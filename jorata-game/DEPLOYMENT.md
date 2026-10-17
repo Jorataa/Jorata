@@ -1,3 +1,17 @@
+# Current guest-first preview
+
+The default entry now opens the application directly without authentication. Deploy the existing Vercel project `j-mind` (root `jorata-game`, Vite, `npm run build`, `dist`, Node 24) to a **preview** branch. Default demo needs **no environment variables** and does not read production Supabase data. Keep `VITE_ENABLE_ACCOUNTS` absent/false. The existing `/api/ai` route remains authenticated and is unused in guest mode.
+
+Production builds always use browser-local sample data and BroadcastChannel; they cannot switch to the development backend with a URL parameter. Guest bootstrap and Socket.IO namespace are registered only outside NODE_ENV=production and VERCEL. There is no custom Socket.IO service deployed to Vercel. Keep Codespaces port 3000 private. Never publish local guest JSON or tokens.
+
+Optional local variables: `PORT` (3000), `GUEST_FILE` (data/development-social.json), `WORLD_FILE` (data/meadow.json). Both state files are ignored. Guest capabilities are hashed server-side; browser-owned identity tokens are local development credentials. Do not migrate these guest IDs or test conversations into production accounts automatically.
+
+Verify a preview with `GUEST_TEST_URL=https://preview.vercel.app GUEST_TEST_DEMO=true npm run test:guest:browser`. It tests same-browser tabs only, not cross-device production messaging. Verify `/api/dev/session` is unavailable. Keep the existing authenticated production deployment separate until a deliberate release.
+
+## Preserved secure integration — future session
+
+The following previous production notes describe the preserved account implementation, not the guest demo. For explicit engineering access only, use `VITE_ENABLE_ACCOUNTS=true` and `/accounts`; authentication callback/recovery URL handling must be revisited when re-enabling the account journey. No account configuration is required for guest development.
+
 # Production operations
 
 Vercel project: existing `j-mind` / `prj_gcx2ocyInULrQpyomxtQ7rzcqamh`, team `jovan-tioria-s-projects`; primary JORATA domain `jorata.vercel.app`. Project root must be **jorata-game**, framework Vite, build `npm run build`, output `dist`, install `npm ci`, Node 24. `vercel.json` serves SPA routes and the independent `/api/ai` function. No Socket.IO process is required on Vercel.

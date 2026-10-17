@@ -17,7 +17,7 @@ class Bucket {
   }
 }
 export function createGameServer(http: Server, savePath: string) {
-  const io = new SocketServer<ClientEvents, ServerEvents>(http, { maxHttpBufferSize: 4096 });
+  const io = new SocketServer<ClientEvents, ServerEvents>(http, { maxHttpBufferSize: process.env.NODE_ENV !== 'production' && !process.env.VERCEL ? 1_600_000 : 4096 });
   const world = loadWorld(savePath);
   const players = new Map<string, Player>();
   const inputs = new Map<string, { value: Input; at: number }>();

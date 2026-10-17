@@ -1,15 +1,15 @@
-# JORATA 2.0 — production handoff
+# JORATA — guest-first handoff
 
-The production entry is `src/social/SocialApp.tsx`. The earlier design shell in `src/App.tsx` is preserved for the local Socket.IO world at `/world-local`; its local task store and illustrative channel navigation are not the production data layer.
+**Entry:** `src/main.tsx` → `src/guest/GuestApp.tsx` → shared `Workspace` in `src/social/SocialApp.tsx`. Opens directly, no authentication UI. Existing account logic remains behind an explicit opt-in `/accounts` route.
 
-**Journeys:** create account → confirm email → sign in → find username → direct chat; create group → invite by username → message/share photos/manage tasks; discover/join community → open channels. Profile editing, block/report, leave/remove membership and an optional managed Meadow are available from the workspace.
+**Journeys:** choose temporary name → lounge or find guest → direct chat; create group → invite exact guest username → messages/photos/tasks; discover/join community → channels; optional Meadow → move/wave/chat/open nearby DM.
 
-**Safe styling/components:** `src/social/social.css`, presentation in `AuthPanel`, `SocialApp`, `TaskBoard`, `PhotoEditor`, `PrivateImage`, `SocialWorld`. Keep accessible labels and `data-room-id`, `data-message-id`, `data-task-id`, `#social-composer` hooks, or update browser tests alongside markup changes. Scope styles to `.social-*` to preserve the game UI.
+**Safe presentation files:** `src/social/social.css`; markup in shared Workspace, `TaskBoard`, `PhotoEditor`, `PrivateImage`; guest identity dialog and `GuestWorld` overlays. Preserve accessible labels and `data-room-id`, `data-message-id`, `data-task-id`, `#social-composer` test hooks. Scope styles to `.social-*` / `.guest-*`. Existing `src/App.tsx`, `src/styles.css` and original design components remain preserved; concurrent Antigravity edits were not overwritten.
 
-**Logic boundary:** `useAccount.ts` owns Auth/session/profile; `useSocial.ts` owns database snapshots, subscriptions, reconnect catch-up, presence/typing; `client.ts` owns the Supabase client and `action(name,payload)` RPC; `types.ts` is the UI data contract. All mutations call `jr_action` and all private reads use RLS. The database, not UI visibility, enforces sender identity, membership, ownership and rate limits.
+**Functional contracts:** `src/social/types.ts` defines rows. Workspace accepts `platform` (the existing `useSocial` shape) and optional guest controls/media/world/notice. `src/guest/transport.ts` isolates identity/storage/realtime; `shared/guest-state.ts` enforces local action permissions; `server/guest-server.ts` binds server-issued capabilities. Do not put data mutations into visual components. Guest IDs are unverified, not production Auth identities.
 
-**Media/AI:** `media.ts` validates/re-encodes uploads; use private Storage signed URLs, never public URLs. Camera must start on explicit action and stop on capture/close. `api/ai.ts` requires a valid bearer session, conversation membership and explicit consent; Gemini remains disabled without its server-side key.
+**Boundaries:** local dev persists separate JSON, uses real Socket.IO. Vercel uses browser-only IndexedDB/BroadcastChannel sample data. Preserve the visible mode notice. Never enable guest endpoints in production or replace Supabase RLS with guest IDs. Future Supabase integration can reuse `useAccount`, `useSocial`, `client`, `media`, private Storage and existing `jr_action` migrations without rewriting this workspace.
 
-**World:** `shared/game.ts`/`src/game/` retain engine contracts. `SocialWorld` uses managed Supabase channels and persistent tile edits; the earlier authoritative Socket.IO server remains local-only. The managed scene trusts client movement and is a social gathering space.
+**Photo/world:** camera starts only on explicit action and stops on capture/close; no upload before Send. Guest image rendering uses MediaResolver, secure account media uses signed URLs. `GuestWorld` shares the existing renderer/physics and transport signals; server checks coordinate shape but movement is client-trusted.
 
-**Run:** `cd jorata-game && npm ci && npm run dev`, Codespaces port 3000. `npm run build`, `npm test`; see `DEPLOYMENT.md` for real-account test setup. Use separate worktrees for concurrent UI work.
+**Run:** `cd jorata-game && npm ci && npm run dev`; private Codespaces port 3000. `npm run build`, `npm test`, `GUEST_TEST_URL=http://localhost:3000 npm run test:guest:browser`. Use separate worktrees for simultaneous edits.

@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 const env = import.meta.env;
 export const configured = Boolean(env.VITE_SUPABASE_URL && env.VITE_SUPABASE_PUBLISHABLE_KEY);
-export const supabase = configured ? createClient(env.VITE_SUPABASE_URL, env.VITE_SUPABASE_PUBLISHABLE_KEY, {
+export const supabase = configured && env.VITE_ENABLE_ACCOUNTS === 'true' ? createClient(env.VITE_SUPABASE_URL, env.VITE_SUPABASE_PUBLISHABLE_KEY, {
   auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true },
 }) : null;
 export function db() { if (!supabase) throw new Error('Account service is not configured.'); return supabase; }

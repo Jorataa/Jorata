@@ -1,43 +1,44 @@
-# JORATA 2.0
+# JORATA — communication workspace
 
-A communication-first social platform with real Supabase accounts, private direct/group messages, communities and channels, shared tasks, creative photo sharing and an optional multiplayer Meadow.
+JORATA opens directly into a temporary guest workspace. **No login, signup or Supabase configuration is needed.** Messaging is the main experience; the Meadow is optional.
 
-## Run
+## Run in Codespaces
 
 ```sh
 cd /workspaces/Jorata/jorata-game
 npm ci
-# Configure .env.local from .env.example (publishable Supabase settings only).
 npm run dev
 ```
 
-Open Codespaces port **3000**. The normal entry is the account-based messaging workspace. Production uses Vercel static hosting and API functions plus Supabase Auth/Postgres/Realtime/Storage; it does not depend on a Codespaces Socket.IO server.
+Open the **port 3000** preview from Codespaces → Ports. Keep its visibility **Private**: this is a development service. Open two tabs, choose **Edit guest** to name each guest, then use the lounge or **New chat** to find the other guest. **New guest** creates a distinct identity; the identity selector restores only identities created in this browser. Reload keeps the current tab's identity.
 
-## Implemented
+## Working features
 
-- Email/password registration and confirmation, login/logout, refresh-persistent sessions, unique moderated usernames, profile/bio/avatar editing and user search.
-- Persistent private direct messages and groups, replies, own-message edits/deletion, reactions, timestamps, online presence and private typing signals.
-- Group creation/invitations/removal/rename/leave, public community discovery/joining, channels and owner/admin/member permissions.
-- One collaborative task board per conversation with assignment, deadlines, editing, completion and permission-checked deletion.
-- User-triggered camera capture or uploads, filters, frame backgrounds, captions/stickers and explicit sharing into private image buckets.
-- Block direct messages and submit reports. All private data reads use RLS; all mutations use a checked database RPC with rate/size limits.
-- Optional `/world` with managed realtime players and persistent tile edits. Client movement is advisory, while conversation access remains database-enforced.
-- A consent-based server-side Gemini summary endpoint, capped at 2/minute and 20/day. It returns a real configuration/provider error when unavailable.
+- Direct and group conversations, history, timestamps, replies, own-message editing/deletion, reactions, conversation search, presence and typing.
+- Group invitations, renaming, member removal and leaving; discover/create/join communities and create text channels with owner/admin/member permissions.
+- A shared task list in each conversation: assignment, deadlines, details, completion, edits and permission-checked deletion.
+- Camera capture or file upload; filters, brightness/contrast/saturation, decorative frames, captions, stickers and explicit photo sending. Frames are not background removal. Photos are validated and re-encoded; guest JPEG payload limit is about 1 MB.
+- Optional Meadow: keyboard movement/jumping, other players, shared blocks, speech bubbles, emotes and opening a nearby player's conversation.
+
+## Data modes
+
+**Local development:** real Socket.IO communication across clients connected to this Codespace. The server creates random session capabilities, binds sender identity to the session, checks memberships and rate-limits mutations. Data persists in ignored `data/development-social.json`; back it up before rebuilding the Codespace. It is test data, not verified accounts or production-secure messaging. Do not share sensitive information or publish this development port.
+
+**Vercel / production build:** explicitly labeled **sample demo**. IndexedDB stores sample data in this browser; BroadcastChannel synchronizes tabs on the same origin/browser profile. Separate devices or browser profiles do not communicate. Anyone with access to that browser's storage can inspect its sample data. No guest backend, production conversation reads, Supabase calls or Gemini requests are used by the default workspace. Clearing site storage erases the demo. Use sample content only.
+
+The existing Supabase implementation and migrations remain intact for future integration. `VITE_ENABLE_ACCOUNTS=true` explicitly enables the preserved `/accounts` route for engineering use; it is off by default. No new authentication screens were built. See [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Verify
 
 ```sh
 npm run build
 npm test
-# Dedicated confirmed QA accounts required; run these sequentially:
-npm run test:social
-TEST_URL=https://jorata.vercel.app npm run test:social:browser
+# With npm run dev on port 3000:
+GUEST_TEST_URL=http://localhost:3000 npm run test:guest:browser
+# With a production build served locally or on a safe Vercel preview:
+GUEST_TEST_URL=https://your-preview.vercel.app GUEST_TEST_DEMO=true npm run test:guest:browser
 ```
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for Vercel/Supabase configuration, email setup and real-account test credentials format. Tests use actual Auth accounts and database/network requests; camera automation uses a synthetic Chromium device. Test credentials, environment files, screenshots and saved legacy worlds are ignored by Git.
+Browser tests use two temporary identities; local mode uses separate browser contexts, demo mode uses two tabs in one context. Camera automation uses a synthetic Chromium device; verify real phones manually. Install Chromium with `npx playwright install --with-deps chromium` if needed.
 
-See [DESIGN_HANDOFF.md](DESIGN_HANDOFF.md) for Antigravity's production UI boundaries and stable data contracts.
-
-## Preserved local game
-
-The original server-authoritative Socket.IO game remains at `/world-local` in development. A/D or arrows move, W/Space jumps, 1–3 select materials, click builds, right click removes. Its atomic JSON save remains `data/meadow.json`, configurable with `WORLD_FILE`. It survives restarts; back it up before rebuilding the Codespace. The legacy design shell and its local task/navigation concepts remain separate from the production social data layer. Legacy browser testing is available through `npm run test:browser`.
+Antigravity: [DESIGN_HANDOFF.md](DESIGN_HANDOFF.md). Original server-authoritative game is preserved at `/world-local` in development, with its separate `data/meadow.json` save.

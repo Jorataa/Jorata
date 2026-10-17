@@ -3,12 +3,15 @@ import { createServer } from 'node:http';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createGameServer } from './game-server.ts';
+import { createGuestServer } from './guest-server.ts';
 import aiHandler from '../api/ai.ts';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const app = express();
 try { process.loadEnvFile(resolve(root, '.env.local')); } catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
 const http = createServer(app);
 const game = createGameServer(http, resolve(process.env.WORLD_FILE || `${root}/data/meadow.json`));
+const guests=createGuestServer(app,game.io,resolve(process.env.GUEST_FILE || `${root}/data/development-social.json`));
+app.all('/api/dev/{*path}',(_req,res)=>res.status(404).json({error:'Development services are unavailable.'}));
 app.get('/api/health', (_req, res) => res.json({ ok: true, world: 'The Meadow', players: game.players.size, revision: game.world.revision }));
 app.post('/api/ai', express.json({limit:'8kb'}), async (req,res) => { await aiHandler(req,res); });
 if (process.env.NODE_ENV === 'production') {
@@ -24,4 +27,4 @@ http.listen(port, '0.0.0.0', () => {
   const address = http.address();
   console.log(`JORATA is ready at http://localhost:${typeof address === 'object' && address ? address.port : port}`);
 });
-for (const signal of ['SIGINT', 'SIGTERM'] as const) process.on(signal, async () => { await game.close(); http.close(); process.exit(0); });
+for (const signal of ['SIGINT', 'SIGTERM'] as const) process.on(signal, async () => { await guests?.close(); await game.close(); http.close(); process.exit(0); });
