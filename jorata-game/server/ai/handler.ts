@@ -94,7 +94,10 @@ function validate(body: Record<string, unknown>) {
     fail(400, "INVALID_INVOCATION", "Choose an explicit AI invocation.");
 }
 /** Dependency injection is for isolated tests, never chosen by request data or production configuration. */
-export function createAiHandler(provider: typeof generate = generate) {
+export function createAiHandler(
+  provider: typeof generate = generate,
+  allowedModes?: readonly string[],
+) {
   return async (req: ApiRequest, res: ApiResponse) => {
     const correlation = randomUUID();
     let client: Awaited<ReturnType<typeof authenticate>>["client"] | undefined,
@@ -107,7 +110,13 @@ export function createAiHandler(provider: typeof generate = generate) {
       ({ client } = await authenticate(req));
       const body = { ...(req.body as Record<string, unknown>) };
       validate(body);
-      const mode = body.mode || "summarize";
+      const mode = body.mode === undefined ? "summarize" : body.mode;
+      if (
+        typeof mode !== "string" ||
+        ![...modes, "open", "settings", "tasks_confirm", "report"].includes(mode) ||
+        (allowedModes && !allowedModes.includes(mode))
+      )
+        fail(400, "INVALID_MODE", "Choose a supported action for this endpoint.");
       const fields: Record<string, string[]> = {
         open: ["mode"],
         settings: ["mode", "room_id", "enabled"],

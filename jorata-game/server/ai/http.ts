@@ -84,10 +84,11 @@ export function headers(req: ApiRequest, res: ApiResponse) {
   if (
     !req.body ||
     typeof req.body !== "object" ||
-    Array.isArray(req.body) ||
-    Buffer.byteLength(JSON.stringify(req.body)) > 16000
+    Array.isArray(req.body)
   )
     fail(400, "INVALID_BODY", "Use a JSON object smaller than 16 KB.");
+  if (Buffer.byteLength(JSON.stringify(req.body)) > 16000)
+    fail(413, "BODY_TOO_LARGE", "Request exceeds 16 KB.");
   return true;
 }
 export async function authenticate(

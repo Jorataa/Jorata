@@ -13,7 +13,8 @@
     "test:social:browser": "node --env-file=.env.local --import tsx tests/social.browser.ts",
     "test:guest:browser": "tsx tests/guest.browser.ts",
     "test:ai:security": "node --env-file=.env.local --env-file=.env.ai --import tsx tests/ai.security.integration.ts",
-    "test:ai:live": "node --env-file=.env.local --import tsx tests/ai.live.ts"
+    "test:ai:live": "node --env-file=.env.local --import tsx tests/ai.live.ts",
+    "test:secrets": "tsx tests/client-secrets.integration.ts"
   },
   "dependencies": {
     "@google/genai": "2.30.0",
@@ -25,6 +26,7 @@
     "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "0.5.10",
     "@playwright/test": "^1.56.0",
     "@types/express": "^5.0.0",
     "@types/node": "^24.0.0",

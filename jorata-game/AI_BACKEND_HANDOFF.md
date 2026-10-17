@@ -1,6 +1,6 @@
 # JORATA AI backend — Antigravity integration
 
-Engineering branch: `codex/jorata-secure-ai`, worktree `/workspaces/jorata-secure-ai`. No visual components or styles changed. Do not reset the main workspace. Coordinate a targeted merge of backend/contracts/network changes; preserve current design work.
+Engineering branch: `codex/jorata-ai-hardening`, worktree `/tmp/jorata-ai-hardening`, includes `codex/jorata-secure-ai`. No visual components or styles changed. Do not reset the main workspace. Coordinate a targeted merge of backend/contracts/network changes; preserve current design work.
 
 ## Contract
 
@@ -33,7 +33,7 @@ AI is optional: normal chat continues during provider errors. Error responses ar
 
 Run `npm ci`, `npm run build`, `npm test`. `npm run test:ai:security` needs dedicated QA accounts, `.env.local` and ignored `.env.ai`; it injects a test-only provider. `AI_TEST_URL=<engineering-preview> npm run test:ai:live` verifies actual Gemini separately. Never use real private conversations as test fixtures.
 
-## Verified engineering deployment — 2026-10-17
+## Historical engineering deployment — prior session, 2026-10-17
 
 API base: `https://j-mind-c54oxu6r0-jovan-tioria-s-projects.vercel.app`; stable branch URL: `https://j-mind-git-codex-jorata-secure-ai-jovan-tioria-s-projects.vercel.app`. Vercel deployment `dpl_DWTiFAMTqhDxGvW2Z4Fx6N9HWqMe`, code `d9b2f42`, **preview / READY**, Node 24. Production aliases were not reassigned and the main design workspace was not merged or reset.
 
@@ -42,3 +42,15 @@ Passed: build; 16 local tests; 21 independent-account security checks; the exist
 Production release still needs coordinated frontend integration and production-scoped JORATA_AI_BACKEND_SECRET / APP_ORIGINS configuration. The preview key is scoped to this engineering branch. Existing Gemini/Supabase configuration was reused; pasted chat credentials were not copied. Revoke the exposed Gemini keys and use a replacement through Vercel Secrets before public release. Supabase's security advisor still warns that leaked-password protection is disabled; enable it in Auth settings if supported by the current plan. Logged-out JWTs were also verified unable to read room/message/task records, community memberships, blocks, reports, AI requests and activity. The two private-table no-policy notices are intentional deny-all storage for limits and key hashes.
 
 Limits: no new authentication UI or guest AI access; Antigravity must connect the typed service and render the bot identity. JSON responses are not streamed. Gemini name classifications are advisory; deterministic Postgres rules remain authoritative. Reports require human review; no permanent AI bans. Shared staging/production Supabase infrastructure, physical-device testing, email delivery, production IP/WAF policy tuning and stronger server-side media re-encoding remain release work. Current private storage type/size/authorization checks passed. Client-controlled Meadow motion remains advisory.
+
+## Current verification and release blockers
+
+The prior deployment/results above were recorded by an earlier session; they are not a verification of this branch. This session has no `GEMINI_API_KEY`, dedicated QA account file, Supabase management/database credentials, or Vercel deployment credentials. Existing public Supabase configuration and a local backend secret are present. Do not put credentials in this document or chat.
+
+New additive migration `20261017053209_bot_message_and_cache_authorization.sql` closes the nullable-sender edit/delete bypass for bot messages and rejects cached replies after invocation changes/deletion or answer removal. Apply it before exposing the AI companion; it has **not** been applied to the hosted database in this session. Moderation now shares all API security checks even on invalid actions. Invalid/null/prototype-like modes are rejected before context retrieval.
+
+`npm test` executes the entire migration chain in test-only in-memory Postgres with separate identities, real RLS and mutation functions. Its Supabase-owned Auth/Storage/Realtime schemas are minimal fixtures: hosted services, HTTP transport, media bytes and real Gemini still require the existing live suites. `npm run test:secrets` builds with synthetic server secrets and scans client artifacts/build logs; it never fabricates an AI response. The added PGlite dependency is development-only.
+
+Current results: **28/28 local tests passed**, production build passed, secret sentinel scan passed, `git diff --check` passed, dependency installation audit reported zero vulnerabilities. No current deployment or real Gemini inference was performed. Hosted account isolation, group AI responses, actual provider quota behavior, browser-refresh persistence and production runtime verification remain blocked on credentials and integration. Local SQL tests cover isolation, stored messages, task confirmation, limits, moderation and session revocation. The build still reports the existing large client bundle warning.
+
+Release sequence: restore secure credentials and dedicated QA accounts; apply the pending migration through the authorized Supabase migration workflow; run `test:ai:security` and `test:social` sequentially; deploy an engineering Vercel preview and run `AI_TEST_URL=<preview> npm run test:ai:live`; coordinate Antigravity's token provider, consent controls, bot rendering, task confirmation and CSP compatibility; only then stage/verify/promote production. Register only the SHA-256 hash of the 64-character server backend secret in `private.jr_backend_keys` (`purpose='ai'`); normal user operations continue to use their JWT and a publishable key. Server variables may use `SUPABASE_URL` / `SUPABASE_PUBLISHABLE_KEY`; browser account integration uses the existing `VITE_SUPABASE_*` names.

@@ -203,6 +203,15 @@ try {
   assert.ifError(stored.error);
   assert.equal(stored.data.sender_id, null);
   assert.equal(stored.data.bot_id, "jorata-ai");
+  for (const who of [0, 1]) {
+    for (const action of ["edit_message", "delete_message"]) {
+      const tampered = await clients[who].rpc("jr_action", {
+        action,
+        payload: { room_id: group, message_id: stored.data.id, body: "Forged bot answer" },
+      });
+      assert(tampered.error, "Conversation members cannot edit or delete a bot message through human ownership checks");
+    }
+  }
   assert.equal((await api(0, request)).body.cached, true);
   assert.equal(calls.length, 1);
   const forged = await clients[0].rpc("jr_ai_backend", {
@@ -426,6 +435,7 @@ try {
         "unknown-history rejection",
         "server-only bot writes",
         "persistent explicit bot identity",
+        "null bot sender cannot bypass edit/delete ownership",
         "idempotent generation",
         "task proposal causes no writes",
         "confirmation and member checks",
