@@ -396,6 +396,25 @@ try {
     payload: { name: "Stale session" },
   });
   assert(denied.error);
+  for (const table of [
+    "jr_rooms",
+    "jr_messages",
+    "jr_tasks",
+    "jr_community_members",
+    "jr_blocks",
+    "jr_reports",
+    "jr_ai_requests",
+    "jr_activity",
+  ]) {
+    const afterLogout = await expired.from(table).select("*").limit(1);
+    assert.ifError(afterLogout.error);
+    assert.deepEqual(
+      afterLogout.data,
+      [],
+      `${table} must not expose records through a logged-out JWT`,
+    );
+  }
+
   console.log(
     JSON.stringify({
       passed: [

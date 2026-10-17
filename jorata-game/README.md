@@ -42,3 +42,7 @@ GUEST_TEST_URL=https://your-preview.vercel.app GUEST_TEST_DEMO=true npm run test
 Browser tests use two temporary identities; local mode uses separate browser contexts, demo mode uses two tabs in one context. Camera automation uses a synthetic Chromium device; verify real phones manually. Install Chromium with `npx playwright install --with-deps chromium` if needed.
 
 Antigravity: [DESIGN_HANDOFF.md](DESIGN_HANDOFF.md). Original server-authoritative game is preserved at `/world-local` in development, with its separate `data/meadow.json` save.
+
+## Secure AI backend
+
+The engineering branch includes authenticated JORATA AI direct chat, admin-enabled group mentions, consent-based context assistance, moderated name checks and explicitly approved task proposals. Real Gemini responses, private data isolation and logout revocation have been verified against Vercel/Supabase. The default guest interface does not access these protected APIs. Antigravity integration and production release requirements are in [AI_BACKEND_HANDOFF.md](AI_BACKEND_HANDOFF.md). No new login UI was added.
