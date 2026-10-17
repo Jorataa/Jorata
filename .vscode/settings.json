@@ -1,0 +1,10 @@
+{
+  "remote.autoForwardPorts": true,
+  "remote.portsAttributes": {
+    "3000": {
+      "label": "JORATA multiplayer game",
+      "onAutoForward": "openPreview",
+      "protocol": "http"
+    }
+  }
+}
