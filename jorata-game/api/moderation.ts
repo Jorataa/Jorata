@@ -1,10 +1,10 @@
-import aiHandler from "../server/ai/handler.ts";
+import aiHandler from "../server/ai/handler.js";
 import {
   fail,
   respondError,
   type ApiRequest,
   type ApiResponse,
-} from "../server/ai/http.ts";
+} from "../server/ai/http.js";
 export default async function moderation(req: ApiRequest, res: ApiResponse) {
   try {
     const mode = (req.body as { mode?: unknown } | undefined)?.mode;

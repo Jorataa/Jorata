@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
-import type { AiMode, AiResponse } from "../../shared/ai-contracts.ts";
-import { JORATA_AI } from "../../shared/ai-contracts.ts";
-import { validateName } from "../../src/social/moderation.ts";
-import { generate } from "./gemini.ts";
+import type { AiMode, AiResponse } from "../../shared/ai-contracts.js";
+import { JORATA_AI } from "../../shared/ai-contracts.js";
+import { validateName } from "../../src/social/moderation.js";
+import { generate } from "./gemini.js";
 import {
   ApiFailure,
   authenticate,
@@ -13,7 +13,7 @@ import {
   uuid,
   type ApiRequest,
   type ApiResponse,
-} from "./http.ts";
+} from "./http.js";
 const modes: AiMode[] = [
   "chat",
   "mention",
