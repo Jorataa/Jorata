@@ -51,7 +51,7 @@ async function clickTile(page: Page, x: number, y: number, button: 'left' | 'rig
   await canvas.click({ position: { x: (x + 0.5) * 32 - camera.x, y: (y + 0.5) * 32 - camera.y }, button });
 }
 try {
-  url = await ready();
+  url = await ready() + '?legacy=1';
   browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({ viewport: { width: 1440, height: 960 } });
   const alice = await context.newPage();

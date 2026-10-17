@@ -3,3 +3,7 @@ dist/
 data/*.json
 data/*.tmp
 artifacts/
+.env*
+!.env.example
+.vercel/
+supabase/.temp/

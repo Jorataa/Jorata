@@ -3,11 +3,14 @@ import { createServer } from 'node:http';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createGameServer } from './game-server.ts';
+import aiHandler from '../api/ai.ts';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const app = express();
+try { process.loadEnvFile(resolve(root, '.env.local')); } catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
 const http = createServer(app);
 const game = createGameServer(http, resolve(process.env.WORLD_FILE || `${root}/data/meadow.json`));
 app.get('/api/health', (_req, res) => res.json({ ok: true, world: 'The Meadow', players: game.players.size, revision: game.world.revision }));
+app.post('/api/ai', express.json({limit:'8kb'}), async (req,res) => { await aiHandler(req,res); });
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(resolve(root, 'dist')));
   app.get('/{*path}', (_req, res) => res.sendFile(resolve(root, 'dist/index.html')));
