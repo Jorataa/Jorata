@@ -58,5 +58,5 @@ try{
   const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const phone=await mobile.newPage();await login(phone,2);await expect(phone.getByRole('button',{name:'New chat',exact:true})).toBeVisible();await phone.screenshot({path:'artifacts/social-mobile.png',fullPage:true});expect(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await a.getByRole('button',{name:'Sign out',exact:true}).click();await expect(a.getByRole('button',{name:'Sign in',exact:true})).toBeVisible();
   expect(errors).toEqual([]);
-  console.log('PASS: real account browser login/session/logout, realtime DM/reply/edit/reaction/history, group invitation, synchronized task assignment/completion, camera permission/capture/filter/private photo delivery, reconnect catch-up, two-player managed world, inactive-AI handling, and mobile layout.');
+  console.log('PASS: real account browser login/session/logout, realtime DM/reply/edit/reaction/history, group invitation, synchronized task assignment/completion, camera permission/capture/filter/private photo delivery, reconnect catch-up, two-player managed world, AI response handling, and mobile layout.');
 }finally{await browser.close();}

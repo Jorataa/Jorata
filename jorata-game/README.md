@@ -1,39 +1,43 @@
-# JORATA
+# JORATA 2.0
 
-A playable shared 2D world: guest identity, server-authoritative movement and collisions, camera follow, real-time world chat, shared building and JSON persistence. React + TypeScript + Canvas, Express and Socket.IO; no external accounts or services.
+A communication-first social platform with real Supabase accounts, private direct/group messages, communities and channels, shared tasks, creative photo sharing and an optional multiplayer Meadow.
 
-## Run in Codespaces
-
-Requires Node.js 22.12+ (the current Codespace uses Node 24).
+## Run
 
 ```sh
 cd /workspaces/Jorata/jorata-game
 npm ci
+# Configure .env.local from .env.example (publishable Supabase settings only).
 npm run dev
 ```
 
-Open port **3000** from the Codespaces **Ports** panel with **Open in Browser**. The frontend, backend, WebSockets and hot reload share this port; no backend URL or CORS configuration is needed. Open the same address in another tab and enter a different name to play together. Keep the port private unless you intend to share this guest world.
+Open Codespaces port **3000**. The normal entry is the account-based messaging workspace. Production uses Vercel static hosting and API functions plus Supabase Auth/Postgres/Realtime/Storage; it does not depend on a Codespaces Socket.IO server.
 
-Move with A/D or left/right arrows. Jump with W, up arrow or Space. Enter focuses chat; Escape returns to the game. Select Timber, Clay or Glass with 1/2/3 or the build kit, then click a nearby empty tile to place. Right click, Shift+click or the Remove tool removes a block. The arrival area and bottom bedrock are protected; build just to the right of the spawn sign. Touch movement buttons appear on mobile. Return to spawn gets you unstuck.
+## Implemented
 
-The floating HUD also offers Q/X to toggle Demolish, a collapsible chat/explorer directory, quick reactions, help, sound effects and local PNG snapshots. On phones, chat starts collapsed so the world and build kit remain visible. Press Enter or tap World Chat to open it. Snapshot downloads are local images; no photo-sharing backend is involved.
+- Email/password registration and confirmation, login/logout, refresh-persistent sessions, unique moderated usernames, profile/bio/avatar editing and user search.
+- Persistent private direct messages and groups, replies, own-message edits/deletion, reactions, timestamps, online presence and private typing signals.
+- Group creation/invitations/removal/rename/leave, public community discovery/joining, channels and owner/admin/member permissions.
+- One collaborative task board per conversation with assignment, deadlines, editing, completion and permission-checked deletion.
+- User-triggered camera capture or uploads, filters, frame backgrounds, captions/stickers and explicit sharing into private image buckets.
+- Block direct messages and submit reports. All private data reads use RLS; all mutations use a checked database RPC with rate/size limits.
+- Optional `/world` with managed realtime players and persistent tile edits. Client movement is advisory, while conversation access remains database-enforced.
+- A consent-based server-side Gemini summary endpoint, capped at 2/minute and 20/day. It returns a real configuration/provider error when unavailable.
 
 ## Verify
 
 ```sh
+npm run build
 npm test
-npx playwright install --with-deps chromium  # first browser-test setup only
-npm run test:browser
+# Dedicated confirmed QA accounts required; run these sequentially:
+npm run test:social
+TEST_URL=https://jorata.vercel.app npm run test:social:browser
 ```
 
-The integration test uses two real Socket.IO clients and checks movement, collision, chat, edit validation, building, leaving and persistence after server restart. The browser test builds and starts an isolated production server on a temporary port/save, then checks two Chromium clients, keyboard movement/jump, chat focus, shared edits, refresh, reconnect and touch controls. Screenshots are written to ignored `artifacts/`. Tests never modify the live world's save.
+See [DEPLOYMENT.md](DEPLOYMENT.md) for Vercel/Supabase configuration, email setup and real-account test credentials format. Tests use actual Auth accounts and database/network requests; camera automation uses a synthetic Chromium device. Test credentials, environment files, screenshots and saved legacy worlds are ignored by Git.
 
-For production-style local serving: `npm run build && npm start`.
+See [DESIGN_HANDOFF.md](DESIGN_HANDOFF.md) for Antigravity's production UI boundaries and stable data contracts.
 
-## Persistence and limits
+## Preserved local game
 
-`data/meadow.json` is written atomically before accepted edits are broadcast. It survives browser refreshes and server restarts. Back it up before rebuilding the Codespace; the save is intentionally ignored by Git. `WORLD_FILE` overrides the save path and `PORT` overrides port 3000. Corrupt saves cause a clear startup error instead of silently discarding builds.
-
-One shared world, at most 64 players; one Node process owns it. Positions and chat history are in memory (guests respawn when reconnecting; up to 80 recent messages survive only while the server runs). Names are unverified guest labels. There are no accounts, moderation, private messages, inventory or multi-server support yet. Materials are unlimited for this sandbox MVP. Rate limits, edit reach, player overlap checks and authoritative server physics provide basic safeguards.
-
-See [the design handoff](../DESIGN_HANDOFF.md) before changing game/UI integration.
+The original server-authoritative Socket.IO game remains at `/world-local` in development. A/D or arrows move, W/Space jumps, 1–3 select materials, click builds, right click removes. Its atomic JSON save remains `data/meadow.json`, configurable with `WORLD_FILE`. It survives restarts; back it up before rebuilding the Codespace. The legacy design shell and its local task/navigation concepts remain separate from the production social data layer. Legacy browser testing is available through `npm run test:browser`.
