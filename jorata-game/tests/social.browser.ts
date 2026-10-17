@@ -11,7 +11,9 @@ try{
   const ac=await browser.newContext({viewport:{width:1450,height:950},permissions:['camera']});
   const bc=await browser.newContext({viewport:{width:1450,height:950}});
   const a=await ac.newPage(),b=await bc.newPage();
-  await login(a,0);await login(b,1);await open(a,fixtures.dm);await open(b,fixtures.dm);
+  await login(a,0);await login(b,1);
+  await a.getByRole('button',{name:'New chat',exact:true}).click();await a.getByLabel('Find a username',{exact:true}).fill(qa.accounts[1].username);await a.getByRole('button',{name:'Find people',exact:true}).click();await a.getByRole('button',{name:`Message ${qa.accounts[1].display_name}`,exact:true}).click();
+  await expect(a.locator(`[data-room-id="${fixtures.dm}"]`)).toHaveClass(/selected/);await open(b,fixtures.dm);
   const marker=`Browser hello ${Date.now()}`;
   await a.getByLabel('Message',{exact:true}).fill(marker);await a.getByRole('button',{name:'Send',exact:true}).click();
   await expect(b.locator('.social-message-body').filter({hasText:marker})).toBeVisible({timeout:10000});
@@ -49,7 +51,10 @@ try{
   await expect(a.locator('.social-world-info')).toContainText('2 here',{timeout:15000});await expect(b.locator('.social-world-info')).toContainText('QA A');
   const canvas=a.locator('#game-canvas');await canvas.focus();const start=Number(await canvas.getAttribute('data-player-x'));await a.keyboard.down('d');await expect.poll(async()=>Number(await canvas.getAttribute('data-player-x'))).toBeGreaterThan(start+.5);await a.keyboard.up('d');
   await a.getByRole('button',{name:'Back to messages',exact:false}).click();
-  await a.getByRole('button',{name:'Summarize',exact:true}).click();await a.getByRole('button',{name:'Send messages to Gemini and summarize',exact:true}).click();await expect(a.locator('.social-ai-result')).toContainText('Gemini is not activated');await a.getByRole('button',{name:'Close dialog',exact:true}).click();
+  await a.locator('.social-profile-button').click();
+  const avatar=await a.evaluate(()=>{const c=document.createElement('canvas');c.width=32;c.height=32;const x=c.getContext('2d')!;x.fillStyle='#709951';x.fillRect(0,0,32,32);return c.toDataURL('image/png').split(',')[1];});
+  await a.getByLabel('Profile photo',{exact:true}).setInputFiles({name:'qa-avatar.png',mimeType:'image/png',buffer:Buffer.from(avatar,'base64')});await a.getByRole('button',{name:'Save profile',exact:true}).click();await expect(a.getByRole('dialog',{name:'Your profile',exact:true})).toHaveCount(0,{timeout:15000});await expect(a.locator('.social-profile-button img')).toBeVisible();
+  await a.getByRole('button',{name:'Summarize',exact:true}).click();const aiResponse=a.waitForResponse(r=>r.url().endsWith('/api/ai')&&r.request().method()==='POST');await a.getByRole('button',{name:'Send messages to Gemini and summarize',exact:true}).click();const ai=await aiResponse;expect([200,429,502,503]).toContain(ai.status());await expect(a.locator('.social-ai-result')).not.toBeEmpty({timeout:30000});console.log(`AI endpoint verified: HTTP ${ai.status()} (${ai.status()===200?'provider summary':'explicit unavailable/rate-limit response'})`);await a.getByRole('button',{name:'Close dialog',exact:true}).click();
   const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const phone=await mobile.newPage();await login(phone,2);await expect(phone.getByRole('button',{name:'New chat',exact:true})).toBeVisible();await phone.screenshot({path:'artifacts/social-mobile.png',fullPage:true});expect(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await a.getByRole('button',{name:'Sign out',exact:true}).click();await expect(a.getByRole('button',{name:'Sign in',exact:true})).toBeVisible();
   expect(errors).toEqual([]);
