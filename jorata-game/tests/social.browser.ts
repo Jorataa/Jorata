@@ -32,7 +32,7 @@ try{
   await a.getByRole('button',{name:'Tasks',exact:true}).click();await b.getByRole('button',{name:'Tasks',exact:true}).click();
   const title=`Meetup ${Date.now()}`;
   await a.getByLabel('Task title',{exact:true}).fill(title);await a.getByLabel('Details',{exact:true}).fill('Bring ideas for our community');await a.getByLabel('Assign to',{exact:true}).selectOption(qa.accounts[1].id);await a.getByLabel('Deadline',{exact:true}).fill('2026-12-01');await a.getByRole('button',{name:'Add task',exact:true}).click();
-  await expect(b.getByLabel(`Complete ${title}`,{exact:true})).toBeVisible();await b.getByLabel(`Complete ${title}`,{exact:true}).check();await expect(a.getByLabel(`Complete ${title}`,{exact:true})).toBeChecked();
+  await expect(b.getByLabel(`Complete ${title}`,{exact:true})).toBeVisible();await b.getByLabel(`Complete ${title}`,{exact:true}).click();await expect(a.getByLabel(`Complete ${title}`,{exact:true})).toBeChecked();await expect(b.getByLabel(`Complete ${title}`,{exact:true})).toBeChecked();
   await a.getByRole('button',{name:'Close side panel',exact:true}).click();await b.getByRole('button',{name:'Close side panel',exact:true}).click();
   // Camera opens only after an explicit click; Chromium supplies a synthetic test camera.
   await a.getByRole('button',{name:'Attach or capture photo',exact:true}).click();await a.getByRole('button',{name:'Use camera',exact:true}).click();await expect(a.getByLabel('Camera preview')).toBeVisible();
