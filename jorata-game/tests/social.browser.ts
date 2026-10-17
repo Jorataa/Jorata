@@ -1,4 +1,4 @@
-import {chromium,expect,type Page} from '@playwright/test';
+import {chromium,expect,type Locator,type Page} from '@playwright/test';
 import {readFileSync,mkdirSync} from 'node:fs';
 const qa=JSON.parse(readFileSync(process.env.QA_ACCOUNTS_FILE||'/tmp/jorata-qa-bootstrap.json','utf8')) as {accounts:{id:string;email:string;username:string;password:string;display_name:string}[]};
 const fixtures=JSON.parse(readFileSync('/tmp/jorata-qa-fixtures.json','utf8')) as {dm:string;group:string;privateRoom:string};
@@ -7,6 +7,7 @@ const browser=await chromium.launch({headless:true,args:['--use-fake-device-for-
 const errors:string[]=[];
 async function login(page:Page,index:number){page.on('pageerror',e=>errors.push(e.message));await page.goto(url);await page.getByLabel('Email',{exact:true}).fill(qa.accounts[index].email);await page.getByLabel('Password',{exact:true}).fill(qa.accounts[index].password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await expect(page.locator('.social-status')).toContainText('Connected',{timeout:20000});}
 async function open(page:Page,id:string){await page.locator(`[data-room-id="${id}"]`).click();await expect(page.getByLabel('Message',{exact:true})).toBeVisible();}
+async function messageAction(page:Page,message:Locator,name:string){await message.hover();await message.getByRole('button',{name:'Message options',exact:true}).click();await page.getByRole('menu',{name:'Message options',exact:true}).getByRole('menuitem',{name,exact:true}).click();}
 try{
   const ac=await browser.newContext({viewport:{width:1450,height:950},permissions:['camera']});
   const bc=await browser.newContext({viewport:{width:1450,height:950}});
@@ -19,12 +20,12 @@ try{
   await expect(b.locator('.social-message-body').filter({hasText:marker})).toBeVisible({timeout:10000});
   await expect(a.getByText('Online now',{exact:true})).toBeVisible({timeout:10000});
   const messageId=await b.locator('.social-message').filter({hasText:marker}).getAttribute('data-message-id');
-  const received=b.locator(`[data-message-id="${messageId}"]`);await received.getByRole('button',{name:'Reply',exact:true}).click();
+  const received=b.locator(`[data-message-id="${messageId}"]`);await messageAction(b,received,'Reply');
   await b.getByLabel('Message',{exact:true}).fill('Browser reply');await b.getByRole('button',{name:'Send',exact:true}).click();
   await expect(a.locator('.social-message-body').filter({hasText:'Browser reply'}).last()).toBeVisible();
-  const own=a.locator(`[data-message-id="${messageId}"]`);await own.getByRole('button',{name:'Edit message',exact:true}).click();await own.getByLabel('Edit message text').fill(marker+' edited');await own.getByRole('button',{name:'Save edit',exact:true}).click();
+  const own=a.locator(`[data-message-id="${messageId}"]`);await messageAction(a,own,'Edit message');await own.getByLabel('Edit message text').fill(marker+' edited');await own.getByRole('button',{name:'Save edit',exact:true}).click();
   await expect(b.locator('.social-message-body').filter({hasText:marker+' edited'})).toBeVisible();
-  await received.getByRole('button',{name:'React 👍',exact:true}).click();await expect(own.getByRole('button',{name:'React 👍',exact:true})).toContainText('1');
+  await messageAction(b,received,'React 👍');await expect(own.getByRole('button',{name:'React 👍',exact:true})).toContainText('1');
   await b.reload();await expect(b.locator('.social-status')).toContainText('Connected',{timeout:20000});await open(b,fixtures.dm);await expect(b.locator('.social-message-body').filter({hasText:marker+' edited'})).toBeVisible();
   // Real group creation and invitation through the production UI.
   const groupName=`Browser Group ${Date.now()}`;
@@ -54,7 +55,7 @@ try{
   await a.locator('.social-profile-button').click();
   const avatar=await a.evaluate(()=>{const c=document.createElement('canvas');c.width=32;c.height=32;const x=c.getContext('2d')!;x.fillStyle='#709951';x.fillRect(0,0,32,32);return c.toDataURL('image/png').split(',')[1];});
   await a.getByLabel('Profile photo',{exact:true}).setInputFiles({name:'qa-avatar.png',mimeType:'image/png',buffer:Buffer.from(avatar,'base64')});await a.getByRole('button',{name:'Save profile',exact:true}).click();await expect(a.getByRole('dialog',{name:'Your profile',exact:true})).toHaveCount(0,{timeout:15000});await expect(a.locator('.social-profile-button img')).toBeVisible();
-  await a.getByRole('button',{name:'Summarize',exact:true}).click();const aiResponse=a.waitForResponse(r=>r.url().endsWith('/api/ai')&&r.request().method()==='POST');await a.getByRole('button',{name:'Send messages to Gemini and summarize',exact:true}).click();const ai=await aiResponse;expect([200,429,502,503]).toContain(ai.status());await expect(a.locator('.social-ai-result')).not.toBeEmpty({timeout:30000});console.log(`AI endpoint verified: HTTP ${ai.status()} (${ai.status()===200?'provider summary':'explicit unavailable/rate-limit response'})`);await a.getByRole('button',{name:'Close dialog',exact:true}).click();
+  await a.getByRole('button',{name:'Summarize conversation',exact:true}).click();const aiResponse=a.waitForResponse(r=>r.url().endsWith('/api/ai')&&r.request().method()==='POST');await a.getByRole('button',{name:'Send messages to Gemini and summarize',exact:true}).click();const ai=await aiResponse;expect([200,429,502,503]).toContain(ai.status());await expect(a.locator('.social-ai-result')).not.toBeEmpty({timeout:30000});console.log(`AI endpoint verified: HTTP ${ai.status()} (${ai.status()===200?'provider summary':'explicit unavailable/rate-limit response'})`);await a.getByRole('button',{name:'Close dialog',exact:true}).click();
   const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const phone=await mobile.newPage();await login(phone,2);await expect(phone.getByRole('button',{name:'New chat',exact:true})).toBeVisible();await phone.screenshot({path:'artifacts/social-mobile.png',fullPage:true});expect(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await a.getByRole('button',{name:'Sign out',exact:true}).click();await expect(a.getByRole('button',{name:'Sign in',exact:true})).toBeVisible();
   expect(errors).toEqual([]);

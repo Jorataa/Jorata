@@ -1,4 +1,4 @@
-import { chromium, expect, type Page } from "@playwright/test";
+import { chromium, expect, type Locator, type Page } from "@playwright/test";
 import { mkdir } from "node:fs/promises";
 const base = process.env.GUEST_TEST_URL || "http://localhost:3101";
 const browser = await chromium.launch({
@@ -44,6 +44,14 @@ async function send(page: Page, body: string) {
   await page.getByRole("textbox", { name: "Message", exact: true }).fill(body);
   await page.getByRole("button", { name: "Send", exact: true }).click();
 }
+async function messageAction(page: Page, message: Locator, name: string) {
+  await message.hover();
+  await message.getByRole("button", { name: "Message options", exact: true }).click();
+  await page
+    .getByRole("menu", { name: "Message options", exact: true })
+    .getByRole("menuitem", { name, exact: true })
+    .click();
+}
 async function newDM(page: Page, name: string) {
   await page.getByRole("button", { name: "New chat", exact: true }).click();
   const d = page.getByRole("dialog", { name: "Start a conversation" });
@@ -81,20 +89,19 @@ try {
     .locator("article.social-message")
     .filter({ hasText: `Direct ${tag}` });
   await expect(direct).toBeVisible();
-  await direct.getByRole("button", { name: "React 👍", exact: true }).click();
+  const directId = await direct.getAttribute("data-message-id");
+  await messageAction(b, direct, "React 👍");
   await expect(
     a
       .locator("article.social-message")
       .filter({ hasText: `Direct ${tag}` })
       .getByRole("button", { name: "React 👍", exact: true }),
   ).toHaveText("👍1");
-  await direct.getByRole("button", { name: "Reply", exact: true }).click();
+  await messageAction(b, direct, "Reply");
   await send(b, `Reply ${tag}`);
   await expect(a.locator("blockquote")).toContainText(`Direct ${tag}`);
-  const own = a
-    .locator("article.social-message")
-    .filter({ hasText: `Direct ${tag}` });
-  await own.getByRole("button", { name: "Edit message", exact: true }).click();
+  const own = a.locator(`article.social-message[data-message-id="${directId}"]`);
+  await messageAction(a, own, "Edit message");
   await a.getByLabel("Edit message text").fill(`Edited ${tag}`);
   await a.getByRole("button", { name: "Save edit" }).click();
   await expect(
@@ -278,7 +285,7 @@ try {
   await expect(
     a.getByRole("textbox", { name: "Message", exact: true }),
   ).toBeVisible();
-  await a.getByRole("button", { name: "← Conversations", exact: true }).click();
+  await a.getByRole("button", { name: "Back to conversations", exact: true }).click();
   await expect(
     a.getByRole("textbox", { name: "Search conversations" }),
   ).toBeVisible();

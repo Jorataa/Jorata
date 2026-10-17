@@ -1,0 +1,47 @@
+/* Local lighting follows the native mouse only over a few deliberate targets. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .social-app :is(.social-room, .social-nav-item, .social-new-chat-btn, .social-composer-send) {
+    position: relative;
+  }
+
+  .social-app :is(.social-room, .social-nav-item, .social-new-chat-btn, .social-composer-send)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(100px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgb(157 198 255 / 8%), transparent 80%);
+    opacity: 0;
+    transition: opacity 180ms ease;
+  }
+
+  .social-app :is(.social-room, .social-nav-item, .social-new-chat-btn, .social-composer-send)[data-pointer-lit]::after {
+    opacity: 1;
+  }
+
+  .social-app :is(.social-new-chat-btn, .social-composer-send) {
+    translate: var(--pointer-shift-x, 0px) var(--pointer-shift-y, 0px);
+    transition: translate 140ms ease-out, background-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease, opacity 160ms ease;
+  }
+
+  .social-pointer-click {
+    position: fixed;
+    z-index: 1000;
+    width: 14px;
+    height: 14px;
+    margin: -7px 0 0 -7px;
+    border: 1px solid rgb(154 202 255 / 50%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: social-pointer-tap 280ms ease-out both;
+  }
+}
+
+@keyframes social-pointer-tap {
+  from { opacity: 0.6; transform: scale(0.45); }
+  to { opacity: 0; transform: scale(1.5); }
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  .social-pointer-click { display: none; }
+}

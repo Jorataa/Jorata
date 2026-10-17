@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react';
+import { Fragment, lazy, Suspense, useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react';
 const ProfileEditor = lazy(() => import('./AuthPanel').then(m => ({ default: m.ProfileEditor })));
 import { check, db } from './client';
 import { PrivateImage } from './PrivateImage';
@@ -18,10 +18,10 @@ import {
   ChevronLeftIcon,
   PlusIcon,
   AttachmentIcon,
-  BookmarkIcon,
-  MoreIcon,
   EmojiIcon,
 } from './Icons';
+import { usePointerPolish } from './usePointerPolish';
+import { MessageMenu } from './MessageMenu';
 import './social.css';
 
 const SocialWorld = lazy(() => import('./SocialWorld'));
@@ -91,17 +91,27 @@ export function Workspace({
   const [aiText, setAiText] = useState('');
   const [search, setSearch] = useState('');
   const [showEmoji, setShowEmoji] = useState(false);
+  const [filter, setFilter] = useState<'all' | 'direct' | 'groups'>('all');
+  const [attachment, setAttachment] = useState<File | null>(null);
+  const [attachmentUrl, setAttachmentUrl] = useState('');
+  const [awayFromBottom, setAwayFromBottom] = useState(false);
+  const drafts = useRef<Record<string, string>>({});
+  const [previews, setPreviews] = useState<Record<string, string>>({});
+  const selectedRef = useRef(social.selected);
+  selectedRef.current = social.selected;
+  const composerRef = useRef<HTMLTextAreaElement>(null);
+  const pointerRef = usePointerPolish();
 
   // Drag & drop image upload state
   const [dragActive, setDragActive] = useState(false);
-  const [dragCounter, setDragCounter] = useState(0);
+  const dragCounter = useRef(0);
 
   // Floating Context Menu state
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number; message: ChatMessage } | null>(null);
 
   // Swipe-to-reply gesture state
   const [swipeOffset, setSwipeOffset] = useState<Record<string, number>>({});
-  const swipeStartRef = useRef<{ id: string; x: number } | null>(null);
+  const swipeStartRef = useRef<{ id: string; x: number; y: number } | null>(null);
 
   const messageList = useRef<HTMLDivElement>(null);
   const keepBottom = useRef(true);
@@ -118,13 +128,38 @@ export function Workspace({
   const other = room?.kind === 'direct' ? memberProfiles.find(p => p.id !== profile.id) : null;
 
   useEffect(() => {
-    setDraft('');
+    setDraft(drafts.current[social.selected || ''] || '');
+    setAttachment(null);
+    setAwayFromBottom(false);
+    dragCounter.current = 0;
+    setDragActive(false);
     setReply(null);
     setEditing(null);
     setContextMenu(null);
     setShowEmoji(false);
     keepBottom.current = true;
   }, [social.selected]);
+
+  useEffect(() => {
+    const latest = social.messages.at(-1);
+    if (!latest) return;
+    const preview = latest.deleted ? 'Message deleted' : latest.body || 'Photo';
+    setPreviews(current => current[latest.room_id] === preview ? current : { ...current, [latest.room_id]: preview });
+  }, [social.messages]);
+
+  useEffect(() => {
+    if (!attachment) { setAttachmentUrl(''); return; }
+    const url = URL.createObjectURL(attachment);
+    setAttachmentUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [attachment]);
+
+  useEffect(() => {
+    const input = composerRef.current;
+    if (!input) return;
+    input.style.height = 'auto';
+    input.style.height = `${Math.min(input.scrollHeight, 144)}px`;
+  }, [draft, social.selected]);
 
   useEffect(() => {
     if (keepBottom.current && messageList.current) {
@@ -137,11 +172,11 @@ export function Workspace({
       if (e.key === 'Escape') {
         setDialog(null);
         setContextMenu(null);
+        setShowEmoji(false);
       }
     }
     function onPointerDown(e: MouseEvent) {
-      if ((e.target as HTMLElement).closest('.social-context-menu')) return;
-      setContextMenu(null);
+      if (!(e.target as HTMLElement).closest('.social-composer-emoji-popover, .social-composer-emoji-btn')) setShowEmoji(false);
     }
     window.addEventListener('keydown', escape);
     window.addEventListener('pointerdown', onPointerDown);
@@ -166,15 +201,48 @@ export function Workspace({
     }
   }
 
+  function updateDraft(value: string) {
+    setDraft(value);
+    if (social.selected) drafts.current[social.selected] = value;
+  }
+
+  function queuePhoto(file: File) {
+    if (!room || busy) return;
+    if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
+      social.setError('Choose a JPEG, PNG or WebP photo.');
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      social.setError('Choose a photo smaller than 5 MB.');
+      return;
+    }
+    social.setError('');
+    setAttachment(file);
+    composerRef.current?.focus();
+  }
+
   async function submit(e: FormEvent) {
     e.preventDefault();
-    if (!draft.trim() || busy) return;
+    if ((!draft.trim() && !attachment) || busy || !room) return;
+    const destination = room.id;
+    const body = draft;
     setBusy(true);
+    social.setError('');
     try {
-      await social.mutate('send_message', { body: draft, reply_to: reply?.id });
-      setDraft('');
-      setReply(null);
-      keepBottom.current = true;
+      if (attachment) await sendPhoto(attachment, body);
+      else await social.mutate('send_message', { room_id: destination, body, reply_to: reply?.id });
+      drafts.current[destination] = '';
+      if (selectedRef.current === destination) {
+        setDraft('');
+        setAttachment(null);
+        setReply(null);
+        keepBottom.current = true;
+        setAwayFromBottom(false);
+        requestAnimationFrame(() => {
+          messageList.current?.scrollTo({ top: messageList.current.scrollHeight });
+          if (matchMedia('(pointer: fine)').matches) composerRef.current?.focus();
+        });
+      }
     } catch (e) {
       social.setError((e as Error).message);
     } finally {
@@ -182,15 +250,18 @@ export function Workspace({
     }
   }
 
-  async function sendPhoto(photo: Blob) {
+  async function sendPhoto(photo: Blob, body = '') {
     if (!room) throw new Error('Open a conversation first.');
+    const destination = room.id;
     const path = guest
       ? await guest.upload(photo)
-      : await uploadImage(photo, 'jr-media', `${room.id}/${profile.id}`);
+      : await uploadImage(photo, 'jr-media', `${destination}/${profile.id}`);
     try {
-      await social.mutate('send_message', { body: '', attachment_path: path, reply_to: reply?.id });
-      setReply(null);
-      keepBottom.current = true;
+      await social.mutate('send_message', { room_id: destination, body, attachment_path: path, reply_to: reply?.id });
+      if (selectedRef.current === destination) {
+        setReply(null);
+        keepBottom.current = true;
+      }
     } catch (e) {
       if (!guest) await db().storage.from('jr-media').remove([path]);
       throw e;
@@ -225,89 +296,82 @@ export function Workspace({
     }
   }
 
-  // Drag and drop handlers
+  // Only file drags activate the drop target; a preview waits for Send.
   function onDragEnter(e: React.DragEvent) {
+    if (!room || !e.dataTransfer.types.includes('Files')) return;
     e.preventDefault();
-    e.stopPropagation();
-    setDragCounter(c => c + 1);
-    if (e.dataTransfer.types.includes('Files')) {
-      setDragActive(true);
-    }
+    dragCounter.current += 1;
+    setDragActive(true);
   }
 
   function onDragOver(e: React.DragEvent) {
+    if (!e.dataTransfer.types.includes('Files')) return;
     e.preventDefault();
-    e.stopPropagation();
-    e.dataTransfer.dropEffect = 'copy';
+    e.dataTransfer.dropEffect = room && !busy ? 'copy' : 'none';
   }
 
   function onDragLeave(e: React.DragEvent) {
     e.preventDefault();
-    e.stopPropagation();
-    setDragCounter(c => {
-      const next = c - 1;
-      if (next <= 0) {
-        setDragActive(false);
-        return 0;
-      }
-      return next;
-    });
+    dragCounter.current = Math.max(0, dragCounter.current - 1);
+    if (!dragCounter.current) setDragActive(false);
   }
 
-  async function onDrop(e: React.DragEvent) {
+  function onDrop(e: React.DragEvent) {
     e.preventDefault();
-    e.stopPropagation();
+    dragCounter.current = 0;
     setDragActive(false);
-    setDragCounter(0);
-    const files = e.dataTransfer.files;
-    if (files && files.length > 0) {
-      const file = files[0];
-      if (file.type.startsWith('image/')) {
-        try {
-          await sendPhoto(file);
-        } catch (err) {
-          social.setError((err as Error).message);
-        }
-      }
-    }
+    const file = e.dataTransfer.files[0];
+    if (file) queuePhoto(file);
   }
 
-  // Swipe gesture handlers
+  // Touch-only reply: vertical scrolling and desktop text selection stay native.
   function handlePointerDown(messageId: string, e: React.PointerEvent) {
-    if (e.button !== 0) return;
-    swipeStartRef.current = { id: messageId, x: e.clientX };
+    if (e.pointerType !== 'touch' || (e.target as HTMLElement).closest('button, input, textarea, a')) return;
+    swipeStartRef.current = { id: messageId, x: e.clientX, y: e.clientY };
   }
 
   function handlePointerMove(messageId: string, e: React.PointerEvent) {
-    if (!swipeStartRef.current || swipeStartRef.current.id !== messageId) return;
-    const diff = e.clientX - swipeStartRef.current.x;
-    const damped = Math.sign(diff) * Math.min(60, Math.abs(diff) * 0.4);
-    setSwipeOffset(prev => ({ ...prev, [messageId]: damped }));
+    const start = swipeStartRef.current;
+    if (!start || start.id !== messageId) return;
+    const dx = e.clientX - start.x;
+    if (Math.abs(e.clientY - start.y) > Math.abs(dx)) {
+      swipeStartRef.current = null;
+      setSwipeOffset({});
+      return;
+    }
+    setSwipeOffset({ [messageId]: Math.min(60, Math.max(0, dx) * 0.5) });
   }
 
   function handlePointerUp(message: ChatMessage) {
-    if (!swipeStartRef.current || swipeStartRef.current.id !== message.id) return;
-    const offset = swipeOffset[message.id] || 0;
-    if (Math.abs(offset) > 35) {
+    if (swipeStartRef.current?.id === message.id && (swipeOffset[message.id] || 0) > 35) {
       setReply(message);
-      document.getElementById('social-composer')?.focus();
+      composerRef.current?.focus();
     }
     swipeStartRef.current = null;
-    setSwipeOffset(prev => ({ ...prev, [message.id]: 0 }));
+    setSwipeOffset({});
   }
 
   // Context Menu handler
   function handleContextMenu(message: ChatMessage, e: React.MouseEvent) {
     e.preventDefault();
+    if (message.deleted) return;
+    const bounds = e.currentTarget.getBoundingClientRect();
     setContextMenu({
-      x: Math.min(window.innerWidth - 210, Math.max(10, e.clientX)),
-      y: Math.min(window.innerHeight - 260, Math.max(10, e.clientY)),
+      x: Math.min(window.innerWidth - 210, Math.max(10, e.clientX || bounds.left)),
+      y: Math.min(window.innerHeight - 260, Math.max(10, e.clientY || bounds.bottom)),
       message,
     });
   }
 
+  const visibleRooms = social.rooms.filter(r =>
+    roomName(r, social, profile.id).toLowerCase().includes(search.toLowerCase()) &&
+    (filter === 'all' || (filter === 'direct' ? r.kind === 'direct' : r.kind !== 'direct'))
+  );
+  const typingNames = social.typing.filter(id => memberProfiles.some(p => p.id === id))
+    .map(id => social.profiles.find(p => p.id === id)?.display_name).filter(Boolean);
+
   return (
-    <div className={`social-app ${room ? 'has-room' : ''} ${panel ? 'has-panel' : ''}`}>
+    <div ref={pointerRef} className={`social-app ${room ? 'has-room' : ''} ${panel ? 'has-panel' : ''} ${world ? 'is-world' : ''}`} >
       {/* Top utility & identity status bar */}
       <header className="social-topbar">
         <a href="/" className="social-brand">
@@ -315,7 +379,7 @@ export function Workspace({
         </a>
         <span className="social-topline">A little closer, together.</span>
         <span role="status" className="social-status">
-          {social.status === 'Live' ? '● Connected' : social.status}
+          {social.status === 'Live' ? 'Connected' : social.status}
         </span>
         <button
           onClick={() => (guest ? guest.edit() : setDialog('profile'))}
@@ -349,6 +413,8 @@ export function Workspace({
               onClick={() => {
                 setWorld(false);
                 setPanel(null);
+                history.replaceState({}, '', '/');
+                if (matchMedia('(max-width: 768px)').matches) social.setSelected(null);
               }}
               title="Chats"
               aria-label="Chats"
@@ -368,16 +434,17 @@ export function Workspace({
             <button
               className="social-nav-item"
               onClick={() => setDialog('photo')}
-              title="Saved"
-              aria-label="Saved"
+              disabled={!room}
+              title="Moments"
+              aria-label="Moments"
             >
-              <BookmarkIcon size={20} />
-              <span className="social-nav-label">Saved</span>
+              <CameraIcon size={20} />
+              <span className="social-nav-label">Moments</span>
             </button>
             <button
               className={`social-nav-item ${panel === 'tasks' ? 'active' : ''}`}
               onClick={() => {
-                if (room) setPanel(p => (p === 'tasks' ? null : 'tasks'));
+                if (room) { setWorld(false); history.replaceState({}, '', '/'); setPanel(p => (p === 'tasks' ? null : 'tasks')); }
               }}
               title="Shared tasks"
               aria-label="Shared tasks"
@@ -392,11 +459,11 @@ export function Workspace({
                 setWorld(true);
                 history.replaceState({}, '', '/world');
               }}
-              title="More"
-              aria-label="More"
+              title="Meadow"
+              aria-label="Meadow"
             >
-              <MoreIcon size={20} />
-              <span className="social-nav-label">More</span>
+              <WorldIcon size={20} />
+              <span className="social-nav-label">Meadow</span>
             </button>
           </div>
           <div className="social-nav-bottom">
@@ -448,10 +515,11 @@ export function Workspace({
             </button>
           </div>
 
-          <nav className="social-room-list">
-            {social.rooms
-              .filter(r => roomName(r, social, profile.id).toLowerCase().includes(search.toLowerCase()))
-              .map(r => {
+          <div className="social-conversation-filters" role="group" aria-label="Filter conversations">
+            {(['all', 'direct', 'groups'] as const).map(value => <button key={value} aria-pressed={filter === value} onClick={() => setFilter(value)}>{value === 'all' ? 'All chats' : value === 'direct' ? 'Personal' : 'Groups'}</button>)}
+          </div>
+          <nav className="social-room-list" aria-label="Conversation list">
+            {visibleRooms.map(r => {
                 const isDirect = r.kind === 'direct';
                 const otherMember = isDirect
                   ? social.members.find(m => m.room_id === r.id && m.user_id !== profile.id)
@@ -465,12 +533,13 @@ export function Workspace({
                   <button
                     key={r.id}
                     className={`social-room ${social.selected === r.id && !world ? 'selected' : ''}`}
+                    aria-current={social.selected === r.id && !world ? 'page' : undefined}
                     data-room-id={r.id}
                     onClick={() => selectRoom(r.id)}
                   >
                     <div className="social-room-avatar-wrap">
                       {isDirect && otherProfile ? (
-                        avatar(otherProfile, 38)
+                        avatar(otherProfile, 44)
                       ) : (
                         <span className="social-room-icon">
                           {r.kind === 'group' ? <UsersIcon size={16} /> : '#'}
@@ -488,22 +557,22 @@ export function Workspace({
                         )}
                       </div>
                       <small>
-                        {r.kind === 'channel'
+                        {drafts.current[r.id] ? `Draft: ${drafts.current[r.id]}` : previews[r.id] || (r.kind === 'channel'
                           ? social.communities.find(c => c.id === r.community_id)?.name
                           : r.kind === 'group'
                           ? 'Group conversation'
                           : guest
                           ? 'Direct · test data'
-                          : 'Private conversation'}
+                          : 'Private conversation')}
                       </small>
                     </div>
                   </button>
                 );
               })}
-            {social.rooms.length === 0 && (
+            {visibleRooms.length === 0 && (
               <div className="social-empty-list">
                 <p className="social-muted">
-                  No active conversations. Start a chat or join a community.
+                  {search ? `No conversations match “${search}”.` : 'No conversations here yet. Start a chat or join a community.'}
                 </p>
               </div>
             )}
@@ -539,7 +608,8 @@ export function Workspace({
           </main>
         ) : (
           <main
-            className="social-main"
+            key={room?.id || 'welcome'}
+            className="social-main social-chat-transition"
             aria-label="Conversation"
             onDragEnter={onDragEnter}
             onDragOver={onDragOver}
@@ -549,9 +619,9 @@ export function Workspace({
             {dragActive && (
               <div className="social-drop-overlay" role="presentation">
                 <div className="social-drop-box">
-                  <div className="social-drop-icon">📸</div>
-                  <div className="social-drop-title">Drop image to send</div>
-                  <p className="social-drop-desc">Photo will be shared directly to this chat</p>
+                  <div className="social-drop-icon"><AttachmentIcon size={30} /></div>
+                  <div className="social-drop-title">Drop a photo here</div>
+                  <p className="social-drop-desc">Preview it before you send</p>
                 </div>
               </div>
             )}
@@ -559,9 +629,9 @@ export function Workspace({
             {room ? (
               <>
                 <header className="social-conversation-heading">
-                  <button className="social-mobile-back" onClick={() => social.setSelected(null)}>
+                  <button className="social-mobile-back" aria-label="Back to conversations" onClick={() => { social.setSelected(null); setPanel(null); }}>
                     <ChevronLeftIcon size={16} />
-                    <span>← Conversations</span>
+                    <span>Conversations</span>
                   </button>
                   <div className="social-heading-lockup">
                     {room.kind === 'direct' && other ? (
@@ -589,6 +659,8 @@ export function Workspace({
                   </div>
                   <div className="social-actions">
                     <button
+                      aria-label="Tasks"
+                      title="Shared tasks"
                       aria-pressed={panel === 'tasks'}
                       onClick={() => setPanel(panel === 'tasks' ? null : 'tasks')}
                       className={`social-action-btn ${panel === 'tasks' ? 'active' : ''}`}
@@ -597,6 +669,8 @@ export function Workspace({
                       <span>Tasks</span>
                     </button>
                     <button
+                      aria-label="Members"
+                      title="Conversation members"
                       aria-pressed={panel === 'members'}
                       onClick={() => setPanel(panel === 'members' ? null : 'members')}
                       className={`social-action-btn ${panel === 'members' ? 'active' : ''}`}
@@ -611,7 +685,10 @@ export function Workspace({
                           setDialog('ai');
                         }}
                         className="social-action-btn"
+                        aria-label="Summarize conversation"
+                        title="Summarize conversation"
                       >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4L12 3Z" /></svg>
                         <span>Summarize</span>
                       </button>
                     )}
@@ -626,6 +703,8 @@ export function Workspace({
                   onScroll={() => {
                     const el = messageList.current!;
                     keepBottom.current = el.scrollHeight - el.scrollTop - el.clientHeight < 120;
+                    setAwayFromBottom(!keepBottom.current);
+                    setContextMenu(null);
                   }}
                 >
                   {social.loading && <p role="status">Loading messages…</p>}
@@ -648,16 +727,22 @@ export function Workspace({
                       <p>Send a message, share a photo, or coordinate a task.</p>
                     </div>
                   )}
-                  {social.messages.map(message => {
+                  {social.messages.map((message, index) => {
                     const sender = social.profiles.find(p => p.id === message.sender_id);
                     const parent = social.messages.find(p => p.id === message.reply_to);
                     const reactions = social.reactions.filter(r => r.message_id === message.id);
                     const offset = swipeOffset[message.id] || 0;
+                    const previous = social.messages[index - 1];
+                    const date = new Date(message.created_at);
+                    const startsDay = !previous || new Date(previous.created_at).toDateString() !== date.toDateString();
+                    const grouped = !startsDay && previous.sender_id === message.sender_id && date.getTime() - new Date(previous.created_at).getTime() < 300000;
+                    const activeReactions = reactions.filter(r => r.active);
 
                     return (
+                      <Fragment key={message.id}>
+                      {startsDay && <div className="social-date-divider"><span>{date.toDateString() === new Date().toDateString() ? 'Today' : date.toLocaleDateString([], { month: 'long', day: 'numeric' })}</span></div>}
                       <article
-                        key={message.id}
-                        className={`social-message ${message.sender_id === profile.id ? 'mine' : ''}`}
+                        className={`social-message ${message.sender_id === profile.id ? 'mine' : ''} ${grouped ? 'grouped' : ''} ${activeReactions.length ? 'has-reactions' : ''}`}
                         data-message-id={message.id}
                         style={{
                           transform: offset ? `translateX(${offset}px)` : undefined,
@@ -667,6 +752,7 @@ export function Workspace({
                         onPointerDown={e => handlePointerDown(message.id, e)}
                         onPointerMove={e => handlePointerMove(message.id, e)}
                         onPointerUp={() => handlePointerUp(message)}
+                        onPointerCancel={() => { swipeStartRef.current = null; setSwipeOffset({}); }}
                         onContextMenu={e => handleContextMenu(message, e)}
                       >
                         <div className="social-message-meta">
@@ -678,7 +764,7 @@ export function Workspace({
                             })}
                           </time>
                           {message.sender_id === profile.id && (
-                            <span className="social-message-tick" title="Delivered">✓✓</span>
+                            <span className="social-message-tick" title="Sent" aria-label="Sent">✓</span>
                           )}
                           {message.edited_at && !message.deleted && <small>edited</small>}
                         </div>
@@ -705,6 +791,7 @@ export function Workspace({
                                 }}
                               >
                                 <input
+                                  autoFocus
                                   aria-label="Edit message text"
                                   required
                                   maxLength={4000}
@@ -725,179 +812,36 @@ export function Workspace({
                                 alt={`Photo from ${sender?.display_name || 'member'}`}
                               />
                             )}
-                            <div className="social-message-actions">
-                              <button
-                                onClick={() => {
-                                  setReply(message);
-                                  document.getElementById('social-composer')?.focus();
-                                }}
-                              >
-                                Reply
-                              </button>
-                              {['👍', '❤️', '😂', '🎉', '👀', '👋'].map(emoji => (
-                                <button
-                                  key={emoji}
-                                  aria-label={`React ${emoji}`}
-                                  aria-pressed={reactions.some(
-                                    r => r.emoji === emoji && r.user_id === profile.id
-                                  )}
-                                  onClick={() =>
-                                    void run(() => social.mutate('react', { message_id: message.id, emoji }))
-                                  }
-                                >
-                                  {emoji}
-                                  {reactions.filter(r => r.emoji === emoji).length || ''}
-                                </button>
-                              ))}
-                              {message.sender_id === profile.id ? (
-                                <>
-                                  <button
-                                    onClick={() => {
-                                      setEditing(message);
-                                      setEditText(message.body);
-                                    }}
-                                  >
-                                    Edit message
-                                  </button>
-                                  <button
-                                    onClick={() =>
-                                      void run(() => social.mutate('delete_message', { message_id: message.id }))
-                                    }
-                                  >
-                                    Delete message
-                                  </button>
-                                </>
-                              ) : (
-                                <button
-                                  onClick={() => {
-                                    const reason = window.prompt(
-                                      'Why are you reporting this message? (3–1000 characters)'
-                                    );
-                                    if (reason)
-                                      void run(() =>
-                                        social.mutate('report', {
-                                          user_id: message.sender_id,
-                                          message_id: message.id,
-                                          reason,
-                                        })
-                                      );
-                                  }}
-                                >
-                                  Report
-                                </button>
-                              )}
-                            </div>
+                            <button className="social-message-menu-trigger" aria-label="Message options" aria-haspopup="menu" aria-expanded={contextMenu?.message.id === message.id} onClick={e => handleContextMenu(message, e)}>···</button>
+                            {activeReactions.length > 0 && <div className="social-message-reactions">
+                              {[...new Set(activeReactions.map(r => r.emoji))].map(emoji => <button key={emoji} aria-label={`React ${emoji}`} aria-pressed={activeReactions.some(r => r.emoji === emoji && r.user_id === profile.id)} onClick={() => void run(() => social.mutate('react', { message_id: message.id, emoji }))}>{emoji}<span>{activeReactions.filter(r => r.emoji === emoji).length}</span></button>)}
+                            </div>}
                           </>
                         )}
                       </article>
+                      </Fragment>
                     );
                   })}
                 </div>
 
-                {contextMenu && (
-                  <div
-                    className="social-context-menu"
-                    style={{ top: `${contextMenu.y}px`, left: `${contextMenu.x}px` }}
-                    role="menu"
-                    aria-label="Message options"
-                  >
-                    <div className="social-context-emojis">
-                      {['👍', '❤️', '😂', '🎉', '👀', '👋'].map(emoji => (
-                        <button
-                          key={emoji}
-                          aria-label={`React ${emoji}`}
-                          onClick={() => {
-                            void run(() =>
-                              social.mutate('react', {
-                                message_id: contextMenu.message.id,
-                                emoji,
-                              })
-                            );
-                            setContextMenu(null);
-                          }}
-                        >
-                          {emoji}
-                        </button>
-                      ))}
-                    </div>
-                    <button
-                      className="social-context-item"
-                      onClick={() => {
-                        setReply(contextMenu.message);
-                        document.getElementById('social-composer')?.focus();
-                        setContextMenu(null);
-                      }}
-                    >
-                      <span>↩</span> Reply
-                    </button>
-                    {contextMenu.message.body && (
-                      <button
-                        className="social-context-item"
-                        onClick={() => {
-                          void navigator.clipboard?.writeText(contextMenu.message.body);
-                          setContextMenu(null);
-                        }}
-                      >
-                        <span>📋</span> Copy text
-                      </button>
-                    )}
-                    {contextMenu.message.sender_id === profile.id ? (
-                      <>
-                        <button
-                          className="social-context-item"
-                          onClick={() => {
-                            setEditing(contextMenu.message);
-                            setEditText(contextMenu.message.body);
-                            setContextMenu(null);
-                          }}
-                        >
-                          <span>✏️</span> Edit message
-                        </button>
-                        <button
-                          className="social-context-item"
-                          onClick={() => {
-                            void run(() =>
-                              social.mutate('delete_message', { message_id: contextMenu.message.id })
-                            );
-                            setContextMenu(null);
-                          }}
-                        >
-                          <span>🗑️</span> Delete message
-                        </button>
-                      </>
-                    ) : (
-                      <button
-                        className="social-context-item"
-                        onClick={() => {
-                          const reason = window.prompt(
-                            'Why are you reporting this message? (3–1000 characters)'
-                          );
-                          if (reason)
-                            void run(() =>
-                              social.mutate('report', {
-                                user_id: contextMenu.message.sender_id,
-                                message_id: contextMenu.message.id,
-                                reason,
-                              })
-                            );
-                          setContextMenu(null);
-                        }}
-                      >
-                        <span>🚩</span> Report message
-                      </button>
-                    )}
-                  </div>
-                )}
+                {contextMenu && <MessageMenu {...contextMenu} userId={profile.id} close={() => setContextMenu(null)} reply={message => { setReply(message); composerRef.current?.focus(); }} edit={message => { setEditing(message); setEditText(message.body); }} mutate={social.mutate} fail={social.setError} />}
+
+                {awayFromBottom && <button className="social-jump-latest" aria-label="Jump to latest messages" onClick={() => {
+                  keepBottom.current = true;
+                  setAwayFromBottom(false);
+                  messageList.current?.scrollTo({ top: messageList.current.scrollHeight, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+                }}>↓ <span>Latest messages</span></button>}
 
                 <div className="social-typing" aria-live="polite">
-                  {social.typing
-                    .filter(id => memberProfiles.some(p => p.id === id))
-                    .map(id => social.profiles.find(p => p.id === id)?.display_name)
-                    .join(', ')}
-                  {social.typing.length > 0 ? ' is typing…' : ''}
+                  {typingNames.length > 0 && <><span className="social-typing-dots" aria-hidden="true"><span /><span /><span /></span><span>{typingNames.join(', ')} {typingNames.length === 1 ? 'is' : 'are'} typing</span></>}
                 </div>
 
-                <form className="social-composer" onSubmit={submit}>
+                <form className="social-composer" onSubmit={submit} aria-label="Message composer">
+                  {attachment && <div className="social-attachment-preview">
+                    {attachmentUrl && <img src={attachmentUrl} alt="Photo ready to send" />}
+                    <div><strong>{attachment.name || 'Pasted photo'}</strong><small>Ready to send · Add a caption below</small></div>
+                    <button type="button" aria-label="Remove attachment" disabled={busy} onClick={() => setAttachment(null)}>×</button>
+                  </div>}
                   {reply && (
                     <div className="social-reply-preview">
                       <div className="social-reply-meta">
@@ -917,7 +861,7 @@ export function Workspace({
                           type="button"
                           aria-label={`Insert ${emoji}`}
                           onClick={() => {
-                            setDraft(d => d + emoji);
+                            updateDraft(draft + emoji);
                             setShowEmoji(false);
                             document.getElementById('social-composer')?.focus();
                           }}
@@ -941,6 +885,8 @@ export function Workspace({
                       Message
                     </label>
                     <textarea
+                      disabled={busy}
+                      ref={composerRef}
                       id="social-composer"
                       aria-label="Message"
                       rows={1}
@@ -948,7 +894,7 @@ export function Workspace({
                       placeholder="Write a message…"
                       value={draft}
                       onChange={e => {
-                        setDraft(e.target.value);
+                        updateDraft(e.target.value);
                         social.sendTyping();
                       }}
                       onPaste={e => {
@@ -959,7 +905,7 @@ export function Workspace({
                               const file = items[i].getAsFile();
                               if (file) {
                                 e.preventDefault();
-                                void sendPhoto(file);
+                                queuePhoto(file);
                                 break;
                               }
                             }
@@ -977,6 +923,8 @@ export function Workspace({
                       type="button"
                       className="social-composer-emoji-btn"
                       onClick={() => setShowEmoji(v => !v)}
+                      disabled={busy}
+                      aria-expanded={showEmoji}
                       aria-label="Insert emoji"
                       title="Insert emoji"
                     >
@@ -984,15 +932,15 @@ export function Workspace({
                     </button>
                     <button
                       className="social-primary social-composer-send"
-                      disabled={busy || !draft.trim()}
+                      disabled={busy || (!draft.trim() && !attachment)}
                       aria-label="Send"
                     >
                       <SendIcon size={14} />
-                      <span>Send</span>
+                      <span>{busy ? 'Sending…' : 'Send'}</span>
                     </button>
                   </div>
                   <div className="social-composer-hint">
-                    <span>Return to send · Shift+Return for new line · Drag & drop or paste photos</span>
+                    <span>Enter to send · Shift+Enter for a new line</span>
                   </div>
                 </form>
               </>
