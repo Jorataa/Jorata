@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { RealtimeChannel } from '@supabase/supabase-js';
 import { action, check, db } from './client';
 import type { ChatMessage, Community, CommunityMember, Member, Profile, Reaction, Room, Task } from './types';
 
@@ -23,7 +22,6 @@ export function useSocial(userId: string) {
   const roomVersion = useRef(0);
   const indexVersion = useRef(0);
   const limit = useRef(100);
-  const roomChannel = useRef<RealtimeChannel | null>(null);
   const typingAt = useRef(0);
 
   const loadIndex = useCallback(async () => {
@@ -36,12 +34,14 @@ export function useSocial(userId: string) {
       s.from('jr_communities').select('*').order('created_at'),
       s.from('jr_community_members').select('*'),
       s.from('jr_blocks').select('blocked_id'),
+      s.from('jr_activity').select('user_id,last_seen'),
     ]);
     results.forEach(check);
     if(indexVersion.current!==version)return;
     setProfiles(results[0].data as Profile[]); setRooms(results[1].data as Room[]); setMembers(results[2].data as Member[]);
     setCommunities(results[3].data as Community[]); setCommunityMembers(results[4].data as CommunityMember[]);
     setBlocks(results[5].data!.map(row=>row.blocked_id));
+    setOnline(results[6].data!.filter(row=>Date.now()-Date.parse(row.last_seen)<65000).map(row=>row.user_id));
     if(roomRef.current && !results[1].data!.some(r=>r.id===roomRef.current)) { setSelected(null); setMessages([]); setTasks([]); }
   },[userId]);
   const loadRoom = useCallback(async () => {
@@ -72,27 +72,28 @@ export function useSocial(userId: string) {
       setStatus(value==='SUBSCRIBED'?'Live':value==='CHANNEL_ERROR'||value==='TIMED_OUT'?'Reconnecting':'Connecting');
       if(value==='SUBSCRIBED') update();
     });
-    const presence=db().channel('jr-presence',{config:{private:true,presence:{key:userId}}});
-    presence.on('presence',{event:'sync'},()=>{ if(active) setOnline(Object.keys(presence.presenceState())); });
-    presence.subscribe(async value=>{ if(value==='SUBSCRIBED') await presence.track({user_id:userId}); });
+    const activity=db().channel(`jr-activity:${userId}`).on('postgres_changes',{event:'*',schema:'public',table:'jr_activity'},()=>{
+      void db().from('jr_activity').select('user_id,last_seen').then(result=>{if(active&&!result.error)setOnline(result.data.filter(row=>Date.now()-Date.parse(row.last_seen)<65000).map(row=>row.user_id));});
+    }).subscribe();
+    const touch=()=>{if(active)void db().rpc('jr_touch',{room_id:roomRef.current,typing:false});};
+    touch();const heartbeat=setInterval(touch,30000);
     const poll=setInterval(update,12000);
     const visible=()=>{ if(document.visibilityState==='visible') update(); };
     document.addEventListener('visibilitychange',visible); window.addEventListener('online',update);
-    return ()=>{active=false;clearInterval(poll);document.removeEventListener('visibilitychange',visible);window.removeEventListener('online',update);void db().removeChannel(changes);void db().removeChannel(presence);};
+    return ()=>{active=false;clearInterval(poll);clearInterval(heartbeat);document.removeEventListener('visibilitychange',visible);window.removeEventListener('online',update);void db().removeChannel(changes);void db().removeChannel(activity);};
   },[refresh,userId]);
   useEffect(() => {
     setMessages([]);setReactions([]);setTasks([]);setTyping([]);limit.current=100;
     if(!selected) return;
     setLoading(true);
     loadRoom().catch(e=>setError(e.message)).finally(()=>setLoading(false));
-    const lastTyping=new Map<string,number>();
-    const channel=db().channel(`jr-room:${selected}`,{config:{private:true}});
-    roomChannel.current=channel;
-    channel.on('broadcast',{event:'typing'},({payload})=>{
-      if(typeof payload.user_id==='string'&&payload.user_id!==userId) lastTyping.set(payload.user_id,Date.now());
-    }).subscribe(value=>{if(value==='SUBSCRIBED') loadRoom().catch(e=>setError(e.message));});
-    const timer=setInterval(()=>{setTyping([...lastTyping].filter(([,at])=>Date.now()-at<3500).map(([id])=>id));},800);
-    return ()=>{clearInterval(timer);roomChannel.current=null;void db().removeChannel(channel);};
+    typingAt.current=0;
+    const lastTyping=new Map<string,number>();let active=true;
+    const updateTyping=()=>{void db().from('jr_activity').select('user_id,typing_until').eq('room_id',selected).then(result=>{if(!active||result.error)return;lastTyping.clear();for(const row of result.data||[])if(row.user_id!==userId&&row.typing_until)lastTyping.set(row.user_id,Date.parse(row.typing_until));});};
+    void db().rpc('jr_touch',{room_id:selected,typing:false});
+    const channel=db().channel(`jr-typing:${selected}`).on('postgres_changes',{event:'*',schema:'public',table:'jr_activity',filter:`room_id=eq.${selected}`},updateTyping).subscribe(value=>{if(value==='SUBSCRIBED'){updateTyping();void loadRoom().catch(e=>setError(e.message));}});
+    const timer=setInterval(()=>{setTyping([...lastTyping].filter(([,until])=>Date.now()<until).map(([id])=>id));},500);
+    return ()=>{active=false;clearInterval(timer);void db().removeChannel(channel);};
   },[selected,loadRoom,userId]);
   async function mutate(name:string,payload:Record<string,unknown>={}) {
     const result=await action(name,{room_id:roomRef.current,...payload});
@@ -108,7 +109,7 @@ export function useSocial(userId: string) {
   function sendTyping() {
     if(Date.now()-typingAt.current<1500) return;
     typingAt.current=Date.now();
-    void roomChannel.current?.send({type:'broadcast',event:'typing',payload:{user_id:userId}});
+    if(roomRef.current)void db().rpc('jr_touch',{room_id:roomRef.current,typing:true});
   }
   return {profiles,rooms,members,communities,communityMembers,blocks,selected,setSelected,messages,reactions,tasks,online,typing,status,error,setError,loading,mutate,refresh,searchProfiles,sendTyping,
     loadOlder:async()=>{limit.current+=100;await loadRoom();},

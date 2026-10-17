@@ -5,15 +5,18 @@ import { fileURLToPath } from 'node:url';
 import { createGameServer } from './game-server.ts';
 import { createGuestServer } from './guest-server.ts';
 import aiHandler from '../api/ai.ts';
+import moderationHandler from '../api/moderation.ts';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const app = express();
-try { process.loadEnvFile(resolve(root, '.env.local')); } catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
+for(const file of ['.env.local','.env.ai'])try { process.loadEnvFile(resolve(root, file)); } catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
 const http = createServer(app);
 const game = createGameServer(http, resolve(process.env.WORLD_FILE || `${root}/data/meadow.json`));
 const guests=createGuestServer(app,game.io,resolve(process.env.GUEST_FILE || `${root}/data/development-social.json`));
 app.all('/api/dev/{*path}',(_req,res)=>res.status(404).json({error:'Development services are unavailable.'}));
 app.get('/api/health', (_req, res) => res.json({ ok: true, world: 'The Meadow', players: game.players.size, revision: game.world.revision }));
-app.post('/api/ai', express.json({limit:'8kb'}), async (req,res) => { await aiHandler(req,res); });
+app.post('/api/moderation', express.json({limit:'16kb'}), async(req,res)=>{await moderationHandler(req,res);});
+app.post('/api/ai', express.json({limit:'16kb'}), async (req,res) => { await aiHandler(req,res); });
+app.use((error:unknown,_req:express.Request,res:express.Response,_next:express.NextFunction)=>{res.status(400).json({error:'Invalid or oversized JSON request.',code:'INVALID_BODY'});});
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(resolve(root, 'dist')));
   app.get('/{*path}', (_req, res) => res.sendFile(resolve(root, 'dist/index.html')));
