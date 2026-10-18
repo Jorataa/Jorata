@@ -1,0 +1,115 @@
+/* Reference: design/Premium Dark Chat Dashboard.png. Existing compact chat stays intact. */
+:root { --rail-width:128px; }
+:root[data-jorata-theme='dark'] {
+  --social-bg-canvas:#0c1118;
+  --social-bg-sidebar:#131a23;
+  --social-bg-surface:#ffffff08;
+  --social-bg-card:#1c2430;
+  --social-bg-elevated:#232c39;
+  --social-bg-hover:#ffffff09;
+  --social-bg-active:#526da92b;
+  --social-bg-chat:#111721;
+  --social-border-subtle:#b6c7e00c;
+  --social-border-light:#c1d1f01b;
+  --social-border-medium:#c1d1f030;
+  --social-border-focus:#5b85f3;
+  --social-accent:#8baaff;
+  --social-accent-hover:#a4bcff;
+  --social-accent-dim:#4473fa1f;
+  --social-accent-border:#7192f54d;
+  --social-text-primary:#edf0f7;
+  --social-text-secondary:#a9b2c2;
+  --social-text-tertiary:#8995a8;
+  --social-bubble-theirs:#232b37;
+  --social-bubble-mine:#293b5b;
+  --social-bubble-theirs-border:#ffffff0b;
+  --social-bubble-mine-border:#9eb8ff15;
+  --social-glass:#101720d6;
+  --social-glass-floating:#1b2432ed;
+  --social-glass-edge:#bed4ff1c;
+}
+:root[data-jorata-theme='dark'] .social-app { background:#0c1118 url('/images/jorata-atmosphere.png') center/cover no-repeat; }
+.social-workspace-body { padding:8px; gap:6px; }
+.jorata-rail { width:var(--rail-width); flex:0 0 var(--rail-width); display:flex; flex-direction:column; padding:20px 8px 10px; background:var(--social-glass); border:1px solid var(--social-border-light); border-radius:18px; backdrop-filter:blur(16px) saturate(125%); box-shadow:inset 0 1px 2px var(--social-glass-edge),0 8px 30px #0002; z-index:4; }
+.social-app .jorata-rail-brand { flex-direction:column; border:0; background:none; gap:9px; padding:4px 0 26px; font-size:20px; font-weight:600; letter-spacing:-.7px; }
+.jorata-rail-brand .social-brand-mark { width:40px; height:42px; border-radius:12px; font-size:34px; background:#3164ef; color:white; box-shadow:inset 0 1px 1px #ffffff55,0 4px 16px #163a9622; }
+.jorata-rail-links { display:flex; flex-direction:column; gap:8px; }
+.social-app .jorata-rail-links button { width:100%; justify-content:flex-start; gap:9px; padding:12px 10px; min-height:44px; border:1px solid transparent; background:none; color:var(--social-text-secondary); font-size:12px; border-radius:12px; }
+.social-app .jorata-rail-links button:hover { background:var(--social-bg-hover); color:var(--social-text-primary); }
+.social-app .jorata-rail-links button[aria-current='page'] { background:#3159cf30; border-color:#6f91ff12; color:var(--social-text-primary); }
+.social-app .jorata-ai-entry { margin-top:auto; width:100%; border-color:var(--social-border-light); background:var(--social-accent-dim); justify-content:flex-start; padding:12px 7px; gap:8px; text-align:left; font-size:12px; border-radius:14px; box-shadow:inset 0 1px var(--social-glass-edge); }
+.jorata-ai-entry > span:last-child { white-space:nowrap; }
+.jorata-ai-entry small { display:block; font-size:9px; color:var(--social-text-secondary); margin-top:2px; }
+.jorata-ai-symbol { width:30px; height:30px; display:grid; place-items:center; color:#e3eaff; background:#3164ef; border:1px solid #8da9ff55; border-radius:50%; box-shadow:0 0 16px #2453e638,inset 0 1px 3px #d6e0ff55; flex:none; }
+.jorata-rail-account { display:flex; align-items:center; justify-content:space-between; margin-top:14px; padding:0 6px; }
+.social-app .jorata-rail-account > button { border:0; background:none; padding:4px; color:var(--social-text-secondary); }
+.social-sidebar { border:1px solid var(--social-border-light); border-radius:18px; box-shadow:inset 0 1px 2px var(--social-glass-edge),0 8px 30px #0002; overflow:hidden; }
+.social-sidebar-header { padding:20px 16px 0; }
+.social-sidebar-header .social-brand-row { display:none; }
+.social-inbox-heading { height:34px; margin-bottom:14px; }
+.social-inbox-heading h1 { font-size:23px; font-weight:550; letter-spacing:-.65px; }
+.social-app .social-new-chat-btn { color:var(--social-text-primary); }
+.social-search-bar { height:36px; border:1px solid var(--social-border-light); background:var(--social-bg-surface); border-radius:11px; }
+.social-list-tabs { padding-top:10px; gap:18px; }
+.social-app .social-list-tabs button { font-size:11px; padding-block:10px; }
+.social-room-list { padding:6px; }
+.social-app .social-room { border-radius:12px; min-height:62px; padding:10px 9px; gap:10px; }
+.social-room.selected::before { display:none; }
+.social-room-row { margin-bottom:3px; }
+.social-room-row strong { font-weight:550; letter-spacing:-.15px; }
+.social-room-preview > span:first-child { font-size:12px; }
+.social-room:not(.selected)::after { content:''; position:absolute; height:1px; background:var(--social-border-subtle); left:57px; right:8px; bottom:0; }
+.social-room-icon { background:var(--social-accent-dim) !important; color:var(--social-accent) !important; }
+.social-sidebar-footer .social-navigation { display:none; }
+.social-sidebar-footer { padding:10px 10px 4px; }
+.social-app .social-sidebar-divider { left:calc(var(--rail-width) + var(--sidebar-width,288px) + 11px); }
+.social-app .social-panel-backdrop { left:calc(var(--rail-width) + var(--sidebar-width,288px) + 20px); }
+.social-main { border-radius:15px; overflow:hidden; }
+:root[data-jorata-theme='dark'] .social-main { background:#0c121a28; }
+:root[data-jorata-theme='dark'] .social-conversation-content { background:#0b111b9c; }
+.social-conversation-heading { background:var(--social-glass); }
+:root[data-jorata-theme='dark'] .social-app .social-primary { background:#3164ef; color:#fff; border:1px solid #6b92ff66; box-shadow:inset 0 1px #ffffff17,0 4px 12px #102e8617; }
+:root[data-jorata-theme='dark'] .social-app .social-primary:hover { background:#4071fa; }
+:root[data-jorata-theme='dark'] .social-composer { background:#19212deb; border-color:#b8ccff24; backdrop-filter:blur(12px); box-shadow:inset 0 1px #ffffff05,0 8px 24px #0002; }
+.social-message { box-shadow:0 2px 4px #00000008; }
+.social-welcome { align-items:center; padding:32px; text-align:left; }
+.jorata-welcome-copy { width:380px; max-width:100%; margin-left:14%; }
+.social-welcome .jorata-greeting { font-size:14px; text-transform:uppercase; letter-spacing:1.1px; margin:0 0 6px; }
+.social-welcome h2 { font-size:clamp(36px,4.5vw,62px); line-height:1.12; letter-spacing:-2.5px; font-weight:550; margin-bottom:18px; }
+.social-welcome h2 span { color:#396eff; }
+.social-welcome .jorata-welcome-copy > p:not(.jorata-greeting) { font-size:16px; line-height:1.65; margin-bottom:28px; color:var(--social-text-secondary); }
+.social-welcome .social-actions { gap:12px; }
+.social-welcome .social-actions button { padding:12px 17px; border-radius:18px; font-size:13px; background:var(--social-glass); backdrop-filter:blur(12px); }
+.jorata-ai-intro { padding:14px 0 2px; color:var(--social-accent); }
+.jorata-ai-intro h3 { color:var(--social-text-primary); margin-top:12px; }
+.social-detail-panel { border-radius:18px 0 0 18px; }
+@media (max-width:1000px) and (min-width:701px) {
+  :root { --rail-width:72px; }
+  .jorata-rail { padding-inline:6px; }
+  .social-app .jorata-rail-brand { font-size:13px; }
+  .jorata-rail-links button span,.jorata-ai-entry > span:last-child { display:none; }
+  .social-app .jorata-rail-links button,.social-app .jorata-ai-entry { justify-content:center; }
+  .jorata-rail-account { flex-direction:column; gap:8px; }
+  .jorata-welcome-copy { margin-left:0; }
+}
+@media (max-width:700px) {
+  .social-workspace-body { padding:0; gap:0; }
+  .jorata-rail { width:100%; height:58px; position:absolute; bottom:0; padding:5px 7px max(5px,env(safe-area-inset-bottom)); border-radius:0; flex-direction:row; align-items:center; gap:4px; }
+  .jorata-rail-brand,.jorata-rail-account { display:none !important; }
+  .jorata-rail-links { display:contents; }
+  .social-app .jorata-rail-links button { flex:1; width:auto; justify-content:center; min-height:42px; padding:5px; }
+  .jorata-rail-links button span { display:none; }
+  .social-app .jorata-ai-entry { margin:0; width:auto; padding:6px 8px; min-height:42px; }
+  .jorata-ai-entry small { display:none; }
+  .jorata-ai-symbol { width:24px; height:24px; }
+  .jorata-ai-symbol svg { width:16px; }
+  .social-sidebar { border:0; border-radius:0; padding-bottom:58px; }
+  .social-sidebar-header { padding:14px 14px 0; }
+  .social-sidebar-header .social-brand-row { display:flex; height:26px; margin-bottom:14px; }
+  .social-sidebar-header .social-brand { font-size:17px !important; }
+  .social-inbox-heading h1 { font-size:21px; }
+  .has-room .jorata-rail,.has-secondary .jorata-rail { display:none; }
+  .social-main { border-radius:0; }
+  .social-app .social-panel-backdrop { left:0; }
+  .social-main,.social-conversation-content { background:var(--social-bg-chat) !important; }
+}

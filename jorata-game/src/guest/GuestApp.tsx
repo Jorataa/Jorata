@@ -3,6 +3,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from "react";
@@ -17,7 +18,9 @@ import {
   type GuestTransport,
   type LiveSnapshot,
 } from "./transport";
-import type { useSocial } from "../social/useSocial";
+import { useReadCursors, type useSocial } from "../social/useSocial";
+import type { ConversationSummary } from "../social/types";
+import { SocialDialog } from "../social/SocialDialog";
 import GuestWorld from "./GuestWorld";
 const Context = createContext<GuestTransport | null>(null);
 export function useGuestTransport() {
@@ -54,8 +57,10 @@ export function GuestApp() {
   if (error)
     return (
       <main className="social-loading">
-        <h1>JORATA</h1>
+        <span className="loading-brand" aria-hidden="true">J</span>
+        <h1>Let's get you connected</h1>
         <p role="alert">{error}</p>
+        <button onClick={() => { setError(""); restart(); }}>Try again</button>
         <button
           onClick={() => {
             setError("");
@@ -70,7 +75,10 @@ export function GuestApp() {
   if (!transport)
     return (
       <main className="social-loading" role="status">
-        Opening JORATA workspace…
+        <span className="loading-brand" aria-hidden="true">J</span>
+        <h1>Jorata</h1>
+        <p>Opening your conversations…</p>
+        <span className="loading-dots" aria-hidden="true"><i /><i /><i /></span>
       </main>
     );
   return (
@@ -84,7 +92,7 @@ export function GuestApp() {
 function GuestWorkspace({ restart }: { restart: () => void }) {
   const transport = useGuestTransport(),
     [data, setData] = useState<LiveSnapshot | null>(null),
-    [selected, setSelected] = useState<string | null>("guest-lobby"),
+    [selected, setSelected] = useState<string | null>(null),
     [error, setError] = useState(""),
     [status, setStatus] = useState("Connecting"),
     [typingAt, setTypingAt] = useState<
@@ -97,6 +105,31 @@ function GuestWorkspace({ restart }: { restart: () => void }) {
     [busy, setBusy] = useState(false);
   const selectedRef = useRef(selected),
     lastTyping = useRef(0);
+  const {readCursors,markThrough}=useReadCursors(`guest:${transport.mode}:${transport.id}`);
+  const conversationSummaries=useMemo(()=>{
+    const summaries:Record<string,ConversationSummary>={};
+    for(const message of data?.messages || []) {
+      const current=summaries[message.room_id];
+      if(!current || Date.parse(message.created_at)>=Date.parse(current.createdAt)) {
+        summaries[message.room_id]={body:message.body,senderId:message.sender_id,createdAt:message.created_at,attachment:Boolean(message.attachment_path),deleted:message.deleted};
+      }
+    }
+    return summaries;
+  },[data?.messages]);
+  const unreadCounts=useMemo(()=>{
+    const counts:Record<string,number>={};
+    for(const message of data?.messages || []) {
+      if(message.sender_id===transport.id || message.deleted)continue;
+      const cursor=readCursors[message.room_id];
+      if(!cursor || Date.parse(message.created_at)>Date.parse(cursor)) counts[message.room_id]=(counts[message.room_id] || 0)+1;
+    }
+    return counts;
+  },[data?.messages,readCursors,transport.id]);
+  const markRead=useCallback((roomId:string)=>{
+    if(document.visibilityState!=="visible" || selectedRef.current!==roomId)return;
+    const latest=conversationSummaries[roomId];
+    if(latest)markThrough(roomId,latest.createdAt);
+  },[conversationSummaries,markThrough]);
   selectedRef.current = selected;
   useEffect(() => {
     const off = transport.subscribe(setData),
@@ -136,7 +169,10 @@ function GuestWorkspace({ restart }: { restart: () => void }) {
   if (!data)
     return (
       <main className="social-loading">
-        <p role="status">{status} · Loading temporary workspace…</p>
+        <span className="loading-brand" aria-hidden="true">J</span>
+        <h1>Jorata</h1>
+        <p role="status">{status === "Connecting" ? "Loading your conversations…" : status}</p>
+        <span className="loading-dots" aria-hidden="true"><i /><i /><i /></span>
         <button
           onClick={() => {
             forgetIdentity(transport.mode);
@@ -173,6 +209,10 @@ function GuestWorkspace({ restart }: { restart: () => void }) {
     error,
     setError,
     loading: false,
+    indexLoading: false,
+    conversationSummaries,
+    unreadCounts,
+    markRead,
     mutate,
     refresh: transport.refresh,
     searchProfiles: async (query: string) =>
@@ -202,6 +242,7 @@ function GuestWorkspace({ restart }: { restart: () => void }) {
   }
   const controls = (
     <>
+      <p className="social-guest-help">Open another tab for a separate guest, or create one here. Switch identities below; conversations stay saved {transport.mode === 'development' ? 'on this local server' : 'in this browser demo only'}.</p>
       <button
         onClick={() => {
           setName(profile.display_name);
@@ -275,14 +316,7 @@ function GuestWorkspace({ restart }: { restart: () => void }) {
         }}
       />
       {profileOpen && (
-        <div
-          className="social-modal"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Temporary profile"
-        >
-          <section className="social-dialog">
-            <h2>Temporary profile</h2>
+        <SocialDialog title="Temporary profile" close={() => setProfileOpen(false)}>
             <p>
               Your username is @{profile.username}. This is a test identity, not
               a verified account.
@@ -324,8 +358,7 @@ function GuestWorkspace({ restart }: { restart: () => void }) {
                 Cancel
               </button>
             </form>
-          </section>
-        </div>
+        </SocialDialog>
       )}
     </>
   );

@@ -8,21 +8,44 @@ import { TouchControls } from './components/BuildToolbar';
 import { SnapshotModal } from './components/SnapshotModal';
 import { PlayerProfileModal } from './components/PlayerProfileModal';
 import { ControlsHelpModal } from './components/ControlsHelpModal';
+import { NavigationRail } from './components/NavigationRail';
+import { CommunitySidebar } from './components/CommunitySidebar';
+import { TaskBoard } from './components/TaskBoard';
+import { CameraStudioModal } from './components/CameraStudioModal';
+import { MobileTabBar } from './components/MobileTabBar';
+import { taskStore } from './game/taskStore';
 import { useGame } from './useGame';
-import { sounds } from './game/audio';
 
 export function App() {
   const game = useGame();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const [selected, setSelected] = useState(4); // Default to Timber
+  // App View Modes: 'split' | 'world' | 'chat' | 'tasks' | 'camera'
+  const [activeView, setActiveView] = useState<'split' | 'world' | 'chat' | 'tasks' | 'camera'>('split');
+  const [activeChannel, setActiveChannel] = useState('general');
+
+  // Building tools
+  const [selected, setSelected] = useState(4); // Default: Timber
   const [mode, updateMode] = useState<'place' | 'remove'>('place');
 
-  // Modal states
+  // Modals & Overlays
   const [inspectedPlayer, setInspectedPlayer] = useState<Player | null>(null);
   const [isSnapshotOpen, setIsSnapshotOpen] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
+  const [isCameraStudioOpen, setIsCameraStudioOpen] = useState(false);
   const [showEmotes, setShowEmotes] = useState(false);
+
+  // Unread & Tasks counts
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [openTasksCount, setOpenTasksCount] = useState(() => {
+    return taskStore.getTasks().filter(t => !t.completed).length;
+  });
+
+  useEffect(() => {
+    return taskStore.subscribe(tasks => {
+      setOpenTasksCount(tasks.filter(t => !t.completed).length);
+    });
+  }, []);
 
   function select(id: number) {
     setSelected(id);
@@ -42,11 +65,12 @@ export function App() {
     }
   }, [game.joined]);
 
-  // Global ESC key listener to close modals
+  // Global ESC key listener to close active overlays
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'Escape') {
-        if (isSnapshotOpen) setIsSnapshotOpen(false);
+        if (isCameraStudioOpen) setIsCameraStudioOpen(false);
+        else if (isSnapshotOpen) setIsSnapshotOpen(false);
         else if (inspectedPlayer) setInspectedPlayer(null);
         else if (isHelpOpen) setIsHelpOpen(false);
         else if (showEmotes) setShowEmotes(false);
@@ -55,70 +79,166 @@ export function App() {
     }
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isSnapshotOpen, inspectedPlayer, isHelpOpen, showEmotes]);
+  }, [isCameraStudioOpen, isSnapshotOpen, inspectedPlayer, isHelpOpen, showEmotes]);
 
   const me = game.players.find(player => player.id === game.model.id);
 
   function handleMention(username: string) {
-    window.dispatchEvent(new CustomEvent('jorata-open-chat', { detail: { text: `@${username} ` } }));
+    const chatInput = document.getElementById('chat-input') as HTMLInputElement | null;
+    if (chatInput) {
+      chatInput.value = `@${username} `;
+      chatInput.focus();
+    }
+  }
+
+  function handleShareToChat(text: string, mediaUrl?: string) {
+    if (mediaUrl) {
+      game.chat(`${text} [Attachment: Snap]`);
+    } else {
+      game.chat(text);
+    }
   }
 
   return (
-    <div className="game-viewport-container">
-      {/* 1. Edge-to-Edge 2D Game Canvas */}
-      <GameCanvas
-        model={game.model}
-        sendInput={game.sendInput}
-        edit={game.edit}
-        select={select}
-        onInspectPlayer={player => setInspectedPlayer(player)}
-        onToggleEmotes={() => setShowEmotes(prev => !prev)}
-        onSnapshot={() => setIsSnapshotOpen(true)}
-        onToggleMode={() => setMode(game.model.mode === 'remove' ? 'place' : 'remove')}
-        canvasRef={canvasRef}
-      />
-
-      {/* 2. Floating Tactile HUD Layer */}
+    <div className={`jorata-app-shell view-${activeView}`}>
+      {/* 1. Global Navigation Rail (Desktop) */}
       {game.joined && (
-        <GameHUD
-          status={game.status}
-          revision={game.revision}
-          players={game.players}
-          me={me}
-          selected={selected}
-          mode={mode}
-          select={select}
-          setMode={setMode}
-          onRespawn={() => {
-            game.respawn();
-            document.getElementById('game-canvas')?.focus();
+        <NavigationRail
+          activeView={activeView}
+          setActiveView={view => {
+            if (view === 'camera') setIsCameraStudioOpen(true);
+            else setActiveView(view);
           }}
-          onOpenSnapshot={() => setIsSnapshotOpen(true)}
+          unreadChatCount={unreadCount}
+          openTasksCount={openTasksCount}
+          me={me}
+          onOpenProfile={() => me && setInspectedPlayer(me)}
           onOpenHelp={() => setIsHelpOpen(true)}
-          onSendChat={game.chat}
-          showEmotes={showEmotes}
-          setShowEmotes={setShowEmotes}
         />
       )}
 
-      {/* 3. Floating Collapsible Social Center */}
+      {/* 2. Main Work Area */}
+      <main className="app-workspace-layout">
+        {/* Community & Channels Sidebar (Visible in Split, Chat, Tasks) */}
+        {game.joined && (activeView === 'split' || activeView === 'chat' || activeView === 'tasks') && (
+          <CommunitySidebar
+            activeChannel={activeChannel}
+            setActiveChannel={ch => {
+              setActiveChannel(ch);
+              if (ch === 'tasks') setActiveView('tasks');
+              else if (ch === 'world') setActiveView('world');
+              else if (activeView === 'tasks') setActiveView('split');
+            }}
+            players={game.players}
+            me={me}
+            onInspectPlayer={p => setInspectedPlayer(p)}
+            onOpenTasks={() => setActiveView('tasks')}
+            onOpenWorld={() => setActiveView('world')}
+            unreadCount={unreadCount}
+            openTasksCount={openTasksCount}
+          />
+        )}
+
+        {/* Center Panel: Chat or Tasks */}
+        {game.joined && (activeView === 'split' || activeView === 'chat') && (
+          <section className="center-messaging-pane" aria-label="Messaging pane">
+            <ChatPanel
+              messages={game.messages}
+              players={game.players}
+              connected={game.status === 'Live'}
+              send={game.chat}
+              localPlayer={me || null}
+              onInspectPlayer={p => setInspectedPlayer(p)}
+              onOpenSnapStudio={() => setIsCameraStudioOpen(true)}
+              channelName={activeChannel}
+              isCompactMode={activeView === 'split'}
+            />
+          </section>
+        )}
+
+        {/* Task Board (When Tasks view active) */}
+        {game.joined && activeView === 'tasks' && (
+          <section className="center-tasks-pane" aria-label="Tasks pane">
+            <TaskBoard
+              me={me}
+              onShareToChat={handleShareToChat}
+              onClose={() => setActiveView('split')}
+            />
+          </section>
+        )}
+
+        {/* Right / Sandbox World Stage */}
+        <section
+          className={`game-world-stage ${activeView === 'world' ? 'stage-fullscreen' : ''} ${activeView === 'chat' || activeView === 'tasks' ? 'stage-hidden-mobile' : ''}`}
+          aria-label="Meadow Sandbox Game"
+        >
+          <GameCanvas
+            model={game.model}
+            sendInput={game.sendInput}
+            edit={game.edit}
+            select={select}
+            onInspectPlayer={player => setInspectedPlayer(player)}
+            onToggleEmotes={() => setShowEmotes(prev => !prev)}
+            onSnapshot={() => setIsSnapshotOpen(true)}
+            onToggleMode={() => setMode(mode === 'remove' ? 'place' : 'remove')}
+            canvasRef={canvasRef}
+          />
+
+          {/* Floating HUD over canvas */}
+          {game.joined && (
+            <GameHUD
+              status={game.status}
+              revision={game.revision}
+              players={game.players}
+              me={me}
+              selected={selected}
+              mode={mode}
+              select={select}
+              setMode={setMode}
+              onRespawn={() => {
+                game.respawn();
+                document.getElementById('game-canvas')?.focus();
+              }}
+              onOpenSnapshot={() => setIsCameraStudioOpen(true)}
+              onOpenHelp={() => setIsHelpOpen(true)}
+              onSendChat={game.chat}
+              showEmotes={showEmotes}
+              setShowEmotes={setShowEmotes}
+            />
+          )}
+
+          {/* Touch Controls on mobile inside world stage */}
+          {game.joined && <TouchControls />}
+        </section>
+      </main>
+
+      {/* 3. Mobile Bottom Tab Bar */}
       {game.joined && (
-        <ChatPanel
-          messages={game.messages}
-          players={game.players}
-          connected={game.status === 'Live'}
-          send={game.chat}
-          localPlayer={me || null}
-          onInspectPlayer={player => setInspectedPlayer(player)}
+        <MobileTabBar
+          activeView={activeView}
+          setActiveView={view => {
+            if (view === 'camera') setIsCameraStudioOpen(true);
+            else setActiveView(view);
+          }}
+          unreadChatCount={unreadCount}
+          openTasksCount={openTasksCount}
         />
       )}
 
-      {/* 4. Touch Controls for Mobile Devices */}
-      {game.joined && <TouchControls />}
-
-      {/* 5. Modals & Overlays */}
+      {/* 4. Modals & Overlays */}
       {!game.joined && <JoinScreen join={game.join} status={game.status} />}
 
+      {/* Camera Studio Modal */}
+      {isCameraStudioOpen && (
+        <CameraStudioModal
+          canvas={canvasRef.current}
+          username={me?.username || 'Explorer'}
+          onSendToChat={handleShareToChat}
+          onClose={() => setIsCameraStudioOpen(false)}
+        />
+      )}
+
+      {/* Polaroid Snap Quick Preview */}
       {isSnapshotOpen && (
         <SnapshotModal
           canvas={canvasRef.current}
@@ -129,6 +249,7 @@ export function App() {
         />
       )}
 
+      {/* Explorer Passport Modal */}
       {inspectedPlayer && (
         <PlayerProfileModal
           player={inspectedPlayer}
@@ -139,20 +260,22 @@ export function App() {
         />
       )}
 
+      {/* Controls Field Guide */}
       {isHelpOpen && <ControlsHelpModal onClose={() => setIsHelpOpen(false)} />}
 
-      {/* 6. Notifications & Reconnect Banners */}
-      {game.notice && (
-        <div className="toast-notification" role="alert">
-          <span className="toast-icon">ℹ</span>
-          <span>{game.notice}</span>
-        </div>
-      )}
-
+      {/* Reconnect Banner */}
       {game.joined && game.status !== 'Live' && (
         <div className="reconnect-banner" role="alert">
           <span className="reconnect-spinner">⏳</span>
           <span>Reconnecting to the meadow… Your world will refresh once reconnected.</span>
+        </div>
+      )}
+
+      {/* Toast Notice */}
+      {game.notice && (
+        <div className="toast-notification" role="alert">
+          <span className="toast-icon">ℹ</span>
+          <span>{game.notice}</span>
         </div>
       )}
     </div>

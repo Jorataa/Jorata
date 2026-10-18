@@ -114,6 +114,8 @@ export function startRenderer(
     if (event.key === 'Enter') {
       event.preventDefault();
       window.dispatchEvent(new CustomEvent('jorata-open-chat'));
+      const input = (document.getElementById('chat-input') || document.getElementById('social-composer')) as HTMLElement | null;
+      input?.focus();
       release();
     }
   }

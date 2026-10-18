@@ -11,6 +11,7 @@
     "test:browser": "VITE_ENABLE_LEGACY_WORLD=true npm run build && tsx tests/browser.ts",
     "test:social": "node --env-file=.env.local --import tsx tests/social.integration.ts",
     "test:social:browser": "node --env-file=.env.local --import tsx tests/social.browser.ts",
+    "test:redesign": "node --import tsx tests/redesign.browser.ts",
     "test:guest:browser": "tsx tests/guest.browser.ts"
   },
   "dependencies": {

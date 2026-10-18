@@ -10,7 +10,7 @@ npm ci
 npm run dev
 ```
 
-Open the **port 3000** preview from Codespaces → Ports. Keep its visibility **Private**: this is a development service. Open two tabs, choose **Edit guest** to name each guest, then use the lounge or **New chat** to find the other guest. **New guest** creates a distinct identity; the identity selector restores only identities created in this browser. Reload keeps the current tab's identity.
+Open the **port 3000** preview from Codespaces → Ports. Keep its visibility **Private**: this is a development service. Open two tabs, choose **Settings → Edit guest** to name each guest, then use the lounge or **New chat** to find the other guest. **New guest** creates a distinct identity; the identity selector restores only identities created in this browser. Reload keeps the current tab's identity.
 
 ## Working features
 
@@ -33,6 +33,9 @@ The existing Supabase implementation and migrations remain intact for future int
 ```sh
 npm run build
 npm test
+# Isolated two-user messaging, persistence, gestures, desktop and mobile:
+npm run test:redesign
+# Legacy guest smoke test (older UI selectors):
 # With npm run dev on port 3000:
 GUEST_TEST_URL=http://localhost:3000 npm run test:guest:browser
 # With a production build served locally or on a safe Vercel preview:
@@ -42,3 +45,9 @@ GUEST_TEST_URL=https://your-preview.vercel.app GUEST_TEST_DEMO=true npm run test
 Browser tests use two temporary identities; local mode uses separate browser contexts, demo mode uses two tabs in one context. Camera automation uses a synthetic Chromium device; verify real phones manually. Install Chromium with `npx playwright install --with-deps chromium` if needed.
 
 Antigravity: [DESIGN_HANDOFF.md](DESIGN_HANDOFF.md). Original server-authoritative game is preserved at `/world-local` in development, with its separate `data/meadow.json` save.
+
+## Compact chat controls
+
+Drag the inbox divider to resize it (250–420px); double-click to reset to 288px. The focused divider also supports arrow keys, Home/End and Enter. On touchscreens, swipe a message to the right to reply. Vertical scrolling stays native. Drop or paste a JPEG, PNG or WebP to preview it, then choose **Send photo**; other file types are not supported by the existing media service.
+
+Guest identities are in **Settings**. Open an independent tab or browser context for a second guest; if your browser duplicates an existing tab session, choose **New guest**. Both clients use the local Socket.IO server. Settings also provides light, dark and system appearance.

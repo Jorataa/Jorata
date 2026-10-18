@@ -15,6 +15,7 @@ import {
 } from '../shared/game.ts';
 import { GameModel } from '../src/game/model.ts';
 import { sounds } from '../src/game/audio.ts';
+import { taskStore } from '../src/game/taskStore.ts';
 
 test('World generator produces consistent terrain and surface', () => {
   const world = generateWorld();
@@ -116,4 +117,20 @@ test('Audio mute state toggle', () => {
   sounds.setMuted(false);
   assert.equal(sounds.isMuted(), false);
   sounds.setMuted(initial);
+});
+
+test('Collaborative task store lifecycle', () => {
+  const task = taskStore.addTask('Plant wild flowers along the river', 'Sunlit Nomad', 'normal');
+  assert.ok(task.id);
+  assert.equal(task.title, 'Plant wild flowers along the river');
+  assert.equal(task.completed, false);
+
+  const toggled = taskStore.toggleTask(task.id);
+  assert.equal(toggled, true);
+  const updated = taskStore.getTasks().find(t => t.id === task.id);
+  assert.equal(updated?.completed, true);
+
+  taskStore.deleteTask(task.id);
+  const deleted = taskStore.getTasks().find(t => t.id === task.id);
+  assert.equal(deleted, undefined);
 });
