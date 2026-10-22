@@ -36,7 +36,7 @@ export default function Play({ onQuickNote, reducedMotion = false, paused = fals
   useEffect(() => {
     if (!world || !canvas.current || !engine.current) return;
     const c = canvas.current, e = engine.current, ctx = c.getContext('2d'); if (!ctx) return;
-    const resize = () => { const box = c.getBoundingClientRect(); const dpr = Math.min(2, window.devicePixelRatio || 1); e.width = box.width; e.height = box.height; c.width = box.width * dpr; c.height = box.height * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+    const resize = () => { const box = c.getBoundingClientRect(); const dpr = Math.min(2, window.devicePixelRatio || 1); e.width = box.width; e.height = box.height; c.width = box.width * dpr; c.height = box.height * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); e.centerCamera(); e.render(ctx, hover.current); c.dataset.ready = 'true'; };
     const observer = new ResizeObserver(resize); observer.observe(c); resize();
     let frame = 0, previous = performance.now();
     const loop = (now: number) => { if (!pausedRef.current) e.step(Math.min((now - previous) / 1000, .033), controls.current); previous = now; e.render(ctx, hover.current); frame = requestAnimationFrame(loop); }; frame = requestAnimationFrame(loop);

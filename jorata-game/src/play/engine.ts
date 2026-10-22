@@ -5,6 +5,10 @@ export class WorldEngine {
   width = 1000; height = 600;
   particles: { x: number; y: number; vx: number; vy: number; life: number; color: string }[] = [];
   constructor(public world: World, public reducedMotion = false) {}
+  centerCamera() {
+    this.cameraX = Math.max(0, Math.min(COLS * TILE - this.width, this.world.player.x - this.width * .45));
+    this.cameraY = Math.max(0, Math.min(ROWS * TILE - this.height, this.world.player.y - this.height * .52));
+  }
   collides(x: number, y: number) {
     for (let ty = Math.floor(y / TILE); ty <= Math.floor((y + 29) / TILE); ty++) for (let tx = Math.floor(x / TILE); tx <= Math.floor((x + 21) / TILE); tx++) if (tileAt(this.world, tx, ty)) return true;
     return false;
