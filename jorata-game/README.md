@@ -31,7 +31,7 @@ Install Playwright Chromium if absent (`npx playwright install chromium`). Brows
 
 ## Persistence and limits
 
-Notes use IndexedDB `jorata-notes-v1`; world saves use IndexedDB `jorata-play` plus a synchronous localStorage recovery copy. Export regularly: browser-data clearing, private browsing, storage eviction, or a different browser/device can make local data unavailable. Storage failures are surfaced, with note export available. Notes support one active editing tab; concurrent independent edits in multiple tabs are not merged. There is no cloud or cross-device synchronization, multiplayer, authentication, or hosted game server.
+Notes use IndexedDB `jorata-notes-v1` with a synchronous localStorage recovery snapshot; world saves use IndexedDB `jorata-play` plus a synchronous localStorage recovery copy. Export regularly: browser-data clearing, private browsing, storage eviction, or a different browser/device can make local data unavailable. Storage failures are surfaced, with note export available. Notes support one active editing tab; concurrent independent edits in multiple tabs are not merged. There is no cloud or cross-device synchronization, multiplayer, authentication, or hosted game server.
 
 ## Architecture
 
