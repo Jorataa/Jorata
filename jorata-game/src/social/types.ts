@@ -1,9 +1,0 @@
-export type Profile = { id: string; username: string; display_name: string; bio: string; avatar_path: string | null };
-export type Room = { id: string; kind: 'direct' | 'group' | 'channel'; name: string; owner_id: string; community_id: string | null; updated_at: string };
-export type Member = { room_id: string; user_id: string; role: 'owner' | 'admin' | 'member' };
-export type Community = { id: string; name: string; owner_id: string };
-export type CommunityMember = { community_id: string; user_id: string; role: Member['role'] };
-export type ChatMessage = { id: string; room_id: string; sender_id: string; body: string; attachment_path: string | null; reply_to: string | null; deleted: boolean; created_at: string; edited_at: string | null };
-export type ConversationSummary = { body: string; senderId: string; createdAt: string; attachment: boolean; deleted: boolean };
-export type Reaction = { message_id: string; user_id: string; emoji: string; active: boolean };
-export type Task = { id: string; room_id: string; creator_id: string; title: string; details: string; assignee_id: string | null; due_date: string | null; completed: boolean; deleted: boolean };

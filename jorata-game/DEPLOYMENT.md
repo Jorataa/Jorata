@@ -1,48 +1,13 @@
-# Current guest-first preview
+# JORATA deployment
 
-The default entry now opens the application directly without authentication. Deploy the existing Vercel project `j-mind` (root `jorata-game`, Vite, `npm run build`, `dist`, Node 24) to a **preview** branch. Default demo needs **no environment variables** and does not read production Supabase data. Keep `VITE_ENABLE_ACCOUNTS` absent/false. The existing `/api/ai` route remains authenticated and is unused in guest mode.
+Existing Vercel project `j-mind` (`prj_gcx2ocyInULrQpyomxtQ7rzcqamh`), team `jovan-tioria-s-projects` (`team_ntipgViAjbHQfxs5e3HuvGGj`). Production domain https://jorata.vercel.app.
 
-Production builds always use browser-local sample data and BroadcastChannel; they cannot switch to the development backend with a URL parameter. Guest bootstrap and Socket.IO namespace are registered only outside NODE_ENV=production and VERCEL. There is no custom Socket.IO service deployed to Vercel. Keep Codespaces port 3000 private. Never publish local guest JSON or tokens.
+Repository https://github.com/Jorataa/Jorata; project root `jorata-game`; Vite, Node 24, `npm ci`, `npm run build`, output `dist`. Static hosting only. No server functions or environment values are required. Existing secrets are not bundled or used; do not copy `.env.local` into deployment artifacts.
 
-Optional local variables: `PORT` (3000), `GUEST_FILE` (data/development-social.json), `WORLD_FILE` (data/meadow.json). Both state files are ignored. Guest capabilities are hashed server-side; browser-owned identity tokens are local development credentials. Do not migrate these guest IDs or test conversations into production accounts automatically.
+Release procedure: run unit tests/build and browser stories, commit only the scoped app, push a nonproduction branch, create a preview on the existing project, verify hosted stories, promote the tested deployment, verify production again.
 
-Verify a preview with `GUEST_TEST_URL=https://preview.vercel.app GUEST_TEST_DEMO=true npm run test:guest:browser`. It tests same-browser tabs only, not cross-device production messaging. Verify `/api/dev/session` is unavailable. Keep the existing authenticated production deployment separate until a deliberate release.
+Old production rollback reference: `dpl_mzMvc97TvzRALHg5BLehvd6NbG8H` / https://j-mind-ms0tmah9h-jovan-tioria-s-projects.vercel.app. A rollback restores the old chat app and should be used only for a release emergency.
 
-## Preserved secure integration — future session
+Pre-rebuild recoverability: branch `backup/pre-play-notes-20261022`; `../rebuild-backups/repository.bundle`, `workspace.patch`, and `jorata-game-working-tree.tar.gz` preserve Git history and the initial working tree. Private local `.env.local` and ignored data files remain untouched in the workspace. Keep the archive outside the deployable app. No remote database data was deleted; this source archive is not a database backup.
 
-The following previous production notes describe the preserved account implementation, not the guest demo. For explicit engineering access only, use `VITE_ENABLE_ACCOUNTS=true` and `/accounts`; authentication callback/recovery URL handling must be revisited when re-enabling the account journey. No account configuration is required for guest development.
-
-# Production operations
-
-Vercel project: existing `j-mind` / `prj_gcx2ocyInULrQpyomxtQ7rzcqamh`, team `jovan-tioria-s-projects`; primary JORATA domain `jorata.vercel.app`. Project root must be **jorata-game**, framework Vite, build `npm run build`, output `dist`, install `npm ci`, Node 24. `vercel.json` serves SPA routes and the independent `/api/ai` function. No Socket.IO process is required on Vercel.
-
-Supabase project: existing Jorata / `jedllbtlawxhimxugtcd`, restored and migrated additively. `supabase/migrations/` contains the applied schema and fixes. Do not drop the `jr_*` tables or reset the project: that deletes communication data. Legacy JSON world saves remain separate and untouched.
-
-Required Vercel config (production, preview, local development):
-
-- `VITE_SUPABASE_URL`
-- `VITE_SUPABASE_PUBLISHABLE_KEY` — deliberately public; only the publishable key belongs in the browser.
-- Optional server-only `GEMINI_API_KEY` and `GEMINI_MODEL` (default `gemini-flash-latest`). Never prefix the Gemini key with `VITE_`.
-
-Use `.env.local` for local config; it is ignored. Never copy service-role keys into this app. RLS enforces private access with the signed-in user's JWT, including inside the AI API.
-
-Auth: email/password registration is enabled and email confirmation is required. Set Auth Site URL to `https://jorata.vercel.app` and allow that origin and intended local/preview callback URLs in Supabase Auth URL Configuration. Configure production SMTP and verify real email delivery before inviting a large audience; Supabase's built-in mail service has recipient/throughput restrictions. Password recovery uses `/?recover=1`. Reserved example-domain email signups are rejected by the provider; they cannot prove email delivery. Enable leaked-password protection if available on the project's plan.
-
-Private media buckets `jr-media` (5 MB) and `jr-avatars` (2 MB) accept JPEG, PNG and WebP. Signed image links expire after 60 seconds. Existing downloaded media cannot be recalled. Reports persist in `jr_reports`; review them in the Supabase dashboard until a moderator console is added.
-
-## Verification
-
-`npm test` runs local game and deterministic moderation checks. `npm run test:social` runs three real-account API/RLS checks; `npm run test:social:browser` runs Chromium user journeys against `TEST_URL` (default local port 3000). Run these two suites sequentially because they share QA accounts. Browser setup: `npx playwright install --with-deps chromium`.
-
-Real-account suites read an untracked JSON file from `QA_ACCOUNTS_FILE` (default `/tmp/jorata-qa-bootstrap.json`) with `accounts: [{id,email,username,password,display_name}, ...]`. Provision three dedicated confirmed test accounts through Supabase's authorized admin interface; keep their credentials out of Git and logs. API verification writes non-secret test room IDs to `/tmp/jorata-qa-fixtures.json` for the browser suite. The temporary QA provisioning function used during development has been disabled and requires JWT verification; it returns 410 and contains no credentials.
-
-Camera verification in automation uses Chromium's synthetic test device; physical iOS/Android camera behavior and email inbox delivery need actual device/inbox checks. Missing Gemini configuration returns an explicit 503, never fabricated content. The existing production secret was verified in the release below.
-
-Known MVP limits: profile directory preloads 500 accounts and uses server search for more; message history loads 100 at a time; public communities require joining to access channels; each conversation owns one shared task list; presence is advisory; the managed Meadow validates update shape but trusts client movement. Polling catches missed updates every 12 seconds in addition to realtime and focus/reconnect refreshes. Add staging isolation, abuse controls/CAPTCHA and moderation operations before scaling public signup traffic.
-
-
-## Verified release — 2026-10-17
-
-Production `https://jorata.vercel.app` serves commit `de2fe78407cb4711ef70936782c535af7361e0c3` from `codex/jorata-social-v2` (deployment `dpl_5FN1y8eh3cDieGPT7gdxrx1VqEuq`). The real-account browser suite passed on this URL: independent login/session/logout, username search, DM history/reply/edit/reactions, group creation/invitation, shared tasks, camera capture/filters/private photos, profile photo upload, network recovery, mobile layout and two connected Meadow players. The existing Vercel Gemini secret was reused without reading/exporting it; the production summary API returned **200 with an actual provider summary** after explicit consent. Earlier provider failures were handled explicitly.
-
-Three dedicated QA accounts verified RLS isolation, sender/edit/delete permissions, community roles, blocked DMs and private image access against the production Supabase project. Test accounts were confirmed through the authorized admin API; actual email inbox confirmation/password recovery delivery remains unverified because controlled test inboxes were not supplied. Physical phone camera behavior remains a manual device check. Public QA communities were removed only after checking that no non-QA members or messages belonged to them. Managed-world persistence and Unicode staff-name rejection also passed against the production database. Local Antigravity changes and unrelated repository deletions were left untouched.
+See `rebuild-audit.md` for shared infrastructure and deferred remote retirement.

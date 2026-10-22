@@ -1,53 +1,40 @@
-# JORATA — communication workspace
+# JORATA — Play. Create. Remember.
 
-JORATA opens directly into a temporary guest workspace. **No login, signup or Supabase configuration is needed.** Messaging is the main experience; the Meadow is optional.
+A personal Canvas sandbox and Markdown notebook. Guest-first, without accounts or chat.
 
-## Run in Codespaces
+## Run
+
+Node 24 recommended.
 
 ```sh
-cd /workspaces/Jorata/jorata-game
 npm ci
 npm run dev
 ```
 
-Open the **port 3000** preview from Codespaces → Ports. Keep its visibility **Private**: this is a development service. Open two tabs, choose **Settings → Edit guest** to name each guest, then use the lounge or **New chat** to find the other guest. **New guest** creates a distinct identity; the identity selector restores only identities created in this browser. Reload keeps the current tab's identity.
-
-## Working features
-
-- Direct and group conversations, history, timestamps, replies, own-message editing/deletion, reactions, conversation search, presence and typing.
-- Group invitations, renaming, member removal and leaving; discover/create/join communities and create text channels with owner/admin/member permissions.
-- A shared task list in each conversation: assignment, deadlines, details, completion, edits and permission-checked deletion.
-- Camera capture or file upload; filters, brightness/contrast/saturation, decorative frames, captions, stickers and explicit photo sending. Frames are not background removal. Photos are validated and re-encoded; guest JPEG payload limit is about 1 MB.
-- Optional Meadow: keyboard movement/jumping, other players, shared blocks, speech bubbles, emotes and opening a nearby player's conversation.
-
-## Data modes
-
-**Local development:** real Socket.IO communication across clients connected to this Codespace. The server creates random session capabilities, binds sender identity to the session, checks memberships and rate-limits mutations. Data persists in ignored `data/development-social.json`; back it up before rebuilding the Codespace. It is test data, not verified accounts or production-secure messaging. Do not share sensitive information or publish this development port.
-
-**Vercel / production build:** explicitly labeled **sample demo**. IndexedDB stores sample data in this browser; BroadcastChannel synchronizes tabs on the same origin/browser profile. Separate devices or browser profiles do not communicate. Anyone with access to that browser's storage can inspect its sample data. No guest backend, production conversation reads, Supabase calls or Gemini requests are used by the default workspace. Clearing site storage erases the demo. Use sample content only.
-
-The existing Supabase implementation and migrations remain intact for future integration. `VITE_ENABLE_ACCOUNTS=true` explicitly enables the preserved `/accounts` route for engineering use; it is off by default. No new authentication screens were built. See [DEPLOYMENT.md](DEPLOYMENT.md).
-
-## Verify
+Open http://localhost:3107. No environment variables, database, or API keys are required.
 
 ```sh
-npm run build
 npm test
-# Isolated two-user messaging, persistence, gestures, desktop and mobile:
-npm run test:redesign
-# Legacy guest smoke test (older UI selectors):
-# With npm run dev on port 3000:
-GUEST_TEST_URL=http://localhost:3000 npm run test:guest:browser
-# With a production build served locally or on a safe Vercel preview:
-GUEST_TEST_URL=https://your-preview.vercel.app GUEST_TEST_DEMO=true npm run test:guest:browser
+npm run build
+npm run test:browser
 ```
 
-Browser tests use two temporary identities; local mode uses separate browser contexts, demo mode uses two tabs in one context. Camera automation uses a synthetic Chromium device; verify real phones manually. Install Chromium with `npx playwright install --with-deps chromium` if needed.
+Install Playwright Chromium if absent (`npx playwright install chromium`). Browser suites run against `http://localhost:3107`; start the dev server first. See `tests/` for environment overrides for hosted runs.
 
-Antigravity: [DESIGN_HANDOFF.md](DESIGN_HANDOFF.md). Original server-authoritative game is preserved at `/world-local` in development, with its separate `data/meadow.json` save.
+## Product
 
-## Compact chat controls
+- `/`: Mosslight entrance and actual recently edited notes.
+- `/play`: single-player 100 × 32 tile world; gravity, collision, jumping, collect/build, earth/stone/wood inventory, chapter goals, keyboard and touch controls, particles and parallax. Saves automatically and manually. JSON export/import validates snapshots before replacing a world.
+- `/notes`: create/edit/delete, autosave, safe basic Markdown preview (headings/lists/quotes), folders, tags, search, pinning, recency/custom ordering, drag-to-file/reorder plus keyboard alternatives, individual Markdown export.
+- `/settings`: motion, cursor companion, storage protection request, keyboard shortcuts.
+- Quick note: `Ctrl/⌘ + J` from any screen, or `N` in Play. Draggable panel, focus containment, Escape to close. Gameplay pauses while writing.
 
-Drag the inbox divider to resize it (250–420px); double-click to reset to 288px. The focused divider also supports arrow keys, Home/End and Enter. On touchscreens, swipe a message to the right to reply. Vertical scrolling stays native. Drop or paste a JPEG, PNG or WebP to preview it, then choose **Send photo**; other file types are not supported by the existing media service.
+## Persistence and limits
 
-Guest identities are in **Settings**. Open an independent tab or browser context for a second guest; if your browser duplicates an existing tab session, choose **New guest**. Both clients use the local Socket.IO server. Settings also provides light, dark and system appearance.
+Notes use IndexedDB `jorata-notes-v1`; world saves use IndexedDB `jorata-play` plus a synchronous localStorage recovery copy. Export regularly: browser-data clearing, private browsing, storage eviction, or a different browser/device can make local data unavailable. Storage failures are surfaced, with note export available. Notes support one active editing tab; concurrent independent edits in multiple tabs are not merged. There is no cloud or cross-device synchronization, multiplayer, authentication, or hosted game server.
+
+## Architecture
+
+React + TypeScript + Vite; runtime dependencies are React and React DOM only. Play and Notes load as separate chunks. Canvas animation uses bounded delta time, capped device pixel ratio, and visible-tile rendering. Motion respects device reduced-motion and user settings. Fonts are locally served Manrope and Newsreader from Google Fonts (SIL Open Font License). All world artwork is original code-drawn geometry.
+
+The old social frontend, chat components and state, Socket.IO services, AI chat API, shared social schemas, old tests, and unused dependencies were removed. Obsolete routes are not deployed. Historical database migrations/functions are preserved in the pre-rebuild archive, not deployed by this product. Remote legacy data is retained because the Supabase project also hosts an unrelated portal. See `rebuild-audit.md` before any future remote resource retirement.
