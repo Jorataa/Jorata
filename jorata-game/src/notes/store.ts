@@ -1,7 +1,8 @@
 import { useEffect, useSyncExternalStore } from 'react';
 
 export interface Note { id: string; title: string; body: string; folder: string; tags: string[]; pinned: boolean; updatedAt: number; order: number }
-interface Library { notes: Note[]; folders: string[] }
+interface Library { notes: Note[]; folders: string[]; savedAt?: number }
+const RECOVERY_KEY = 'jorata.notes.recovery.v1';
 interface Snapshot extends Library { loaded: boolean; status: 'loading' | 'saving' | 'saved' | 'error'; error: string }
 let snapshot: Snapshot = { notes: [], folders: ['Personal', 'World journal'], loaded: false, status: 'loading', error: '' };
 const listeners = new Set<() => void>();
@@ -10,6 +11,13 @@ let initializing: Promise<void> | undefined;
 let pending = Promise.resolve();
 let revision = 0;
 function emit(next: Partial<Snapshot>) { snapshot = { ...snapshot, ...next }; listeners.forEach(listener => listener()); }
+function readRecovery(): Library | undefined {
+  try {
+    const raw = localStorage.getItem(RECOVERY_KEY);
+    const value = raw ? JSON.parse(raw) as Library : undefined;
+    if (value && Array.isArray(value.notes) && Array.isArray(value.folders) && value.notes.every(n => n && typeof n.id === 'string' && typeof n.title === 'string' && typeof n.body === 'string' && typeof n.folder === 'string' && Array.isArray(n.tags))) return value;
+  } catch { /* Preserve unreadable recovery data; never delete it automatically. */ }
+}
 function db() {
   database ??= new Promise((resolve, reject) => {
     const request = indexedDB.open('jorata-notes-v1', 1);
@@ -30,14 +38,20 @@ export function initializeNotes() {
         request.onsuccess = () => resolve(request.result);
         request.onerror = () => reject(request.error);
       });
-      if (value && (!Array.isArray(value.notes) || !Array.isArray(value.folders))) throw new Error('The stored library could not be read.');
-      emit({ ...(value ?? {}), loaded: true, status: 'saved' });
-    } catch (error) { emit({ loaded: true, status: 'error', error: `Notes storage is unavailable. Changes stay in this tab only. Export your writing before leaving. ${error instanceof Error ? error.message : ''}` }); }
+      const recovery = readRecovery();
+      const valid=(item: Library | undefined) => item && Array.isArray(item.notes) && Array.isArray(item.folders) && item.notes.every(n=>typeof n.id==='string' && typeof n.title==='string' && typeof n.body==='string' && Array.isArray(n.tags));
+      const choices=[value,recovery].filter(valid) as Library[];
+      if ((value || recovery) && !choices.length) throw new Error('The stored library could not be read.');
+      const restored=choices.sort((a,b)=>(b.savedAt||0)-(a.savedAt||0))[0];
+      emit({ ...(restored ?? {}), loaded: true, status: 'saved' });
+    } catch (error) { emit({ ...(readRecovery() ?? {}), loaded: true, status: 'error', error: `The notes database is unavailable. A local recovery copy may be available; export your writing before leaving. ${error instanceof Error ? error.message : ''}` }); }
   })();
   return initializing;
 }
 function persist(library: Library) {
   const current = ++revision;
+  library = {...library, savedAt: Math.max(Date.now(), (snapshot.savedAt || 0) + 1)};
+  try { localStorage.setItem(RECOVERY_KEY, JSON.stringify(library)); } catch { /* IndexedDB remains the primary store; failed writes are surfaced below. */ }
   emit({ ...library, status: 'saving' });
   pending = pending.catch(() => {}).then(async () => {
     try {
