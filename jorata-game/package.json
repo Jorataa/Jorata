@@ -7,8 +7,10 @@
     "dev": "vite --host 0.0.0.0 --port 3107",
     "build": "tsc --noEmit && vite build",
     "start": "vite preview --host 0.0.0.0 --port 3107",
-    "test": "tsx --test src/play/*.test.ts",
-    "test:browser": "tsx tests/product.browser.ts && tsx tests/play.browser.ts && tsx tests/notes.browser.ts"
+    "test": "tsx --test src/play/*.test.ts src/surgery/*.test.ts src/boxing/*.test.ts",
+    "test:browser": "tsx tests/product.browser.ts && tsx tests/play.browser.ts && tsx tests/notes.browser.ts",
+    "test:surgery": "tsx tests/surgery.browser.ts && tsx tests/surgery.media.browser.ts",
+    "test:boxing": "tsx tests/boxing.browser.ts"
   },
   "dependencies": {
     "react": "^19.1.0",

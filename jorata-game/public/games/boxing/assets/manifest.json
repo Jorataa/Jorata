@@ -1,0 +1,1247 @@
+{
+  "pack": "JORATA Boxing Asset Pack",
+  "version": "1.0",
+  "guidelines": {
+    "genre": "2D side-view pixel boxing",
+    "suggested_fps": 60,
+    "character_canvas_px": [
+      160,
+      160
+    ],
+    "character_anchor": "center-bottom; ground at y ~148 within canvas",
+    "animation_note": "Only 1-2 distinct frames exist for each illustrated state. Generate interpolated frames or apply programmatic pose transitions for complete animation.",
+    "pixel_rendering": "image-rendering: pixelated; nearest-neighbor texture sampling",
+    "alpha_note": "Transparency removed from rasterized checkerboard by bright-neutral flood fill; inspect for minor residual matte/edge artifacts."
+  },
+  "asset_count": 86,
+  "assets": [
+    {
+      "file": "characters/player_red/idle_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        17,
+        43,
+        94,
+        162
+      ],
+      "animation": "idle"
+    },
+    {
+      "file": "characters/player_red/idle_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        107,
+        42,
+        183,
+        162
+      ],
+      "animation": "idle"
+    },
+    {
+      "file": "characters/player_red/walk_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        192,
+        42,
+        264,
+        163
+      ],
+      "animation": "walk"
+    },
+    {
+      "file": "characters/player_red/walk_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        267,
+        43,
+        347,
+        162
+      ],
+      "animation": "walk"
+    },
+    {
+      "file": "characters/player_red/jab_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        344,
+        43,
+        439,
+        163
+      ],
+      "animation": "jab"
+    },
+    {
+      "file": "characters/player_red/jab_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        437,
+        42,
+        547,
+        163
+      ],
+      "animation": "jab"
+    },
+    {
+      "file": "characters/player_red/hook_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        548,
+        42,
+        655,
+        163
+      ],
+      "animation": "hook"
+    },
+    {
+      "file": "characters/player_red/hook_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        658,
+        42,
+        767,
+        163
+      ],
+      "animation": "hook"
+    },
+    {
+      "file": "characters/player_red/uppercut_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        16,
+        197,
+        102,
+        320
+      ],
+      "animation": "uppercut"
+    },
+    {
+      "file": "characters/player_red/uppercut_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        108,
+        191,
+        196,
+        319
+      ],
+      "animation": "uppercut"
+    },
+    {
+      "file": "characters/player_red/block.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        192,
+        199,
+        261,
+        319
+      ],
+      "animation": "block"
+    },
+    {
+      "file": "characters/player_red/duck_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        260,
+        208,
+        344,
+        321
+      ],
+      "animation": "duck"
+    },
+    {
+      "file": "characters/player_red/duck_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        345,
+        210,
+        415,
+        321
+      ],
+      "animation": "duck"
+    },
+    {
+      "file": "characters/player_red/hit_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        416,
+        213,
+        483,
+        319
+      ],
+      "animation": "hit"
+    },
+    {
+      "file": "characters/player_red/hit_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        489,
+        214,
+        554,
+        321
+      ],
+      "animation": "hit"
+    },
+    {
+      "file": "characters/player_red/ko.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        553,
+        247,
+        679,
+        321
+      ],
+      "animation": "ko"
+    },
+    {
+      "file": "characters/player_red/win.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        676,
+        194,
+        774,
+        320
+      ],
+      "animation": "win"
+    },
+    {
+      "file": "characters/player_blue/idle_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        789,
+        42,
+        869,
+        163
+      ],
+      "animation": "idle"
+    },
+    {
+      "file": "characters/player_blue/idle_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        873,
+        42,
+        958,
+        163
+      ],
+      "animation": "idle"
+    },
+    {
+      "file": "characters/player_blue/walk_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        960,
+        43,
+        1049,
+        163
+      ],
+      "animation": "walk"
+    },
+    {
+      "file": "characters/player_blue/walk_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1051,
+        43,
+        1136,
+        163
+      ],
+      "animation": "walk"
+    },
+    {
+      "file": "characters/player_blue/jab_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1137,
+        44,
+        1238,
+        163
+      ],
+      "animation": "jab"
+    },
+    {
+      "file": "characters/player_blue/jab_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1236,
+        44,
+        1327,
+        163
+      ],
+      "animation": "jab"
+    },
+    {
+      "file": "characters/player_blue/hook_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1328,
+        44,
+        1434,
+        163
+      ],
+      "animation": "hook"
+    },
+    {
+      "file": "characters/player_blue/hook_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1432,
+        43,
+        1535,
+        163
+      ],
+      "animation": "hook"
+    },
+    {
+      "file": "characters/player_blue/uppercut_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        790,
+        196,
+        873,
+        319
+      ],
+      "animation": "uppercut"
+    },
+    {
+      "file": "characters/player_blue/uppercut_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        874,
+        192,
+        963,
+        320
+      ],
+      "animation": "uppercut"
+    },
+    {
+      "file": "characters/player_blue/block.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        955,
+        192,
+        1046,
+        321
+      ],
+      "animation": "block"
+    },
+    {
+      "file": "characters/player_blue/duck_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1039,
+        212,
+        1117,
+        321
+      ],
+      "animation": "duck"
+    },
+    {
+      "file": "characters/player_blue/duck_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1106,
+        211,
+        1182,
+        321
+      ],
+      "animation": "duck"
+    },
+    {
+      "file": "characters/player_blue/hit_01.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1177,
+        207,
+        1260,
+        321
+      ],
+      "animation": "hit"
+    },
+    {
+      "file": "characters/player_blue/hit_02.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1252,
+        207,
+        1337,
+        321
+      ],
+      "animation": "hit"
+    },
+    {
+      "file": "characters/player_blue/ko.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1311,
+        246,
+        1443,
+        323
+      ],
+      "animation": "ko"
+    },
+    {
+      "file": "characters/player_blue/win.png",
+      "kind": "character",
+      "size": [
+        160,
+        160
+      ],
+      "source_rect": [
+        1441,
+        192,
+        1533,
+        321
+      ],
+      "animation": "win"
+    },
+    {
+      "file": "effects/hit_sparks_01.png",
+      "kind": "effect",
+      "size": [
+        78,
+        77
+      ],
+      "source_rect": [
+        18,
+        398,
+        112,
+        484
+      ]
+    },
+    {
+      "file": "effects/hit_sparks_02.png",
+      "kind": "effect",
+      "size": [
+        64,
+        68
+      ],
+      "source_rect": [
+        119,
+        401,
+        201,
+        484
+      ]
+    },
+    {
+      "file": "effects/hit_sparks_03.png",
+      "kind": "effect",
+      "size": [
+        68,
+        68
+      ],
+      "source_rect": [
+        212,
+        404,
+        293,
+        484
+      ]
+    },
+    {
+      "file": "effects/hit_sparks_04.png",
+      "kind": "effect",
+      "size": [
+        70,
+        68
+      ],
+      "source_rect": [
+        310,
+        400,
+        396,
+        484
+      ]
+    },
+    {
+      "file": "effects/hit_sparks_05.png",
+      "kind": "effect",
+      "size": [
+        77,
+        78
+      ],
+      "source_rect": [
+        400,
+        397,
+        502,
+        484
+      ]
+    },
+    {
+      "file": "effects/hit_flash.png",
+      "kind": "effect",
+      "size": [
+        82,
+        79
+      ],
+      "source_rect": [
+        508,
+        403,
+        600,
+        485
+      ]
+    },
+    {
+      "file": "effects/punch_trail_red.png",
+      "kind": "effect",
+      "size": [
+        72,
+        75
+      ],
+      "source_rect": [
+        599,
+        400,
+        703,
+        489
+      ]
+    },
+    {
+      "file": "effects/punch_trail_blue.png",
+      "kind": "effect",
+      "size": [
+        92,
+        59
+      ],
+      "source_rect": [
+        708,
+        401,
+        810,
+        486
+      ]
+    },
+    {
+      "file": "effects/punch_trail_alt.png",
+      "kind": "effect",
+      "size": [
+        94,
+        56
+      ],
+      "source_rect": [
+        15,
+        524,
+        126,
+        597
+      ]
+    },
+    {
+      "file": "effects/impact_dust_01.png",
+      "kind": "effect",
+      "size": [
+        69,
+        57
+      ],
+      "source_rect": [
+        125,
+        518,
+        208,
+        596
+      ]
+    },
+    {
+      "file": "effects/impact_dust_02.png",
+      "kind": "effect",
+      "size": [
+        79,
+        63
+      ],
+      "source_rect": [
+        227,
+        521,
+        319,
+        596
+      ]
+    },
+    {
+      "file": "effects/impact_dust_03.png",
+      "kind": "effect",
+      "size": [
+        61,
+        64
+      ],
+      "source_rect": [
+        329,
+        513,
+        424,
+        597
+      ]
+    },
+    {
+      "file": "effects/impact_smoke.png",
+      "kind": "effect",
+      "size": [
+        68,
+        61
+      ],
+      "source_rect": [
+        428,
+        508,
+        539,
+        599
+      ]
+    },
+    {
+      "file": "effects/knockdown_dust.png",
+      "kind": "effect",
+      "size": [
+        82,
+        58
+      ],
+      "source_rect": [
+        528,
+        521,
+        626,
+        599
+      ]
+    },
+    {
+      "file": "effects/ring_shake.png",
+      "kind": "effect",
+      "size": [
+        75,
+        45
+      ],
+      "source_rect": [
+        649,
+        521,
+        744,
+        597
+      ]
+    },
+    {
+      "file": "effects/star_stun.png",
+      "kind": "effect",
+      "size": [
+        69,
+        40
+      ],
+      "source_rect": [
+        745,
+        522,
+        843,
+        598
+      ]
+    },
+    {
+      "file": "ui/health_bar_red.png",
+      "kind": "ui",
+      "size": [
+        143,
+        38
+      ],
+      "source_rect": [
+        853,
+        406,
+        1005,
+        451
+      ]
+    },
+    {
+      "file": "ui/health_bar_blue.png",
+      "kind": "ui",
+      "size": [
+        143,
+        37
+      ],
+      "source_rect": [
+        1019,
+        407,
+        1181,
+        451
+      ]
+    },
+    {
+      "file": "ui/stamina_bar.png",
+      "kind": "ui",
+      "size": [
+        142,
+        37
+      ],
+      "source_rect": [
+        1198,
+        405,
+        1365,
+        451
+      ]
+    },
+    {
+      "file": "ui/bar_background.png",
+      "kind": "ui",
+      "size": [
+        134,
+        37
+      ],
+      "source_rect": [
+        1371,
+        404,
+        1524,
+        451
+      ]
+    },
+    {
+      "file": "ui/versus.png",
+      "kind": "ui",
+      "size": [
+        56,
+        40
+      ],
+      "source_rect": [
+        854,
+        490,
+        937,
+        545
+      ]
+    },
+    {
+      "file": "ui/round_numbers.png",
+      "kind": "ui",
+      "size": [
+        92,
+        35
+      ],
+      "source_rect": [
+        956,
+        494,
+        1064,
+        541
+      ]
+    },
+    {
+      "file": "ui/round_timer.png",
+      "kind": "ui",
+      "size": [
+        83,
+        33
+      ],
+      "source_rect": [
+        1093,
+        495,
+        1187,
+        540
+      ]
+    },
+    {
+      "file": "ui/ko.png",
+      "kind": "ui",
+      "size": [
+        62,
+        43
+      ],
+      "source_rect": [
+        1209,
+        487,
+        1283,
+        549
+      ]
+    },
+    {
+      "file": "ui/win.png",
+      "kind": "ui",
+      "size": [
+        99,
+        39
+      ],
+      "source_rect": [
+        1316,
+        492,
+        1415,
+        543
+      ]
+    },
+    {
+      "file": "ui/draw.png",
+      "kind": "ui",
+      "size": [
+        71,
+        35
+      ],
+      "source_rect": [
+        1422,
+        490,
+        1515,
+        544
+      ]
+    },
+    {
+      "file": "ui/portrait_red.png",
+      "kind": "ui",
+      "size": [
+        71,
+        75
+      ],
+      "source_rect": [
+        853,
+        566,
+        931,
+        647
+      ]
+    },
+    {
+      "file": "ui/portrait_blue.png",
+      "kind": "ui",
+      "size": [
+        70,
+        75
+      ],
+      "source_rect": [
+        944,
+        566,
+        1020,
+        645
+      ]
+    },
+    {
+      "file": "ui/crown.png",
+      "kind": "ui",
+      "size": [
+        48,
+        41
+      ],
+      "source_rect": [
+        1049,
+        586,
+        1112,
+        647
+      ]
+    },
+    {
+      "file": "ui/medals.png",
+      "kind": "ui",
+      "size": [
+        55,
+        42
+      ],
+      "source_rect": [
+        1120,
+        587,
+        1194,
+        646
+      ]
+    },
+    {
+      "file": "ui/round_dot.png",
+      "kind": "ui",
+      "size": [
+        43,
+        44
+      ],
+      "source_rect": [
+        1210,
+        591,
+        1294,
+        649
+      ]
+    },
+    {
+      "file": "ui/round_dot_empty.png",
+      "kind": "ui",
+      "size": [
+        41,
+        42
+      ],
+      "source_rect": [
+        1313,
+        589,
+        1380,
+        647
+      ]
+    },
+    {
+      "file": "ui/pause.png",
+      "kind": "ui",
+      "size": [
+        48,
+        49
+      ],
+      "source_rect": [
+        1435,
+        589,
+        1516,
+        648
+      ]
+    },
+    {
+      "file": "backgrounds/ring/layers/ring_floor.png",
+      "kind": "ring-layer",
+      "size": [
+        304,
+        99
+      ],
+      "source_rect": [
+        632,
+        692,
+        947,
+        815
+      ]
+    },
+    {
+      "file": "backgrounds/ring/layers/ring_rope_left.png",
+      "kind": "ring-layer",
+      "size": [
+        163,
+        83
+      ],
+      "source_rect": [
+        954,
+        716,
+        1133,
+        814
+      ]
+    },
+    {
+      "file": "backgrounds/ring/layers/ring_rope_right.png",
+      "kind": "ring-layer",
+      "size": [
+        123,
+        85
+      ],
+      "source_rect": [
+        1142,
+        714,
+        1292,
+        812
+      ]
+    },
+    {
+      "file": "backgrounds/ring/layers/corner_red.png",
+      "kind": "ring-layer",
+      "size": [
+        48,
+        103
+      ],
+      "source_rect": [
+        1305,
+        691,
+        1403,
+        814
+      ]
+    },
+    {
+      "file": "backgrounds/ring/layers/corner_blue.png",
+      "kind": "ring-layer",
+      "size": [
+        48,
+        121
+      ],
+      "source_rect": [
+        1432,
+        690,
+        1520,
+        816
+      ]
+    },
+    {
+      "file": "props/stool_red.png",
+      "kind": "prop",
+      "size": [
+        80,
+        81
+      ],
+      "source_rect": [
+        21,
+        895,
+        101,
+        976
+      ]
+    },
+    {
+      "file": "props/stool_blue.png",
+      "kind": "prop",
+      "size": [
+        61,
+        75
+      ],
+      "source_rect": [
+        118,
+        898,
+        213,
+        979
+      ]
+    },
+    {
+      "file": "props/bucket.png",
+      "kind": "prop",
+      "size": [
+        60,
+        76
+      ],
+      "source_rect": [
+        217,
+        890,
+        309,
+        979
+      ]
+    },
+    {
+      "file": "props/water_bottle.png",
+      "kind": "prop",
+      "size": [
+        27,
+        74
+      ],
+      "source_rect": [
+        304,
+        890,
+        368,
+        978
+      ]
+    },
+    {
+      "file": "props/towel.png",
+      "kind": "prop",
+      "size": [
+        50,
+        76
+      ],
+      "source_rect": [
+        387,
+        891,
+        459,
+        982
+      ]
+    },
+    {
+      "file": "props/banner_red.png",
+      "kind": "prop",
+      "size": [
+        56,
+        97
+      ],
+      "source_rect": [
+        472,
+        872,
+        553,
+        985
+      ]
+    },
+    {
+      "file": "props/banner_blue.png",
+      "kind": "prop",
+      "size": [
+        55,
+        97
+      ],
+      "source_rect": [
+        554,
+        871,
+        633,
+        984
+      ]
+    },
+    {
+      "file": "props/championship_belt.png",
+      "kind": "prop",
+      "size": [
+        144,
+        76
+      ],
+      "source_rect": [
+        680,
+        889,
+        845,
+        983
+      ]
+    },
+    {
+      "file": "props/glove_red.png",
+      "kind": "prop",
+      "size": [
+        61,
+        78
+      ],
+      "source_rect": [
+        875,
+        893,
+        955,
+        980
+      ]
+    },
+    {
+      "file": "props/glove_blue.png",
+      "kind": "prop",
+      "size": [
+        61,
+        78
+      ],
+      "source_rect": [
+        973,
+        894,
+        1061,
+        982
+      ]
+    },
+    {
+      "file": "backgrounds/ring/layers/crowd_strip.png",
+      "kind": "ring-layer",
+      "size": [
+        177,
+        80
+      ],
+      "source_rect": [
+        1111,
+        896,
+        1319,
+        988
+      ]
+    },
+    {
+      "file": "backgrounds/ring/layers/stage_lights.png",
+      "kind": "ring-layer",
+      "size": [
+        194,
+        79
+      ],
+      "source_rect": [
+        1320,
+        888,
+        1524,
+        985
+      ]
+    },
+    {
+      "file": "backgrounds/ring/ring_background_full.png",
+      "kind": "background",
+      "size": [
+        1536,
+        351
+      ],
+      "source": "original full-sheet image"
+    },
+    {
+      "file": "backgrounds/ring/ring_background_alternative.png",
+      "kind": "background",
+      "size": [
+        601,
+        146
+      ],
+      "source": "organized atlas"
+    }
+  ]
+}
