@@ -7,3 +7,4 @@ artifacts/
 !.env.example
 .vercel/
 supabase/.temp/
+.vercel

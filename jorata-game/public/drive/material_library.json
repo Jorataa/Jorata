@@ -1,0 +1,1233 @@
+{
+  "pearl_white": {
+    "name": "pearl_white",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.82,
+        0.85,
+        0.82,
+        1
+      ],
+      "metallicFactor": 0.32,
+      "roughnessFactor": 0.24
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.82,
+      0.85,
+      0.82
+    ]
+  },
+  "charcoal_black": {
+    "name": "charcoal_black",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.055,
+        0.073,
+        0.078,
+        1
+      ],
+      "metallicFactor": 0.42,
+      "roughnessFactor": 0.27
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.055,
+      0.073,
+      0.078
+    ]
+  },
+  "silver": {
+    "name": "silver",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.48,
+        0.55,
+        0.56,
+        1
+      ],
+      "metallicFactor": 0.72,
+      "roughnessFactor": 0.22
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.48,
+      0.55,
+      0.56
+    ]
+  },
+  "deep_navy": {
+    "name": "deep_navy",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.035,
+        0.1,
+        0.16,
+        1
+      ],
+      "metallicFactor": 0.44,
+      "roughnessFactor": 0.23
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.035,
+      0.1,
+      0.16
+    ]
+  },
+  "forest_green": {
+    "name": "forest_green",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.065,
+        0.2,
+        0.15,
+        1
+      ],
+      "metallicFactor": 0.36,
+      "roughnessFactor": 0.26
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.065,
+      0.2,
+      0.15
+    ]
+  },
+  "dark_red": {
+    "name": "dark_red",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.3,
+        0.052,
+        0.045,
+        1
+      ],
+      "metallicFactor": 0.4,
+      "roughnessFactor": 0.27
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.3,
+      0.052,
+      0.045
+    ]
+  },
+  "warm_beige": {
+    "name": "warm_beige",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.63,
+        0.51,
+        0.34,
+        1
+      ],
+      "metallicFactor": 0.3,
+      "roughnessFactor": 0.3
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.63,
+      0.51,
+      0.34
+    ]
+  },
+  "rubber": {
+    "name": "rubber",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.022,
+        0.027,
+        0.029,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.022,
+      0.027,
+      0.029
+    ]
+  },
+  "trim": {
+    "name": "trim",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.045,
+        0.058,
+        0.06,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.64
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.045,
+      0.058,
+      0.06
+    ]
+  },
+  "alloy": {
+    "name": "alloy",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.57,
+        0.64,
+        0.65,
+        1
+      ],
+      "metallicFactor": 0.88,
+      "roughnessFactor": 0.25
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.57,
+      0.64,
+      0.65
+    ]
+  },
+  "steel": {
+    "name": "steel",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.32,
+        0.4,
+        0.42,
+        1
+      ],
+      "metallicFactor": 0.8,
+      "roughnessFactor": 0.38
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.32,
+      0.4,
+      0.42
+    ]
+  },
+  "interior": {
+    "name": "interior",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.1,
+        0.135,
+        0.14,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.9
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.1,
+      0.135,
+      0.14
+    ]
+  },
+  "leather": {
+    "name": "leather",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.28,
+        0.25,
+        0.21,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.9
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.28,
+      0.25,
+      0.21
+    ]
+  },
+  "screen": {
+    "name": "screen",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.026,
+        0.105,
+        0.12,
+        1
+      ],
+      "metallicFactor": 0.1,
+      "roughnessFactor": 0.3
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.026,
+      0.105,
+      0.12
+    ]
+  },
+  "road_marking": {
+    "name": "road_marking",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.86,
+        0.88,
+        0.75,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.86
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.86,
+      0.88,
+      0.75
+    ]
+  },
+  "road_yellow": {
+    "name": "road_yellow",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.91,
+        0.63,
+        0.2,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.9
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.91,
+      0.63,
+      0.2
+    ]
+  },
+  "wood": {
+    "name": "wood",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.26,
+        0.18,
+        0.105,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.92
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.26,
+      0.18,
+      0.105
+    ]
+  },
+  "bark": {
+    "name": "bark",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.14,
+        0.11,
+        0.075,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 1
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.14,
+      0.11,
+      0.075
+    ]
+  },
+  "birch_bark": {
+    "name": "birch_bark",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.77,
+        0.77,
+        0.66,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.77,
+      0.77,
+      0.66
+    ]
+  },
+  "leaf_oak": {
+    "name": "leaf_oak",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.18,
+        0.32,
+        0.115,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.18,
+      0.32,
+      0.115
+    ]
+  },
+  "leaf_light": {
+    "name": "leaf_light",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.27,
+        0.41,
+        0.15,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.27,
+      0.41,
+      0.15
+    ]
+  },
+  "leaf_pine": {
+    "name": "leaf_pine",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.065,
+        0.2,
+        0.15,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.065,
+      0.2,
+      0.15
+    ]
+  },
+  "leaf_sage": {
+    "name": "leaf_sage",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.28,
+        0.4,
+        0.25,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.28,
+      0.4,
+      0.25
+    ]
+  },
+  "leaf_dry": {
+    "name": "leaf_dry",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.47,
+        0.42,
+        0.19,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.47,
+      0.42,
+      0.19
+    ]
+  },
+  "flower_cream": {
+    "name": "flower_cream",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.96,
+        0.84,
+        0.53,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.9
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.96,
+      0.84,
+      0.53
+    ]
+  },
+  "flower_lilac": {
+    "name": "flower_lilac",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.44,
+        0.32,
+        0.56,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.9
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.44,
+      0.32,
+      0.56
+    ]
+  },
+  "plaster": {
+    "name": "plaster",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.76,
+        0.7,
+        0.56,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.76,
+      0.7,
+      0.56
+    ]
+  },
+  "roof": {
+    "name": "roof",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.25,
+        0.17,
+        0.13,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.25,
+      0.17,
+      0.13
+    ]
+  },
+  "roof_blue": {
+    "name": "roof_blue",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.14,
+        0.22,
+        0.23,
+        1
+      ],
+      "metallicFactor": 0.1,
+      "roughnessFactor": 0.9
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.14,
+      0.22,
+      0.23
+    ]
+  },
+  "barn_red": {
+    "name": "barn_red",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.38,
+        0.13,
+        0.085,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.38,
+      0.13,
+      0.085
+    ]
+  },
+  "window_building": {
+    "name": "window_building",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.105,
+        0.2,
+        0.23,
+        1
+      ],
+      "metallicFactor": 0.3,
+      "roughnessFactor": 0.22
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.105,
+      0.2,
+      0.23
+    ]
+  },
+  "sign_green": {
+    "name": "sign_green",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.06,
+        0.2,
+        0.16,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.7
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.06,
+      0.2,
+      0.16
+    ]
+  },
+  "sign_white": {
+    "name": "sign_white",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.85,
+        0.86,
+        0.75,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.8
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.85,
+      0.86,
+      0.75
+    ]
+  },
+  "sign_red": {
+    "name": "sign_red",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.59,
+        0.16,
+        0.095,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.8
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.59,
+      0.16,
+      0.095
+    ]
+  },
+  "snow_leaves": {
+    "name": "snow_leaves",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.78,
+        0.85,
+        0.85,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 1
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.78,
+      0.85,
+      0.85
+    ]
+  },
+  "leaf_pine_light": {
+    "name": "leaf_pine_light",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.085,
+        0.235,
+        0.165,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.085,
+      0.235,
+      0.165
+    ]
+  },
+  "glass": {
+    "name": "glass",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.24,
+        0.41,
+        0.43,
+        0.34
+      ],
+      "metallicFactor": 0.15,
+      "roughnessFactor": 0.14
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.24,
+      0.41,
+      0.43
+    ],
+    "alphaMode": "BLEND"
+  },
+  "headlight": {
+    "name": "headlight",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.88,
+        0.94,
+        0.83,
+        1
+      ],
+      "metallicFactor": 0.2,
+      "roughnessFactor": 0.2
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.88,
+      0.94,
+      0.83
+    ],
+    "emissiveFactor": [
+      0.6,
+      0.7,
+      0.55
+    ]
+  },
+  "brake_light": {
+    "name": "brake_light",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.54,
+        0.027,
+        0.013,
+        1
+      ],
+      "metallicFactor": 0.1,
+      "roughnessFactor": 0.3
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.54,
+      0.027,
+      0.013
+    ],
+    "emissiveFactor": [
+      0.025,
+      0,
+      0
+    ]
+  },
+  "indicator": {
+    "name": "indicator",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.95,
+        0.42,
+        0.06,
+        1
+      ],
+      "metallicFactor": 0.05,
+      "roughnessFactor": 0.35
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.95,
+      0.42,
+      0.06
+    ],
+    "emissiveFactor": [
+      0.025,
+      0.01,
+      0
+    ]
+  },
+  "display_glow": {
+    "name": "display_glow",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.25,
+        0.68,
+        0.68,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.4
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.25,
+      0.68,
+      0.68
+    ],
+    "emissiveFactor": [
+      0.12,
+      0.28,
+      0.28
+    ]
+  },
+  "lake_water": {
+    "name": "lake_water",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.045,
+        0.2,
+        0.22,
+        0.88
+      ],
+      "metallicFactor": 0.28,
+      "roughnessFactor": 0.18
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.045,
+      0.2,
+      0.22
+    ],
+    "alphaMode": "BLEND"
+  },
+  "river_water": {
+    "name": "river_water",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.09,
+        0.32,
+        0.3,
+        0.85
+      ],
+      "metallicFactor": 0.2,
+      "roughnessFactor": 0.24
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.09,
+      0.32,
+      0.3
+    ],
+    "alphaMode": "BLEND"
+  },
+  "ocean_water": {
+    "name": "ocean_water",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.045,
+        0.24,
+        0.31,
+        0.96
+      ],
+      "metallicFactor": 0.3,
+      "roughnessFactor": 0.2
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.045,
+      0.24,
+      0.31
+    ],
+    "alphaMode": "BLEND"
+  },
+  "shallow_water": {
+    "name": "shallow_water",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.13,
+        0.43,
+        0.41,
+        0.85
+      ],
+      "metallicFactor": 0.15,
+      "roughnessFactor": 0.2
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.13,
+      0.43,
+      0.41
+    ],
+    "alphaMode": "BLEND"
+  },
+  "water_foam": {
+    "name": "water_foam",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.71,
+        0.86,
+        0.79,
+        0.6
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.75
+    },
+    "doubleSided": true,
+    "preview_color": [
+      0.71,
+      0.86,
+      0.79
+    ],
+    "alphaMode": "BLEND"
+  },
+  "grass": {
+    "name": "grass",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.40784313725490196,
+      0.5058823529411764,
+      0.2549019607843137
+    ],
+    "textures": {
+      "basecolor": "grass_basecolor.png",
+      "normal": "grass_normal.png",
+      "orm": "grass_orm.png"
+    }
+  },
+  "dirt": {
+    "name": "dirt",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.98
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.48627450980392156,
+      0.39215686274509803,
+      0.26666666666666666
+    ],
+    "textures": {
+      "basecolor": "dirt_basecolor.png",
+      "normal": "dirt_normal.png",
+      "orm": "dirt_orm.png"
+    }
+  },
+  "gravel": {
+    "name": "gravel",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.92
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.5019607843137255,
+      0.5019607843137255,
+      0.4392156862745098
+    ],
+    "textures": {
+      "basecolor": "gravel_basecolor.png",
+      "normal": "gravel_normal.png",
+      "orm": "gravel_orm.png"
+    }
+  },
+  "sand": {
+    "name": "sand",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.7490196078431373,
+      0.6862745098039216,
+      0.5137254901960784
+    ],
+    "textures": {
+      "basecolor": "sand_basecolor.png",
+      "normal": "sand_normal.png",
+      "orm": "sand_orm.png"
+    }
+  },
+  "stone": {
+    "name": "stone",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.88
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.5215686274509804,
+      0.5764705882352941,
+      0.5450980392156862
+    ],
+    "textures": {
+      "basecolor": "stone_basecolor.png",
+      "normal": "stone_normal.png",
+      "orm": "stone_orm.png"
+    }
+  },
+  "mountain_rock": {
+    "name": "mountain_rock",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.95
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.4588235294117647,
+      0.5294117647058824,
+      0.5372549019607843
+    ],
+    "textures": {
+      "basecolor": "mountain_rock_basecolor.png",
+      "normal": "mountain_rock_normal.png",
+      "orm": "mountain_rock_orm.png"
+    }
+  },
+  "snow": {
+    "name": "snow",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.83
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.8666666666666667,
+      0.9098039215686274,
+      0.8901960784313725
+    ],
+    "textures": {
+      "basecolor": "snow_basecolor.png",
+      "normal": "snow_normal.png",
+      "orm": "snow_orm.png"
+    }
+  },
+  "mud": {
+    "name": "mud",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.5
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.3215686274509804,
+      0.29411764705882354,
+      0.21176470588235294
+    ],
+    "textures": {
+      "basecolor": "mud_basecolor.png",
+      "normal": "mud_normal.png",
+      "orm": "mud_orm.png"
+    }
+  },
+  "dry_earth": {
+    "name": "dry_earth",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.6078431372549019,
+      0.4980392156862745,
+      0.3254901960784314
+    ],
+    "textures": {
+      "basecolor": "dry_earth_basecolor.png",
+      "normal": "dry_earth_normal.png",
+      "orm": "dry_earth_orm.png"
+    }
+  },
+  "asphalt_clean": {
+    "name": "asphalt_clean",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.88
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.2549019607843137,
+      0.2980392156862745,
+      0.2980392156862745
+    ],
+    "textures": {
+      "basecolor": "asphalt_clean_basecolor.png",
+      "normal": "asphalt_clean_normal.png",
+      "orm": "asphalt_clean_orm.png"
+    }
+  },
+  "asphalt_weathered": {
+    "name": "asphalt_weathered",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.92
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.3568627450980392,
+      0.3803921568627451,
+      0.34901960784313724
+    ],
+    "textures": {
+      "basecolor": "asphalt_weathered_basecolor.png",
+      "normal": "asphalt_weathered_normal.png",
+      "orm": "asphalt_weathered_orm.png"
+    }
+  },
+  "asphalt_wet": {
+    "name": "asphalt_wet",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.26
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.1568627450980392,
+      0.20784313725490197,
+      0.2196078431372549
+    ],
+    "textures": {
+      "basecolor": "asphalt_wet_basecolor.png",
+      "normal": "asphalt_wet_normal.png",
+      "orm": "asphalt_wet_orm.png"
+    }
+  },
+  "dirt_road": {
+    "name": "dirt_road",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.94
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.5607843137254902,
+      0.48627450980392156,
+      0.3333333333333333
+    ],
+    "textures": {
+      "basecolor": "dirt_road_basecolor.png",
+      "normal": "dirt_road_normal.png",
+      "orm": "dirt_road_orm.png"
+    }
+  },
+  "speed_limit_50": {
+    "name": "speed_limit_50",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.65
+    },
+    "alphaMode": "MASK",
+    "alphaCutoff": 0.5,
+    "doubleSided": false,
+    "textures": {
+      "basecolor": "speed_limit_50_basecolor.png"
+    }
+  }
+}

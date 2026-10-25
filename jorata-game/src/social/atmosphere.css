@@ -104,7 +104,7 @@
   .jorata-ai-symbol { width:24px; height:24px; }
   .jorata-ai-symbol svg { width:16px; }
   .social-sidebar { border:0; border-radius:0; padding-bottom:58px; }
-  .social-sidebar-header { padding:14px 14px 0; }
+  .social-sidebar-header { padding:14px 16px 0; }
   .social-sidebar-header .social-brand-row { display:flex; height:26px; margin-bottom:14px; }
   .social-sidebar-header .social-brand { font-size:17px !important; }
   .social-inbox-heading h1 { font-size:21px; }
@@ -113,3 +113,19 @@
   .social-app .social-panel-backdrop { left:0; }
   .social-main,.social-conversation-content { background:var(--social-bg-chat) !important; }
 }
+
+/* Keep compact metadata readable across the inbox and conversation views. */
+.social-app .jorata-ai-entry small,
+.social-app .social-room-time,
+.social-app .social-unread-badge,
+.social-app .social-list-tabs button > span,
+.social-app .social-connection-note,
+.social-app .social-connection-note button,
+.social-app .social-heading-status,
+.social-app .social-message-meta,
+.social-app .social-message-meta small,
+.social-app .social-message-sender,
+.social-app .social-day-divider,
+.social-app .social-typing { font-size:11px; }
+.social-app button { box-shadow:none !important; }
+.social-welcome .jorata-greeting { text-transform:none; letter-spacing:0; }

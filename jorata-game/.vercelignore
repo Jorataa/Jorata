@@ -1,0 +1,6 @@
+.env*
+data/
+artifacts/
+.taste-skill/
+tests/
+node_modules/

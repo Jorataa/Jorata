@@ -1,0 +1,86 @@
+{
+  "clear_morning": {
+    "sky": "#80b4c6",
+    "horizon": "#d4ddcf",
+    "sun": "#fff0cf",
+    "sun_direction": [
+      -0.5,
+      0.45,
+      0.3
+    ],
+    "sun_intensity": 2.0,
+    "ambient_intensity": 1.5,
+    "fog_near": 180,
+    "fog_far": 720
+  },
+  "sunny_afternoon": {
+    "sky": "#77aabd",
+    "horizon": "#ccd9d0",
+    "sun": "#fff0d9",
+    "sun_direction": [
+      -0.5,
+      0.8,
+      0.4
+    ],
+    "sun_intensity": 2.5,
+    "ambient_intensity": 1.6,
+    "fog_near": 180,
+    "fog_far": 720
+  },
+  "golden_sunset": {
+    "sky": "#798d9f",
+    "horizon": "#dcb48a",
+    "sun": "#ffbd77",
+    "sun_direction": [
+      -0.8,
+      0.23,
+      0.25
+    ],
+    "sun_intensity": 2.2,
+    "ambient_intensity": 1.0,
+    "fog_near": 150,
+    "fog_far": 620
+  },
+  "overcast_afternoon": {
+    "sky": "#9baeb0",
+    "horizon": "#c7d0c6",
+    "sun": "#d4ddd6",
+    "sun_direction": [
+      -0.5,
+      0.8,
+      0.4
+    ],
+    "sun_intensity": 0.8,
+    "ambient_intensity": 1.9,
+    "fog_near": 100,
+    "fog_far": 480
+  },
+  "blue_hour": {
+    "sky": "#344d70",
+    "horizon": "#758c9a",
+    "sun": "#b1c8e7",
+    "sun_direction": [
+      -0.5,
+      0.18,
+      0.4
+    ],
+    "sun_intensity": 0.35,
+    "ambient_intensity": 1.0,
+    "fog_near": 120,
+    "fog_far": 520
+  },
+  "moonlit_night": {
+    "sky": "#070f20",
+    "horizon": "#29384c",
+    "sun": "#a8c5fa",
+    "sun_direction": [
+      -0.4,
+      0.5,
+      0.4
+    ],
+    "sun_intensity": 0.17,
+    "ambient_intensity": 0.2,
+    "fog_near": 70,
+    "fog_far": 380
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "characters": 3,
+  "character_sequences": 28,
+  "character_frames": 162,
+  "effect_sequences": 10,
+  "effect_frames": 68,
+  "total_animation_sequences": 38,
+  "numbered_png_frames": 230,
+  "parallax_layers": 9,
+  "background_themes": 3,
+  "environment_objects": 16,
+  "all_png_files_decoded": 321,
+  "playable_gifs_verified": 38,
+  "unique_frame_sequences": 38,
+  "standing_baselines": [
+    {
+      "name": "runner",
+      "visible_ground_y": 112,
+      "anchor_y": 112
+    },
+    {
+      "name": "pursuer",
+      "visible_ground_y": 112,
+      "anchor_y": 112
+    },
+    {
+      "name": "guard",
+      "visible_ground_y": 112,
+      "anchor_y": 112
+    }
+  ],
+  "clipped_frames": [],
+  "preview_javascript_syntax": "passed",
+  "browser_execution": "not_run_no_browser_binary",
+  "archive_crc": "passed_after_packaging",
+  "errors": [],
+  "limitations": [
+    "Cutout skeletal animation rather than hand-redrawn anatomy.",
+    "Vault/climb world trajectories and contact fitting require game integration.",
+    "Collision and attack hitboxes are initial tuning values, not playtested game logic."
+  ],
+  "preview_runtime_smoke_test": {
+    "result": "passed",
+    "environment": "Node VM with DOM/canvas stubs and actual local image-path loading; not a real browser",
+    "sequences_loaded": 38,
+    "frame_scrubbing": "passed",
+    "scene_composition_paths": "passed"
+  },
+  "json_asset_references_verified": 347
+}
