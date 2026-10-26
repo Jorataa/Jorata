@@ -1,0 +1,6 @@
+
+> jorata-game@0.1.0 test:surgery
+> tsx tests/surgery.browser.ts && tsx tests/surgery.media.browser.ts
+
+PASS: 14 case wins, loss, drag/drop, touch, guide, persistence, fixed stage, layouts, Mosslight and Notes.
+PASS: critical loop, actual video playback, pixel-identical fixed bed across moods, case resume isolation, corrupt/blocked storage.

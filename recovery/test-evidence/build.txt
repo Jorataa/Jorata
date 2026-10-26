@@ -1,0 +1,30 @@
+
+> jorata-game@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 87 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                       0.87 kB │ gzip:   0.49 kB
+dist/assets/Rooftop-F8rZPEWR.css      6.38 kB │ gzip:   1.98 kB
+dist/assets/Drive-BWB2UcA_.css        7.99 kB │ gzip:   2.27 kB
+dist/assets/Play-Dbr00Qfs.css        10.21 kB │ gzip:   2.62 kB
+dist/assets/notes-DbLqlhiw.css       13.27 kB │ gzip:   3.33 kB
+dist/assets/index-CllAvOlb.css       67.13 kB │ gzip:  12.95 kB
+dist/assets/recent-B5hSiTUZ.js        0.91 kB │ gzip:   0.49 kB
+dist/assets/notes-RnhFg9GV.js         3.73 kB │ gzip:   1.75 kB
+dist/assets/Notes-C-c2-w3i.js        10.77 kB │ gzip:   3.82 kB
+dist/assets/Play-BFdq3zZB.js         16.52 kB │ gzip:   6.56 kB
+dist/assets/Surgery-Btas7C_f.js      36.16 kB │ gzip:  12.50 kB
+dist/assets/Boxing-B9r8myIy.js       52.88 kB │ gzip:  16.34 kB
+dist/assets/index-CiLME-ZH.js       253.77 kB │ gzip:  80.59 kB
+dist/assets/Drive-C4kqNVWY.js       671.57 kB │ gzip: 174.17 kB
+dist/assets/Rooftop-C2W7oKR0.js   1,441.55 kB │ gzip: 383.86 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 30.98s

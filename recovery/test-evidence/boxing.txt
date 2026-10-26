@@ -1,0 +1,5 @@
+
+> jorata-game@0.1.0 test:boxing
+> tsx tests/boxing.browser.ts
+
+PASS: Ringcraft Boxing shared-keyboard Local 1v1, 4-key controls, automatic Jab-Hook-Uppercut combo, simultaneous movement/blocking/attacks, customizable anti-ghosting bindings, AI mode, and responsive layouts.

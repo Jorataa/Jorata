@@ -1,0 +1,1428 @@
+{
+ "url": "http://localhost:3117",
+ "at": "2026-10-26T00:12:33.142Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.53,
+    0.45
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1060,
+     "screens": 1.2,
+     "words": 103,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 17,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "healthy.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "A little world. Endless possibility.",
+     "words": 5,
+     "chars": 36,
+     "lines": 2,
+     "size": 32,
+     "vw": 2.2,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.03,
+     "leading": 1.25,
+     "top": 116,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "A little world. Endless possibility.",
+     "words": 5,
+     "lines": 2,
+     "size": 32,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "A little world. Endless possibility.",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.034,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 116,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      21,
+      22,
+      32
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 13,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.5
+     },
+     "measureChars": 74,
+     "max": {
+      "size": 32,
+      "vw": 2.2,
+      "font": "Manrope",
+      "text": "A little world.Endless possibility."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.02,
+     "smallText": 4
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#141614",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 0.05,
+      "l": 0.08
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#a5ada3",
+       "share": 0.4
+      },
+      {
+       "color": "#f1f2ee",
+       "share": 0.33
+      },
+      {
+       "color": "#c1c7bd",
+       "share": 0.22
+      },
+      {
+       "color": "#1b201b",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#f1f2ee",
+      "hsl": {
+       "h": 75,
+       "s": 0.13,
+       "l": 0.94
+      },
+      "fg": "#1b201b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 5,
+     "radius": 5,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Quick note ⌘ J",
+      "Browse games",
+      "Enter Mosslight",
+      "Play Surgery"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 2,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.16
+     },
+     {
+      "type": "img",
+      "ratio": 0.08
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 1060,
+    "margins": {
+     "left": 120,
+     "right": 120
+    },
+    "sections": [
+     {
+      "sel": "section.home-games",
+      "tag": "section",
+      "top": 261,
+      "height": 451,
+      "words": 39,
+      "media": 2,
+      "middle": 20,
+      "heading": {
+       "text": "Mosslight",
+       "size": 21,
+       "tag": "h2"
+      },
+      "left": 120,
+      "right": 120,
+      "textLeft": 144,
+      "textRight": 144,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.home-bottom",
+      "tag": "section",
+      "top": 752,
+      "height": 186,
+      "words": 29,
+      "media": 0,
+      "middle": 326,
+      "heading": {
+       "text": "Leave room for a thought.",
+       "size": 22,
+       "tag": "h2"
+      },
+      "left": 120,
+      "right": 120,
+      "textLeft": 120,
+      "textRight": 472,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "A little world. Endless possibility.",
+      "size": 32,
+      "top": 116,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 120,
+      "n": 3
+     },
+     {
+      "x": 144,
+      "n": 1
+     },
+     {
+      "x": 930,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 5,
+    "bodySize": 13,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.07,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 120,
+     "h": 780
+    }
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": true,
+    "ground": "#141614",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 32,
+     "right": 120
+    },
+    "hero": {
+     "text": "A little world. Endless possibility.",
+     "words": 5,
+     "chars": 36,
+     "lines": 2,
+     "size": 32,
+     "vw": 2.2,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.03,
+     "leading": 1.25,
+     "top": 116,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 1,
+    "layout": {
+     "panels": 2,
+     "firstScreen": 2,
+     "ragged": [],
+     "voids": [
+      {
+       "gap": 44,
+       "at": 604,
+       "panel": "Mosslight"
+      },
+      {
+       "gap": 44,
+       "at": 604,
+       "panel": "Surgery Simulator"
+      }
+     ]
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 2,
+     "radii": [
+      [
+       8,
+       2
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 2,
+    "placeholders": [],
+    "type": {
+     "under13": 0.19,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      21,
+      22,
+      32
+     ]
+    },
+    "title": {
+     "text": "A little world.\nEndless possibility.",
+     "size": 32,
+     "top": 116
+    },
+    "colourShare": 0.002
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.52,
+    0.55
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1074,
+     "screens": 1,
+     "words": 101,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 17,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "healthy.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "A little world. Endless possibility.",
+     "words": 5,
+     "chars": 36,
+     "lines": 2,
+     "size": 32,
+     "vw": 4.2,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.03,
+     "leading": 1.25,
+     "top": 110,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "A little world. Endless possibility.",
+     "words": 5,
+     "lines": 2,
+     "size": 32,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "A little world. Endless possibility.",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.034,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 110,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      19,
+      22,
+      32
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 13,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.5
+     },
+     "measureChars": 54,
+     "max": {
+      "size": 32,
+      "vw": 4.2,
+      "font": "Manrope",
+      "text": "A little world.Endless possibility."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.02,
+     "smallText": 4
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#141614",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 0.05,
+      "l": 0.08
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#a5ada3",
+       "share": 0.4
+      },
+      {
+       "color": "#f1f2ee",
+       "share": 0.33
+      },
+      {
+       "color": "#c1c7bd",
+       "share": 0.22
+      },
+      {
+       "color": "#1b201b",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#f1f2ee",
+      "hsl": {
+       "h": 75,
+       "s": 0.13,
+       "l": 0.94
+      },
+      "fg": "#1b201b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 5,
+     "radius": 5,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Quick note",
+      "Browse games",
+      "Enter Mosslight",
+      "Play Surgery"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 2,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.11
+     },
+     {
+      "type": "img",
+      "ratio": 0.09
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1074,
+    "margins": {
+     "left": 28,
+     "right": 28
+    },
+    "sections": [
+     {
+      "sel": "section.home-games",
+      "tag": "section",
+      "top": 255,
+      "height": 482,
+      "words": 39,
+      "media": 2,
+      "middle": 20,
+      "heading": {
+       "text": "Mosslight",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 28,
+      "right": 28,
+      "textLeft": 48,
+      "textRight": 74,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.home-bottom",
+      "tag": "section",
+      "top": 777,
+      "height": 186,
+      "words": 29,
+      "media": 0,
+      "middle": 73,
+      "heading": {
+       "text": "Leave room for a thought.",
+       "size": 22,
+       "tag": "h2"
+      },
+      "left": 28,
+      "right": 28,
+      "textLeft": 28,
+      "textRight": 145,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "A little world. Endless possibility.",
+      "size": 32,
+      "top": 110,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 28,
+      "n": 3
+     },
+     {
+      "x": 48,
+      "n": 1
+     },
+     {
+      "x": 459,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 5,
+    "bodySize": 13,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": true,
+    "ground": "#141614",
+    "sidebar": null,
+    "topbar": {
+     "h": 80
+    },
+    "canvas": {
+     "left": 28,
+     "right": 28
+    },
+    "hero": {
+     "text": "A little world. Endless possibility.",
+     "words": 5,
+     "chars": 36,
+     "lines": 2,
+     "size": 32,
+     "vw": 4.2,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.03,
+     "leading": 1.25,
+     "top": 110,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 1,
+    "layout": {
+     "panels": 2,
+     "firstScreen": 2,
+     "ragged": [],
+     "voids": [
+      {
+       "gap": 47,
+       "at": 690,
+       "panel": "Surgery Simulator"
+      },
+      {
+       "gap": 45,
+       "at": 603,
+       "panel": "Mosslight"
+      }
+     ]
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 2,
+     "radii": [
+      [
+       8,
+       2
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 2,
+    "placeholders": [],
+    "type": {
+     "under13": 0.23,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      19,
+      22,
+      32
+     ]
+    },
+    "title": {
+     "text": "A little world.\nEndless possibility.",
+     "size": 32,
+     "top": 110
+    },
+    "colourShare": 0.002
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.74,
+    0.48
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 1574,
+     "screens": 1.9,
+     "words": 101,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 17,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "healthy.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "A little world. Endless possibility.",
+     "words": 5,
+     "chars": 36,
+     "lines": 2,
+     "size": 28,
+     "vw": 7.2,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.04,
+     "leading": 1.25,
+     "top": 96,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "A little world. Endless possibility.",
+     "words": 5,
+     "lines": 2,
+     "size": 28,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "A little world. Endless possibility.",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.036,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 96,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "+",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.09,
+      "top": 1282,
+      "tag": "button",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      20,
+      21,
+      22,
+      28
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 13,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.5
+     },
+     "measureChars": 48,
+     "max": {
+      "size": 28,
+      "vw": 7.2,
+      "font": "Manrope",
+      "text": "A little world.Endless possibility."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.02,
+     "smallText": 7
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#141614",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 0.05,
+      "l": 0.08
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#1e201e",
+       "top": 301,
+       "hsl": {
+        "h": 120,
+        "s": 0.03,
+        "l": 0.12
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a5ada3",
+       "share": 0.4
+      },
+      {
+       "color": "#f1f2ee",
+       "share": 0.33
+      },
+      {
+       "color": "#c1c7bd",
+       "share": 0.22
+      },
+      {
+       "color": "#1b201b",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#f1f2ee",
+      "hsl": {
+       "h": 75,
+       "s": 0.13,
+       "l": 0.94
+      },
+      "fg": "#1b201b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 5,
+     "radius": 5,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Home",
+      "Quick note",
+      "Browse games",
+      "Enter Mosslight"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 1,
+     "hairlineSamples": [
+      "nav.dock 390px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 2,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.21
+     },
+     {
+      "type": "img",
+      "ratio": 0.16
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 1574,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "header.home-intro",
+      "tag": "header",
+      "top": 96,
+      "height": 181,
+      "words": 17,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "A little world.",
+       "size": 28,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 110,
+      "textLeft": 20,
+      "textRight": 110,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.home-games",
+      "tag": "section",
+      "top": 301,
+      "height": 751,
+      "words": 39,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Mosslight",
+       "size": 20,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.home-bottom",
+      "tag": "section",
+      "top": 1082,
+      "height": 335,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Leave room for a thought.",
+       "size": 21,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 72,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "A little world. Endless possibility.",
+      "size": 28,
+      "top": 96,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 3
+     },
+     {
+      "x": 40,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 5,
+    "bodySize": 13,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "dark": true,
+    "ground": "#141614",
+    "sidebar": null,
+    "topbar": {
+     "h": 72
+    },
+    "canvas": {
+     "left": 20,
+     "right": 20
+    },
+    "hero": {
+     "text": "A little world. Endless possibility.",
+     "words": 5,
+     "chars": 36,
+     "lines": 2,
+     "size": 28,
+     "vw": 7.2,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.04,
+     "leading": 1.25,
+     "top": 96,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 1,
+    "layout": {
+     "panels": 2,
+     "firstScreen": 2,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 2,
+     "radii": [
+      [
+       8,
+       2
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 2,
+    "placeholders": [],
+    "type": {
+     "under13": 0.31,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      20,
+      21,
+      28
+     ]
+    },
+    "title": {
+     "text": "A little world.\nEndless possibility.",
+     "size": 28,
+     "top": 96
+    },
+    "colourShare": 0.001
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "panel-void",
+   "width": 1440,
+   "message": "2 card(s) hold a blank band inside: 44px in \"Mosslight\", 44px in \"Surgery Simulator\".",
+   "fix": "A card stretches to its neighbour only when it has content to fill. Keep a legend or a note directly under its chart (only an action or a total may sit at a stretched card's foot), let a short card keep its own height (align-items: start), and let a filtered block shrink to its rows."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/tmp/jorata-recovery-20261026/before/desktop-fold.jpg",
+   "pages": [
+    "/tmp/jorata-recovery-20261026/before/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/tmp/jorata-recovery-20261026/before/tablet-fold.jpg",
+   "pages": [
+    "/tmp/jorata-recovery-20261026/before/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/tmp/jorata-recovery-20261026/before/mobile-fold.jpg",
+   "pages": [
+    "/tmp/jorata-recovery-20261026/before/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

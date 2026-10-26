@@ -1,0 +1,296 @@
+{
+  "source": "JORATA_ENDLESS_DRIVE_COMPLETE_ASSETS.zip",
+  "source_bytes": 18153472,
+  "recovered_archive": "JORATA_ENDLESS_DRIVE_COMPLETE_ASSETS_recovered-20261026.zip",
+  "recovered_members": [
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/classic_vintage.glb",
+      "bytes": 599456,
+      "sha256": "70c0d0930cef3866220d1892d691bae912dc59e8a76e6ba6e6506bee87f1cb18"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/classic_vintage_lod1.glb",
+      "bytes": 373240,
+      "sha256": "aa663a903f493aaf018d5520e3ad635e2ce69b18a022faab1c3d4f89f93c59b1"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/hatchback_compact.glb",
+      "bytes": 618340,
+      "sha256": "440424891ac8ba8a81d0536ebdb9c636b69101fbe1b0be056e9ed24b2d3e2907"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/hatchback_compact_lod1.glb",
+      "bytes": 391956,
+      "sha256": "ed712b8e707d2439dfdf78bc937ff9a7f4568ccd32fefd12e07d832d2c5f52c7"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/pickup_truck.glb",
+      "bytes": 588984,
+      "sha256": "44333449ba14db9f1790b74042ec2328ba019f42fce0320aeaad2273d6c5d33c"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/pickup_truck_lod1.glb",
+      "bytes": 362812,
+      "sha256": "c2dfb169a9ee398bb9bf2a7d003f70b07f63edb58a1577b7e8870438bf6813a8"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/sedan_modern.glb",
+      "bytes": 618664,
+      "sha256": "58a3fdb4bf21fd65f287854a116c5741745a2c3d79279ab72ef8b3feb38df07e"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/sedan_modern_lod1.glb",
+      "bytes": 392284,
+      "sha256": "e3868d5d7738b65f0760b632c2d56076aefab31ae798554aab21b0591b9d32ab"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/sports_coupe.glb",
+      "bytes": 565560,
+      "sha256": "358a85380b9ce4cca61ac8ad602f068650fb2540a8434c7b94380b7b2e1b511d"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/sports_coupe_lod1.glb",
+      "bytes": 339144,
+      "sha256": "f8d3f85ab98abeb7309daf4beae024e33d55a24cf82ae1b0c88b69a687c1aacb"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/suv_offroad.glb",
+      "bytes": 632636,
+      "sha256": "bb268e6469818a223738952bbc74da309c9eb5b12962719d42b9e43a150def4f"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/suv_offroad_lod1.glb",
+      "bytes": 406244,
+      "sha256": "97bfedbfff5e95edc5b92e19b899da79b1154b2fb89bdbb009963cf309f4214d"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/01_vehicles/vehicle_specs.json",
+      "bytes": 1373,
+      "sha256": "1dc1f2ecff6dfa741b13209e50f54c89b0a64a5dea0903c6c2057c0691eba2c2"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/02_vehicle_materials/paint_presets.json",
+      "bytes": 2275,
+      "sha256": "9d4a1bc7b8f50e5451aa8b2db1c7b956cd86d1a23994e652798f9ab50b4684f0"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_asphalt_two_lane_curve_64m.glb",
+      "bytes": 747680,
+      "sha256": "bf8cc600076be864eb10e054fa9b5f45b989c7ad5821e1bef961218a2237925c"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_asphalt_two_lane_hill_64m.glb",
+      "bytes": 747780,
+      "sha256": "f836cae0d30825cddcb9d55e6aab073b82820bc9ad27cda025ecc8ad98c063fa"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_asphalt_two_lane_straight_64m.glb",
+      "bytes": 747600,
+      "sha256": "862ebd1f9f95ed8ab6ee818ac5b8d8bf2c606c808f25b4ea8e8ffeb142fcdcf3"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_coastal_highway_curve_64m.glb",
+      "bytes": 747660,
+      "sha256": "bb632edb476fd3ca938e980cdbafc7ec856a25c70e213a96fe400b5fea6ecbee"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_coastal_highway_hill_64m.glb",
+      "bytes": 747752,
+      "sha256": "d38777981618e008940cfd5befc0eed93f586174c636fcf176d58db0011105b6"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_coastal_highway_straight_64m.glb",
+      "bytes": 747572,
+      "sha256": "bc8d7195904cfdf0359d242923dac0ff72862f860cd4914a6223798cf9eb9047"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_countryside_curve_64m.glb",
+      "bytes": 820432,
+      "sha256": "4b8f1c7d70ee1252edd037443d48f7078996e521d0f5449667323a9dc6a4b2fe"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_countryside_hill_64m.glb",
+      "bytes": 820540,
+      "sha256": "e00b43da8a2c3ae8afd9e32d4caeb0a9c7e3a70e4bb702ef8691dfce93fb9a65"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_countryside_straight_64m.glb",
+      "bytes": 820360,
+      "sha256": "dd6f9e7cdeb482f9ff7ccc45cff0cf7ca94f6f64ed5b4771589958f8be266713"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_forest_curve_64m.glb",
+      "bytes": 767556,
+      "sha256": "2dd076df06820506c3fcb74df97dc1da70817efd56a6b9ecabb74afe5ba7ec7b"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_forest_hill_64m.glb",
+      "bytes": 767624,
+      "sha256": "4567ecea927244a164ff784d724da90e5936995b7fd59f6b2c466c6850517dde"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_forest_straight_64m.glb",
+      "bytes": 767508,
+      "sha256": "0e2b5f96d7a10dc1c23be3fba772452a718a3a8b0b3c1c7f7052f377886786fd"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_gravel_curve_64m.glb",
+      "bytes": 419648,
+      "sha256": "01fe6ae529d86aaf274f1313d1ccae954ea6887b581ff89afe85ddfdffd542ab"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_gravel_hill_64m.glb",
+      "bytes": 419680,
+      "sha256": "6bad5039a046c2d834eaebd905178e84e926ce53ba3f36e9a2ef4a3a0c1671c9"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_gravel_straight_64m.glb",
+      "bytes": 419624,
+      "sha256": "7f8648a20fd44c528499c41dd6bac23cedf0f436733a38b8665e26b7dd09844b"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_mountain_curve_64m.glb",
+      "bytes": 747652,
+      "sha256": "e1964b482e46e893ea37db99dbcbaa348122b47ebceb9753a01d5f4ab64370a7"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_mountain_hill_64m.glb",
+      "bytes": 747744,
+      "sha256": "d8d0ce949771e72f0a69cedb5df4d59222100b357b38578ab79109c8f27cde4d"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/road_mountain_straight_64m.glb",
+      "bytes": 747564,
+      "sha256": "761016e5980fef51d7dfe906097da953546f592e3beb6bf577593e121a2c84d7"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/roadside_drainage_4m.glb",
+      "bytes": 385776,
+      "sha256": "672b95d10e51df69e8af8e33c4719459bee2a82709dfc7f2ccea20881af8dadc"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/small_bridge.glb",
+      "bytes": 504640,
+      "sha256": "ac995f2fb1bd0b49472e66da38dc46aeabcb58f0ce031e5b2ba408657d835985"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/03_roads/tunnel_entrance.glb",
+      "bytes": 419064,
+      "sha256": "72853c007405e6c3fc5c6b60de41533a716dce9213bf2dd00751a07ca4422ffe"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/terrain_alpine_chunk_64m.glb",
+      "bytes": 529856,
+      "sha256": "4f03d721962219bf46ae726394f71b180729b53cbf8b22a36d6d8f559f18a0a8"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/terrain_coastal_chunk_64m.glb",
+      "bytes": 529856,
+      "sha256": "a2de45fdc0aeca6417615aac91cd95d9fdc1b03ac25c626b18eb4c43b28121c9"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/terrain_green_highlands_chunk_64m.glb",
+      "bytes": 529864,
+      "sha256": "f4dc465fee65d31072e6e3b95eed184e3ad8e10d56b9b4275d53c792451c1ccb"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/asphalt_clean_basecolor.png",
+      "bytes": 66268,
+      "sha256": "6157c85eb6b2b166c90de1b0e2733dceac4df463a2f7385915806adae2f7feec"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/asphalt_clean_normal.png",
+      "bytes": 145388,
+      "sha256": "84f62064c4d5a65b594646d542ca210dee784f7521f876a29d70ff8cdcb9f9c5"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/asphalt_clean_orm.png",
+      "bytes": 98001,
+      "sha256": "0d0a3566b4db671e005a76392bf2d581cb56bde9e7d8ec26a6ca561a59b9a24b"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/asphalt_weathered_basecolor.png",
+      "bytes": 114445,
+      "sha256": "f2649ac63d177fd7b5d9bdfab4db723fa03bb8294c0c4057d4d1648f8d114574"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/asphalt_weathered_normal.png",
+      "bytes": 164505,
+      "sha256": "2c046c0c4f7f4ffc178c6ed44930937dbb87694affa6a81039220815d1973fd3"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/asphalt_weathered_orm.png",
+      "bytes": 103447,
+      "sha256": "0744fc98a5fb65156624e3243a1f75bf6e2fd645b05c214cc62405796ba20b97"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/asphalt_wet_basecolor.png",
+      "bytes": 68196,
+      "sha256": "bb91761916db959a9d2c56c673ee568ddc0a8b7833ee400cb661db798dfecd2a"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/asphalt_wet_normal.png",
+      "bytes": 127154,
+      "sha256": "f9a285ea8336ba334d9218febf88684487063a74df93e2b26834f64ded0568ed"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/asphalt_wet_orm.png",
+      "bytes": 99873,
+      "sha256": "1717093ba58915c96b96976ead32e9dd68cf31dae4c2255938a7985aed864742"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/dirt_basecolor.png",
+      "bytes": 115574,
+      "sha256": "f37030c06b201c9363c8f3f2e320a65159c53d9e8c91be48ee6285e911a73592"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/dirt_normal.png",
+      "bytes": 142916,
+      "sha256": "dd12237f2f518b63ef83f2b1e32f9818dcfd2c5e99c4c7bafca698a114b0711b"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/dirt_orm.png",
+      "bytes": 93840,
+      "sha256": "d3bea7e57d0e441518fbc13a309dd1f72ef52d6aea79823f097e0a2f59b18d91"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/dirt_road_basecolor.png",
+      "bytes": 117665,
+      "sha256": "b9eb71f60903797c46f891eff03cdfdde636a9040f551da26060f97e5eba9fca"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/dirt_road_normal.png",
+      "bytes": 132630,
+      "sha256": "a5d0962022cd2821b8d3a8e1df89163758cc787bd9e0ff694571d768cb6fa11b"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/dirt_road_orm.png",
+      "bytes": 95914,
+      "sha256": "f240ed9d2b831ef100751fc06d11a430189f22fda5ac9b5069c94d2e1f0afb35"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/dry_earth_basecolor.png",
+      "bytes": 136913,
+      "sha256": "5154c70c7fea897becf3b207d29b558e5b760905a72b473bbe384a5da7f47023"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/dry_earth_normal.png",
+      "bytes": 149002,
+      "sha256": "6970168e699397062c15bef49a41fa7a90cc622635d53261fdeb20657660c53e"
+    },
+    {
+      "member": "JORATA_ENDLESS_DRIVE/04_terrain/textures/dry_earth_orm.png",
+      "bytes": 103694,
+      "sha256": "9d1ca0f4a247847f7b0de7891d7ef679602d2f82880e4db25ea52208e2cf7098"
+    }
+  ],
+  "unrecoverable": [
+    {
+      "path": "JORATA_ENDLESS_DRIVE/04_terrain/textures/grass_basecolor.png",
+      "reason": "truncated compressed data"
+    }
+  ],
+  "stopped_at_byte": 18149233,
+  "source_unchanged": true,
+  "note": "Only complete local-header entries with matching CRC and size were recovered. Missing central directory prevents proving the original full entry count."
+}

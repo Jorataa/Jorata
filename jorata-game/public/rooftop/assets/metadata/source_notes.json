@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "names": [
+    "runner",
+    "pursuer",
+    "guard"
+  ],
+  "source": "source/character_rig_source.png",
+  "method": "imagegen-designed cutout components; original articulated skeletal keyposes; fixed-size bone parts, no full-frame stretch",
+  "rig_bone_lengths": {
+    "thigh": 19,
+    "shin": 20,
+    "upper_arm": 13,
+    "forearm": 16,
+    "torso": 27
+  },
+  "notes": [
+    "Source component dimensions normalized once; each animation rotates and translates individual components.",
+    "No 3D models, source game artwork, or external assets used.",
+    "Traversal poses are in place; a game engine must move the root and align hands with level geometry.",
+    "RGBA PNG is authoritative; GIF previews composite transparency onto an opaque checkerboard and quantize colours.",
+    "Artwork has small soft edge coverage from antialiasing, not baked motion blur."
+  ]
+}

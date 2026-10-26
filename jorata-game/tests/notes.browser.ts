@@ -6,7 +6,7 @@ const context = await browser.newContext({ viewport: { width: 1440, height: 1000
 const page = await context.newPage();
 const failures: string[] = [];
 page.on('pageerror', error => failures.push(error.message));
-const base = process.env.BASE_URL || 'http://localhost:3107';
+const base = process.env.TEST_BASE_URL || process.env.BASE_URL || 'http://localhost:3107';
 const evidence: string[] = [];
 try {
   await page.goto(`${base}/notes`);

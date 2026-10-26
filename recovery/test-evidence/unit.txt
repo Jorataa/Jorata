@@ -1,0 +1,35 @@
+
+> jorata-game@0.1.0 test
+> tsx --test src/play/*.test.ts src/surgery/*.test.ts src/boxing/*.test.ts
+
+✔ default shared keyboard bindings use exact 4 keys per player with zero conflicts (13.446261ms)
+✔ single punch key automatically chains jab -> hook -> uppercut and resets (11.518447ms)
+✔ both players move, block, and attack simultaneously with zero turn-order bias (0.753666ms)
+✔ blocking reduces damage and knockback, and custom bindings prevent conflicts (0.76125ms)
+✔ single player vs AI mode drives P2 autonomously across Easy, Normal, and Hard difficulties (8.917206ms)
+✔ 2D spatial hitboxes and hurtboxes detect punch contact and emit visual effects (2.731904ms)
+✔ KO knockdown, round end, and match victory progression work cleanly (1.117243ms)
+✔ every supplied and generated boxing asset file exists on disk with valid PNG dimensions (21.005859ms)
+✔ a world is deterministic, serializable, and rejects corrupt inventory (22.499901ms)
+✔ collect and build conserve resources, enforce reach, and avoid player trapping (0.636036ms)
+✔ physics lands, jumps, returns to ground, and respects world bounds (19.878984ms)
+✔ every disease is recoverable with skill 0 across 100 random seeds (595.71765ms)
+✔ the shared guide recipe completes every case without complications (7.91076ms)
+✔ wrong tools lose a patient and terminal states ignore further tools (1.947111ms)
+✔ critical pulse can be rescued, or ignored for three turns and lost (0.284611ms)
+✔ skill slips leave the recipe unchanged and recovery actions resume it (1.461785ms)
+✔ wrong cutting hurts, sleep and cleanliness guard the scalpel (1.654144ms)
+✔ all random complication types fire and have a usable response (0.962214ms)
+✔ progress records wins/losses exactly once, with best turn counts and skill cap (2.90174ms)
+✔ generated admissions are hidden, reproducible and completable at zero skill (1157.595731ms)
+✔ hidden infection diagnosis requires both investigations, in either order (1.899472ms)
+✔ missing Gemini configuration is an honest unavailable response (1.193055ms)
+✔ Gemini request contains only allowlisted discovered state, and spoiler output is rejected (50.178465ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3600.975171

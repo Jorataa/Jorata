@@ -1,3 +1,19 @@
+# JORATA — games and personal notes
+
+The current gaming product lives in [`jorata-game/`](jorata-game/). It includes Home, a five-game library, local Notes, and Settings. Gameplay engines and website presentation are separate.
+
+```sh
+cd jorata-game
+npm ci
+npm run dev
+```
+
+Production build: `npm run build`. Core checks: `npm test` and `npm run test:rooftop`. Browser checks run against the local server; set `TEST_BASE_URL=http://localhost:3107` when using the default dev port. See [`recovery/RECOVERY_REPORT.md`](recovery/RECOVERY_REPORT.md) for all tested commands and remaining limits.
+
+The root Next.js project is preserved historical productivity work. Its original README follows. Original messaging implementations and alternate game variants remain on the source/backup branches; they are not part of the gaming build.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

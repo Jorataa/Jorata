@@ -1,0 +1,465 @@
+{
+  "source": "stash@{0}^3:rebuild-backups/repository.bundle",
+  "heads": [
+    {
+      "ref": "refs/heads/codex/jorata-ai-hardening",
+      "commit": "98a9e4154494821e1734005aa2ca75ca49436afa",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/codex/jorata-ai-hardening"
+      ]
+    },
+    {
+      "ref": "refs/heads/codex/jorata-premium-ui",
+      "commit": "2b58bde8c45794a05632a1252967b60604a9156c",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/codex/jorata-premium-ui"
+      ]
+    },
+    {
+      "ref": "refs/heads/codex/jorata-secure-ai",
+      "commit": "d0836b93c072e8bdec13de072214bd527047e87b",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-secure-ai"
+      ]
+    },
+    {
+      "ref": "refs/heads/main",
+      "commit": "f79dfcb903acd4a79a75827e11a912a863c295d2",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/HEAD",
+      "commit": "f79dfcb903acd4a79a75827e11a912a863c295d2",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/dashboard-error-onboarding-3c1vuh",
+      "commit": "a0b0152e94dfbdc8cb8e4d38cf0b2dbd9c9127a8",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/claude/dashboard-error-onboarding-3c1vuh"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/google-site-verification-ibxugg",
+      "commit": "03d390dbc4b41b13bb56ec70acc306dbca2661e8",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/claude/google-site-verification-ibxugg",
+        "refs/remotes/origin/claude/jorata-ai-descriptions-review-6q6b5k",
+        "refs/remotes/origin/claude/jorata-orbit-logo-cbgldh",
+        "refs/remotes/origin/claude/jorata-visual-redesign-grlx78",
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-guest-core",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/codex/jorata-premium-ui",
+        "refs/remotes/origin/codex/jorata-secure-ai",
+        "refs/remotes/origin/codex/jorata-social-v2",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main",
+        "refs/remotes/origin/vercel/install-vercel-web-analytics-i-ho5cb4"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/jorata-ai-descriptions-review-6q6b5k",
+      "commit": "1ec2bef89be8562a0af711bcd663f51e9f36d4c4",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/claude/jorata-ai-descriptions-review-6q6b5k",
+        "refs/remotes/origin/claude/jorata-visual-redesign-grlx78",
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-guest-core",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/codex/jorata-premium-ui",
+        "refs/remotes/origin/codex/jorata-secure-ai",
+        "refs/remotes/origin/codex/jorata-social-v2",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main",
+        "refs/remotes/origin/vercel/install-vercel-web-analytics-i-ho5cb4"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/jorata-audit-onboarding-o8mbz9",
+      "commit": "ad191cf3c1082dcdda4c1fe2c5a7577493f8796f",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/claude/jorata-audit-onboarding-o8mbz9"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/jorata-opt-in-cloud-sync-sdbhbd",
+      "commit": "d2c9e73ac7688aca2e40c3b19501c4a705234d28",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/claude/google-site-verification-ibxugg",
+        "refs/remotes/origin/claude/jorata-ai-descriptions-review-6q6b5k",
+        "refs/remotes/origin/claude/jorata-audit-onboarding-o8mbz9",
+        "refs/remotes/origin/claude/jorata-opt-in-cloud-sync-sdbhbd",
+        "refs/remotes/origin/claude/jorata-orbit-logo-cbgldh",
+        "refs/remotes/origin/claude/jorata-visual-redesign-grlx78",
+        "refs/remotes/origin/claude/security-audit-comprehensive-8b739e",
+        "refs/remotes/origin/claude/security-audit-pentest-0wmthg",
+        "refs/remotes/origin/claude/security-audit-pentest-jptefa",
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-guest-core",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/codex/jorata-premium-ui",
+        "refs/remotes/origin/codex/jorata-secure-ai",
+        "refs/remotes/origin/codex/jorata-social-v2",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main",
+        "refs/remotes/origin/vercel/install-vercel-web-analytics-i-ho5cb4"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/jorata-orbit-logo-cbgldh",
+      "commit": "1d7e75401621377503537b76af80cd5f005b245a",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/claude/jorata-ai-descriptions-review-6q6b5k",
+        "refs/remotes/origin/claude/jorata-orbit-logo-cbgldh",
+        "refs/remotes/origin/claude/jorata-visual-redesign-grlx78",
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-guest-core",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/codex/jorata-premium-ui",
+        "refs/remotes/origin/codex/jorata-secure-ai",
+        "refs/remotes/origin/codex/jorata-social-v2",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main",
+        "refs/remotes/origin/vercel/install-vercel-web-analytics-i-ho5cb4"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/jorata-visual-redesign-grlx78",
+      "commit": "d05f733c357553d3a6159e2905fd18134a33579b",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/claude/jorata-visual-redesign-grlx78"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/security-audit-comprehensive-8b739e",
+      "commit": "1f8d77ac81a892593124a171422ea41788da3155",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/claude/security-audit-comprehensive-8b739e"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/security-audit-pentest-0wmthg",
+      "commit": "12c936da00dc125670f21bdbb08dbc0d59e8d45b",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/claude/security-audit-pentest-0wmthg"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/claude/security-audit-pentest-jptefa",
+      "commit": "f8047b72aa34f67540ab6405a0cee349b23a2bfd",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/claude/jorata-ai-descriptions-review-6q6b5k",
+        "refs/remotes/origin/claude/jorata-orbit-logo-cbgldh",
+        "refs/remotes/origin/claude/jorata-visual-redesign-grlx78",
+        "refs/remotes/origin/claude/security-audit-pentest-jptefa",
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-guest-core",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/codex/jorata-premium-ui",
+        "refs/remotes/origin/codex/jorata-secure-ai",
+        "refs/remotes/origin/codex/jorata-social-v2",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main",
+        "refs/remotes/origin/vercel/install-vercel-web-analytics-i-ho5cb4"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/codex/jorata-guest-core",
+      "commit": "11001c2268a3efd2d8254de192c41c944452f5aa",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-guest-core",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/codex/jorata-premium-ui",
+        "refs/remotes/origin/codex/jorata-secure-ai",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/codex/jorata-secure-ai",
+      "commit": "d0836b93c072e8bdec13de072214bd527047e87b",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-secure-ai"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/codex/jorata-social-v2",
+      "commit": "f1341aa3d0dfda84c1ca77b0cfac86c5411dc86b",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-guest-core",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/codex/jorata-premium-ui",
+        "refs/remotes/origin/codex/jorata-secure-ai",
+        "refs/remotes/origin/codex/jorata-social-v2",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/deploy/vercel-build-fix",
+      "commit": "e4630b7d04bcc8a491e232e5388be8a1d09a834b",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/claude/dashboard-error-onboarding-3c1vuh",
+        "refs/remotes/origin/claude/google-site-verification-ibxugg",
+        "refs/remotes/origin/claude/jorata-ai-descriptions-review-6q6b5k",
+        "refs/remotes/origin/claude/jorata-audit-onboarding-o8mbz9",
+        "refs/remotes/origin/claude/jorata-opt-in-cloud-sync-sdbhbd",
+        "refs/remotes/origin/claude/jorata-orbit-logo-cbgldh",
+        "refs/remotes/origin/claude/jorata-visual-redesign-grlx78",
+        "refs/remotes/origin/claude/security-audit-comprehensive-8b739e",
+        "refs/remotes/origin/claude/security-audit-pentest-0wmthg",
+        "refs/remotes/origin/claude/security-audit-pentest-jptefa",
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-guest-core",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/codex/jorata-premium-ui",
+        "refs/remotes/origin/codex/jorata-secure-ai",
+        "refs/remotes/origin/codex/jorata-social-v2",
+        "refs/remotes/origin/deploy/vercel-build-fix",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main",
+        "refs/remotes/origin/vercel/install-vercel-web-analytics-i-ho5cb4",
+        "refs/remotes/origin/vercel/install-vercel-web-analytics-i-y4hbjx"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/main",
+      "commit": "f79dfcb903acd4a79a75827e11a912a863c295d2",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/vercel/install-vercel-web-analytics-i-ho5cb4",
+      "commit": "fa34b52fb623fc53098d05882d4a80138ca1076b",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/vercel/install-vercel-web-analytics-i-ho5cb4"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/vercel/install-vercel-web-analytics-i-y4hbjx",
+      "commit": "feada411736a8373ddb6157dfe44d72e2782628d",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/vercel/install-vercel-web-analytics-i-y4hbjx"
+      ]
+    },
+    {
+      "ref": "HEAD",
+      "commit": "f79dfcb903acd4a79a75827e11a912a863c295d2",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main"
+      ]
+    },
+    {
+      "ref": "worktrees/jorata-secure-ai/HEAD",
+      "commit": "d0836b93c072e8bdec13de072214bd527047e87b",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-secure-ai"
+      ]
+    },
+    {
+      "ref": "worktrees/jorata-premium-ui/HEAD",
+      "commit": "2b58bde8c45794a05632a1252967b60604a9156c",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/codex/jorata-premium-ui"
+      ]
+    },
+    {
+      "ref": "worktrees/jorata-ai-hardening/HEAD",
+      "commit": "98a9e4154494821e1734005aa2ca75ca49436afa",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/codex/jorata-ai-hardening"
+      ]
+    },
+    {
+      "ref": "worktrees/jorata-guest-release/HEAD",
+      "commit": "11001c2268a3efd2d8254de192c41c944452f5aa",
+      "already_present_in_repository": true,
+      "remote_refs_containing_commit": [
+        "refs/remotes/origin/HEAD",
+        "refs/remotes/origin/backup/boxing-workspace-20261025",
+        "refs/remotes/origin/backup/pre-play-notes-20261022",
+        "refs/remotes/origin/backup/pre-premium-consolidation-20261025",
+        "refs/remotes/origin/backup/stash-recovery-20261026",
+        "refs/remotes/origin/backup/workspace-recovery-20261025",
+        "refs/remotes/origin/backup/workspace-recovery-20261026",
+        "refs/remotes/origin/boxing-game",
+        "refs/remotes/origin/codex/jorata-ai-hardening",
+        "refs/remotes/origin/codex/jorata-guest-core",
+        "refs/remotes/origin/codex/jorata-play-notes",
+        "refs/remotes/origin/codex/jorata-premium-ui",
+        "refs/remotes/origin/codex/jorata-secure-ai",
+        "refs/remotes/origin/driving-game",
+        "refs/remotes/origin/feat/boxing-game",
+        "refs/remotes/origin/feature/rooftop-escape",
+        "refs/remotes/origin/main"
+      ]
+    }
+  ],
+  "opaque_bundle_uploaded": false,
+  "scope": "Listed bundle refs and checked commit availability; raw bundle remains local and was not uploaded."
+}

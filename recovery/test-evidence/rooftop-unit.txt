@@ -1,0 +1,25 @@
+
+> jorata-game@0.1.0 test:rooftop
+> node scripts/rooftop-assets.mjs && node --import tsx src/rooftop/model.test.ts
+
+Verified 384 hashes and paths, 38 sprite sheet layouts, anchors and timings, 16 environment collider contracts.
+First Escape: 46s to second checkpoint; gap range 338–544px; actions {"jump":14,"land":13,"slide":5,"hit":4,"vault":4,"checkpoint":2,"escape":1}
+High Ground: 46s to second checkpoint; gap range 194–478px; actions {"vault":5,"jump":14,"slide":5,"land":7,"hit":4,"climb":5,"checkpoint":2,"escape":1}
+Last Rooftop: 45s to second checkpoint; gap range 132–599px; actions {"slide":5,"jump":14,"vault":5,"land":7,"hit":5,"climb":4,"checkpoint":2,"escape":1}
+✔ First Escape: full route, checkpoint retries, physical pursuit and all guards (250.599713ms)
+✔ High Ground: full route, checkpoint retries, physical pursuit and all guards (239.646818ms)
+✔ Last Rooftop: full route, checkpoint retries, physical pursuit and all guards (63.600915ms)
+✔ variable jump, 100ms coyote and 120ms buffer (5.634074ms)
+✔ slide collider clears the beam and restores standing state safely (5.479557ms)
+✔ one hit per strike, metadata anticipation/recovery, and aerial kick (3.007177ms)
+✔ capture is spatial; hesitation brings danger before failure (3.744361ms)
+✔ pause freezes movement and checkpoint restart clears transient combat state (3.087246ms)
+✔ higher drops roll and a buffered jump interrupts recovery (1.79141ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 618.367717

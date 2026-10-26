@@ -1,3 +1,13 @@
+# Current recovery context — 2026-10-26
+
+The current product brief is **a premium pixel-inspired gaming platform with personal notes**. The implementation is in `jorata-game/` (React, TypeScript, Vite; per-game engines remain isolated). Main destinations: Home, Games, Notes, Settings. Games: Mosslight, Surgery, Ringcraft Boxing, Rooftop Escape, Endless Drive. No messaging or account UI is included in the gaming build.
+
+Read `JORATA_AUDIT.md`, `recovery/RECOVERY_REPORT.md`, and `recovery/asset-inventory.json` for preservation scope, branch decisions, current verification and limitations. Original workspaces and source branches remain intact. The root Next.js application below is historical productivity work retained for recovery; it is not the gaming entrypoint. Do not merge it into the gaming UI by inference.
+
+Run the gaming product with `cd jorata-game`, `npm ci`, `npm run dev`. Do not deploy or merge this recovery branch into main without review of the verified result.
+
+---
+
 # Jorata Project Context
 
 Saved from `C:\Users\jovan\Downloads\Jorata Project Context.pdf` and current workspace inspection on 2026-05-30. Code snapshot refreshed 2026-06-12 after the multi-map & sticky completion pass (see `PRODUCT_AUDIT.md`).

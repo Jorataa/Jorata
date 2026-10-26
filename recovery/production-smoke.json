@@ -1,0 +1,51 @@
+{
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Home · Jorata"
+    },
+    {
+      "path": "/games",
+      "status": 200,
+      "title": "Games · Jorata"
+    },
+    {
+      "path": "/notes",
+      "status": 200,
+      "title": "Notes · Jorata"
+    },
+    {
+      "path": "/settings",
+      "status": 200,
+      "title": "Settings · Jorata"
+    },
+    {
+      "path": "/play",
+      "status": 200,
+      "title": "Mosslight · Jorata"
+    },
+    {
+      "path": "/games/surgery",
+      "status": 200,
+      "title": "Surgery Simulator · Jorata"
+    },
+    {
+      "path": "/games/boxing",
+      "status": 200,
+      "title": "Ringcraft Boxing · Jorata"
+    },
+    {
+      "path": "/games/rooftop-escape",
+      "status": 200,
+      "title": "Rooftop Escape · Jorata"
+    },
+    {
+      "path": "/games/endless-drive",
+      "status": 200,
+      "title": "Endless Drive · Jorata"
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": []
+}

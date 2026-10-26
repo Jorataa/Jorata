@@ -1,0 +1,459 @@
+{
+  "schema_version": 1,
+  "units": "unscaled_texture_pixels",
+  "grid": 32,
+  "collider_coordinates": "relative_to_image_top_left",
+  "anchors": "subtract anchor from image top-left coordinates to obtain coordinates relative to the placement point",
+  "objects": [
+    {
+      "name": "rooftop_start",
+      "path": "environment/rooftop_start.png",
+      "source_svg": "environment/source/rooftop_start.svg",
+      "width": 256,
+      "height": 96,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 16
+      },
+      "type": "platform",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 0,
+          "y": 16,
+          "width": 256,
+          "height": 80
+        }
+      ],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      },
+      "notes": "rooftop_middle repeats horizontally; top surface y=16. Start/end raised edge caps are decorative, not extra colliders."
+    },
+    {
+      "name": "rooftop_middle",
+      "path": "environment/rooftop_middle.png",
+      "source_svg": "environment/source/rooftop_middle.svg",
+      "width": 256,
+      "height": 96,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 16
+      },
+      "type": "platform",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 0,
+          "y": 16,
+          "width": 256,
+          "height": 80
+        }
+      ],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      },
+      "notes": "rooftop_middle repeats horizontally; top surface y=16. Start/end raised edge caps are decorative, not extra colliders."
+    },
+    {
+      "name": "rooftop_end",
+      "path": "environment/rooftop_end.png",
+      "source_svg": "environment/source/rooftop_end.svg",
+      "width": 256,
+      "height": 96,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 16
+      },
+      "type": "platform",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 0,
+          "y": 16,
+          "width": 256,
+          "height": 80
+        }
+      ],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      },
+      "notes": "rooftop_middle repeats horizontally; top surface y=16. Start/end raised edge caps are decorative, not extra colliders."
+    },
+    {
+      "name": "rooftop_corner",
+      "path": "environment/rooftop_corner.png",
+      "source_svg": "environment/source/rooftop_corner.svg",
+      "width": 128,
+      "height": 96,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 16
+      },
+      "type": "platform",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 0,
+          "y": 16,
+          "width": 128,
+          "height": 80
+        }
+      ],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      },
+      "notes": "rooftop_middle repeats horizontally; top surface y=16. Start/end raised edge caps are decorative, not extra colliders."
+    },
+    {
+      "name": "building_facade",
+      "path": "environment/building_facade.png",
+      "source_svg": "environment/source/building_facade.svg",
+      "width": 256,
+      "height": 256,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 0
+      },
+      "type": "decoration",
+      "colliders": [],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": true
+      },
+      "notes": "Tile horizontally and vertically; add separate platform or wall collision when required."
+    },
+    {
+      "name": "wall_climbable",
+      "path": "environment/wall_climbable.png",
+      "source_svg": "environment/source/wall_climbable.svg",
+      "width": 64,
+      "height": 256,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 0
+      },
+      "type": "wall",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 0,
+          "y": 0,
+          "width": 64,
+          "height": 256
+        }
+      ],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": true,
+        "grabbable": false,
+        "decoration_only": false
+      },
+      "notes": "Grip details mark a climbable wall. Engine validates the destination ledge."
+    },
+    {
+      "name": "ledge_grabbable",
+      "path": "environment/ledge_grabbable.png",
+      "source_svg": "environment/source/ledge_grabbable.svg",
+      "width": 128,
+      "height": 64,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 16
+      },
+      "type": "ledge",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 0,
+          "y": 16,
+          "width": 128,
+          "height": 48
+        }
+      ],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": true,
+        "grabbable": true,
+        "decoration_only": false
+      }
+    },
+    {
+      "name": "low_barrier",
+      "path": "environment/low_barrier.png",
+      "source_svg": "environment/source/low_barrier.svg",
+      "width": 96,
+      "height": 64,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 64
+      },
+      "type": "obstacle",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 8,
+          "y": 16,
+          "width": 80,
+          "height": 48
+        }
+      ],
+      "flags": {
+        "vaultable": true,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      }
+    },
+    {
+      "name": "slide_barrier",
+      "path": "environment/slide_barrier.png",
+      "source_svg": "environment/source/slide_barrier.svg",
+      "width": 128,
+      "height": 128,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 128
+      },
+      "type": "overhead_obstacle",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 0,
+          "y": 16,
+          "width": 128,
+          "height": 44
+        }
+      ],
+      "flags": {
+        "vaultable": false,
+        "slide_under": true,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      },
+      "notes": "Hang overhead; assumed floor y=128 gives 68px clearance under the beam. Cables are decorative. Scale collider and floor consistently."
+    },
+    {
+      "name": "vent",
+      "path": "environment/vent.png",
+      "source_svg": "environment/source/vent.svg",
+      "width": 64,
+      "height": 64,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 64
+      },
+      "type": "obstacle",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 4,
+          "y": 24,
+          "width": 56,
+          "height": 40
+        }
+      ],
+      "flags": {
+        "vaultable": true,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      }
+    },
+    {
+      "name": "air_conditioner",
+      "path": "environment/air_conditioner.png",
+      "source_svg": "environment/source/air_conditioner.svg",
+      "width": 96,
+      "height": 64,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 64
+      },
+      "type": "obstacle",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 4,
+          "y": 16,
+          "width": 88,
+          "height": 48
+        }
+      ],
+      "flags": {
+        "vaultable": true,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      }
+    },
+    {
+      "name": "water_tank",
+      "path": "environment/water_tank.png",
+      "source_svg": "environment/source/water_tank.svg",
+      "width": 128,
+      "height": 192,
+      "grid": 32,
+      "anchor": {
+        "x": 64,
+        "y": 192
+      },
+      "type": "decoration",
+      "colliders": [],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": true
+      },
+      "notes": "Background rooftop prop. Deliberately non-solid to avoid invisible bars blocking parkour."
+    },
+    {
+      "name": "antenna",
+      "path": "environment/antenna.png",
+      "source_svg": "environment/source/antenna.svg",
+      "width": 64,
+      "height": 160,
+      "grid": 32,
+      "anchor": {
+        "x": 32,
+        "y": 160
+      },
+      "type": "decoration",
+      "colliders": [],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": true
+      }
+    },
+    {
+      "name": "chimney",
+      "path": "environment/chimney.png",
+      "source_svg": "environment/source/chimney.svg",
+      "width": 64,
+      "height": 128,
+      "grid": 32,
+      "anchor": {
+        "x": 0,
+        "y": 128
+      },
+      "type": "obstacle",
+      "colliders": [
+        {
+          "shape": "rectangle",
+          "x": 12,
+          "y": 16,
+          "width": 40,
+          "height": 112
+        }
+      ],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      }
+    },
+    {
+      "name": "door",
+      "path": "environment/door.png",
+      "source_svg": "environment/source/door.svg",
+      "width": 96,
+      "height": 160,
+      "grid": 32,
+      "anchor": {
+        "x": 48,
+        "y": 160
+      },
+      "type": "interaction",
+      "colliders": [],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      },
+      "triggers": [
+        {
+          "shape": "rectangle",
+          "x": 8,
+          "y": 12,
+          "width": 80,
+          "height": 148
+        }
+      ]
+    },
+    {
+      "name": "escape_exit",
+      "path": "environment/escape_exit.png",
+      "source_svg": "environment/source/escape_exit.svg",
+      "width": 128,
+      "height": 192,
+      "grid": 32,
+      "anchor": {
+        "x": 64,
+        "y": 192
+      },
+      "type": "exit_trigger",
+      "colliders": [],
+      "flags": {
+        "vaultable": false,
+        "slide_under": false,
+        "climbable": false,
+        "grabbable": false,
+        "decoration_only": false
+      },
+      "triggers": [
+        {
+          "shape": "rectangle",
+          "x": 18,
+          "y": 12,
+          "width": 92,
+          "height": 180
+        }
+      ]
+    }
+  ]
+}

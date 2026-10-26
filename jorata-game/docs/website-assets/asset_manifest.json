@@ -1,0 +1,970 @@
+[
+  {
+    "filename": "assistant/assistant_dock.svg",
+    "dimensions": "176 \u00d7 100",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 541,
+    "usage": "Decorative assistant assistant_dock. Place existing robot unchanged above this plate."
+  },
+  {
+    "filename": "assistant/assistant_hover.svg",
+    "dimensions": "88 \u00d7 88",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 535,
+    "usage": "Decorative assistant assistant_hover. Place existing robot unchanged above this plate."
+  },
+  {
+    "filename": "assistant/assistant_light.svg",
+    "dimensions": "256 \u00d7 256",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 299,
+    "usage": "Subtle dock aura. Static, no perpetual status pulse."
+  },
+  {
+    "filename": "assistant/assistant_panel_background.png",
+    "dimensions": "360 \u00d7 480",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 3381,
+    "usage": "Decorative assistant assistant_panel_background. Place existing robot unchanged above this plate. PNG convenience export."
+  },
+  {
+    "filename": "assistant/assistant_panel_background.svg",
+    "dimensions": "360 \u00d7 480",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 542,
+    "usage": "Decorative assistant assistant_panel_background. Place existing robot unchanged above this plate."
+  },
+  {
+    "filename": "assistant/assistant_widget_frame.png",
+    "dimensions": "88 \u00d7 88",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 1628,
+    "usage": "Decorative assistant assistant_widget_frame. Place existing robot unchanged above this plate. PNG convenience export."
+  },
+  {
+    "filename": "assistant/assistant_widget_frame.svg",
+    "dimensions": "88 \u00d7 88",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 535,
+    "usage": "Decorative assistant assistant_widget_frame. Place existing robot unchanged above this plate."
+  },
+  {
+    "filename": "assistant/notification_indicator.svg",
+    "dimensions": "16 \u00d7 16",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 167,
+    "usage": "Unread indicator, show only for actual unread content."
+  },
+  {
+    "filename": "assistant/speech_bubble.svg",
+    "dimensions": "280 \u00d7 104",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 217,
+    "usage": "Bubble background only, no baked AI responses."
+  },
+  {
+    "filename": "assistant/speech_bubble_compact.svg",
+    "dimensions": "192 \u00d7 64",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 214,
+    "usage": "Bubble background only, no baked AI responses."
+  },
+  {
+    "filename": "backgrounds/bg_discovery.webp",
+    "dimensions": "1536 \u00d7 900",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 14708,
+    "usage": "Quiet discovery background; content-safe, use at native scale or cover."
+  },
+  {
+    "filename": "backgrounds/bg_footer.webp",
+    "dimensions": "1536 \u00d7 480",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 5266,
+    "usage": "Quiet footer background; content-safe, use at native scale or cover."
+  },
+  {
+    "filename": "backgrounds/bg_homepage.webp",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 17454,
+    "usage": "Quiet homepage background; content-safe, use at native scale or cover."
+  },
+  {
+    "filename": "backgrounds/bg_library.webp",
+    "dimensions": "1536 \u00d7 900",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 7270,
+    "usage": "Quiet library background; content-safe, use at native scale or cover."
+  },
+  {
+    "filename": "backgrounds/bg_notes.webp",
+    "dimensions": "1200 \u00d7 640",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 2262,
+    "usage": "Quiet notes background; content-safe, use at native scale or cover."
+  },
+  {
+    "filename": "backgrounds/bg_section.webp",
+    "dimensions": "1200 \u00d7 640",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 1516,
+    "usage": "Quiet section background; content-safe, use at native scale or cover."
+  },
+  {
+    "filename": "backgrounds/texture_pixel_dust.svg",
+    "dimensions": "128 \u00d7 128",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 453,
+    "usage": "Seamless optional subtle dust tile, 128px repeat. Avoid on images."
+  },
+  {
+    "filename": "branding/favicon.ico",
+    "dimensions": "64 \u00d7 64",
+    "format": "ICO",
+    "alpha": "alpha",
+    "bytes": 4585,
+    "usage": "Multi-size browser fallback."
+  },
+  {
+    "filename": "branding/jorata_emblem.svg",
+    "dimensions": "32 \u00d7 32",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 208,
+    "usage": "Compact stepped J / open portal emblem. Primary mint/gold."
+  },
+  {
+    "filename": "branding/jorata_emblem_mono.svg",
+    "dimensions": "32 \u00d7 32",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 208,
+    "usage": "Single-color emblem for stamping or monochrome use."
+  },
+  {
+    "filename": "branding/jorata_favicon.png",
+    "dimensions": "32 \u00d7 32",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 658,
+    "usage": "Browser favicon; SVG master. PNG convenience export."
+  },
+  {
+    "filename": "branding/jorata_favicon.svg",
+    "dimensions": "32 \u00d7 32",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 304,
+    "usage": "Browser favicon; SVG master."
+  },
+  {
+    "filename": "branding/jorata_logo_dark.svg",
+    "dimensions": "410 \u00d7 84",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 1681,
+    "usage": "Primary horizontal emblem and outlined wordmark lockup, dark."
+  },
+  {
+    "filename": "branding/jorata_logo_light.svg",
+    "dimensions": "410 \u00d7 84",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 1681,
+    "usage": "Primary horizontal emblem and outlined wordmark lockup, light."
+  },
+  {
+    "filename": "branding/jorata_logo_mono.svg",
+    "dimensions": "410 \u00d7 84",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 1681,
+    "usage": "Primary horizontal emblem and outlined wordmark lockup, mono."
+  },
+  {
+    "filename": "branding/jorata_wordmark_dark.svg",
+    "dimensions": "340 \u00d7 84",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 1515,
+    "usage": "Outlined JORATA wordmark; dark background use. Clear space = cap height / 2."
+  },
+  {
+    "filename": "branding/jorata_wordmark_light.svg",
+    "dimensions": "340 \u00d7 84",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 1515,
+    "usage": "Outlined JORATA wordmark; light background use. Clear space = cap height / 2."
+  },
+  {
+    "filename": "decorations/cloud_wisp.png",
+    "dimensions": "640 \u00d7 128",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 858,
+    "usage": "Transparent stepped cloud wisp; sparse upper sky use. PNG convenience export."
+  },
+  {
+    "filename": "decorations/cloud_wisp.svg",
+    "dimensions": "640 \u00d7 128",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 244,
+    "usage": "Transparent stepped cloud wisp; sparse upper sky use."
+  },
+  {
+    "filename": "decorations/notes_bookmark.svg",
+    "dimensions": "48 \u00d7 80",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 214,
+    "usage": "Warm bookmark decoration for notes panel."
+  },
+  {
+    "filename": "decorations/particle_gold.svg",
+    "dimensions": "16 \u00d7 16",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 147,
+    "usage": "Tiny atmospheric particle; maximum 6 visible on desktop."
+  },
+  {
+    "filename": "decorations/particle_mint.svg",
+    "dimensions": "16 \u00d7 16",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 147,
+    "usage": "Tiny atmospheric particle; maximum 6 visible on desktop."
+  },
+  {
+    "filename": "decorations/pixel_star.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 148,
+    "usage": "Tiny atmospheric particle; maximum 6 visible on desktop."
+  },
+  {
+    "filename": "decorations/rooftop_antenna.svg",
+    "dimensions": "96 \u00d7 192",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 272,
+    "usage": "Silhouette decoration for quiet footer only, not gameplay."
+  },
+  {
+    "filename": "decorations/window_lights.png",
+    "dimensions": "128 \u00d7 128",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 578,
+    "usage": "Optional window motif. Do not overlay randomly over rendered windows. PNG convenience export."
+  },
+  {
+    "filename": "decorations/window_lights.svg",
+    "dimensions": "128 \u00d7 128",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 592,
+    "usage": "Optional window motif. Do not overlay randomly over rendered windows."
+  },
+  {
+    "filename": "design-system/design_system.md",
+    "dimensions": "\u2014",
+    "format": "MD",
+    "alpha": "\u2014",
+    "bytes": 2984,
+    "usage": "Palette, typography, sizing, brand, accessibility and visual rules."
+  },
+  {
+    "filename": "design-system/generation_notes.md",
+    "dimensions": "\u2014",
+    "format": "MD",
+    "alpha": "\u2014",
+    "bytes": 2532,
+    "usage": "Reproducible prompt directions and generation provenance."
+  },
+  {
+    "filename": "design-system/integration_guide.md",
+    "dimensions": "\u2014",
+    "format": "MD",
+    "alpha": "\u2014",
+    "bytes": 5498,
+    "usage": "Short integration map and implementation constraints for the next coding agent."
+  },
+  {
+    "filename": "design-system/quality_control.md",
+    "dimensions": "\u2014",
+    "format": "MD",
+    "alpha": "\u2014",
+    "bytes": 1502,
+    "usage": "Export checks, visual review scope and integration limitations."
+  },
+  {
+    "filename": "design-system/references.md",
+    "dimensions": "\u2014",
+    "format": "MD",
+    "alpha": "\u2014",
+    "bytes": 1447,
+    "usage": "Research sources and original-work provenance."
+  },
+  {
+    "filename": "design-system/tokens.json",
+    "dimensions": "\u2014",
+    "format": "JSON",
+    "alpha": "\u2014",
+    "bytes": 802,
+    "usage": "Portable design tokens, not executable website code."
+  },
+  {
+    "filename": "game-covers/game_boxing_card.webp",
+    "dimensions": "768 \u00d7 512",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 138942,
+    "usage": "Boxing promotional art, card placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_boxing_featured.webp",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 366598,
+    "usage": "Boxing promotional art, featured placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_boxing_landscape.webp",
+    "dimensions": "1200 \u00d7 675",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 245534,
+    "usage": "Boxing promotional art, landscape placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_boxing_mobile.webp",
+    "dimensions": "600 \u00d7 800",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 181760,
+    "usage": "Separately generated portrait composition preserving both boxers; no padded frame."
+  },
+  {
+    "filename": "game-covers/game_rooftop_card.webp",
+    "dimensions": "768 \u00d7 512",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 116988,
+    "usage": "Rooftop promotional art, card placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_rooftop_featured.webp",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 323222,
+    "usage": "Rooftop promotional art, featured placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_rooftop_landscape.webp",
+    "dimensions": "1200 \u00d7 675",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 201868,
+    "usage": "Rooftop promotional art, landscape placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_rooftop_mobile.webp",
+    "dimensions": "600 \u00d7 800",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 131072,
+    "usage": "Rooftop promotional art, mobile placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_surgery_card.webp",
+    "dimensions": "768 \u00d7 512",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 110318,
+    "usage": "Surgery promotional art, card placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_surgery_featured.webp",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 312832,
+    "usage": "Surgery promotional art, featured placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_surgery_landscape.webp",
+    "dimensions": "1200 \u00d7 675",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 195132,
+    "usage": "Surgery promotional art, landscape placement. No gameplay dependency."
+  },
+  {
+    "filename": "game-covers/game_surgery_mobile.webp",
+    "dimensions": "600 \u00d7 800",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 117514,
+    "usage": "Surgery promotional art, mobile placement. No gameplay dependency."
+  },
+  {
+    "filename": "hero/hero_bg_main.webp",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 291972,
+    "usage": "Static desktop hero; left text zone x=5\u201343%, y=17\u201353%."
+  },
+  {
+    "filename": "hero/hero_parallax_composite.webp",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 160416,
+    "usage": "Reference composite for the independent parallax plates; alternative to hero_bg_main."
+  },
+  {
+    "filename": "hero/layers/hero_bg_far.png",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 963730,
+    "usage": "Independent transparent far parallax plate; full canvas registration."
+  },
+  {
+    "filename": "hero/layers/hero_bg_foreground.png",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 1223439,
+    "usage": "Independent transparent foreground parallax plate; full canvas registration."
+  },
+  {
+    "filename": "hero/layers/hero_bg_mid.png",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 1579450,
+    "usage": "Independent transparent mid parallax plate; full canvas registration."
+  },
+  {
+    "filename": "hero/layers/hero_sky_base.webp",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 4846,
+    "usage": "Opaque backing for the separate parallax scene."
+  },
+  {
+    "filename": "hero/mobile/hero_bg_mobile.webp",
+    "dimensions": "1024 \u00d7 1536",
+    "format": "WEBP",
+    "alpha": "opaque",
+    "bytes": 281688,
+    "usage": "Separately generated portrait hero; top 40% reserved for live heading and CTA."
+  },
+  {
+    "filename": "icons/icon_arrow.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 225,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_back.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 224,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_close.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 220,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_controller.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 277,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_document.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 246,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_favorite.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 232,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_folder.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 220,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_games.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 268,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_grid.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 254,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_home.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 242,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_library.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 234,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_list.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 243,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_menu.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 223,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_notes.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 252,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_notifications.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 241,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_play.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 216,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_profile.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 237,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_robot_assistant.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 265,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_search.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 241,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "icons/icon_settings.svg",
+    "dimensions": "24 \u00d7 24",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 266,
+    "usage": "Custom JORATA icon; 24px grid, 2px stroke, inherits currentColor when inline. External SVG defaults black; apply CSS mask for colors."
+  },
+  {
+    "filename": "motion/ambient_spark_strip.png",
+    "dimensions": "256 \u00d7 64",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 273,
+    "usage": "4 \u00d7 64px transparent frames in horizontal strip; timing in motion_spec.json."
+  },
+  {
+    "filename": "motion/dock_glow_0.svg",
+    "dimensions": "256 \u00d7 256",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 300,
+    "usage": "Optional user-triggered dock glow keyframe, not AI status."
+  },
+  {
+    "filename": "motion/dock_glow_1.svg",
+    "dimensions": "256 \u00d7 256",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 300,
+    "usage": "Optional user-triggered dock glow keyframe, not AI status."
+  },
+  {
+    "filename": "motion/dock_glow_2.svg",
+    "dimensions": "256 \u00d7 256",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 300,
+    "usage": "Optional user-triggered dock glow keyframe, not AI status."
+  },
+  {
+    "filename": "motion/motion_spec.json",
+    "dimensions": "\u2014",
+    "format": "JSON",
+    "alpha": "\u2014",
+    "bytes": 793,
+    "usage": "Motion timing and registration specifications, no implementation."
+  },
+  {
+    "filename": "overlays/card_caption_scrim.svg",
+    "dimensions": "768 \u00d7 512",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 323,
+    "usage": "Lower art scrim for live game title. Prefer title below picture for cards."
+  },
+  {
+    "filename": "overlays/glass_highlight.svg",
+    "dimensions": "640 \u00d7 420",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 212,
+    "usage": "Very subtle highlight on an existing panel, not a full fake glass image."
+  },
+  {
+    "filename": "overlays/hero_ambient_overlay.png",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "PNG",
+    "alpha": "alpha",
+    "bytes": 55547,
+    "usage": "Optional warm atmosphere, right side only. Do not stack over already-bright art. PNG convenience export."
+  },
+  {
+    "filename": "overlays/hero_ambient_overlay.svg",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 314,
+    "usage": "Optional warm atmosphere, right side only. Do not stack over already-bright art."
+  },
+  {
+    "filename": "overlays/text_scrim_desktop.svg",
+    "dimensions": "1536 \u00d7 1024",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 363,
+    "usage": "Use over static hero to guarantee left-heading contrast."
+  },
+  {
+    "filename": "overlays/text_scrim_mobile.svg",
+    "dimensions": "1024 \u00d7 1536",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 374,
+    "usage": "Mobile upper text scrim."
+  },
+  {
+    "filename": "previews/assistant_widget.png",
+    "dimensions": "1440 \u00d7 960",
+    "format": "PNG",
+    "alpha": "opaque",
+    "bytes": 580944,
+    "usage": "Assistant shells with existing reference robot shown only in preview; original character identity retained."
+  },
+  {
+    "filename": "previews/brand_identity.png",
+    "dimensions": "1600 \u00d7 1240",
+    "format": "PNG",
+    "alpha": "opaque",
+    "bytes": 707771,
+    "usage": "Brand identity board using real outlined logos, palette, original icons and cover exports."
+  },
+  {
+    "filename": "previews/desktop_homepage.png",
+    "dimensions": "1440 \u00d7 2040",
+    "format": "PNG",
+    "alpha": "opaque",
+    "bytes": 2033931,
+    "usage": "Full desktop homepage visual board assembled from exported assets; sample copy only."
+  },
+  {
+    "filename": "previews/desktop_mobile.png",
+    "dimensions": "1900 \u00d7 1260",
+    "format": "PNG",
+    "alpha": "opaque",
+    "bytes": 1480125,
+    "usage": "Side-by-side composition comparison. This is a visual board, not responsive implementation."
+  },
+  {
+    "filename": "previews/game_discovery.png",
+    "dimensions": "1600 \u00d7 1180",
+    "format": "PNG",
+    "alpha": "opaque",
+    "bytes": 1303753,
+    "usage": "Game discovery composition; exported cover art with live-text placement demonstrated."
+  },
+  {
+    "filename": "previews/homepage_hero.png",
+    "dimensions": "1440 \u00d7 960",
+    "format": "PNG",
+    "alpha": "opaque",
+    "bytes": 1329462,
+    "usage": "Homepage first-screen composition, 1440px desktop. Static visual preview only."
+  },
+  {
+    "filename": "previews/mobile_homepage.png",
+    "dimensions": "750 \u00d7 2810",
+    "format": "PNG",
+    "alpha": "opaque",
+    "bytes": 1879433,
+    "usage": "750px-wide phone composition (2x-class visual board), using separate portrait hero and landscape cards."
+  },
+  {
+    "filename": "previews/notes_section.png",
+    "dimensions": "1440 \u00d7 960",
+    "format": "PNG",
+    "alpha": "opaque",
+    "bytes": 55418,
+    "usage": "Notes visual styling board; sample note text clearly identified. No new functionality implied."
+  },
+  {
+    "filename": "previews/vector_contact_sheet.png",
+    "dimensions": "1440 \u00d7 1896",
+    "format": "PNG",
+    "alpha": "opaque",
+    "bytes": 283205,
+    "usage": "QA contact sheet of every rendered vector asset, labels are preview-only."
+  },
+  {
+    "filename": "readme.md",
+    "dimensions": "\u2014",
+    "format": "MD",
+    "alpha": "\u2014",
+    "bytes": 936,
+    "usage": "Entry point for the complete pack."
+  },
+  {
+    "filename": "ui-components/badge_arcade.svg",
+    "dimensions": "96 \u00d7 28",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 228,
+    "usage": "Category badge background only; add live label at x=22."
+  },
+  {
+    "filename": "ui-components/badge_parkour.svg",
+    "dimensions": "96 \u00d7 28",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 228,
+    "usage": "Category badge background only; add live label at x=22."
+  },
+  {
+    "filename": "ui-components/badge_strategy.svg",
+    "dimensions": "96 \u00d7 28",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 228,
+    "usage": "Category badge background only; add live label at x=22."
+  },
+  {
+    "filename": "ui-components/button_default.svg",
+    "dimensions": "192 \u00d7 52",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 232,
+    "usage": "Button default background plate. Put live navy text over enabled states; muted text over disabled. CSS preferred for resizing."
+  },
+  {
+    "filename": "ui-components/button_disabled.svg",
+    "dimensions": "192 \u00d7 52",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 232,
+    "usage": "Button disabled background plate. Put live navy text over enabled states; muted text over disabled. CSS preferred for resizing."
+  },
+  {
+    "filename": "ui-components/button_focus.svg",
+    "dimensions": "192 \u00d7 52",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 314,
+    "usage": "Button focus background plate. Put live navy text over enabled states; muted text over disabled. CSS preferred for resizing."
+  },
+  {
+    "filename": "ui-components/button_hover.svg",
+    "dimensions": "192 \u00d7 52",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 232,
+    "usage": "Button hover background plate. Put live navy text over enabled states; muted text over disabled. CSS preferred for resizing."
+  },
+  {
+    "filename": "ui-components/button_pressed.svg",
+    "dimensions": "192 \u00d7 52",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 232,
+    "usage": "Button pressed background plate. Put live navy text over enabled states; muted text over disabled. CSS preferred for resizing."
+  },
+  {
+    "filename": "ui-components/card_hover_overlay.svg",
+    "dimensions": "768 \u00d7 512",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 246,
+    "usage": "Hover outline for card; no baked content."
+  },
+  {
+    "filename": "ui-components/content_panel.svg",
+    "dimensions": "640 \u00d7 420",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 607,
+    "usage": "Decorative content panel. Use behind/over semantic content; do not bake labels into image."
+  },
+  {
+    "filename": "ui-components/corner_ornament.svg",
+    "dimensions": "48 \u00d7 48",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 170,
+    "usage": "Corner ornament, use once on featured panel only."
+  },
+  {
+    "filename": "ui-components/featured_card_decoration.svg",
+    "dimensions": "1200 \u00d7 675",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 602,
+    "usage": "Decorative featured card decoration. Use behind/over semantic content; do not bake labels into image."
+  },
+  {
+    "filename": "ui-components/focus_ring.svg",
+    "dimensions": "192 \u00d7 52",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 188,
+    "usage": "Visible keyboard focus overlay. Keep offset from target."
+  },
+  {
+    "filename": "ui-components/game_card_frame.svg",
+    "dimensions": "768 \u00d7 512",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 599,
+    "usage": "Decorative game card frame. Use behind/over semantic content; do not bake labels into image."
+  },
+  {
+    "filename": "ui-components/modal_surface.svg",
+    "dimensions": "640 \u00d7 480",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 607,
+    "usage": "Decorative modal surface. Use behind/over semantic content; do not bake labels into image."
+  },
+  {
+    "filename": "ui-components/notes_card.svg",
+    "dimensions": "480 \u00d7 320",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 620,
+    "usage": "Decorative notes card. Use behind/over semantic content; do not bake labels into image."
+  },
+  {
+    "filename": "ui-components/search_field.svg",
+    "dimensions": "400 \u00d7 48",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 601,
+    "usage": "Decorative search field. Use behind/over semantic content; do not bake labels into image."
+  },
+  {
+    "filename": "ui-components/section_separator.svg",
+    "dimensions": "1200 \u00d7 16",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 198,
+    "usage": "Section divider with small stepped brand accent."
+  },
+  {
+    "filename": "ui-components/selected_indicator.svg",
+    "dimensions": "80 \u00d7 6",
+    "format": "SVG",
+    "alpha": "vector",
+    "bytes": 131,
+    "usage": "Navigation selected underline, unique stepped leading cap."
+  }
+]

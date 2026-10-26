@@ -1,0 +1,18 @@
+
+> jorata-game@0.1.0 test:browser
+> tsx tests/product.browser.ts && tsx tests/play.browser.ts && tsx tests/notes.browser.ts
+
+PASS: navigation, desktop/tablet/mobile layouts, settings persistence, reduced motion, obsolete route, no chat UI, no JS errors.
+PASS Play browser: movement, jumping, modified keys, collection, building, save/reload, export, invalid/valid import, quick-note pause/resume, mobile controls and layout.
+{
+  "passed": [
+    "Create/edit/autosave/reload preserve content, folder, tags and pin; preview renders headings and treats HTML as text.",
+    "Search, tag filters, folder move by drag, keyboard reorder and Markdown download work.",
+    "Confirmed note deletion persists after refresh.",
+    "390px mobile editing, library navigation, refresh recovery and no horizontal overflow.",
+    "Gameplay quick note saves and is recoverable in the Notes library.",
+    "Mobile touch context creates and recovers notes using tap interactions.",
+    "Blocked IndexedDB surfaces a save failure, keeps Markdown export available, and restores the recovery copy in a new page."
+  ],
+  "pageErrors": []
+}

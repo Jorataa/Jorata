@@ -1,0 +1,57 @@
+{
+  "color": {
+    "background": "#14231f",
+    "surface": "rgba(18,32,28,.78)",
+    "text": "#f1f4e9",
+    "muted": "#c1cec2",
+    "accent": "#dbebba",
+    "border": "rgba(241,244,233,.23)",
+    "danger": "#f2a38d"
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48
+  ],
+  "radius": {
+    "control": 10,
+    "panel": 18
+  },
+  "font": {
+    "family": "system-ui, sans-serif",
+    "speed": {
+      "size": 68,
+      "weight": 300,
+      "tracking": "-.06em"
+    },
+    "heading": {
+      "size": 28,
+      "weight": 450
+    },
+    "body": {
+      "size": 15,
+      "weight": 400
+    },
+    "label": {
+      "size": 12,
+      "weight": 550
+    }
+  },
+  "motion": {
+    "feedback_ms": 140,
+    "panel_ms": 220,
+    "easing": "cubic-bezier(.22,.61,.36,1)",
+    "reduced_motion": "disable ambient animations and panel transforms"
+  },
+  "breakpoints": {
+    "narrow": 680,
+    "desktop": 1100
+  },
+  "targets": {
+    "minimum_css_px": 44
+  }
+}

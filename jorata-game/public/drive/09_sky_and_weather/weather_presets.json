@@ -1,0 +1,50 @@
+{
+  "clear": {
+    "cloud_coverage": 0.06,
+    "fog_multiplier": 1,
+    "particle_count": 0,
+    "wind_strength": 0.08,
+    "wetness": 0
+  },
+  "cloudy": {
+    "cloud_coverage": 0.68,
+    "fog_multiplier": 0.75,
+    "particle_count": 0,
+    "wind_strength": 0.18,
+    "wetness": 0
+  },
+  "foggy": {
+    "cloud_coverage": 0.5,
+    "fog_multiplier": 0.2,
+    "particle_count": 0,
+    "wind_strength": 0.08,
+    "wetness": 0.25
+  },
+  "light_rain": {
+    "cloud_coverage": 0.82,
+    "fog_multiplier": 0.55,
+    "particle_count": 900,
+    "particle_kind": "rain",
+    "particle_speed": 17,
+    "wind_strength": 0.22,
+    "wetness": 0.7
+  },
+  "heavy_rain": {
+    "cloud_coverage": 0.97,
+    "fog_multiplier": 0.32,
+    "particle_count": 1800,
+    "particle_kind": "rain",
+    "particle_speed": 24,
+    "wind_strength": 0.4,
+    "wetness": 1
+  },
+  "snow": {
+    "cloud_coverage": 0.73,
+    "fog_multiplier": 0.4,
+    "particle_count": 1000,
+    "particle_kind": "snow",
+    "particle_speed": 2.5,
+    "wind_strength": 0.18,
+    "wetness": 0.3
+  }
+}

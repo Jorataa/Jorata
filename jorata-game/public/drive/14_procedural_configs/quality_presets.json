@@ -1,0 +1,32 @@
+{
+  "low": {
+    "pixel_ratio_cap": 1,
+    "shadows": false,
+    "shadow_map": 0,
+    "active_chunks": 5,
+    "terrain_step_m": 4,
+    "tree_lod_distance_m": 30,
+    "particle_cap": 400,
+    "anisotropy": 2
+  },
+  "medium": {
+    "pixel_ratio_cap": 1.5,
+    "shadows": true,
+    "shadow_map": 1024,
+    "active_chunks": 7,
+    "terrain_step_m": 3.2,
+    "tree_lod_distance_m": 55,
+    "particle_cap": 900,
+    "anisotropy": 4
+  },
+  "high": {
+    "pixel_ratio_cap": 2,
+    "shadows": true,
+    "shadow_map": 2048,
+    "active_chunks": 9,
+    "terrain_step_m": 2,
+    "tree_lod_distance_m": 80,
+    "particle_cap": 1800,
+    "anisotropy": 8
+  }
+}

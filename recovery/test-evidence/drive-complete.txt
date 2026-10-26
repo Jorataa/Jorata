@@ -1,0 +1,170 @@
+
+> jorata-game@0.1.0 test:drive
+> node --import tsx tests/drive.browser.ts
+
+PASS foundation: acceleration, steering, supplied wheel rotation and steering pivots, hard brake, reverse, reset, pause
+PASS six simulated minutes [
+  {
+    z: -639.0010326399874,
+    geometries: 80,
+    textures: 13,
+    calls: 119,
+    triangles: 112590
+  },
+  {
+    z: -1293.195606824557,
+    geometries: 87,
+    textures: 13,
+    calls: 136,
+    triangles: 108754
+  },
+  {
+    z: -1948.0005220275468,
+    geometries: 85,
+    textures: 13,
+    calls: 133,
+    triangles: 137614
+  },
+  {
+    z: -2604.825092304205,
+    geometries: 83,
+    textures: 13,
+    calls: 131,
+    triangles: 129618
+  },
+  {
+    z: -3261.988379884398,
+    geometries: 80,
+    textures: 13,
+    calls: 123,
+    triangles: 116322
+  },
+  {
+    z: -3917.648010707332,
+    geometries: 86,
+    textures: 13,
+    calls: 137,
+    triangles: 109502
+  },
+  {
+    z: -4572.547598978658,
+    geometries: 85,
+    textures: 13,
+    calls: 132,
+    triangles: 116950
+  },
+  {
+    z: -5227.215738439784,
+    geometries: 83,
+    textures: 13,
+    calls: 130,
+    triangles: 122694
+  },
+  {
+    z: -5882.392162079308,
+    geometries: 81,
+    textures: 13,
+    calls: 122,
+    triangles: 115490
+  },
+  {
+    z: -6536.627948230212,
+    geometries: 92,
+    textures: 13,
+    calls: 143,
+    triangles: 111158
+  },
+  {
+    z: -7191.252272302106,
+    geometries: 85,
+    textures: 13,
+    calls: 138,
+    triangles: 139302
+  },
+  {
+    z: -7846.998138527804,
+    geometries: 83,
+    textures: 13,
+    calls: 129,
+    triangles: 108090
+  }
+]
+Settings opened
+Choose Vehicle sedan_modern
+Choose Vehicle sports_coupe
+Choose Vehicle suv_offroad
+Choose Vehicle classic_vintage
+Choose Vehicle pickup_truck
+Choose Vehicle hatchback_compact
+Choose Environment alpine
+Choose Environment coastal
+Choose Environment green_highlands
+Choose Camera chase
+Choose Camera close
+Choose Camera cockpit
+Choose Camera cinematic
+Choose Camera free_look
+Choose Weather clear
+Choose Weather cloudy
+Choose Weather foggy
+Choose Weather light_rain
+Choose Weather heavy_rain
+Choose Weather snow
+Choose Time of day clear_morning
+Choose Time of day sunny_afternoon
+Choose Time of day golden_sunset
+Choose Time of day overcast_afternoon
+Choose Time of day blue_hour
+Choose Time of day moonlit_night
+Choose Graphics medium
+Choose Graphics high
+Choose Graphics low
+Choose Weather clear
+Choose Time of day clear_morning
+Choose Camera chase
+vehicles [
+  {
+    vehicle: 'sedan_modern',
+    wheels: 4,
+    steer: 2,
+    paint: 1,
+    y: 2.1161832001944023
+  },
+  {
+    vehicle: 'sports_coupe',
+    wheels: 4,
+    steer: 2,
+    paint: 1,
+    y: 2.1161832001944023
+  },
+  {
+    vehicle: 'suv_offroad',
+    wheels: 4,
+    steer: 2,
+    paint: 1,
+    y: 2.1161832001944023
+  },
+  {
+    vehicle: 'classic_vintage',
+    wheels: 4,
+    steer: 2,
+    paint: 1,
+    y: 2.1161832001944023
+  },
+  {
+    vehicle: 'pickup_truck',
+    wheels: 4,
+    steer: 2,
+    paint: 1,
+    y: 2.1161832001944023
+  },
+  {
+    vehicle: 'hatchback_compact',
+    wheels: 4,
+    steer: 2,
+    paint: 1,
+    y: 2.1161832001944023
+  }
+]
+errors [] bad requests []
+PASS all vehicles, environments, cameras, weather, time, quality, portal companion, focus pause, persistence, cleanup, narrow layout and existing feature smoke checks

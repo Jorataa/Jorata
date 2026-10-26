@@ -1,0 +1,14 @@
+{
+  "sky": "#80b4c6",
+  "horizon": "#d4ddcf",
+  "sun": "#fff0cf",
+  "sun_direction": [
+    -0.5,
+    0.45,
+    0.3
+  ],
+  "sun_intensity": 2.0,
+  "ambient_intensity": 1.5,
+  "fog_near": 180,
+  "fog_far": 720
+}
