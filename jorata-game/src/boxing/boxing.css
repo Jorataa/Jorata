@@ -1,0 +1,844 @@
+.boxing-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 100%;
+}
+
+.product:has(.boxing-page) > .skip:not(:focus-visible) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.b-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.b-title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.b-heading-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.b-header-belt {
+  width: 68px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.b-back {
+  border: 0;
+  padding: 0;
+  min-height: 28px;
+  color: var(--muted);
+  font-size: var(--text-small);
+  margin-bottom: 6px;
+}
+
+.b-back:hover {
+  background: transparent;
+  color: var(--ivory);
+}
+
+.b-header h1 {
+  font-size: var(--text-title);
+  letter-spacing: -0.9px;
+  margin: 0 0 6px;
+}
+
+.b-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-control);
+  max-width: 640px;
+}
+
+.b-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.b-pause-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.b-config-toggle.is-open,
+.b-guide-toggle.is-open,
+.b-pause-btn.is-open {
+  background: var(--surface-raised);
+  border-color: var(--sage);
+  color: var(--ivory);
+}
+
+.b-howto-panel {
+  background: var(--surface);
+  border: 1px solid var(--control-line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+
+.b-howto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.b-howto-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.b-howto-card h3 {
+  margin: 0;
+  font-size: var(--text-control);
+  color: var(--ivory);
+}
+
+.b-howto-card p {
+  margin: 0;
+  font-size: var(--text-small);
+  color: var(--muted-strong);
+  line-height: 1.45;
+}
+
+.b-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+}
+
+.b-mode-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.b-mode-tabs button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 9px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--control-line);
+  background: var(--bg);
+  color: var(--ivory);
+  text-align: left;
+}
+
+.b-mode-tabs button span {
+  font-size: var(--text-caption);
+  color: var(--muted);
+}
+
+.b-mode-tabs button.is-active {
+  background: var(--surface-raised);
+  border-color: var(--sage);
+}
+
+.b-mode-tabs button.is-active span {
+  color: var(--muted-strong);
+}
+
+.b-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.b-difficulty > span {
+  font-size: var(--text-small);
+  color: var(--muted);
+}
+
+.b-difficulty button {
+  padding: 7px 12px;
+  min-height: 36px;
+  font-size: var(--text-small);
+  background: var(--bg);
+}
+
+.b-difficulty button.is-active {
+  background: var(--surface-raised);
+  border-color: var(--sage);
+  color: var(--ivory);
+}
+
+.b-record-summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: var(--text-small);
+  color: var(--muted);
+}
+
+.b-record-medal {
+  width: 24px;
+  height: auto;
+}
+
+.b-record-summary strong {
+  color: var(--ivory);
+  margin-left: 3px;
+}
+
+.b-hud {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 216px minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+}
+
+.b-fighter-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.b-fighter-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.b-fighter-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.b-portrait {
+  width: 48px;
+  height: 51px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  background: #0d1320;
+}
+
+.b-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.b-leader-crown {
+  width: 20px;
+  height: auto;
+}
+
+.b-corner-tag {
+  display: block;
+  font-size: var(--text-caption);
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.b-fighter-top h2 {
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: -0.4px;
+}
+
+.b-rounds-won {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.b-round-dot-img {
+  width: 22px;
+  height: 22px;
+}
+
+.b-meter-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.b-meter-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-caption);
+  color: var(--muted-strong);
+}
+
+.b-meter-track {
+  height: 11px;
+  background: #0f141d;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--control-line);
+}
+
+.b-meter-stamina {
+  height: 8px;
+}
+
+.b-meter-fill {
+  height: 100%;
+  transition: width 80ms linear;
+}
+
+.b-hp-p1 {
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+.b-hp-p2 {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+.b-stam-fill {
+  background: linear-gradient(90deg, #d97706, #f59e0b);
+}
+
+.b-combo-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+  border-top: 1px solid var(--line);
+}
+
+.b-combo-title {
+  font-size: var(--text-caption);
+  color: var(--muted);
+}
+
+.b-combo-steps {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.b-combo-pill {
+  font-size: 11px;
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.b-combo-pill.is-next {
+  background: var(--surface-raised);
+  border-color: var(--sage);
+  color: var(--ivory);
+  font-weight: 600;
+}
+
+.b-combo-pill.is-firing {
+  background: var(--ivory);
+  border-color: var(--ivory);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.b-center-hud {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.b-vs-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.b-vs-badge {
+  width: 34px;
+  height: auto;
+}
+
+.b-round-badge {
+  font-size: var(--text-caption);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.b-clock {
+  font-size: 28px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.8px;
+}
+
+.b-callout {
+  margin: 4px 0 0;
+  font-size: var(--text-small);
+  color: var(--sage);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.b-ring-stage {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #080c14;
+  aspect-ratio: 900 / 440;
+  max-height: 460px;
+  width: 100%;
+}
+
+.b-ring-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.b-round-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 14, 22, 0.84);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.b-round-card {
+  background: var(--surface);
+  border: 1px solid var(--control-line);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.b-overlay-banners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.b-result-banner {
+  height: 42px;
+  width: auto;
+}
+
+.b-victory-belt {
+  height: 46px;
+  width: auto;
+}
+
+.b-overlay-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.b-overlay-kicker {
+  font-size: var(--text-caption);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.b-round-card h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.b-round-card p {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: var(--text-control);
+}
+
+.b-round-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--text-small);
+  color: var(--muted);
+  margin: 6px 0 8px;
+}
+
+.b-round-stats strong {
+  color: var(--ivory);
+}
+
+.b-overlay-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.b-keyboard-deck {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.b-deck-column {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  min-width: 0;
+}
+
+.b-deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.b-deck-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.b-deck-glove {
+  width: 22px;
+  height: auto;
+}
+
+.b-deck-header h3 {
+  font-size: var(--text-control);
+  margin: 0;
+}
+
+.b-deck-header span {
+  font-size: var(--text-caption);
+  color: var(--muted);
+}
+
+.b-key-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.b-key-cap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 6px;
+  min-height: 62px;
+  background: var(--bg);
+  border: 1px solid var(--control-line);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.b-key-cap kbd {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 8px;
+  background: var(--surface);
+  color: var(--ivory);
+  border-color: var(--control-line);
+}
+
+.b-key-cap span {
+  font-size: 11px;
+  color: var(--muted-strong);
+  line-height: 1.2;
+}
+
+.b-key-cap.is-pressed {
+  background: var(--surface-raised);
+  border-color: var(--sage);
+  transform: translateY(1px);
+}
+
+.b-key-cap.is-pressed kbd {
+  background: var(--ivory);
+  color: var(--ink);
+}
+
+.b-config-panel {
+  background: var(--surface);
+  border: 1px solid var(--control-line);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.b-config-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.b-config-top h2 {
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+.b-config-top p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-control);
+  max-width: 620px;
+}
+
+.b-ghost-meter {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--text-small);
+}
+
+.b-ghost-meter small {
+  color: var(--muted);
+  font-size: var(--text-caption);
+}
+
+.b-presets {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.b-preset-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 10px 12px;
+  background: var(--bg);
+  text-align: left;
+  font-size: var(--text-small);
+}
+
+.b-preset-btn span {
+  font-size: var(--text-caption);
+  color: var(--muted);
+}
+
+.b-rebind-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.b-rebind-group {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.b-rebind-group h3 {
+  font-size: var(--text-control);
+  margin: 0 0 4px;
+}
+
+.b-rebind-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--text-small);
+  color: var(--muted-strong);
+}
+
+.b-rebind-btn {
+  min-width: 120px;
+  min-height: 36px;
+  padding: 6px 12px;
+  font-size: var(--text-small);
+  font-weight: 600;
+  background: var(--surface);
+}
+
+.b-rebind-btn.is-listening {
+  border-color: var(--sage);
+  background: var(--surface-raised);
+  color: var(--sage);
+}
+
+.b-binding-notice {
+  margin: 0;
+  font-size: var(--text-small);
+  color: var(--sage);
+}
+
+/* Pixel-art GameCard cover for Boxing in Games Library */
+.game-cover-boxing {
+  background: #080d18;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-cover-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-cover-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: pixelated;
+}
+
+.b-cover-fighters {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  pointer-events: none;
+}
+
+.b-cover-fighter {
+  width: 124px;
+  height: 124px;
+  image-rendering: pixelated;
+}
+
+.b-cover-fighter-blue {
+  transform: scaleX(-1);
+}
+
+.b-cover-vs {
+  width: 44px;
+  height: auto;
+  align-self: center;
+  image-rendering: pixelated;
+}
+
+@media (max-width: 1024px) {
+  .b-hud {
+    grid-template-columns: 1fr;
+  }
+
+  .b-center-hud {
+    order: -1;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .b-howto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .b-presets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .b-header {
+    flex-direction: column;
+  }
+
+  .b-header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .b-keyboard-deck {
+    grid-template-columns: 1fr;
+  }
+
+  .b-key-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .b-presets,
+  .b-rebind-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .b-ring-stage {
+    aspect-ratio: 16 / 10;
+  }
+}

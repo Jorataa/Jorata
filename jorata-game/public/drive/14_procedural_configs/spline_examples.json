@@ -1,0 +1,106 @@
+{
+  "units": "meters",
+  "curve": "centripetal_catmull_rom",
+  "points": {
+    "straight": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -80
+      ],
+      [
+        0,
+        0,
+        -160
+      ]
+    ],
+    "hills": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        -60
+      ],
+      [
+        -6,
+        2,
+        -120
+      ],
+      [
+        0,
+        12,
+        -200
+      ]
+    ],
+    "valley": [
+      [
+        0,
+        14,
+        0
+      ],
+      [
+        12,
+        3,
+        -70
+      ],
+      [
+        -10,
+        2,
+        -150
+      ],
+      [
+        0,
+        15,
+        -230
+      ]
+    ],
+    "mountain_switchbacks": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        4,
+        -55
+      ],
+      [
+        65,
+        9,
+        -65
+      ],
+      [
+        75,
+        15,
+        -120
+      ],
+      [
+        5,
+        21,
+        -135
+      ],
+      [
+        -10,
+        27,
+        -195
+      ],
+      [
+        65,
+        34,
+        -215
+      ]
+    ]
+  },
+  "minimum_radius_warning_m": 22,
+  "terrain_blending": "use global road projection; demonstration analytic road has no self intersections"
+}

@@ -1,0 +1,6 @@
+{
+  "tool": "built_in_imagegen",
+  "prompt": "Original right-facing athletic parkour cutout rig sheet; six equal columns for head, torso, upper arm, forearm, thigh and shin/foot; three rows for charcoal/cyan runner, dark/red pursuer, gray/orange guard; transparent, simple shapes, no text/logos.",
+  "animation_extension": "Original deterministic fixed-length articulated skeleton and per-action keyposes; source components are normalized once and rotated/translated for frames.",
+  "environment_extension": "Original flat modular SVG environment geometry and deterministic seamless city silhouettes."
+}

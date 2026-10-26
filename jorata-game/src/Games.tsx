@@ -1,0 +1,12 @@
+import {useEffect,useState} from 'react';
+import {Icon,PageHeader,LocalNote,type Navigate} from './ui';
+import GameCard,{gameLibrary} from './ui/GameCard';
+const filters=['All games','Sandbox','Simulation','Sports','Action'];
+function queryState(){const params=new URLSearchParams(location.search);return {q:params.get('q')??'',category:filters.includes(params.get('category')??'')?params.get('category')!:'All games'};}
+export default function Games({navigate}:{navigate:Navigate}){
+ const [query,setQuery]=useState(()=>queryState().q),[category,setCategory]=useState(()=>queryState().category);
+ useEffect(()=>{const params=new URLSearchParams();if(query)params.set('q',query);if(category!=='All games')params.set('category',category);history.replaceState(null,'',`${location.pathname}${params.size?'?'+params:''}`);},[query,category]);
+ useEffect(()=>{const pop=()=>{const next=queryState();setQuery(next.q);setCategory(next.category);};window.addEventListener('popstate',pop);return()=>window.removeEventListener('popstate',pop);},[]);
+ const visible=gameLibrary.filter(g=>(category==='All games'||g.category===category)&&`${g.title} ${g.description} ${g.tags.join(' ')}`.toLowerCase().includes(query.toLowerCase()));
+ return <section className="games-page"><PageHeader title="Jorata Games" description="Small worlds. Good company for your curiosity."><LocalNote/></PageHeader><div className="library-toolbar"><div className="library-filters" role="group" aria-label="Game categories">{filters.map(f=><button key={f} aria-pressed={category===f} onClick={()=>setCategory(f)}>{f}<span>{f==='All games'?gameLibrary.length:gameLibrary.filter(g=>g.category===f).length}</span></button>)}</div><label className="ui-search"><Icon name="search"/><input type="search" name="game-search" autoComplete="off" aria-label="Search games" placeholder="Find a game…" value={query} onChange={e=>setQuery(e.target.value)}/></label></div><div className="games-list">{visible.map(game=><GameCard key={game.id} game={game} navigate={navigate}/>)}</div>{!visible.length&&<div className="ui-empty" role="status"><Icon name="search" size={28}/><h2>No games found.</h2><p>Try another title or explore the full collection.</p><button className="ui-button ui-button-secondary" onClick={()=>{setQuery('');setCategory('All games');}}>Show all games</button></div>}<div className="library-footer"><p>{gameLibrary.length} games. No downloads. No account needed.</p><span>Made for a little time well spent.</span></div></section>;
+}

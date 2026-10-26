@@ -1,0 +1,135 @@
+{
+  "pearl_white": {
+    "name": "pearl_white",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.82,
+        0.85,
+        0.82,
+        1
+      ],
+      "metallicFactor": 0.32,
+      "roughnessFactor": 0.24
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.82,
+      0.85,
+      0.82
+    ]
+  },
+  "charcoal_black": {
+    "name": "charcoal_black",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.055,
+        0.073,
+        0.078,
+        1
+      ],
+      "metallicFactor": 0.42,
+      "roughnessFactor": 0.27
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.055,
+      0.073,
+      0.078
+    ]
+  },
+  "silver": {
+    "name": "silver",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.48,
+        0.55,
+        0.56,
+        1
+      ],
+      "metallicFactor": 0.72,
+      "roughnessFactor": 0.22
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.48,
+      0.55,
+      0.56
+    ]
+  },
+  "deep_navy": {
+    "name": "deep_navy",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.035,
+        0.1,
+        0.16,
+        1
+      ],
+      "metallicFactor": 0.44,
+      "roughnessFactor": 0.23
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.035,
+      0.1,
+      0.16
+    ]
+  },
+  "forest_green": {
+    "name": "forest_green",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.065,
+        0.2,
+        0.15,
+        1
+      ],
+      "metallicFactor": 0.36,
+      "roughnessFactor": 0.26
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.065,
+      0.2,
+      0.15
+    ]
+  },
+  "dark_red": {
+    "name": "dark_red",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.3,
+        0.052,
+        0.045,
+        1
+      ],
+      "metallicFactor": 0.4,
+      "roughnessFactor": 0.27
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.3,
+      0.052,
+      0.045
+    ]
+  },
+  "warm_beige": {
+    "name": "warm_beige",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.63,
+        0.51,
+        0.34,
+        1
+      ],
+      "metallicFactor": 0.3,
+      "roughnessFactor": 0.3
+    },
+    "doubleSided": false,
+    "preview_color": [
+      0.63,
+      0.51,
+      0.34
+    ]
+  }
+}

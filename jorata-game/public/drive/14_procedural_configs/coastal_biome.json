@@ -1,0 +1,18 @@
+{
+  "seed": 781,
+  "chunk_size_m": 64,
+  "terrain_width_m": 320,
+  "road_exclusion_margin_m": 3.2,
+  "shore_limit_x_m": -39,
+  "road": "coastal_highway",
+  "trees": [
+    "palm",
+    "cypress",
+    "oak"
+  ],
+  "tree_density_per_ha": 28,
+  "grass": "grass",
+  "rock": "coastal_rock_01",
+  "lighting": "sunny_afternoon",
+  "water": "ocean_water"
+}

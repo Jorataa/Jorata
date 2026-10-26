@@ -1,0 +1,5 @@
+JORATA original procedural asset and custom code license
+
+You may use, copy, modify, combine and redistribute the original Jorata models, textures, configurations, icons and custom source in personal or commercial projects, with or without attribution. These files are supplied as-is without a performance or fitness warranty. This permission does not grant rights to third-party brands or to the user's pre-existing assistant artwork.
+
+Third-party software: the bundled Three.js r180 distribution and example loader, controls and utility code remain under their included MIT license at 15_preview_scenes/viewer/vendor/THREE_LICENSE.txt. No Slow Roads proprietary assets or code are included.

@@ -1,0 +1,8267 @@
+{
+  "coordinate_system": "frame_top_left_pixels",
+  "poses": [
+    {
+      "character": "runner",
+      "animation": "idle",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          63.35,
+          49.1
+        ],
+        "head": [
+          64.22,
+          39.14
+        ],
+        "near_knee": [
+          72.83,
+          90.87
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          66.98,
+          92.67
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          65.47,
+          61.93
+        ],
+        "near_hand": [
+          69.91,
+          77.3
+        ],
+        "far_elbow": [
+          59.43,
+          61.77
+        ],
+        "far_hand": [
+          57.7,
+          77.68
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "idle",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          61.4,
+          75.4
+        ],
+        "shoulder": [
+          64.22,
+          48.55
+        ],
+        "head": [
+          65.27,
+          38.6
+        ],
+        "near_knee": [
+          72.55,
+          90.79
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          66.49,
+          92.4
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          66.05,
+          61.42
+        ],
+        "near_hand": [
+          70.14,
+          76.89
+        ],
+        "far_elbow": [
+          60.02,
+          61.15
+        ],
+        "far_hand": [
+          57.93,
+          77.01
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "idle",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          76.2
+        ],
+        "shoulder": [
+          62.88,
+          49.27
+        ],
+        "head": [
+          63.58,
+          39.29
+        ],
+        "near_knee": [
+          73.01,
+          90.92
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          67.19,
+          92.79
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          65.18,
+          62.06
+        ],
+        "near_hand": [
+          69.85,
+          77.36
+        ],
+        "far_elbow": [
+          59.19,
+          61.98
+        ],
+        "far_hand": [
+          57.74,
+          77.92
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "idle",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60.7,
+          76.7
+        ],
+        "shoulder": [
+          62.11,
+          49.74
+        ],
+        "head": [
+          62.64,
+          39.75
+        ],
+        "near_knee": [
+          73.22,
+          90.99
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          67.54,
+          93.01
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          64.64,
+          62.49
+        ],
+        "near_hand": [
+          69.59,
+          77.71
+        ],
+        "far_elbow": [
+          58.65,
+          62.5
+        ],
+        "far_hand": [
+          57.49,
+          78.46
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "run",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          78.3
+        ],
+        "shoulder": [
+          68.79,
+          52.77
+        ],
+        "head": [
+          72.05,
+          43.32
+        ],
+        "near_knee": [
+          79.0,
+          78.46
+        ],
+        "near_foot": [
+          62.0,
+          89.0
+        ],
+        "far_knee": [
+          71.65,
+          91.48
+        ],
+        "far_foot": [
+          62.0,
+          109.0
+        ],
+        "near_elbow": [
+          57.78,
+          59.68
+        ],
+        "near_hand": [
+          70.0,
+          70.0
+        ],
+        "far_elbow": [
+          54.79,
+          53.03
+        ],
+        "far_hand": [
+          70.0,
+          58.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "run",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          78.88,
+          74.9
+        ],
+        "near_foot": [
+          77.56,
+          94.86
+        ],
+        "far_knee": [
+          60.66,
+          94.93
+        ],
+        "far_foot": [
+          46.44,
+          109.0
+        ],
+        "near_elbow": [
+          55.83,
+          52.5
+        ],
+        "near_hand": [
+          58.69,
+          68.24
+        ],
+        "far_elbow": [
+          65.99,
+          64.35
+        ],
+        "far_hand": [
+          81.31,
+          59.76
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "run",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          60,
+          75.7
+        ],
+        "shoulder": [
+          68.79,
+          50.17
+        ],
+        "head": [
+          72.05,
+          40.72
+        ],
+        "near_knee": [
+          71.89,
+          90.52
+        ],
+        "near_foot": [
+          82.77,
+          107.3
+        ],
+        "far_knee": [
+          50.67,
+          91.78
+        ],
+        "far_foot": [
+          40.13,
+          108.77
+        ],
+        "near_elbow": [
+          55.95,
+          48.12
+        ],
+        "near_hand": [
+          54.0,
+          64.0
+        ],
+        "far_elbow": [
+          70.03,
+          62.98
+        ],
+        "far_hand": [
+          86.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "run",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          74.54,
+          89.23
+        ],
+        "near_foot": [
+          77.56,
+          109.0
+        ],
+        "far_knee": [
+          66.4,
+          93.5
+        ],
+        "far_foot": [
+          46.44,
+          94.86
+        ],
+        "near_elbow": [
+          58.32,
+          43.76
+        ],
+        "near_hand": [
+          58.69,
+          59.76
+        ],
+        "far_elbow": [
+          65.8,
+          64.32
+        ],
+        "far_hand": [
+          81.31,
+          68.24
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "run",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          60,
+          78.3
+        ],
+        "shoulder": [
+          68.79,
+          52.77
+        ],
+        "head": [
+          72.05,
+          43.32
+        ],
+        "near_knee": [
+          72.91,
+          92.24
+        ],
+        "near_foot": [
+          62.0,
+          109.0
+        ],
+        "far_knee": [
+          78.0,
+          77.0
+        ],
+        "far_foot": [
+          62.0,
+          89.0
+        ],
+        "near_elbow": [
+          56.06,
+          50.15
+        ],
+        "near_hand": [
+          70.0,
+          58.0
+        ],
+        "far_elbow": [
+          57.23,
+          60.36
+        ],
+        "far_hand": [
+          70.0,
+          70.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "run",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          61.59,
+          95.93
+        ],
+        "near_foot": [
+          46.44,
+          109.0
+        ],
+        "far_knee": [
+          77.97,
+          74.86
+        ],
+        "far_foot": [
+          77.56,
+          94.86
+        ],
+        "near_elbow": [
+          65.93,
+          64.15
+        ],
+        "near_hand": [
+          81.31,
+          59.76
+        ],
+        "far_elbow": [
+          54.85,
+          52.71
+        ],
+        "far_hand": [
+          58.69,
+          68.24
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "run",
+      "frame": 6,
+      "joints": {
+        "hip": [
+          60,
+          75.7
+        ],
+        "shoulder": [
+          68.79,
+          50.17
+        ],
+        "head": [
+          72.05,
+          40.72
+        ],
+        "near_knee": [
+          51.75,
+          92.82
+        ],
+        "near_foot": [
+          40.0,
+          109.0
+        ],
+        "far_knee": [
+          70.97,
+          89.45
+        ],
+        "far_foot": [
+          81.94,
+          106.18
+        ],
+        "near_elbow": [
+          70.02,
+          63.11
+        ],
+        "near_hand": [
+          86.0,
+          64.0
+        ],
+        "far_elbow": [
+          54.97,
+          48.03
+        ],
+        "far_hand": [
+          54.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "run",
+      "frame": 7,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          66.44,
+          94.87
+        ],
+        "near_foot": [
+          46.44,
+          94.86
+        ],
+        "far_knee": [
+          72.1,
+          89.76
+        ],
+        "far_foot": [
+          77.56,
+          109.0
+        ],
+        "near_elbow": [
+          65.85,
+          64.13
+        ],
+        "near_hand": [
+          81.31,
+          68.24
+        ],
+        "far_elbow": [
+          57.28,
+          43.82
+        ],
+        "far_hand": [
+          58.69,
+          59.76
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "jump",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          81
+        ],
+        "shoulder": [
+          68.34,
+          55.32
+        ],
+        "head": [
+          71.43,
+          45.81
+        ],
+        "near_knee": [
+          76.17,
+          90.98
+        ],
+        "near_foot": [
+          70.0,
+          110.0
+        ],
+        "far_knee": [
+          67.98,
+          96.75
+        ],
+        "far_foot": [
+          53.0,
+          110.0
+        ],
+        "near_elbow": [
+          60.06,
+          65.34
+        ],
+        "near_hand": [
+          72.0,
+          76.0
+        ],
+        "far_elbow": [
+          61.13,
+          66.74
+        ],
+        "far_hand": [
+          55.19,
+          81.6
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "jump",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          86
+        ],
+        "shoulder": [
+          71.68,
+          62.16
+        ],
+        "head": [
+          76.37,
+          53.33
+        ],
+        "near_knee": [
+          77.54,
+          90.16
+        ],
+        "near_foot": [
+          75.0,
+          110.0
+        ],
+        "far_knee": [
+          67.52,
+          101.44
+        ],
+        "far_foot": [
+          49.0,
+          109.0
+        ],
+        "near_elbow": [
+          58.73,
+          61.0
+        ],
+        "near_hand": [
+          59.0,
+          77.0
+        ],
+        "far_elbow": [
+          57.73,
+          63.29
+        ],
+        "far_hand": [
+          48.0,
+          76.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "jump",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          62,
+          75
+        ],
+        "shoulder": [
+          69.89,
+          49.18
+        ],
+        "head": [
+          72.82,
+          39.62
+        ],
+        "near_knee": [
+          78.69,
+          84.07
+        ],
+        "near_foot": [
+          77.0,
+          104.0
+        ],
+        "far_knee": [
+          67.74,
+          91.77
+        ],
+        "far_foot": [
+          48.0,
+          95.0
+        ],
+        "near_elbow": [
+          78.73,
+          58.72
+        ],
+        "near_hand": [
+          85.0,
+          44.0
+        ],
+        "far_elbow": [
+          61.53,
+          38.46
+        ],
+        "far_hand": [
+          53.0,
+          52.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "jump",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          63,
+          73
+        ],
+        "shoulder": [
+          67.22,
+          46.33
+        ],
+        "head": [
+          68.79,
+          36.46
+        ],
+        "near_knee": [
+          81.96,
+          74.23
+        ],
+        "near_foot": [
+          85.0,
+          94.0
+        ],
+        "far_knee": [
+          70.13,
+          89.17
+        ],
+        "far_foot": [
+          51.0,
+          95.0
+        ],
+        "near_elbow": [
+          78.35,
+          53.05
+        ],
+        "near_hand": [
+          86.0,
+          39.0
+        ],
+        "far_elbow": [
+          60.69,
+          34.57
+        ],
+        "far_hand": [
+          52.0,
+          48.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "jump",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          64,
+          74
+        ],
+        "shoulder": [
+          70.07,
+          47.69
+        ],
+        "head": [
+          72.32,
+          37.95
+        ],
+        "near_knee": [
+          82.03,
+          80.0
+        ],
+        "near_foot": [
+          82.0,
+          100.0
+        ],
+        "far_knee": [
+          68.2,
+          91.27
+        ],
+        "far_foot": [
+          52.0,
+          103.0
+        ],
+        "near_elbow": [
+          72.87,
+          60.39
+        ],
+        "near_hand": [
+          83.0,
+          48.0
+        ],
+        "far_elbow": [
+          59.45,
+          38.96
+        ],
+        "far_hand": [
+          54.0,
+          54.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "jump",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          64,
+          76
+        ],
+        "shoulder": [
+          71.89,
+          50.18
+        ],
+        "head": [
+          74.82,
+          40.62
+        ],
+        "near_knee": [
+          79.29,
+          87.27
+        ],
+        "near_foot": [
+          76.0,
+          107.0
+        ],
+        "far_knee": [
+          69.96,
+          92.68
+        ],
+        "far_foot": [
+          56.0,
+          107.0
+        ],
+        "near_elbow": [
+          62.09,
+          58.72
+        ],
+        "near_hand": [
+          78.0,
+          57.0
+        ],
+        "far_elbow": [
+          59.05,
+          44.82
+        ],
+        "far_hand": [
+          54.0,
+          60.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "fall",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          62,
+          75
+        ],
+        "shoulder": [
+          68.07,
+          48.69
+        ],
+        "head": [
+          70.32,
+          38.95
+        ],
+        "near_knee": [
+          78.73,
+          84.01
+        ],
+        "near_foot": [
+          78.0,
+          104.0
+        ],
+        "far_knee": [
+          67.74,
+          91.76
+        ],
+        "far_foot": [
+          50.0,
+          101.0
+        ],
+        "near_elbow": [
+          73.19,
+          60.64
+        ],
+        "near_hand": [
+          83.0,
+          48.0
+        ],
+        "far_elbow": [
+          56.85,
+          40.67
+        ],
+        "far_hand": [
+          48.0,
+          54.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "fall",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          62,
+          75.6
+        ],
+        "shoulder": [
+          66.69,
+          49.01
+        ],
+        "head": [
+          68.42,
+          39.16
+        ],
+        "near_knee": [
+          79.5,
+          83.01
+        ],
+        "near_foot": [
+          79.0,
+          103.0
+        ],
+        "far_knee": [
+          66.72,
+          92.72
+        ],
+        "far_foot": [
+          49.0,
+          102.0
+        ],
+        "near_elbow": [
+          72.84,
+          60.46
+        ],
+        "near_hand": [
+          84.0,
+          49.0
+        ],
+        "far_elbow": [
+          56.32,
+          40.0
+        ],
+        "far_hand": [
+          47.0,
+          53.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "fall",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          62,
+          76
+        ],
+        "shoulder": [
+          67.61,
+          49.59
+        ],
+        "head": [
+          69.69,
+          39.81
+        ],
+        "near_knee": [
+          80.03,
+          82.0
+        ],
+        "near_foot": [
+          80.0,
+          102.0
+        ],
+        "far_knee": [
+          65.57,
+          93.44
+        ],
+        "far_foot": [
+          48.0,
+          103.0
+        ],
+        "near_elbow": [
+          73.54,
+          61.16
+        ],
+        "near_hand": [
+          85.0,
+          50.0
+        ],
+        "far_elbow": [
+          57.22,
+          40.6
+        ],
+        "far_hand": [
+          46.0,
+          52.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "fall",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          62,
+          74.7
+        ],
+        "shoulder": [
+          68.99,
+          48.62
+        ],
+        "head": [
+          71.58,
+          38.96
+        ],
+        "near_knee": [
+          79.91,
+          81.03
+        ],
+        "near_foot": [
+          81.0,
+          101.0
+        ],
+        "far_knee": [
+          63.4,
+          92.55
+        ],
+        "far_foot": [
+          47.0,
+          104.0
+        ],
+        "near_elbow": [
+          73.39,
+          60.85
+        ],
+        "near_hand": [
+          86.0,
+          51.0
+        ],
+        "far_elbow": [
+          57.47,
+          40.98
+        ],
+        "far_hand": [
+          45.0,
+          51.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "land",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          62,
+          80
+        ],
+        "shoulder": [
+          72.11,
+          54.97
+        ],
+        "head": [
+          75.86,
+          45.69
+        ],
+        "near_knee": [
+          77.91,
+          90.39
+        ],
+        "near_foot": [
+          74.0,
+          110.0
+        ],
+        "far_knee": [
+          67.17,
+          96.97
+        ],
+        "far_foot": [
+          52.0,
+          110.0
+        ],
+        "near_elbow": [
+          72.81,
+          67.95
+        ],
+        "near_hand": [
+          86.0,
+          77.0
+        ],
+        "far_elbow": [
+          60.97,
+          63.09
+        ],
+        "far_hand": [
+          49.74,
+          74.49
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "land",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          63,
+          89
+        ],
+        "shoulder": [
+          80.36,
+          68.32
+        ],
+        "head": [
+          86.78,
+          60.66
+        ],
+        "near_knee": [
+          81.82,
+          91.59
+        ],
+        "near_foot": [
+          74.0,
+          110.0
+        ],
+        "far_knee": [
+          71.26,
+          104.59
+        ],
+        "far_foot": [
+          52.0,
+          110.0
+        ],
+        "near_elbow": [
+          76.31,
+          80.67
+        ],
+        "near_hand": [
+          91.0,
+          87.0
+        ],
+        "far_elbow": [
+          67.55,
+          73.77
+        ],
+        "far_hand": [
+          53.92,
+          82.15
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "land",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          62,
+          83
+        ],
+        "shoulder": [
+          74.26,
+          58.94
+        ],
+        "head": [
+          78.8,
+          50.03
+        ],
+        "near_knee": [
+          79.36,
+          90.73
+        ],
+        "near_foot": [
+          74.0,
+          110.0
+        ],
+        "far_knee": [
+          68.89,
+          99.29
+        ],
+        "far_foot": [
+          52.0,
+          110.0
+        ],
+        "near_elbow": [
+          68.41,
+          70.55
+        ],
+        "near_hand": [
+          82.0,
+          79.0
+        ],
+        "far_elbow": [
+          63.45,
+          67.47
+        ],
+        "far_hand": [
+          52.7,
+          79.32
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "land",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          63.82,
+          49.15
+        ],
+        "head": [
+          64.87,
+          39.2
+        ],
+        "near_knee": [
+          73.84,
+          90.0
+        ],
+        "near_foot": [
+          74.0,
+          110.0
+        ],
+        "far_knee": [
+          63.54,
+          93.67
+        ],
+        "far_foot": [
+          52.0,
+          110.0
+        ],
+        "near_elbow": [
+          65.76,
+          62.0
+        ],
+        "near_hand": [
+          70.0,
+          77.43
+        ],
+        "far_elbow": [
+          59.79,
+          61.79
+        ],
+        "far_hand": [
+          57.92,
+          77.68
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "slide",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          59,
+          86
+        ],
+        "shoulder": [
+          72.5,
+          62.62
+        ],
+        "head": [
+          77.5,
+          53.96
+        ],
+        "near_knee": [
+          77.51,
+          90.31
+        ],
+        "near_foot": [
+          81.0,
+          110.0
+        ],
+        "far_knee": [
+          65.52,
+          102.45
+        ],
+        "far_foot": [
+          47.0,
+          110.0
+        ],
+        "near_elbow": [
+          68.21,
+          74.89
+        ],
+        "near_hand": [
+          82.0,
+          83.0
+        ],
+        "far_elbow": [
+          62.31,
+          71.81
+        ],
+        "far_hand": [
+          52.42,
+          84.39
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "slide",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          57,
+          97
+        ],
+        "shoulder": [
+          80.61,
+          83.91
+        ],
+        "head": [
+          89.36,
+          79.06
+        ],
+        "near_knee": [
+          75.96,
+          95.83
+        ],
+        "near_foot": [
+          89.0,
+          111.0
+        ],
+        "far_knee": [
+          56.37,
+          115.0
+        ],
+        "far_foot": [
+          37.0,
+          110.0
+        ],
+        "near_elbow": [
+          75.01,
+          95.64
+        ],
+        "near_hand": [
+          91.0,
+          95.0
+        ],
+        "far_elbow": [
+          67.93,
+          89.62
+        ],
+        "far_hand": [
+          54.49,
+          98.29
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "slide",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          57,
+          101
+        ],
+        "shoulder": [
+          82.82,
+          93.11
+        ],
+        "head": [
+          92.38,
+          90.18
+        ],
+        "near_knee": [
+          75.91,
+          99.12
+        ],
+        "near_foot": [
+          92.0,
+          111.0
+        ],
+        "far_knee": [
+          53.41,
+          118.82
+        ],
+        "far_foot": [
+          35.0,
+          111.0
+        ],
+        "near_elbow": [
+          78.99,
+          105.53
+        ],
+        "near_hand": [
+          94.0,
+          100.0
+        ],
+        "far_elbow": [
+          69.3,
+          96.59
+        ],
+        "far_hand": [
+          54.5,
+          102.67
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "slide",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60,
+          102
+        ],
+        "shoulder": [
+          86.41,
+          96.39
+        ],
+        "head": [
+          96.19,
+          94.31
+        ],
+        "near_knee": [
+          78.62,
+          98.22
+        ],
+        "near_foot": [
+          94.0,
+          111.0
+        ],
+        "far_knee": [
+          55.06,
+          119.59
+        ],
+        "far_foot": [
+          37.0,
+          111.0
+        ],
+        "near_elbow": [
+          79.64,
+          107.49
+        ],
+        "near_hand": [
+          95.0,
+          103.0
+        ],
+        "far_elbow": [
+          72.63,
+          98.79
+        ],
+        "far_hand": [
+          57.37,
+          103.57
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "slide",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          60,
+          97
+        ],
+        "shoulder": [
+          82.38,
+          81.9
+        ],
+        "head": [
+          90.67,
+          76.31
+        ],
+        "near_knee": [
+          78.64,
+          93.32
+        ],
+        "near_foot": [
+          88.0,
+          111.0
+        ],
+        "far_knee": [
+          62.67,
+          114.64
+        ],
+        "far_foot": [
+          43.0,
+          111.0
+        ],
+        "near_elbow": [
+          73.15,
+          91.05
+        ],
+        "near_hand": [
+          88.0,
+          97.0
+        ],
+        "far_elbow": [
+          69.65,
+          87.49
+        ],
+        "far_hand": [
+          56.11,
+          96.02
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "slide",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          61,
+          84
+        ],
+        "shoulder": [
+          72.84,
+          59.73
+        ],
+        "head": [
+          77.22,
+          50.74
+        ],
+        "near_knee": [
+          79.03,
+          90.0
+        ],
+        "near_foot": [
+          79.0,
+          110.0
+        ],
+        "far_knee": [
+          68.36,
+          100.06
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          68.99,
+          72.15
+        ],
+        "near_hand": [
+          77.0,
+          86.0
+        ],
+        "far_elbow": [
+          63.85,
+          69.99
+        ],
+        "far_hand": [
+          55.57,
+          83.68
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "vault",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          56,
+          79
+        ],
+        "shoulder": [
+          62.99,
+          52.92
+        ],
+        "head": [
+          65.58,
+          43.26
+        ],
+        "near_knee": [
+          71.39,
+          90.14
+        ],
+        "near_foot": [
+          69.0,
+          110.0
+        ],
+        "far_knee": [
+          61.02,
+          96.02
+        ],
+        "far_foot": [
+          45.0,
+          108.0
+        ],
+        "near_elbow": [
+          62.14,
+          65.89
+        ],
+        "near_hand": [
+          78.0,
+          68.0
+        ],
+        "far_elbow": [
+          51.18,
+          60.15
+        ],
+        "far_hand": [
+          49.0,
+          76.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "vault",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          74
+        ],
+        "shoulder": [
+          72.09,
+          50.39
+        ],
+        "head": [
+          76.94,
+          41.64
+        ],
+        "near_knee": [
+          75.93,
+          82.62
+        ],
+        "near_foot": [
+          71.0,
+          102.0
+        ],
+        "far_knee": [
+          61.94,
+          91.59
+        ],
+        "far_foot": [
+          43.0,
+          98.0
+        ],
+        "near_elbow": [
+          69.55,
+          63.13
+        ],
+        "near_hand": [
+          84.0,
+          70.0
+        ],
+        "far_elbow": [
+          59.98,
+          57.13
+        ],
+        "far_hand": [
+          62.0,
+          73.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "vault",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          69
+        ],
+        "shoulder": [
+          79.76,
+          49.58
+        ],
+        "head": [
+          86.7,
+          42.38
+        ],
+        "near_knee": [
+          79.82,
+          71.59
+        ],
+        "near_foot": [
+          72.0,
+          90.0
+        ],
+        "far_knee": [
+          58.98,
+          86.97
+        ],
+        "far_foot": [
+          39.0,
+          86.0
+        ],
+        "near_elbow": [
+          75.75,
+          61.95
+        ],
+        "near_hand": [
+          85.0,
+          75.0
+        ],
+        "far_elbow": [
+          68.98,
+          58.15
+        ],
+        "far_hand": [
+          77.0,
+          72.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "vault",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          68,
+          64
+        ],
+        "shoulder": [
+          93.03,
+          53.89
+        ],
+        "head": [
+          102.31,
+          50.14
+        ],
+        "near_knee": [
+          86.33,
+          59.01
+        ],
+        "near_foot": [
+          87.0,
+          79.0
+        ],
+        "far_knee": [
+          66.37,
+          81.99
+        ],
+        "far_foot": [
+          47.0,
+          77.0
+        ],
+        "near_elbow": [
+          81.28,
+          59.44
+        ],
+        "near_hand": [
+          85.0,
+          75.0
+        ],
+        "far_elbow": [
+          79.76,
+          58.16
+        ],
+        "far_hand": [
+          82.0,
+          74.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "vault",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          74,
+          65
+        ],
+        "shoulder": [
+          99.68,
+          56.66
+        ],
+        "head": [
+          109.19,
+          53.57
+        ],
+        "near_knee": [
+          92.21,
+          59.58
+        ],
+        "near_foot": [
+          97.0,
+          79.0
+        ],
+        "far_knee": [
+          83.99,
+          79.5
+        ],
+        "far_foot": [
+          64.0,
+          80.0
+        ],
+        "near_elbow": [
+          86.91,
+          59.11
+        ],
+        "near_hand": [
+          85.0,
+          75.0
+        ],
+        "far_elbow": [
+          86.15,
+          60.11
+        ],
+        "far_hand": [
+          88.0,
+          76.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "vault",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          80,
+          71
+        ],
+        "shoulder": [
+          97.71,
+          50.62
+        ],
+        "head": [
+          104.27,
+          43.08
+        ],
+        "near_knee": [
+          98.87,
+          73.25
+        ],
+        "near_foot": [
+          102.0,
+          93.0
+        ],
+        "far_knee": [
+          89.08,
+          86.11
+        ],
+        "far_foot": [
+          73.0,
+          98.0
+        ],
+        "near_elbow": [
+          90.51,
+          61.44
+        ],
+        "near_hand": [
+          99.0,
+          75.0
+        ],
+        "far_elbow": [
+          90.43,
+          62.01
+        ],
+        "far_hand": [
+          90.0,
+          78.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "vault",
+      "frame": 6,
+      "joints": {
+        "hip": [
+          81,
+          79
+        ],
+        "shoulder": [
+          92.41,
+          54.53
+        ],
+        "head": [
+          96.64,
+          45.47
+        ],
+        "near_knee": [
+          97.14,
+          89.03
+        ],
+        "near_foot": [
+          96.0,
+          109.0
+        ],
+        "far_knee": [
+          87.66,
+          95.39
+        ],
+        "far_foot": [
+          74.0,
+          110.0
+        ],
+        "near_elbow": [
+          89.25,
+          67.14
+        ],
+        "near_hand": [
+          101.0,
+          78.0
+        ],
+        "far_elbow": [
+          85.14,
+          65.92
+        ],
+        "far_hand": [
+          79.12,
+          80.74
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "vault",
+      "frame": 7,
+      "joints": {
+        "hip": [
+          76,
+          78
+        ],
+        "shoulder": [
+          82.07,
+          51.69
+        ],
+        "head": [
+          84.32,
+          41.95
+        ],
+        "near_knee": [
+          90.15,
+          90.68
+        ],
+        "near_foot": [
+          85.0,
+          110.0
+        ],
+        "far_knee": [
+          79.68,
+          95.41
+        ],
+        "far_foot": [
+          66.0,
+          110.0
+        ],
+        "near_elbow": [
+          82.52,
+          64.68
+        ],
+        "near_hand": [
+          84.95,
+          80.5
+        ],
+        "far_elbow": [
+          74.4,
+          62.85
+        ],
+        "far_hand": [
+          67.85,
+          77.45
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "climb",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          86
+        ],
+        "shoulder": [
+          57.65,
+          59.1
+        ],
+        "head": [
+          56.78,
+          49.14
+        ],
+        "near_knee": [
+          76.48,
+          95.45
+        ],
+        "near_foot": [
+          69.0,
+          114.0
+        ],
+        "far_knee": [
+          68.95,
+          101.18
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          67.47,
+          50.58
+        ],
+        "near_hand": [
+          78.23,
+          38.75
+        ],
+        "far_elbow": [
+          69.4,
+          56.59
+        ],
+        "far_hand": [
+          73.0,
+          41.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "climb",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          60,
+          85
+        ],
+        "shoulder": [
+          60.47,
+          58.0
+        ],
+        "head": [
+          60.65,
+          48.01
+        ],
+        "near_knee": [
+          77.9,
+          91.38
+        ],
+        "near_foot": [
+          74.0,
+          111.0
+        ],
+        "far_knee": [
+          67.38,
+          101.05
+        ],
+        "far_foot": [
+          48.0,
+          106.0
+        ],
+        "near_elbow": [
+          70.55,
+          49.79
+        ],
+        "near_hand": [
+          81.68,
+          38.3
+        ],
+        "far_elbow": [
+          72.09,
+          54.89
+        ],
+        "far_hand": [
+          74.0,
+          39.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "climb",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          80
+        ],
+        "shoulder": [
+          67.07,
+          53.69
+        ],
+        "head": [
+          69.32,
+          43.95
+        ],
+        "near_knee": [
+          78.54,
+          87.3
+        ],
+        "near_foot": [
+          82.0,
+          107.0
+        ],
+        "far_knee": [
+          65.98,
+          97.04
+        ],
+        "far_foot": [
+          46.0,
+          98.0
+        ],
+        "near_elbow": [
+          79.63,
+          57.07
+        ],
+        "near_hand": [
+          85.0,
+          42.0
+        ],
+        "far_elbow": [
+          76.83,
+          61.0
+        ],
+        "far_hand": [
+          77.0,
+          45.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "climb",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          63,
+          77
+        ],
+        "shoulder": [
+          75.68,
+          53.16
+        ],
+        "head": [
+          80.37,
+          44.33
+        ],
+        "near_knee": [
+          81.29,
+          82.16
+        ],
+        "near_foot": [
+          88.0,
+          101.0
+        ],
+        "far_knee": [
+          67.76,
+          94.11
+        ],
+        "far_foot": [
+          48.0,
+          91.0
+        ],
+        "near_elbow": [
+          79.53,
+          65.58
+        ],
+        "near_hand": [
+          88.0,
+          52.0
+        ],
+        "far_elbow": [
+          70.21,
+          65.37
+        ],
+        "far_hand": [
+          79.0,
+          52.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "climb",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          68,
+          82
+        ],
+        "shoulder": [
+          87.75,
+          63.59
+        ],
+        "head": [
+          95.06,
+          56.77
+        ],
+        "near_knee": [
+          86.61,
+          85.85
+        ],
+        "near_foot": [
+          95.0,
+          104.0
+        ],
+        "far_knee": [
+          76.92,
+          97.21
+        ],
+        "far_foot": [
+          57.0,
+          99.0
+        ],
+        "near_elbow": [
+          74.75,
+          63.15
+        ],
+        "near_hand": [
+          90.0,
+          68.0
+        ],
+        "far_elbow": [
+          92.5,
+          51.93
+        ],
+        "far_hand": [
+          82.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "climb",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          72,
+          84
+        ],
+        "shoulder": [
+          86.31,
+          61.1
+        ],
+        "head": [
+          91.61,
+          52.62
+        ],
+        "near_knee": [
+          89.65,
+          91.03
+        ],
+        "near_foot": [
+          96.0,
+          110.0
+        ],
+        "far_knee": [
+          81.31,
+          98.96
+        ],
+        "far_foot": [
+          63.0,
+          107.0
+        ],
+        "near_elbow": [
+          78.1,
+          71.18
+        ],
+        "near_hand": [
+          93.0,
+          77.0
+        ],
+        "far_elbow": [
+          72.39,
+          62.52
+        ],
+        "far_hand": [
+          81.0,
+          76.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "climb",
+      "frame": 6,
+      "joints": {
+        "hip": [
+          73,
+          80
+        ],
+        "shoulder": [
+          81.34,
+          54.32
+        ],
+        "head": [
+          84.43,
+          44.81
+        ],
+        "near_knee": [
+          88.91,
+          90.39
+        ],
+        "near_foot": [
+          85.0,
+          110.0
+        ],
+        "far_knee": [
+          78.17,
+          96.97
+        ],
+        "far_foot": [
+          63.0,
+          110.0
+        ],
+        "near_elbow": [
+          81.64,
+          67.32
+        ],
+        "near_hand": [
+          88.0,
+          82.0
+        ],
+        "far_elbow": [
+          72.97,
+          65.03
+        ],
+        "far_hand": [
+          72.0,
+          81.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "climb",
+      "frame": 7,
+      "joints": {
+        "hip": [
+          69,
+          76
+        ],
+        "shoulder": [
+          72.29,
+          49.2
+        ],
+        "head": [
+          73.51,
+          39.28
+        ],
+        "near_knee": [
+          80.83,
+          90.87
+        ],
+        "near_foot": [
+          75.0,
+          110.0
+        ],
+        "far_knee": [
+          73.04,
+          93.32
+        ],
+        "far_foot": [
+          62.0,
+          110.0
+        ],
+        "near_elbow": [
+          73.99,
+          62.09
+        ],
+        "near_hand": [
+          77.93,
+          77.6
+        ],
+        "far_elbow": [
+          67.73,
+          61.7
+        ],
+        "far_hand": [
+          65.19,
+          77.5
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "roll",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          64.0,
+          87.0
+        ],
+        "shoulder": [
+          88.67,
+          76.02
+        ],
+        "head": [
+          97.8,
+          71.95
+        ],
+        "near_knee": [
+          81.68,
+          80.04
+        ],
+        "near_foot": [
+          83.0,
+          100.0
+        ],
+        "far_knee": [
+          80.74,
+          92.81
+        ],
+        "far_foot": [
+          69.0,
+          109.0
+        ],
+        "near_elbow": [
+          75.7,
+          76.93
+        ],
+        "near_hand": [
+          59.98,
+          79.92
+        ],
+        "far_elbow": [
+          74.82,
+          78.03
+        ],
+        "far_hand": [
+          59.41,
+          82.34
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "roll",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          64.0,
+          78.0
+        ],
+        "shoulder": [
+          81.71,
+          98.38
+        ],
+        "head": [
+          88.27,
+          105.92
+        ],
+        "near_knee": [
+          75.82,
+          92.87
+        ],
+        "near_foot": [
+          57.12,
+          99.97
+        ],
+        "far_knee": [
+          63.34,
+          95.71
+        ],
+        "far_foot": [
+          44.42,
+          89.21
+        ],
+        "near_elbow": [
+          77.05,
+          86.24
+        ],
+        "near_hand": [
+          69.6,
+          72.08
+        ],
+        "far_elbow": [
+          75.75,
+          85.72
+        ],
+        "far_hand": [
+          67.12,
+          72.25
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "roll",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          64.0,
+          76.0
+        ],
+        "shoulder": [
+          47.75,
+          97.56
+        ],
+        "head": [
+          41.73,
+          105.55
+        ],
+        "near_knee": [
+          51.91,
+          90.66
+        ],
+        "near_foot": [
+          41.08,
+          73.84
+        ],
+        "far_knee": [
+          46.54,
+          79.04
+        ],
+        "far_foot": [
+          48.96,
+          59.18
+        ],
+        "near_elbow": [
+          58.65,
+          90.48
+        ],
+        "near_hand": [
+          70.95,
+          80.25
+        ],
+        "far_elbow": [
+          58.89,
+          89.1
+        ],
+        "far_hand": [
+          70.27,
+          77.85
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "roll",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          64.0,
+          104.0
+        ],
+        "shoulder": [
+          39.94,
+          91.74
+        ],
+        "head": [
+          31.03,
+          87.2
+        ],
+        "near_knee": [
+          47.47,
+          94.64
+        ],
+        "near_foot": [
+          62.15,
+          81.05
+        ],
+        "far_knee": [
+          57.98,
+          87.34
+        ],
+        "far_foot": [
+          77.95,
+          86.27
+        ],
+        "near_elbow": [
+          48.81,
+          101.25
+        ],
+        "near_hand": [
+          61.02,
+          111.58
+        ],
+        "far_elbow": [
+          50.21,
+          101.24
+        ],
+        "far_hand": [
+          63.26,
+          110.5
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "roll",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          64.0,
+          101.0
+        ],
+        "shoulder": [
+          70.07,
+          74.69
+        ],
+        "head": [
+          72.32,
+          64.95
+        ],
+        "near_knee": [
+          69.08,
+          82.69
+        ],
+        "near_foot": [
+          85.82,
+          93.65
+        ],
+        "far_knee": [
+          78.71,
+          91.13
+        ],
+        "far_foot": [
+          84.58,
+          110.25
+        ],
+        "near_elbow": [
+          62.99,
+          85.6
+        ],
+        "near_hand": [
+          55.92,
+          99.95
+        ],
+        "far_elbow": [
+          63.34,
+          86.96
+        ],
+        "far_hand": [
+          57.52,
+          101.86
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "roll",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          63,
+          78
+        ],
+        "shoulder": [
+          73.98,
+          53.33
+        ],
+        "head": [
+          78.05,
+          44.2
+        ],
+        "near_knee": [
+          79.09,
+          88.11
+        ],
+        "near_foot": [
+          77.0,
+          108.0
+        ],
+        "far_knee": [
+          68.17,
+          94.97
+        ],
+        "far_foot": [
+          53.0,
+          108.0
+        ],
+        "near_elbow": [
+          69.98,
+          65.7
+        ],
+        "near_hand": [
+          83.0,
+          75.0
+        ],
+        "far_elbow": [
+          64.0,
+          62.74
+        ],
+        "far_hand": [
+          54.39,
+          75.53
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "punch",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          76
+        ],
+        "shoulder": [
+          63.29,
+          49.2
+        ],
+        "head": [
+          64.51,
+          39.28
+        ],
+        "near_knee": [
+          72.84,
+          90.0
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.54,
+          93.67
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          60.02,
+          61.78
+        ],
+        "near_hand": [
+          76.0,
+          61.0
+        ],
+        "far_elbow": [
+          49.44,
+          51.17
+        ],
+        "far_hand": [
+          59.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "punch",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          77
+        ],
+        "shoulder": [
+          57.59,
+          50.04
+        ],
+        "head": [
+          57.06,
+          40.05
+        ],
+        "near_knee": [
+          72.86,
+          90.0
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          63.32,
+          94.24
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          51.36,
+          61.45
+        ],
+        "near_hand": [
+          66.0,
+          55.0
+        ],
+        "far_elbow": [
+          44.9,
+          55.72
+        ],
+        "far_hand": [
+          60.0,
+          61.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "punch",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          68.44,
+          50.05
+        ],
+        "head": [
+          71.2,
+          40.43
+        ],
+        "near_knee": [
+          73.83,
+          90.02
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.73,
+          93.8
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          78.56,
+          58.21
+        ],
+        "near_hand": [
+          94.0,
+          54.0
+        ],
+        "far_elbow": [
+          54.44,
+          50.17
+        ],
+        "far_hand": [
+          64.0,
+          63.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "punch",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          63,
+          76.5
+        ],
+        "shoulder": [
+          73.11,
+          51.47
+        ],
+        "head": [
+          76.86,
+          42.19
+        ],
+        "near_knee": [
+          76.12,
+          90.24
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          63.56,
+          94.44
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          85.99,
+          53.25
+        ],
+        "near_hand": [
+          101.99,
+          53.56
+        ],
+        "far_elbow": [
+          59.13,
+          52.07
+        ],
+        "far_hand": [
+          67.0,
+          66.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "punch",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          67.53,
+          49.8
+        ],
+        "head": [
+          69.95,
+          40.1
+        ],
+        "near_knee": [
+          73.83,
+          90.02
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.73,
+          93.8
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          75.06,
+          60.4
+        ],
+        "near_hand": [
+          91.0,
+          59.0
+        ],
+        "far_elbow": [
+          53.59,
+          51.06
+        ],
+        "far_hand": [
+          63.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "punch",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          60,
+          76
+        ],
+        "shoulder": [
+          62.35,
+          49.1
+        ],
+        "head": [
+          63.22,
+          39.14
+        ],
+        "near_knee": [
+          72.84,
+          90.0
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.54,
+          93.67
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          61.57,
+          62.08
+        ],
+        "near_hand": [
+          76.0,
+          69.0
+        ],
+        "far_elbow": [
+          50.14,
+          55.68
+        ],
+        "far_hand": [
+          59.0,
+          69.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "kick",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          62.88,
+          49.07
+        ],
+        "head": [
+          63.58,
+          39.09
+        ],
+        "near_knee": [
+          73.31,
+          90.47
+        ],
+        "near_foot": [
+          69.0,
+          110.0
+        ],
+        "far_knee": [
+          65.72,
+          93.12
+        ],
+        "far_foot": [
+          55.0,
+          110.0
+        ],
+        "near_elbow": [
+          56.42,
+          60.35
+        ],
+        "near_hand": [
+          72.0,
+          64.0
+        ],
+        "far_elbow": [
+          49.5,
+          53.01
+        ],
+        "far_hand": [
+          49.0,
+          69.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "kick",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          60,
+          77
+        ],
+        "shoulder": [
+          55.31,
+          50.41
+        ],
+        "head": [
+          53.58,
+          40.56
+        ],
+        "near_knee": [
+          78.0,
+          70.92
+        ],
+        "near_foot": [
+          72.0,
+          90.0
+        ],
+        "far_knee": [
+          66.34,
+          93.53
+        ],
+        "far_foot": [
+          55.0,
+          110.0
+        ],
+        "near_elbow": [
+          54.61,
+          63.39
+        ],
+        "near_hand": [
+          70.0,
+          59.0
+        ],
+        "far_elbow": [
+          41.75,
+          53.74
+        ],
+        "far_hand": [
+          49.0,
+          68.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "kick",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          60,
+          75
+        ],
+        "shoulder": [
+          52.56,
+          49.05
+        ],
+        "head": [
+          49.8,
+          39.43
+        ],
+        "near_knee": [
+          77.97,
+          68.84
+        ],
+        "near_foot": [
+          97.0,
+          75.0
+        ],
+        "far_knee": [
+          64.24,
+          92.26
+        ],
+        "far_foot": [
+          55.0,
+          110.0
+        ],
+        "near_elbow": [
+          52.52,
+          62.05
+        ],
+        "near_hand": [
+          68.0,
+          58.0
+        ],
+        "far_elbow": [
+          39.57,
+          54.07
+        ],
+        "far_hand": [
+          49.0,
+          67.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "kick",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          61,
+          75
+        ],
+        "shoulder": [
+          52.21,
+          49.47
+        ],
+        "head": [
+          48.95,
+          40.02
+        ],
+        "near_knee": [
+          79.91,
+          73.17
+        ],
+        "near_foot": [
+          99.91,
+          73.27
+        ],
+        "far_knee": [
+          64.57,
+          92.44
+        ],
+        "far_foot": [
+          55.0,
+          110.0
+        ],
+        "near_elbow": [
+          53.35,
+          62.42
+        ],
+        "near_hand": [
+          68.0,
+          56.0
+        ],
+        "far_elbow": [
+          38.88,
+          53.6
+        ],
+        "far_hand": [
+          49.0,
+          66.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "kick",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          62,
+          76
+        ],
+        "shoulder": [
+          58.24,
+          49.26
+        ],
+        "head": [
+          56.85,
+          39.36
+        ],
+        "near_knee": [
+          80.86,
+          73.67
+        ],
+        "near_foot": [
+          86.0,
+          93.0
+        ],
+        "far_knee": [
+          66.04,
+          93.32
+        ],
+        "far_foot": [
+          55.0,
+          110.0
+        ],
+        "near_elbow": [
+          55.14,
+          61.89
+        ],
+        "near_hand": [
+          71.0,
+          64.0
+        ],
+        "far_elbow": [
+          44.25,
+          49.72
+        ],
+        "far_hand": [
+          49.0,
+          65.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "kick",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          63.82,
+          49.15
+        ],
+        "head": [
+          64.87,
+          39.2
+        ],
+        "near_knee": [
+          73.09,
+          90.66
+        ],
+        "near_foot": [
+          68.0,
+          110.0
+        ],
+        "far_knee": [
+          65.72,
+          93.12
+        ],
+        "far_foot": [
+          55.0,
+          110.0
+        ],
+        "near_elbow": [
+          63.99,
+          62.15
+        ],
+        "near_hand": [
+          72.0,
+          76.0
+        ],
+        "far_elbow": [
+          49.87,
+          48.02
+        ],
+        "far_hand": [
+          49.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "hurt",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          58.65,
+          49.1
+        ],
+        "head": [
+          57.78,
+          39.14
+        ],
+        "near_knee": [
+          73.76,
+          90.08
+        ],
+        "near_foot": [
+          72.0,
+          110.0
+        ],
+        "far_knee": [
+          62.73,
+          93.8
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          57.49,
+          62.05
+        ],
+        "near_hand": [
+          73.0,
+          66.0
+        ],
+        "far_elbow": [
+          46.59,
+          55.94
+        ],
+        "far_hand": [
+          52.0,
+          71.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "hurt",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          79
+        ],
+        "shoulder": [
+          48.45,
+          54.15
+        ],
+        "head": [
+          44.54,
+          44.94
+        ],
+        "near_knee": [
+          74.29,
+          90.27
+        ],
+        "near_foot": [
+          71.0,
+          110.0
+        ],
+        "far_knee": [
+          64.23,
+          95.95
+        ],
+        "far_foot": [
+          50.0,
+          110.0
+        ],
+        "near_elbow": [
+          55.61,
+          65.0
+        ],
+        "near_hand": [
+          70.0,
+          58.0
+        ],
+        "far_elbow": [
+          34.47,
+          54.9
+        ],
+        "far_hand": [
+          46.0,
+          66.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "hurt",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          57,
+          81
+        ],
+        "shoulder": [
+          48.66,
+          55.32
+        ],
+        "head": [
+          45.57,
+          45.81
+        ],
+        "near_knee": [
+          73.56,
+          90.32
+        ],
+        "near_foot": [
+          70.0,
+          110.0
+        ],
+        "far_knee": [
+          64.28,
+          97.1
+        ],
+        "far_foot": [
+          49.0,
+          110.0
+        ],
+        "near_elbow": [
+          51.78,
+          67.94
+        ],
+        "near_hand": [
+          67.0,
+          63.0
+        ],
+        "far_elbow": [
+          35.28,
+          59.29
+        ],
+        "far_hand": [
+          45.0,
+          72.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "hurt",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60,
+          78
+        ],
+        "shoulder": [
+          57.18,
+          51.15
+        ],
+        "head": [
+          56.13,
+          41.2
+        ],
+        "near_knee": [
+          74.15,
+          90.68
+        ],
+        "near_foot": [
+          69.0,
+          110.0
+        ],
+        "far_knee": [
+          62.04,
+          95.76
+        ],
+        "far_foot": [
+          48.0,
+          110.0
+        ],
+        "near_elbow": [
+          57.06,
+          64.15
+        ],
+        "near_hand": [
+          71.0,
+          72.0
+        ],
+        "far_elbow": [
+          48.24,
+          61.45
+        ],
+        "far_hand": [
+          52.0,
+          77.0
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "caught",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          58.65,
+          49.1
+        ],
+        "head": [
+          57.78,
+          39.14
+        ],
+        "near_knee": [
+          73.09,
+          90.66
+        ],
+        "near_foot": [
+          68.0,
+          110.0
+        ],
+        "far_knee": [
+          65.04,
+          93.32
+        ],
+        "far_foot": [
+          54.0,
+          110.0
+        ],
+        "near_elbow": [
+          61.71,
+          61.74
+        ],
+        "near_hand": [
+          67.29,
+          76.73
+        ],
+        "far_elbow": [
+          55.33,
+          61.9
+        ],
+        "far_hand": [
+          54.36,
+          77.87
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "caught",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          58,
+          80
+        ],
+        "shoulder": [
+          51.93,
+          53.69
+        ],
+        "head": [
+          49.68,
+          43.95
+        ],
+        "near_knee": [
+          73.91,
+          90.39
+        ],
+        "near_foot": [
+          70.0,
+          110.0
+        ],
+        "far_knee": [
+          63.17,
+          96.97
+        ],
+        "far_foot": [
+          48.0,
+          110.0
+        ],
+        "near_elbow": [
+          56.44,
+          65.88
+        ],
+        "near_hand": [
+          63.72,
+          80.13
+        ],
+        "far_elbow": [
+          48.8,
+          66.52
+        ],
+        "far_hand": [
+          48.05,
+          82.5
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "caught",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          56,
+          87
+        ],
+        "shoulder": [
+          62.99,
+          60.92
+        ],
+        "head": [
+          65.58,
+          51.26
+        ],
+        "near_knee": [
+          74.57,
+          91.01
+        ],
+        "near_foot": [
+          74.0,
+          111.0
+        ],
+        "far_knee": [
+          61.66,
+          103.8
+        ],
+        "far_foot": [
+          43.0,
+          111.0
+        ],
+        "near_elbow": [
+          63.92,
+          73.89
+        ],
+        "near_hand": [
+          66.94,
+          89.6
+        ],
+        "far_elbow": [
+          54.5,
+          71.55
+        ],
+        "far_hand": [
+          46.9,
+          85.62
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "caught",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          57,
+          95
+        ],
+        "shoulder": [
+          76.42,
+          76.24
+        ],
+        "head": [
+          83.62,
+          69.3
+        ],
+        "near_knee": [
+          75.95,
+          93.65
+        ],
+        "near_foot": [
+          81.0,
+          113.0
+        ],
+        "far_knee": [
+          58.0,
+          112.89
+        ],
+        "far_foot": [
+          38.0,
+          113.0
+        ],
+        "near_elbow": [
+          71.08,
+          88.1
+        ],
+        "near_hand": [
+          79.0,
+          102.0
+        ],
+        "far_elbow": [
+          65.7,
+          84.88
+        ],
+        "far_hand": [
+          55.07,
+          96.83
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "caught",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          58,
+          102
+        ],
+        "shoulder": [
+          83.37,
+          92.77
+        ],
+        "head": [
+          92.77,
+          89.35
+        ],
+        "near_knee": [
+          76.76,
+          99.01
+        ],
+        "near_foot": [
+          90.0,
+          114.0
+        ],
+        "far_knee": [
+          53.2,
+          119.62
+        ],
+        "far_foot": [
+          34.0,
+          114.0
+        ],
+        "near_elbow": [
+          75.91,
+          103.41
+        ],
+        "near_hand": [
+          90.0,
+          111.0
+        ],
+        "far_elbow": [
+          70.57,
+          98.22
+        ],
+        "far_hand": [
+          56.94,
+          106.6
+        ]
+      }
+    },
+    {
+      "character": "runner",
+      "animation": "caught",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          60,
+          105
+        ],
+        "shoulder": [
+          86.8,
+          101.71
+        ],
+        "head": [
+          96.72,
+          100.49
+        ],
+        "near_knee": [
+          79.0,
+          105.29
+        ],
+        "near_foot": [
+          97.0,
+          114.0
+        ],
+        "far_knee": [
+          52.76,
+          121.94
+        ],
+        "far_foot": [
+          34.0,
+          115.0
+        ],
+        "near_elbow": [
+          87.0,
+          114.71
+        ],
+        "near_hand": [
+          103.0,
+          115.0
+        ],
+        "far_elbow": [
+          73.25,
+          105.11
+        ],
+        "far_hand": [
+          58.41,
+          111.09
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "idle",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          63.35,
+          49.1
+        ],
+        "head": [
+          64.22,
+          39.14
+        ],
+        "near_knee": [
+          72.83,
+          90.87
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          66.98,
+          92.67
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          65.47,
+          61.93
+        ],
+        "near_hand": [
+          69.91,
+          77.3
+        ],
+        "far_elbow": [
+          59.43,
+          61.77
+        ],
+        "far_hand": [
+          57.7,
+          77.68
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "idle",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          61.4,
+          75.4
+        ],
+        "shoulder": [
+          64.22,
+          48.55
+        ],
+        "head": [
+          65.27,
+          38.6
+        ],
+        "near_knee": [
+          72.55,
+          90.79
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          66.49,
+          92.4
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          66.05,
+          61.42
+        ],
+        "near_hand": [
+          70.14,
+          76.89
+        ],
+        "far_elbow": [
+          60.02,
+          61.15
+        ],
+        "far_hand": [
+          57.93,
+          77.01
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "idle",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          76.2
+        ],
+        "shoulder": [
+          62.88,
+          49.27
+        ],
+        "head": [
+          63.58,
+          39.29
+        ],
+        "near_knee": [
+          73.01,
+          90.92
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          67.19,
+          92.79
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          65.18,
+          62.06
+        ],
+        "near_hand": [
+          69.85,
+          77.36
+        ],
+        "far_elbow": [
+          59.19,
+          61.98
+        ],
+        "far_hand": [
+          57.74,
+          77.92
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "idle",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60.7,
+          76.7
+        ],
+        "shoulder": [
+          62.11,
+          49.74
+        ],
+        "head": [
+          62.64,
+          39.75
+        ],
+        "near_knee": [
+          73.22,
+          90.99
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          67.54,
+          93.01
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          64.64,
+          62.49
+        ],
+        "near_hand": [
+          69.59,
+          77.71
+        ],
+        "far_elbow": [
+          58.65,
+          62.5
+        ],
+        "far_hand": [
+          57.49,
+          78.46
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "run",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          78.3
+        ],
+        "shoulder": [
+          68.79,
+          52.77
+        ],
+        "head": [
+          72.05,
+          43.32
+        ],
+        "near_knee": [
+          79.0,
+          78.46
+        ],
+        "near_foot": [
+          62.0,
+          89.0
+        ],
+        "far_knee": [
+          71.65,
+          91.48
+        ],
+        "far_foot": [
+          62.0,
+          109.0
+        ],
+        "near_elbow": [
+          57.78,
+          59.68
+        ],
+        "near_hand": [
+          70.0,
+          70.0
+        ],
+        "far_elbow": [
+          54.79,
+          53.03
+        ],
+        "far_hand": [
+          70.0,
+          58.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "run",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          78.88,
+          74.9
+        ],
+        "near_foot": [
+          77.56,
+          94.86
+        ],
+        "far_knee": [
+          60.66,
+          94.93
+        ],
+        "far_foot": [
+          46.44,
+          109.0
+        ],
+        "near_elbow": [
+          55.83,
+          52.5
+        ],
+        "near_hand": [
+          58.69,
+          68.24
+        ],
+        "far_elbow": [
+          65.99,
+          64.35
+        ],
+        "far_hand": [
+          81.31,
+          59.76
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "run",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          60,
+          75.7
+        ],
+        "shoulder": [
+          68.79,
+          50.17
+        ],
+        "head": [
+          72.05,
+          40.72
+        ],
+        "near_knee": [
+          71.89,
+          90.52
+        ],
+        "near_foot": [
+          82.77,
+          107.3
+        ],
+        "far_knee": [
+          50.67,
+          91.78
+        ],
+        "far_foot": [
+          40.13,
+          108.77
+        ],
+        "near_elbow": [
+          55.95,
+          48.12
+        ],
+        "near_hand": [
+          54.0,
+          64.0
+        ],
+        "far_elbow": [
+          70.03,
+          62.98
+        ],
+        "far_hand": [
+          86.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "run",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          74.54,
+          89.23
+        ],
+        "near_foot": [
+          77.56,
+          109.0
+        ],
+        "far_knee": [
+          66.4,
+          93.5
+        ],
+        "far_foot": [
+          46.44,
+          94.86
+        ],
+        "near_elbow": [
+          58.32,
+          43.76
+        ],
+        "near_hand": [
+          58.69,
+          59.76
+        ],
+        "far_elbow": [
+          65.8,
+          64.32
+        ],
+        "far_hand": [
+          81.31,
+          68.24
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "run",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          60,
+          78.3
+        ],
+        "shoulder": [
+          68.79,
+          52.77
+        ],
+        "head": [
+          72.05,
+          43.32
+        ],
+        "near_knee": [
+          72.91,
+          92.24
+        ],
+        "near_foot": [
+          62.0,
+          109.0
+        ],
+        "far_knee": [
+          78.0,
+          77.0
+        ],
+        "far_foot": [
+          62.0,
+          89.0
+        ],
+        "near_elbow": [
+          56.06,
+          50.15
+        ],
+        "near_hand": [
+          70.0,
+          58.0
+        ],
+        "far_elbow": [
+          57.23,
+          60.36
+        ],
+        "far_hand": [
+          70.0,
+          70.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "run",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          61.59,
+          95.93
+        ],
+        "near_foot": [
+          46.44,
+          109.0
+        ],
+        "far_knee": [
+          77.97,
+          74.86
+        ],
+        "far_foot": [
+          77.56,
+          94.86
+        ],
+        "near_elbow": [
+          65.93,
+          64.15
+        ],
+        "near_hand": [
+          81.31,
+          59.76
+        ],
+        "far_elbow": [
+          54.85,
+          52.71
+        ],
+        "far_hand": [
+          58.69,
+          68.24
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "run",
+      "frame": 6,
+      "joints": {
+        "hip": [
+          60,
+          75.7
+        ],
+        "shoulder": [
+          68.79,
+          50.17
+        ],
+        "head": [
+          72.05,
+          40.72
+        ],
+        "near_knee": [
+          51.75,
+          92.82
+        ],
+        "near_foot": [
+          40.0,
+          109.0
+        ],
+        "far_knee": [
+          70.97,
+          89.45
+        ],
+        "far_foot": [
+          81.94,
+          106.18
+        ],
+        "near_elbow": [
+          70.02,
+          63.11
+        ],
+        "near_hand": [
+          86.0,
+          64.0
+        ],
+        "far_elbow": [
+          54.97,
+          48.03
+        ],
+        "far_hand": [
+          54.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "run",
+      "frame": 7,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          66.44,
+          94.87
+        ],
+        "near_foot": [
+          46.44,
+          94.86
+        ],
+        "far_knee": [
+          72.1,
+          89.76
+        ],
+        "far_foot": [
+          77.56,
+          109.0
+        ],
+        "near_elbow": [
+          65.85,
+          64.13
+        ],
+        "near_hand": [
+          81.31,
+          68.24
+        ],
+        "far_elbow": [
+          57.28,
+          43.82
+        ],
+        "far_hand": [
+          58.69,
+          59.76
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "jump",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          81
+        ],
+        "shoulder": [
+          68.34,
+          55.32
+        ],
+        "head": [
+          71.43,
+          45.81
+        ],
+        "near_knee": [
+          76.17,
+          90.98
+        ],
+        "near_foot": [
+          70.0,
+          110.0
+        ],
+        "far_knee": [
+          67.98,
+          96.75
+        ],
+        "far_foot": [
+          53.0,
+          110.0
+        ],
+        "near_elbow": [
+          60.06,
+          65.34
+        ],
+        "near_hand": [
+          72.0,
+          76.0
+        ],
+        "far_elbow": [
+          61.13,
+          66.74
+        ],
+        "far_hand": [
+          55.19,
+          81.6
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "jump",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          86
+        ],
+        "shoulder": [
+          71.68,
+          62.16
+        ],
+        "head": [
+          76.37,
+          53.33
+        ],
+        "near_knee": [
+          77.54,
+          90.16
+        ],
+        "near_foot": [
+          75.0,
+          110.0
+        ],
+        "far_knee": [
+          67.52,
+          101.44
+        ],
+        "far_foot": [
+          49.0,
+          109.0
+        ],
+        "near_elbow": [
+          58.73,
+          61.0
+        ],
+        "near_hand": [
+          59.0,
+          77.0
+        ],
+        "far_elbow": [
+          57.73,
+          63.29
+        ],
+        "far_hand": [
+          48.0,
+          76.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "jump",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          62,
+          75
+        ],
+        "shoulder": [
+          69.89,
+          49.18
+        ],
+        "head": [
+          72.82,
+          39.62
+        ],
+        "near_knee": [
+          78.69,
+          84.07
+        ],
+        "near_foot": [
+          77.0,
+          104.0
+        ],
+        "far_knee": [
+          67.74,
+          91.77
+        ],
+        "far_foot": [
+          48.0,
+          95.0
+        ],
+        "near_elbow": [
+          78.73,
+          58.72
+        ],
+        "near_hand": [
+          85.0,
+          44.0
+        ],
+        "far_elbow": [
+          61.53,
+          38.46
+        ],
+        "far_hand": [
+          53.0,
+          52.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "jump",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          63,
+          73
+        ],
+        "shoulder": [
+          67.22,
+          46.33
+        ],
+        "head": [
+          68.79,
+          36.46
+        ],
+        "near_knee": [
+          81.96,
+          74.23
+        ],
+        "near_foot": [
+          85.0,
+          94.0
+        ],
+        "far_knee": [
+          70.13,
+          89.17
+        ],
+        "far_foot": [
+          51.0,
+          95.0
+        ],
+        "near_elbow": [
+          78.35,
+          53.05
+        ],
+        "near_hand": [
+          86.0,
+          39.0
+        ],
+        "far_elbow": [
+          60.69,
+          34.57
+        ],
+        "far_hand": [
+          52.0,
+          48.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "jump",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          64,
+          74
+        ],
+        "shoulder": [
+          70.07,
+          47.69
+        ],
+        "head": [
+          72.32,
+          37.95
+        ],
+        "near_knee": [
+          82.03,
+          80.0
+        ],
+        "near_foot": [
+          82.0,
+          100.0
+        ],
+        "far_knee": [
+          68.2,
+          91.27
+        ],
+        "far_foot": [
+          52.0,
+          103.0
+        ],
+        "near_elbow": [
+          72.87,
+          60.39
+        ],
+        "near_hand": [
+          83.0,
+          48.0
+        ],
+        "far_elbow": [
+          59.45,
+          38.96
+        ],
+        "far_hand": [
+          54.0,
+          54.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "jump",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          64,
+          76
+        ],
+        "shoulder": [
+          71.89,
+          50.18
+        ],
+        "head": [
+          74.82,
+          40.62
+        ],
+        "near_knee": [
+          79.29,
+          87.27
+        ],
+        "near_foot": [
+          76.0,
+          107.0
+        ],
+        "far_knee": [
+          69.96,
+          92.68
+        ],
+        "far_foot": [
+          56.0,
+          107.0
+        ],
+        "near_elbow": [
+          62.09,
+          58.72
+        ],
+        "near_hand": [
+          78.0,
+          57.0
+        ],
+        "far_elbow": [
+          59.05,
+          44.82
+        ],
+        "far_hand": [
+          54.0,
+          60.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "fall",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          62,
+          75
+        ],
+        "shoulder": [
+          68.07,
+          48.69
+        ],
+        "head": [
+          70.32,
+          38.95
+        ],
+        "near_knee": [
+          78.73,
+          84.01
+        ],
+        "near_foot": [
+          78.0,
+          104.0
+        ],
+        "far_knee": [
+          67.74,
+          91.76
+        ],
+        "far_foot": [
+          50.0,
+          101.0
+        ],
+        "near_elbow": [
+          73.19,
+          60.64
+        ],
+        "near_hand": [
+          83.0,
+          48.0
+        ],
+        "far_elbow": [
+          56.85,
+          40.67
+        ],
+        "far_hand": [
+          48.0,
+          54.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "fall",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          62,
+          75.6
+        ],
+        "shoulder": [
+          66.69,
+          49.01
+        ],
+        "head": [
+          68.42,
+          39.16
+        ],
+        "near_knee": [
+          79.5,
+          83.01
+        ],
+        "near_foot": [
+          79.0,
+          103.0
+        ],
+        "far_knee": [
+          66.72,
+          92.72
+        ],
+        "far_foot": [
+          49.0,
+          102.0
+        ],
+        "near_elbow": [
+          72.84,
+          60.46
+        ],
+        "near_hand": [
+          84.0,
+          49.0
+        ],
+        "far_elbow": [
+          56.32,
+          40.0
+        ],
+        "far_hand": [
+          47.0,
+          53.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "fall",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          62,
+          76
+        ],
+        "shoulder": [
+          67.61,
+          49.59
+        ],
+        "head": [
+          69.69,
+          39.81
+        ],
+        "near_knee": [
+          80.03,
+          82.0
+        ],
+        "near_foot": [
+          80.0,
+          102.0
+        ],
+        "far_knee": [
+          65.57,
+          93.44
+        ],
+        "far_foot": [
+          48.0,
+          103.0
+        ],
+        "near_elbow": [
+          73.54,
+          61.16
+        ],
+        "near_hand": [
+          85.0,
+          50.0
+        ],
+        "far_elbow": [
+          57.22,
+          40.6
+        ],
+        "far_hand": [
+          46.0,
+          52.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "fall",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          62,
+          74.7
+        ],
+        "shoulder": [
+          68.99,
+          48.62
+        ],
+        "head": [
+          71.58,
+          38.96
+        ],
+        "near_knee": [
+          79.91,
+          81.03
+        ],
+        "near_foot": [
+          81.0,
+          101.0
+        ],
+        "far_knee": [
+          63.4,
+          92.55
+        ],
+        "far_foot": [
+          47.0,
+          104.0
+        ],
+        "near_elbow": [
+          73.39,
+          60.85
+        ],
+        "near_hand": [
+          86.0,
+          51.0
+        ],
+        "far_elbow": [
+          57.47,
+          40.98
+        ],
+        "far_hand": [
+          45.0,
+          51.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "land",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          62,
+          80
+        ],
+        "shoulder": [
+          72.11,
+          54.97
+        ],
+        "head": [
+          75.86,
+          45.69
+        ],
+        "near_knee": [
+          77.91,
+          90.39
+        ],
+        "near_foot": [
+          74.0,
+          110.0
+        ],
+        "far_knee": [
+          67.17,
+          96.97
+        ],
+        "far_foot": [
+          52.0,
+          110.0
+        ],
+        "near_elbow": [
+          72.81,
+          67.95
+        ],
+        "near_hand": [
+          86.0,
+          77.0
+        ],
+        "far_elbow": [
+          60.97,
+          63.09
+        ],
+        "far_hand": [
+          49.74,
+          74.49
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "land",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          63,
+          89
+        ],
+        "shoulder": [
+          80.36,
+          68.32
+        ],
+        "head": [
+          86.78,
+          60.66
+        ],
+        "near_knee": [
+          81.82,
+          91.59
+        ],
+        "near_foot": [
+          74.0,
+          110.0
+        ],
+        "far_knee": [
+          71.26,
+          104.59
+        ],
+        "far_foot": [
+          52.0,
+          110.0
+        ],
+        "near_elbow": [
+          76.31,
+          80.67
+        ],
+        "near_hand": [
+          91.0,
+          87.0
+        ],
+        "far_elbow": [
+          67.55,
+          73.77
+        ],
+        "far_hand": [
+          53.92,
+          82.15
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "land",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          62,
+          83
+        ],
+        "shoulder": [
+          74.26,
+          58.94
+        ],
+        "head": [
+          78.8,
+          50.03
+        ],
+        "near_knee": [
+          79.36,
+          90.73
+        ],
+        "near_foot": [
+          74.0,
+          110.0
+        ],
+        "far_knee": [
+          68.89,
+          99.29
+        ],
+        "far_foot": [
+          52.0,
+          110.0
+        ],
+        "near_elbow": [
+          68.41,
+          70.55
+        ],
+        "near_hand": [
+          82.0,
+          79.0
+        ],
+        "far_elbow": [
+          63.45,
+          67.47
+        ],
+        "far_hand": [
+          52.7,
+          79.32
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "land",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          63.82,
+          49.15
+        ],
+        "head": [
+          64.87,
+          39.2
+        ],
+        "near_knee": [
+          73.84,
+          90.0
+        ],
+        "near_foot": [
+          74.0,
+          110.0
+        ],
+        "far_knee": [
+          63.54,
+          93.67
+        ],
+        "far_foot": [
+          52.0,
+          110.0
+        ],
+        "near_elbow": [
+          65.76,
+          62.0
+        ],
+        "near_hand": [
+          70.0,
+          77.43
+        ],
+        "far_elbow": [
+          59.79,
+          61.79
+        ],
+        "far_hand": [
+          57.92,
+          77.68
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "vault",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          56,
+          79
+        ],
+        "shoulder": [
+          62.99,
+          52.92
+        ],
+        "head": [
+          65.58,
+          43.26
+        ],
+        "near_knee": [
+          71.39,
+          90.14
+        ],
+        "near_foot": [
+          69.0,
+          110.0
+        ],
+        "far_knee": [
+          61.02,
+          96.02
+        ],
+        "far_foot": [
+          45.0,
+          108.0
+        ],
+        "near_elbow": [
+          62.14,
+          65.89
+        ],
+        "near_hand": [
+          78.0,
+          68.0
+        ],
+        "far_elbow": [
+          51.18,
+          60.15
+        ],
+        "far_hand": [
+          49.0,
+          76.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "vault",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          74
+        ],
+        "shoulder": [
+          72.09,
+          50.39
+        ],
+        "head": [
+          76.94,
+          41.64
+        ],
+        "near_knee": [
+          75.93,
+          82.62
+        ],
+        "near_foot": [
+          71.0,
+          102.0
+        ],
+        "far_knee": [
+          61.94,
+          91.59
+        ],
+        "far_foot": [
+          43.0,
+          98.0
+        ],
+        "near_elbow": [
+          69.55,
+          63.13
+        ],
+        "near_hand": [
+          84.0,
+          70.0
+        ],
+        "far_elbow": [
+          59.98,
+          57.13
+        ],
+        "far_hand": [
+          62.0,
+          73.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "vault",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          69
+        ],
+        "shoulder": [
+          79.76,
+          49.58
+        ],
+        "head": [
+          86.7,
+          42.38
+        ],
+        "near_knee": [
+          79.82,
+          71.59
+        ],
+        "near_foot": [
+          72.0,
+          90.0
+        ],
+        "far_knee": [
+          58.98,
+          86.97
+        ],
+        "far_foot": [
+          39.0,
+          86.0
+        ],
+        "near_elbow": [
+          75.75,
+          61.95
+        ],
+        "near_hand": [
+          85.0,
+          75.0
+        ],
+        "far_elbow": [
+          68.98,
+          58.15
+        ],
+        "far_hand": [
+          77.0,
+          72.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "vault",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          68,
+          64
+        ],
+        "shoulder": [
+          93.03,
+          53.89
+        ],
+        "head": [
+          102.31,
+          50.14
+        ],
+        "near_knee": [
+          86.33,
+          59.01
+        ],
+        "near_foot": [
+          87.0,
+          79.0
+        ],
+        "far_knee": [
+          66.37,
+          81.99
+        ],
+        "far_foot": [
+          47.0,
+          77.0
+        ],
+        "near_elbow": [
+          81.28,
+          59.44
+        ],
+        "near_hand": [
+          85.0,
+          75.0
+        ],
+        "far_elbow": [
+          79.76,
+          58.16
+        ],
+        "far_hand": [
+          82.0,
+          74.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "vault",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          74,
+          65
+        ],
+        "shoulder": [
+          99.68,
+          56.66
+        ],
+        "head": [
+          109.19,
+          53.57
+        ],
+        "near_knee": [
+          92.21,
+          59.58
+        ],
+        "near_foot": [
+          97.0,
+          79.0
+        ],
+        "far_knee": [
+          83.99,
+          79.5
+        ],
+        "far_foot": [
+          64.0,
+          80.0
+        ],
+        "near_elbow": [
+          86.91,
+          59.11
+        ],
+        "near_hand": [
+          85.0,
+          75.0
+        ],
+        "far_elbow": [
+          86.15,
+          60.11
+        ],
+        "far_hand": [
+          88.0,
+          76.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "vault",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          80,
+          71
+        ],
+        "shoulder": [
+          97.71,
+          50.62
+        ],
+        "head": [
+          104.27,
+          43.08
+        ],
+        "near_knee": [
+          98.87,
+          73.25
+        ],
+        "near_foot": [
+          102.0,
+          93.0
+        ],
+        "far_knee": [
+          89.08,
+          86.11
+        ],
+        "far_foot": [
+          73.0,
+          98.0
+        ],
+        "near_elbow": [
+          90.51,
+          61.44
+        ],
+        "near_hand": [
+          99.0,
+          75.0
+        ],
+        "far_elbow": [
+          90.43,
+          62.01
+        ],
+        "far_hand": [
+          90.0,
+          78.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "vault",
+      "frame": 6,
+      "joints": {
+        "hip": [
+          81,
+          79
+        ],
+        "shoulder": [
+          92.41,
+          54.53
+        ],
+        "head": [
+          96.64,
+          45.47
+        ],
+        "near_knee": [
+          97.14,
+          89.03
+        ],
+        "near_foot": [
+          96.0,
+          109.0
+        ],
+        "far_knee": [
+          87.66,
+          95.39
+        ],
+        "far_foot": [
+          74.0,
+          110.0
+        ],
+        "near_elbow": [
+          89.25,
+          67.14
+        ],
+        "near_hand": [
+          101.0,
+          78.0
+        ],
+        "far_elbow": [
+          85.14,
+          65.92
+        ],
+        "far_hand": [
+          79.12,
+          80.74
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "vault",
+      "frame": 7,
+      "joints": {
+        "hip": [
+          76,
+          78
+        ],
+        "shoulder": [
+          82.07,
+          51.69
+        ],
+        "head": [
+          84.32,
+          41.95
+        ],
+        "near_knee": [
+          90.15,
+          90.68
+        ],
+        "near_foot": [
+          85.0,
+          110.0
+        ],
+        "far_knee": [
+          79.68,
+          95.41
+        ],
+        "far_foot": [
+          66.0,
+          110.0
+        ],
+        "near_elbow": [
+          82.52,
+          64.68
+        ],
+        "near_hand": [
+          84.95,
+          80.5
+        ],
+        "far_elbow": [
+          74.4,
+          62.85
+        ],
+        "far_hand": [
+          67.85,
+          77.45
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "climb",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          86
+        ],
+        "shoulder": [
+          57.65,
+          59.1
+        ],
+        "head": [
+          56.78,
+          49.14
+        ],
+        "near_knee": [
+          76.48,
+          95.45
+        ],
+        "near_foot": [
+          69.0,
+          114.0
+        ],
+        "far_knee": [
+          68.95,
+          101.18
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          67.47,
+          50.58
+        ],
+        "near_hand": [
+          78.23,
+          38.75
+        ],
+        "far_elbow": [
+          69.4,
+          56.59
+        ],
+        "far_hand": [
+          73.0,
+          41.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "climb",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          60,
+          85
+        ],
+        "shoulder": [
+          60.47,
+          58.0
+        ],
+        "head": [
+          60.65,
+          48.01
+        ],
+        "near_knee": [
+          77.9,
+          91.38
+        ],
+        "near_foot": [
+          74.0,
+          111.0
+        ],
+        "far_knee": [
+          67.38,
+          101.05
+        ],
+        "far_foot": [
+          48.0,
+          106.0
+        ],
+        "near_elbow": [
+          70.55,
+          49.79
+        ],
+        "near_hand": [
+          81.68,
+          38.3
+        ],
+        "far_elbow": [
+          72.09,
+          54.89
+        ],
+        "far_hand": [
+          74.0,
+          39.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "climb",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          80
+        ],
+        "shoulder": [
+          67.07,
+          53.69
+        ],
+        "head": [
+          69.32,
+          43.95
+        ],
+        "near_knee": [
+          78.54,
+          87.3
+        ],
+        "near_foot": [
+          82.0,
+          107.0
+        ],
+        "far_knee": [
+          65.98,
+          97.04
+        ],
+        "far_foot": [
+          46.0,
+          98.0
+        ],
+        "near_elbow": [
+          79.63,
+          57.07
+        ],
+        "near_hand": [
+          85.0,
+          42.0
+        ],
+        "far_elbow": [
+          76.83,
+          61.0
+        ],
+        "far_hand": [
+          77.0,
+          45.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "climb",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          63,
+          77
+        ],
+        "shoulder": [
+          75.68,
+          53.16
+        ],
+        "head": [
+          80.37,
+          44.33
+        ],
+        "near_knee": [
+          81.29,
+          82.16
+        ],
+        "near_foot": [
+          88.0,
+          101.0
+        ],
+        "far_knee": [
+          67.76,
+          94.11
+        ],
+        "far_foot": [
+          48.0,
+          91.0
+        ],
+        "near_elbow": [
+          79.53,
+          65.58
+        ],
+        "near_hand": [
+          88.0,
+          52.0
+        ],
+        "far_elbow": [
+          70.21,
+          65.37
+        ],
+        "far_hand": [
+          79.0,
+          52.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "climb",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          68,
+          82
+        ],
+        "shoulder": [
+          87.75,
+          63.59
+        ],
+        "head": [
+          95.06,
+          56.77
+        ],
+        "near_knee": [
+          86.61,
+          85.85
+        ],
+        "near_foot": [
+          95.0,
+          104.0
+        ],
+        "far_knee": [
+          76.92,
+          97.21
+        ],
+        "far_foot": [
+          57.0,
+          99.0
+        ],
+        "near_elbow": [
+          74.75,
+          63.15
+        ],
+        "near_hand": [
+          90.0,
+          68.0
+        ],
+        "far_elbow": [
+          92.5,
+          51.93
+        ],
+        "far_hand": [
+          82.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "climb",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          72,
+          84
+        ],
+        "shoulder": [
+          86.31,
+          61.1
+        ],
+        "head": [
+          91.61,
+          52.62
+        ],
+        "near_knee": [
+          89.65,
+          91.03
+        ],
+        "near_foot": [
+          96.0,
+          110.0
+        ],
+        "far_knee": [
+          81.31,
+          98.96
+        ],
+        "far_foot": [
+          63.0,
+          107.0
+        ],
+        "near_elbow": [
+          78.1,
+          71.18
+        ],
+        "near_hand": [
+          93.0,
+          77.0
+        ],
+        "far_elbow": [
+          72.39,
+          62.52
+        ],
+        "far_hand": [
+          81.0,
+          76.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "climb",
+      "frame": 6,
+      "joints": {
+        "hip": [
+          73,
+          80
+        ],
+        "shoulder": [
+          81.34,
+          54.32
+        ],
+        "head": [
+          84.43,
+          44.81
+        ],
+        "near_knee": [
+          88.91,
+          90.39
+        ],
+        "near_foot": [
+          85.0,
+          110.0
+        ],
+        "far_knee": [
+          78.17,
+          96.97
+        ],
+        "far_foot": [
+          63.0,
+          110.0
+        ],
+        "near_elbow": [
+          81.64,
+          67.32
+        ],
+        "near_hand": [
+          88.0,
+          82.0
+        ],
+        "far_elbow": [
+          72.97,
+          65.03
+        ],
+        "far_hand": [
+          72.0,
+          81.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "climb",
+      "frame": 7,
+      "joints": {
+        "hip": [
+          69,
+          76
+        ],
+        "shoulder": [
+          72.29,
+          49.2
+        ],
+        "head": [
+          73.51,
+          39.28
+        ],
+        "near_knee": [
+          80.83,
+          90.87
+        ],
+        "near_foot": [
+          75.0,
+          110.0
+        ],
+        "far_knee": [
+          73.04,
+          93.32
+        ],
+        "far_foot": [
+          62.0,
+          110.0
+        ],
+        "near_elbow": [
+          73.99,
+          62.09
+        ],
+        "near_hand": [
+          77.93,
+          77.6
+        ],
+        "far_elbow": [
+          67.73,
+          61.7
+        ],
+        "far_hand": [
+          65.19,
+          77.5
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "attack",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          76
+        ],
+        "shoulder": [
+          63.29,
+          49.2
+        ],
+        "head": [
+          64.51,
+          39.28
+        ],
+        "near_knee": [
+          72.84,
+          90.0
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.54,
+          93.67
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          60.02,
+          61.78
+        ],
+        "near_hand": [
+          76.0,
+          61.0
+        ],
+        "far_elbow": [
+          49.44,
+          51.17
+        ],
+        "far_hand": [
+          59.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "attack",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          77
+        ],
+        "shoulder": [
+          57.59,
+          50.04
+        ],
+        "head": [
+          57.06,
+          40.05
+        ],
+        "near_knee": [
+          72.86,
+          90.0
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          63.32,
+          94.24
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          51.36,
+          61.45
+        ],
+        "near_hand": [
+          66.0,
+          55.0
+        ],
+        "far_elbow": [
+          44.9,
+          55.72
+        ],
+        "far_hand": [
+          60.0,
+          61.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "attack",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          68.44,
+          50.05
+        ],
+        "head": [
+          71.2,
+          40.43
+        ],
+        "near_knee": [
+          73.83,
+          90.02
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.73,
+          93.8
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          78.56,
+          58.21
+        ],
+        "near_hand": [
+          94.0,
+          54.0
+        ],
+        "far_elbow": [
+          54.44,
+          50.17
+        ],
+        "far_hand": [
+          64.0,
+          63.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "attack",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          63,
+          76.5
+        ],
+        "shoulder": [
+          73.11,
+          51.47
+        ],
+        "head": [
+          76.86,
+          42.19
+        ],
+        "near_knee": [
+          76.12,
+          90.24
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          63.56,
+          94.44
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          85.99,
+          53.25
+        ],
+        "near_hand": [
+          101.99,
+          53.56
+        ],
+        "far_elbow": [
+          59.13,
+          52.07
+        ],
+        "far_hand": [
+          67.0,
+          66.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "attack",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          67.53,
+          49.8
+        ],
+        "head": [
+          69.95,
+          40.1
+        ],
+        "near_knee": [
+          73.83,
+          90.02
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.73,
+          93.8
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          75.06,
+          60.4
+        ],
+        "near_hand": [
+          91.0,
+          59.0
+        ],
+        "far_elbow": [
+          53.59,
+          51.06
+        ],
+        "far_hand": [
+          63.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "attack",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          60,
+          76
+        ],
+        "shoulder": [
+          62.35,
+          49.1
+        ],
+        "head": [
+          63.22,
+          39.14
+        ],
+        "near_knee": [
+          72.84,
+          90.0
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.54,
+          93.67
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          61.57,
+          62.08
+        ],
+        "near_hand": [
+          76.0,
+          69.0
+        ],
+        "far_elbow": [
+          50.14,
+          55.68
+        ],
+        "far_hand": [
+          59.0,
+          69.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "hurt",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          58.65,
+          49.1
+        ],
+        "head": [
+          57.78,
+          39.14
+        ],
+        "near_knee": [
+          73.76,
+          90.08
+        ],
+        "near_foot": [
+          72.0,
+          110.0
+        ],
+        "far_knee": [
+          62.73,
+          93.8
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          57.49,
+          62.05
+        ],
+        "near_hand": [
+          73.0,
+          66.0
+        ],
+        "far_elbow": [
+          46.59,
+          55.94
+        ],
+        "far_hand": [
+          52.0,
+          71.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "hurt",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          79
+        ],
+        "shoulder": [
+          48.45,
+          54.15
+        ],
+        "head": [
+          44.54,
+          44.94
+        ],
+        "near_knee": [
+          74.29,
+          90.27
+        ],
+        "near_foot": [
+          71.0,
+          110.0
+        ],
+        "far_knee": [
+          64.23,
+          95.95
+        ],
+        "far_foot": [
+          50.0,
+          110.0
+        ],
+        "near_elbow": [
+          55.61,
+          65.0
+        ],
+        "near_hand": [
+          70.0,
+          58.0
+        ],
+        "far_elbow": [
+          34.47,
+          54.9
+        ],
+        "far_hand": [
+          46.0,
+          66.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "hurt",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          57,
+          81
+        ],
+        "shoulder": [
+          48.66,
+          55.32
+        ],
+        "head": [
+          45.57,
+          45.81
+        ],
+        "near_knee": [
+          73.56,
+          90.32
+        ],
+        "near_foot": [
+          70.0,
+          110.0
+        ],
+        "far_knee": [
+          64.28,
+          97.1
+        ],
+        "far_foot": [
+          49.0,
+          110.0
+        ],
+        "near_elbow": [
+          51.78,
+          67.94
+        ],
+        "near_hand": [
+          67.0,
+          63.0
+        ],
+        "far_elbow": [
+          35.28,
+          59.29
+        ],
+        "far_hand": [
+          45.0,
+          72.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "hurt",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60,
+          78
+        ],
+        "shoulder": [
+          57.18,
+          51.15
+        ],
+        "head": [
+          56.13,
+          41.2
+        ],
+        "near_knee": [
+          74.15,
+          90.68
+        ],
+        "near_foot": [
+          69.0,
+          110.0
+        ],
+        "far_knee": [
+          62.04,
+          95.76
+        ],
+        "far_foot": [
+          48.0,
+          110.0
+        ],
+        "near_elbow": [
+          57.06,
+          64.15
+        ],
+        "near_hand": [
+          71.0,
+          72.0
+        ],
+        "far_elbow": [
+          48.24,
+          61.45
+        ],
+        "far_hand": [
+          52.0,
+          77.0
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "knockout",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          58.65,
+          49.1
+        ],
+        "head": [
+          57.78,
+          39.14
+        ],
+        "near_knee": [
+          73.09,
+          90.66
+        ],
+        "near_foot": [
+          68.0,
+          110.0
+        ],
+        "far_knee": [
+          65.04,
+          93.32
+        ],
+        "far_foot": [
+          54.0,
+          110.0
+        ],
+        "near_elbow": [
+          61.71,
+          61.74
+        ],
+        "near_hand": [
+          67.29,
+          76.73
+        ],
+        "far_elbow": [
+          55.33,
+          61.9
+        ],
+        "far_hand": [
+          54.36,
+          77.87
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "knockout",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          58,
+          80
+        ],
+        "shoulder": [
+          51.93,
+          53.69
+        ],
+        "head": [
+          49.68,
+          43.95
+        ],
+        "near_knee": [
+          73.91,
+          90.39
+        ],
+        "near_foot": [
+          70.0,
+          110.0
+        ],
+        "far_knee": [
+          63.17,
+          96.97
+        ],
+        "far_foot": [
+          48.0,
+          110.0
+        ],
+        "near_elbow": [
+          56.44,
+          65.88
+        ],
+        "near_hand": [
+          63.72,
+          80.13
+        ],
+        "far_elbow": [
+          48.8,
+          66.52
+        ],
+        "far_hand": [
+          48.05,
+          82.5
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "knockout",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          56,
+          87
+        ],
+        "shoulder": [
+          62.99,
+          60.92
+        ],
+        "head": [
+          65.58,
+          51.26
+        ],
+        "near_knee": [
+          74.57,
+          91.01
+        ],
+        "near_foot": [
+          74.0,
+          111.0
+        ],
+        "far_knee": [
+          61.66,
+          103.8
+        ],
+        "far_foot": [
+          43.0,
+          111.0
+        ],
+        "near_elbow": [
+          63.92,
+          73.89
+        ],
+        "near_hand": [
+          66.94,
+          89.6
+        ],
+        "far_elbow": [
+          54.5,
+          71.55
+        ],
+        "far_hand": [
+          46.9,
+          85.62
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "knockout",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          57,
+          95
+        ],
+        "shoulder": [
+          76.42,
+          76.24
+        ],
+        "head": [
+          83.62,
+          69.3
+        ],
+        "near_knee": [
+          75.95,
+          93.65
+        ],
+        "near_foot": [
+          81.0,
+          113.0
+        ],
+        "far_knee": [
+          58.0,
+          112.89
+        ],
+        "far_foot": [
+          38.0,
+          113.0
+        ],
+        "near_elbow": [
+          71.08,
+          88.1
+        ],
+        "near_hand": [
+          79.0,
+          102.0
+        ],
+        "far_elbow": [
+          65.7,
+          84.88
+        ],
+        "far_hand": [
+          55.07,
+          96.83
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "knockout",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          58,
+          102
+        ],
+        "shoulder": [
+          83.37,
+          92.77
+        ],
+        "head": [
+          92.77,
+          89.35
+        ],
+        "near_knee": [
+          76.76,
+          99.01
+        ],
+        "near_foot": [
+          90.0,
+          114.0
+        ],
+        "far_knee": [
+          53.2,
+          119.62
+        ],
+        "far_foot": [
+          34.0,
+          114.0
+        ],
+        "near_elbow": [
+          75.91,
+          103.41
+        ],
+        "near_hand": [
+          90.0,
+          111.0
+        ],
+        "far_elbow": [
+          70.57,
+          98.22
+        ],
+        "far_hand": [
+          56.94,
+          106.6
+        ]
+      }
+    },
+    {
+      "character": "pursuer",
+      "animation": "knockout",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          60,
+          105
+        ],
+        "shoulder": [
+          86.8,
+          101.71
+        ],
+        "head": [
+          96.72,
+          100.49
+        ],
+        "near_knee": [
+          79.0,
+          105.29
+        ],
+        "near_foot": [
+          97.0,
+          114.0
+        ],
+        "far_knee": [
+          52.76,
+          121.94
+        ],
+        "far_foot": [
+          34.0,
+          115.0
+        ],
+        "near_elbow": [
+          87.0,
+          114.71
+        ],
+        "near_hand": [
+          103.0,
+          115.0
+        ],
+        "far_elbow": [
+          73.25,
+          105.11
+        ],
+        "far_hand": [
+          58.41,
+          111.09
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "idle",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          63.35,
+          49.1
+        ],
+        "head": [
+          64.22,
+          39.14
+        ],
+        "near_knee": [
+          72.83,
+          90.87
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          66.98,
+          92.67
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          65.47,
+          61.93
+        ],
+        "near_hand": [
+          69.91,
+          77.3
+        ],
+        "far_elbow": [
+          59.43,
+          61.77
+        ],
+        "far_hand": [
+          57.7,
+          77.68
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "idle",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          61.4,
+          75.4
+        ],
+        "shoulder": [
+          64.22,
+          48.55
+        ],
+        "head": [
+          65.27,
+          38.6
+        ],
+        "near_knee": [
+          72.55,
+          90.79
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          66.49,
+          92.4
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          66.05,
+          61.42
+        ],
+        "near_hand": [
+          70.14,
+          76.89
+        ],
+        "far_elbow": [
+          60.02,
+          61.15
+        ],
+        "far_hand": [
+          57.93,
+          77.01
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "idle",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          76.2
+        ],
+        "shoulder": [
+          62.88,
+          49.27
+        ],
+        "head": [
+          63.58,
+          39.29
+        ],
+        "near_knee": [
+          73.01,
+          90.92
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          67.19,
+          92.79
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          65.18,
+          62.06
+        ],
+        "near_hand": [
+          69.85,
+          77.36
+        ],
+        "far_elbow": [
+          59.19,
+          61.98
+        ],
+        "far_hand": [
+          57.74,
+          77.92
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "idle",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60.7,
+          76.7
+        ],
+        "shoulder": [
+          62.11,
+          49.74
+        ],
+        "head": [
+          62.64,
+          39.75
+        ],
+        "near_knee": [
+          73.22,
+          90.99
+        ],
+        "near_foot": [
+          67.0,
+          110.0
+        ],
+        "far_knee": [
+          67.54,
+          93.01
+        ],
+        "far_foot": [
+          57.0,
+          110.0
+        ],
+        "near_elbow": [
+          64.64,
+          62.49
+        ],
+        "near_hand": [
+          69.59,
+          77.71
+        ],
+        "far_elbow": [
+          58.65,
+          62.5
+        ],
+        "far_hand": [
+          57.49,
+          78.46
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "run",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          78.3
+        ],
+        "shoulder": [
+          68.79,
+          52.77
+        ],
+        "head": [
+          72.05,
+          43.32
+        ],
+        "near_knee": [
+          79.0,
+          78.46
+        ],
+        "near_foot": [
+          62.0,
+          89.0
+        ],
+        "far_knee": [
+          71.65,
+          91.48
+        ],
+        "far_foot": [
+          62.0,
+          109.0
+        ],
+        "near_elbow": [
+          57.78,
+          59.68
+        ],
+        "near_hand": [
+          70.0,
+          70.0
+        ],
+        "far_elbow": [
+          54.79,
+          53.03
+        ],
+        "far_hand": [
+          70.0,
+          58.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "run",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          78.88,
+          74.9
+        ],
+        "near_foot": [
+          77.56,
+          94.86
+        ],
+        "far_knee": [
+          60.66,
+          94.93
+        ],
+        "far_foot": [
+          46.44,
+          109.0
+        ],
+        "near_elbow": [
+          55.83,
+          52.5
+        ],
+        "near_hand": [
+          58.69,
+          68.24
+        ],
+        "far_elbow": [
+          65.99,
+          64.35
+        ],
+        "far_hand": [
+          81.31,
+          59.76
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "run",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          60,
+          75.7
+        ],
+        "shoulder": [
+          68.79,
+          50.17
+        ],
+        "head": [
+          72.05,
+          40.72
+        ],
+        "near_knee": [
+          71.89,
+          90.52
+        ],
+        "near_foot": [
+          82.77,
+          107.3
+        ],
+        "far_knee": [
+          50.67,
+          91.78
+        ],
+        "far_foot": [
+          40.13,
+          108.77
+        ],
+        "near_elbow": [
+          55.95,
+          48.12
+        ],
+        "near_hand": [
+          54.0,
+          64.0
+        ],
+        "far_elbow": [
+          70.03,
+          62.98
+        ],
+        "far_hand": [
+          86.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "run",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          74.54,
+          89.23
+        ],
+        "near_foot": [
+          77.56,
+          109.0
+        ],
+        "far_knee": [
+          66.4,
+          93.5
+        ],
+        "far_foot": [
+          46.44,
+          94.86
+        ],
+        "near_elbow": [
+          58.32,
+          43.76
+        ],
+        "near_hand": [
+          58.69,
+          59.76
+        ],
+        "far_elbow": [
+          65.8,
+          64.32
+        ],
+        "far_hand": [
+          81.31,
+          68.24
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "run",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          60,
+          78.3
+        ],
+        "shoulder": [
+          68.79,
+          52.77
+        ],
+        "head": [
+          72.05,
+          43.32
+        ],
+        "near_knee": [
+          72.91,
+          92.24
+        ],
+        "near_foot": [
+          62.0,
+          109.0
+        ],
+        "far_knee": [
+          78.0,
+          77.0
+        ],
+        "far_foot": [
+          62.0,
+          89.0
+        ],
+        "near_elbow": [
+          56.06,
+          50.15
+        ],
+        "near_hand": [
+          70.0,
+          58.0
+        ],
+        "far_elbow": [
+          57.23,
+          60.36
+        ],
+        "far_hand": [
+          70.0,
+          70.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "run",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          61.59,
+          95.93
+        ],
+        "near_foot": [
+          46.44,
+          109.0
+        ],
+        "far_knee": [
+          77.97,
+          74.86
+        ],
+        "far_foot": [
+          77.56,
+          94.86
+        ],
+        "near_elbow": [
+          65.93,
+          64.15
+        ],
+        "near_hand": [
+          81.31,
+          59.76
+        ],
+        "far_elbow": [
+          54.85,
+          52.71
+        ],
+        "far_hand": [
+          58.69,
+          68.24
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "run",
+      "frame": 6,
+      "joints": {
+        "hip": [
+          60,
+          75.7
+        ],
+        "shoulder": [
+          68.79,
+          50.17
+        ],
+        "head": [
+          72.05,
+          40.72
+        ],
+        "near_knee": [
+          51.75,
+          92.82
+        ],
+        "near_foot": [
+          40.0,
+          109.0
+        ],
+        "far_knee": [
+          70.97,
+          89.45
+        ],
+        "far_foot": [
+          81.94,
+          106.18
+        ],
+        "near_elbow": [
+          70.02,
+          63.11
+        ],
+        "near_hand": [
+          86.0,
+          64.0
+        ],
+        "far_elbow": [
+          54.97,
+          48.03
+        ],
+        "far_hand": [
+          54.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "run",
+      "frame": 7,
+      "joints": {
+        "hip": [
+          60,
+          77.0
+        ],
+        "shoulder": [
+          68.79,
+          51.47
+        ],
+        "head": [
+          72.05,
+          42.02
+        ],
+        "near_knee": [
+          66.44,
+          94.87
+        ],
+        "near_foot": [
+          46.44,
+          94.86
+        ],
+        "far_knee": [
+          72.1,
+          89.76
+        ],
+        "far_foot": [
+          77.56,
+          109.0
+        ],
+        "near_elbow": [
+          65.85,
+          64.13
+        ],
+        "near_hand": [
+          81.31,
+          68.24
+        ],
+        "far_elbow": [
+          57.28,
+          43.82
+        ],
+        "far_hand": [
+          58.69,
+          59.76
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "attack",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          60,
+          76
+        ],
+        "shoulder": [
+          65.15,
+          49.5
+        ],
+        "head": [
+          67.06,
+          39.68
+        ],
+        "near_knee": [
+          72.84,
+          90.0
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.54,
+          93.67
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          61.14,
+          61.86
+        ],
+        "near_hand": [
+          77.0,
+          64.0
+        ],
+        "far_elbow": [
+          51.16,
+          50.05
+        ],
+        "far_hand": [
+          59.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "attack",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          77
+        ],
+        "shoulder": [
+          59.47,
+          50.0
+        ],
+        "head": [
+          59.65,
+          40.01
+        ],
+        "near_knee": [
+          72.86,
+          90.0
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          63.32,
+          94.24
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          51.12,
+          59.97
+        ],
+        "near_hand": [
+          67.0,
+          58.0
+        ],
+        "far_elbow": [
+          45.92,
+          53.4
+        ],
+        "far_hand": [
+          60.0,
+          61.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "attack",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          70.23,
+          50.63
+        ],
+        "head": [
+          73.65,
+          41.23
+        ],
+        "near_knee": [
+          73.83,
+          90.02
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.73,
+          93.8
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          79.28,
+          59.97
+        ],
+        "near_hand": [
+          95.0,
+          57.0
+        ],
+        "far_elbow": [
+          56.34,
+          48.95
+        ],
+        "far_hand": [
+          64.0,
+          63.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "attack",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          63,
+          76.5
+        ],
+        "shoulder": [
+          74.84,
+          52.23
+        ],
+        "head": [
+          79.22,
+          43.24
+        ],
+        "near_knee": [
+          76.12,
+          90.24
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          63.56,
+          94.44
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          87.57,
+          54.86
+        ],
+        "near_hand": [
+          103.51,
+          56.23
+        ],
+        "far_elbow": [
+          60.88,
+          51.22
+        ],
+        "far_hand": [
+          67.0,
+          66.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "attack",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          69.34,
+          50.32
+        ],
+        "head": [
+          72.43,
+          40.81
+        ],
+        "near_knee": [
+          73.83,
+          90.02
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.73,
+          93.8
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          76.01,
+          61.48
+        ],
+        "near_hand": [
+          92.0,
+          62.0
+        ],
+        "far_elbow": [
+          55.35,
+          49.95
+        ],
+        "far_hand": [
+          63.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "attack",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          60,
+          76
+        ],
+        "shoulder": [
+          64.22,
+          49.33
+        ],
+        "head": [
+          65.79,
+          39.46
+        ],
+        "near_knee": [
+          72.84,
+          90.0
+        ],
+        "near_foot": [
+          73.0,
+          110.0
+        ],
+        "far_knee": [
+          62.54,
+          93.67
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          64.25,
+          62.33
+        ],
+        "near_hand": [
+          77.0,
+          72.0
+        ],
+        "far_elbow": [
+          51.47,
+          54.88
+        ],
+        "far_hand": [
+          59.0,
+          69.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "hurt",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          58.65,
+          49.1
+        ],
+        "head": [
+          57.78,
+          39.14
+        ],
+        "near_knee": [
+          73.76,
+          90.08
+        ],
+        "near_foot": [
+          72.0,
+          110.0
+        ],
+        "far_knee": [
+          62.73,
+          93.8
+        ],
+        "far_foot": [
+          51.0,
+          110.0
+        ],
+        "near_elbow": [
+          57.49,
+          62.05
+        ],
+        "near_hand": [
+          73.0,
+          66.0
+        ],
+        "far_elbow": [
+          46.59,
+          55.94
+        ],
+        "far_hand": [
+          52.0,
+          71.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "hurt",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          59,
+          79
+        ],
+        "shoulder": [
+          48.45,
+          54.15
+        ],
+        "head": [
+          44.54,
+          44.94
+        ],
+        "near_knee": [
+          74.29,
+          90.27
+        ],
+        "near_foot": [
+          71.0,
+          110.0
+        ],
+        "far_knee": [
+          64.23,
+          95.95
+        ],
+        "far_foot": [
+          50.0,
+          110.0
+        ],
+        "near_elbow": [
+          55.61,
+          65.0
+        ],
+        "near_hand": [
+          70.0,
+          58.0
+        ],
+        "far_elbow": [
+          34.47,
+          54.9
+        ],
+        "far_hand": [
+          46.0,
+          66.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "hurt",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          57,
+          81
+        ],
+        "shoulder": [
+          48.66,
+          55.32
+        ],
+        "head": [
+          45.57,
+          45.81
+        ],
+        "near_knee": [
+          73.56,
+          90.32
+        ],
+        "near_foot": [
+          70.0,
+          110.0
+        ],
+        "far_knee": [
+          64.28,
+          97.1
+        ],
+        "far_foot": [
+          49.0,
+          110.0
+        ],
+        "near_elbow": [
+          51.78,
+          67.94
+        ],
+        "near_hand": [
+          67.0,
+          63.0
+        ],
+        "far_elbow": [
+          35.28,
+          59.29
+        ],
+        "far_hand": [
+          45.0,
+          72.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "hurt",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          60,
+          78
+        ],
+        "shoulder": [
+          57.18,
+          51.15
+        ],
+        "head": [
+          56.13,
+          41.2
+        ],
+        "near_knee": [
+          74.15,
+          90.68
+        ],
+        "near_foot": [
+          69.0,
+          110.0
+        ],
+        "far_knee": [
+          62.04,
+          95.76
+        ],
+        "far_foot": [
+          48.0,
+          110.0
+        ],
+        "near_elbow": [
+          57.06,
+          64.15
+        ],
+        "near_hand": [
+          71.0,
+          72.0
+        ],
+        "far_elbow": [
+          48.24,
+          61.45
+        ],
+        "far_hand": [
+          52.0,
+          77.0
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "knockout",
+      "frame": 0,
+      "joints": {
+        "hip": [
+          61,
+          76
+        ],
+        "shoulder": [
+          58.65,
+          49.1
+        ],
+        "head": [
+          57.78,
+          39.14
+        ],
+        "near_knee": [
+          73.09,
+          90.66
+        ],
+        "near_foot": [
+          68.0,
+          110.0
+        ],
+        "far_knee": [
+          65.04,
+          93.32
+        ],
+        "far_foot": [
+          54.0,
+          110.0
+        ],
+        "near_elbow": [
+          61.71,
+          61.74
+        ],
+        "near_hand": [
+          67.29,
+          76.73
+        ],
+        "far_elbow": [
+          55.33,
+          61.9
+        ],
+        "far_hand": [
+          54.36,
+          77.87
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "knockout",
+      "frame": 1,
+      "joints": {
+        "hip": [
+          58,
+          80
+        ],
+        "shoulder": [
+          51.93,
+          53.69
+        ],
+        "head": [
+          49.68,
+          43.95
+        ],
+        "near_knee": [
+          73.91,
+          90.39
+        ],
+        "near_foot": [
+          70.0,
+          110.0
+        ],
+        "far_knee": [
+          63.17,
+          96.97
+        ],
+        "far_foot": [
+          48.0,
+          110.0
+        ],
+        "near_elbow": [
+          56.44,
+          65.88
+        ],
+        "near_hand": [
+          63.72,
+          80.13
+        ],
+        "far_elbow": [
+          48.8,
+          66.52
+        ],
+        "far_hand": [
+          48.05,
+          82.5
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "knockout",
+      "frame": 2,
+      "joints": {
+        "hip": [
+          56,
+          87
+        ],
+        "shoulder": [
+          62.99,
+          60.92
+        ],
+        "head": [
+          65.58,
+          51.26
+        ],
+        "near_knee": [
+          74.57,
+          91.01
+        ],
+        "near_foot": [
+          74.0,
+          111.0
+        ],
+        "far_knee": [
+          61.66,
+          103.8
+        ],
+        "far_foot": [
+          43.0,
+          111.0
+        ],
+        "near_elbow": [
+          63.92,
+          73.89
+        ],
+        "near_hand": [
+          66.94,
+          89.6
+        ],
+        "far_elbow": [
+          54.5,
+          71.55
+        ],
+        "far_hand": [
+          46.9,
+          85.62
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "knockout",
+      "frame": 3,
+      "joints": {
+        "hip": [
+          57,
+          95
+        ],
+        "shoulder": [
+          76.42,
+          76.24
+        ],
+        "head": [
+          83.62,
+          69.3
+        ],
+        "near_knee": [
+          75.95,
+          93.65
+        ],
+        "near_foot": [
+          81.0,
+          113.0
+        ],
+        "far_knee": [
+          58.0,
+          112.89
+        ],
+        "far_foot": [
+          38.0,
+          113.0
+        ],
+        "near_elbow": [
+          71.08,
+          88.1
+        ],
+        "near_hand": [
+          79.0,
+          102.0
+        ],
+        "far_elbow": [
+          65.7,
+          84.88
+        ],
+        "far_hand": [
+          55.07,
+          96.83
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "knockout",
+      "frame": 4,
+      "joints": {
+        "hip": [
+          58,
+          102
+        ],
+        "shoulder": [
+          83.37,
+          92.77
+        ],
+        "head": [
+          92.77,
+          89.35
+        ],
+        "near_knee": [
+          76.76,
+          99.01
+        ],
+        "near_foot": [
+          90.0,
+          114.0
+        ],
+        "far_knee": [
+          53.2,
+          119.62
+        ],
+        "far_foot": [
+          34.0,
+          114.0
+        ],
+        "near_elbow": [
+          75.91,
+          103.41
+        ],
+        "near_hand": [
+          90.0,
+          111.0
+        ],
+        "far_elbow": [
+          70.57,
+          98.22
+        ],
+        "far_hand": [
+          56.94,
+          106.6
+        ]
+      }
+    },
+    {
+      "character": "guard",
+      "animation": "knockout",
+      "frame": 5,
+      "joints": {
+        "hip": [
+          60,
+          105
+        ],
+        "shoulder": [
+          86.8,
+          101.71
+        ],
+        "head": [
+          96.72,
+          100.49
+        ],
+        "near_knee": [
+          79.0,
+          105.29
+        ],
+        "near_foot": [
+          97.0,
+          114.0
+        ],
+        "far_knee": [
+          52.76,
+          121.94
+        ],
+        "far_foot": [
+          34.0,
+          115.0
+        ],
+        "near_elbow": [
+          87.0,
+          114.71
+        ],
+        "near_hand": [
+          103.0,
+          115.0
+        ],
+        "far_elbow": [
+          73.25,
+          105.11
+        ],
+        "far_hand": [
+          58.41,
+          111.09
+        ]
+      }
+    }
+  ]
+}

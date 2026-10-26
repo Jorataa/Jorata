@@ -1,20 +1,16 @@
-import { useEffect } from 'react';
-/** Small pointer effects remain optional; all controls retain their native cursor and focus. */
-export function useInteractions(enabled:boolean) {
+import {useEffect} from 'react';
+/** Optional pointer feedback: native controls and touch interactions remain unchanged. */
+export function useInteractions(enabled:boolean){
  useEffect(()=>{
-  if(!enabled||matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(pointer: fine)').matches)return;
-  let active:HTMLElement|null=null;
+  if(!enabled)return;
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)'),fine=matchMedia('(pointer: fine)');let active:HTMLElement|null=null;
+  const reset=()=>{if(active)active.style.transform='';active=null;};
   const move=(event:PointerEvent)=>{
-   const button=(event.target as HTMLElement).closest<HTMLElement>('.magnetic');
-   if(active&&active!==button)active.style.transform='';
-   active=button;
-   if(button){const r=button.getBoundingClientRect();button.style.transform=`translate(${(event.clientX-r.left-r.width/2)*.07}px, ${(event.clientY-r.top-r.height/2)*.12}px)`}
+   if(reduced.matches||!fine.matches){reset();return;}
+   const button=(event.target as HTMLElement).closest<HTMLElement>('.magnetic');if(active&&active!==button)reset();active=button;
+   if(button){const r=button.getBoundingClientRect();const x=Math.max(-2,Math.min(2,(event.clientX-r.left-r.width/2)*.045)),y=Math.max(-2,Math.min(2,(event.clientY-r.top-r.height/2)*.045));button.style.transform=`translate(${x}px,${y}px)`;}
   };
-  const click=(event:PointerEvent)=>{
-   if(!(event.target as HTMLElement).closest('button,a')||(event.target as HTMLElement).closest('.jn-workspace'))return;
-   const ripple=document.createElement('span');ripple.className='click-ripple';ripple.style.left=`${event.clientX}px`;ripple.style.top=`${event.clientY}px`;document.body.append(ripple);ripple.addEventListener('animationend',()=>ripple.remove(),{once:true});
-  };
-  document.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerdown',click,{passive:true});
-  return()=>{document.removeEventListener('pointermove',move);document.removeEventListener('pointerdown',click);if(active)active.style.transform='';document.querySelectorAll('.click-ripple').forEach(e=>e.remove())};
+  document.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerleave',reset);window.addEventListener('blur',reset);reduced.addEventListener('change',reset);
+  return()=>{document.removeEventListener('pointermove',move);document.removeEventListener('pointerleave',reset);window.removeEventListener('blur',reset);reduced.removeEventListener('change',reset);reset();};
  },[enabled]);
 }
