@@ -8,8 +8,6 @@ export default defineConfig(({mode})=>{
  return {
  plugins:[{name:'surgery-assistant-server',configureServer(server){server.middlewares.use('/api/surgery-assistant',assistant);},configurePreviewServer(server){server.middlewares.use('/api/surgery-assistant',assistant);}}],
   server: {
-    allowedHosts: codespace
-      ? ['localhost', '.app.github.dev', ...[3000, 3107, 3108, 3109, 5173].map(port => `${codespace}-${port}.${forwardingDomain}`)]
-      : ['localhost'],
+    allowedHosts: true,
   },
 };});
