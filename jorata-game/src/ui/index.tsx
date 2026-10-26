@@ -8,20 +8,29 @@ export function AppLink({to,navigate,children,...props}:Omit<AnchorHTMLAttribute
 }
 export function Icon({name,size=18}:{name:string;size?:number}){
  const icons:Record<string,ReactNode>={
- home:<><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/></>,
- play:<><path d="m12 3 9 5v9l-9 5-9-5V8z"/><path d="m3 8 9 5 9-5M12 13v9"/></>,
- games:<><path d="M7 6h10c3 0 5 11 4 13s-3 0-6-3H9c-3 3-5 5-6 3S4 6 7 6Z"/><path d="M7 9v5m-2.5-2.5h5M16 10h.1M18 13h.1"/></>,
- notes:<><path d="M5 3h14v18H5zM9 8h6M9 12h6M9 16h4"/></>,
- arrow:<path d="M4 12h16m-6-6 6 6-6 6"/>,
- plus:<path d="M12 5v14M5 12h14"/>,
- search:<><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></>,
- pause:<><path d="M8 5v14M16 5v14"/></>,
- resume:<path d="m8 4 12 8-12 8Z"/>,
- close:<path d="m6 6 12 12M6 18 18 6"/>,
- lock:<><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></>,
- settings:<><path d="m12 3 2 3 4 1 1 4 2 2-2 2-1 4-4 1-2 2-2-2-4-1-1-4-2-2 2-2 1-4 4-1z"/><circle cx="12" cy="13" r="3"/></>,
+ home:<path d="M4 11V21H10V15H14V21H20V11M2 11L12 3L22 11"/>,
+ play:<path d="M7 4L20 12L7 20Z"/>,
+ games:<path d="M8 4H16V7H20V17H16V20H8V17H4V7H8ZM8 10V14M6 12H10M15 11H17M17 14H19"/>,
+ controller:<path d="M6 7H18V9H20L22 19H16L14 16H10L8 19H2L4 9H6ZM7 10V14M5 12H9M15 11H17M17 14H19"/>,
+ notes:<path d="M5 3H17L21 7V21H5ZM17 3V7H21M9 11H17M9 15H17M9 18H13"/>,
+ document:<path d="M6 3H16L20 7V21H6ZM16 3V7H20M10 11H16M10 15H16"/>,
+ folder:<path d="M3 5H9L12 8H21V20H3Z"/>,
+ library:<path d="M4 5V21H9V5ZM12 3V21H17V3ZM20 7V21"/>,
+ grid:<path d="M3 3H9V9H3ZM15 3H21V9H15ZM3 15H9V21H3ZM15 15H21V21H15Z"/>,
+ list:<path d="M3 5H5M9 5H21M3 12H5M9 12H21M3 19H5M9 19H21"/>,
+ favorite:<path d="M12 20L3 11V6H9L12 9L15 6H21V11Z"/>,
+ robot:<path d="M12 2V5M5 5H19V8H21V18H18V21H6V18H3V8H5ZM8 10V13M16 10V13M9 17H15"/>,
+ arrow:<path d="M4 12H20M14 6L20 12L14 18"/>,
+ back:<path d="M20 12H4M10 6L4 12L10 18"/>,
+ plus:<path d="M12 5V19M5 12H19"/>,
+ search:<path d="M4 4H14V6H16V14H14V16H6V14H4ZM16 16L21 21"/>,
+ pause:<path d="M8 5V19M16 5V19"/>,
+ resume:<path d="M8 4L20 12L8 20Z"/>,
+ close:<path d="M5 5L19 19M19 5L5 19"/>,
+ lock:<><rect x="5" y="10" width="14" height="11"/><path d="M8 10V6H16V10M12 15V17"/></>,
+ settings:<path d="M9 3H15V6H18V9H21V15H18V18H15V21H9V18H6V15H3V9H6V6H9ZM9 9H15V15H9Z"/>,
  };
- return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{icons[name]??icons.settings}</svg>;
+ return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="square" strokeLinejoin="miter" aria-hidden="true">{icons[name]??icons.settings}</svg>;
 }
 export function PageHeader({title,description,children}:{title:string;description:string;children?:ReactNode}){return <header className="ui-page-header"><div><h1>{title}</h1><p>{description}</p></div>{children&&<div className="ui-header-actions">{children}</div>}</header>;}
 export function Loading({text}:{text:string}){return <div className="loading" role="status"><span className="loading-mark" aria-hidden="true"/>{text}</div>;}

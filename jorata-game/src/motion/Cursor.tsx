@@ -21,8 +21,9 @@ export default function Cursor({enabled}:{enabled:boolean}){
    if(event.pointerType==='touch'||!target||!fine.matches||!scope.contains(target)||target.closest('canvas,input,textarea,select,[contenteditable=true],iframe,[data-native-cursor]')){hide();return;}
    tx=event.clientX;ty=event.clientY;
    if(!shown){x=dx=tx;y=dy=ty;shown=true;el.dataset.visible='true';dot.dataset.visible='true';document.documentElement.dataset.cursorReady='true';}
-   const mode=target.closest('[draggable=true],.jn-drag-handle')?'drag':target.closest('.game-cover,.game-launch')?'play':target.closest('a,button')?'link':'idle';
-   el.dataset.mode=mode;el.dataset.label=mode==='play'?'Play':mode==='drag'?'Move':'';
+   const dragging=target.closest('[data-dragging="true"]');
+   const mode=dragging?'drag':target.closest('[draggable=true],.jn-drag-handle')?'drag':target.closest('.game-cover,.game-launch')?'play':target.closest('a,button,[data-carousel]')?'link':'idle';
+   el.dataset.mode=mode;el.dataset.label=mode==='play'?'Play':mode==='drag'?(dragging?'Drag':'Move'):'';
    if(!frame){last=performance.now();frame=requestAnimationFrame(tick);}
   };
   const press=()=>{el.dataset.pressed='true';},release=()=>{delete el.dataset.pressed;};

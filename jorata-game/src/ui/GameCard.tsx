@@ -17,11 +17,12 @@ const coverArt:Record<string,{alt:string}>={
 };
 export default function GameCard({game,navigate,featured=false,compact=false}:{game:Game;navigate:Navigate;featured?:boolean;compact?:boolean}){
  const art=coverArt[game.id];
- return <article className={`game-card ${featured?'game-card-featured':''} ${compact?'game-card-compact':''}`}>
+ return <article className={`game-card game-card-${game.id} ${featured?'game-card-featured':''} ${compact?'game-card-compact':''}`}>
   <AppLink to={game.to} navigate={navigate} className={`game-cover game-cover-${game.id}`} aria-label={`Open ${game.title}`}>
-   {art?<img src={`/covers/game_${game.id}_card.webp`} srcSet={`/covers/game_${game.id}_card.webp 768w, /covers/game_${game.id}_landscape.webp 1200w`} sizes={compact?'(max-width:760px) 100vw, 33vw':'(max-width:760px) 100vw, 50vw'} alt={art.alt} width={768} height={512} loading="lazy" decoding="async"/>:game.id==='drive'?<img src="/drive/cover.png" alt="A winding road through the green highlands" width={1200} height={675} loading="lazy" decoding="async"/>:<Landscape/>}
+   {art?<img src={featured?`/covers/game_${game.id}_featured.webp`:`/covers/game_${game.id}_card.webp`} srcSet={`/covers/game_${game.id}_card.webp 768w, /covers/game_${game.id}_landscape.webp 1200w, /covers/game_${game.id}_featured.webp 1536w`} sizes={compact?'(max-width:760px) 92vw, 34vw':featured?'(max-width:760px) 95vw, 66vw':'(max-width:760px) 95vw, 48vw'} alt={art.alt} width={featured?1536:768} height={featured?1024:512} decoding="async"/>:game.id==='drive'?<img src="/drive/cover.png" alt="A winding road through the green highlands" width={1200} height={675} decoding="async"/>:<Landscape/>}
+   {featured&&<img className="game-corner-ornament" src="/brand/ui/corner_ornament.svg" alt="" width={40} height={40} aria-hidden="true"/>}
    <GamePreview game={game.id}/><span className="game-open" aria-hidden="true"><Icon name="arrow"/></span>
   </AppLink>
-  <div className="game-card-content"><div className="game-title-row"><h2>{game.title}</h2><span>{game.category}</span></div>{!compact&&<p>{game.description}</p>}<div className="game-card-bottom">{!compact&&<span>{game.detail}</span>}<AppLink to={game.to} navigate={navigate} className="game-launch">{game.action}<Icon name="arrow" size={16}/></AppLink></div></div>
+  <div className="game-card-content"><div className="game-title-row"><h2>{game.title}</h2><span className={`game-category-badge category-${game.category.toLowerCase()}`}>{game.category}</span></div><p>{game.description}</p><div className="game-card-bottom"><span>{game.detail}</span><AppLink to={game.to} navigate={navigate} className="game-launch">{game.action}<Icon name="arrow" size={16}/></AppLink></div></div>
  </article>;
 }

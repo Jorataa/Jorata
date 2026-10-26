@@ -1,0 +1,41 @@
+{
+  "parallax": {
+    "canvas": [
+      1536,
+      1024
+    ],
+    "order": [
+      "hero_sky_base.webp",
+      "hero_bg_far.png",
+      "hero_bg_mid.png",
+      "hero_bg_foreground.png"
+    ],
+    "max_translate_y_px": [
+      0,
+      3,
+      6,
+      10
+    ],
+    "anchor": "bottom center",
+    "overscan": "3%; common scale and transform origin for every plate",
+    "mobile": "static mobile artwork; disable parallax"
+  },
+  "spark": {
+    "file": "ambient_spark_strip.png",
+    "frame_size": [
+      64,
+      64
+    ],
+    "frames": 4,
+    "durations_ms": [
+      1000,
+      220,
+      180,
+      600
+    ],
+    "repeat": "optional; at most 3 sprites; pause offscreen"
+  },
+  "hover_ms": 140,
+  "panel_ms": 220,
+  "reduced_motion": "Use static first frame, no parallax, no loops."
+}
