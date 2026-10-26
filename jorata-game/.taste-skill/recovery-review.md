@@ -32,3 +32,11 @@ Top three problems (most visible first), each with the screenshot it shows in an
 Final screenshot inspection: opened all six Home render sheets/folds, and all six Games render sheets/folds at 1440, 768, 390. Home: 0 FAIL / 2 WARN; Games: 0 FAIL / 2 WARN. Warnings: the tool treats game-launch arrows as icon chips (these are focus/hover launch affordances, not KPI decoration), and treats the gaming showcase's large headings as app-dashboard titles. Retain the scale: this is a game discovery gallery. Source lint: 0 FAIL / 0 WARN. Neutral scrims are explicitly marked as the permitted readability exception.
 
 No external photography, clips or generated replacements. Supplied premium artwork is inventoried in recovery/asset-inventory.json, original Mosslight SVG and existing Drive cover retained. No fabricated customer or usage claims, and no sample content requiring replacement.
+
+MOTION FOLLOW-UP
+Seen in one second: the same game collection, with a quiet moving city and a mint active route indicator.
+Idea: original worlds become the live sleeve of the collection.
+Live thing: contextual hover preview, game launch, real Notes drag/reorder.
+Layout words by section: hero=city sleeve / gallery=large artwork / notes=paired pane.
+Scores remain design 6.5 · usability 8.0 · creativity 7.0 · content 8.0 → overall 7.2, with the illustration cap.
+Top three review items: keep the hero text still while the artwork breathes; keep preview controls out of the tab order; keep the original Notes drag hit targets and saved positions. All three are implemented and verified. Home/Games render sheets opened at all three widths, no layout failures. Cursor and preview outlines are functional geometry/real overlays; drag elevation applies only to the floating note dialog. No real-device FPS claim.

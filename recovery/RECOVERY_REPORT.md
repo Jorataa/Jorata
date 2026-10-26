@@ -30,11 +30,11 @@ Supplied emblem/favicon, separate desktop/phone city artwork, Surgery/Boxing/Roo
 | Mosslight | Browser movement, jumps, collect/build, save/reload, import/export, modified-key protection, quick-note pause/resume, mobile controls pass |
 | Surgery | All 14 case wins, loss, drag/touch tool application, guide, progress, responsive views, real video playback, fixed bed across moods, corrupt/blocked storage pass |
 | Boxing | Shared-keyboard controls, combos, simultaneous actions, custom bindings/anti-ghosting, solo AI and responsive layout pass on repeat |
-| Rooftop | 9 model tests; 384 asset hashes/paths, 38 sprite layouts, 16 collider contracts; all 3 browser routes complete; focused phone controls/rotation pass. Full-suite harness status updated below |
+| Rooftop | 9 model tests; 384 asset hashes/paths, 38 sprite layouts, 16 collider contracts; all 3 browser routes complete; focused phone controls/rotation pass. Full browser suite passes: all routes, pause/focus, touch, persistence, 20 retries, cleanup/re-entry, no browser errors/failed assets |
 | Drive | Complete retry passes all six vehicles, three environments, five cameras, weather/time/quality, six simulated minutes of bounded chunk ownership, persistence, focus pause, cleanup and narrow layout |
 | Notes | Create/edit/autosave/reload, folders/tags/pins, search, reorder/drag, Markdown export, deletion, touch editing, quick-note recovery, blocked IndexedDB recovery pass |
 
-All 49 gameplay/Notes source files were byte-identical to the recovery snapshot before the subsequent motion work. This recovery changes presentation, host deep-link configuration, docs and test infrastructure. Optional live Gemini/AI behavior is not claimed as verified; missing-configuration and spoiler boundaries pass unit tests.
+All 49 gameplay/Notes source files remain byte-identical to the recovery snapshot after the motion work. This recovery changes presentation, host deep-link configuration, docs and test infrastructure. Optional live Gemini/AI behavior is not claimed as verified; missing-configuration and spoiler boundaries pass unit tests.
 
 ## UI/UX and verification
 

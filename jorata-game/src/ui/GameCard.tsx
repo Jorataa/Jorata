@@ -1,4 +1,5 @@
 import {AppLink,Icon,type Navigate,type Page} from './index';
+import GamePreview from '../motion/GamePreview';
 import {Landscape} from './Landscape';
 import {cases} from '../surgery/data';
 export const gameLibrary=[
@@ -19,7 +20,7 @@ export default function GameCard({game,navigate,featured=false,compact=false}:{g
  return <article className={`game-card ${featured?'game-card-featured':''} ${compact?'game-card-compact':''}`}>
   <AppLink to={game.to} navigate={navigate} className={`game-cover game-cover-${game.id}`} aria-label={`Open ${game.title}`}>
    {art?<img src={`/covers/game_${game.id}_card.webp`} srcSet={`/covers/game_${game.id}_card.webp 768w, /covers/game_${game.id}_landscape.webp 1200w`} sizes={compact?'(max-width:760px) 100vw, 33vw':'(max-width:760px) 100vw, 50vw'} alt={art.alt} width={768} height={512} loading="lazy" decoding="async"/>:game.id==='drive'?<img src="/drive/cover.png" alt="A winding road through the green highlands" width={1200} height={675} loading="lazy" decoding="async"/>:<Landscape/>}
-   <span className="game-open" aria-hidden="true"><Icon name="arrow"/></span>
+   <GamePreview game={game.id}/><span className="game-open" aria-hidden="true"><Icon name="arrow"/></span>
   </AppLink>
   <div className="game-card-content"><div className="game-title-row"><h2>{game.title}</h2><span>{game.category}</span></div>{!compact&&<p>{game.description}</p>}<div className="game-card-bottom">{!compact&&<span>{game.detail}</span>}<AppLink to={game.to} navigate={navigate} className="game-launch">{game.action}<Icon name="arrow" size={16}/></AppLink></div></div>
  </article>;

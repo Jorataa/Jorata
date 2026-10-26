@@ -1,0 +1,48 @@
+/* Shared website motion. Every effect is scoped away from game routes. */
+:root{--motion-ease:cubic-bezier(.22,1,.36,1);--motion-spring:cubic-bezier(.2,.8,.2,1);--motion-feedback:180ms}
+.jorata-cursor,.jorata-cursor-trail{position:fixed;left:0;top:0;pointer-events:none!important;z-index:250;opacity:0;will-change:transform;transition:opacity 120ms}
+.jorata-cursor[data-visible=true],.jorata-cursor-trail[data-visible=true]{opacity:1}
+.jorata-cursor i{display:block;width:18px;height:18px;margin:-9px;border:1px solid #b6eadbc9;border-radius:3px;transition:width 180ms,height 180ms,margin 180ms,rotate 180ms,background 180ms;box-sizing:border-box}
+.jorata-cursor i:after{content:'';position:absolute;left:-1px;top:-1px;width:3px;height:3px;background:#5fe1c3}
+.jorata-cursor[data-mode=play] i,.jorata-cursor[data-mode=drag] i{width:30px;height:30px;margin:-15px;background:#07131c40}
+.jorata-cursor[data-mode=drag] i{rotate:45deg}.jorata-cursor[data-pressed=true] i{scale:.8}
+.jorata-cursor:after{content:attr(data-label);position:absolute;left:24px;top:-10px;color:#f3f7ff;background:#101820;padding:3px 7px;font:12px/1.5 var(--font);border-radius:3px;white-space:nowrap}
+.jorata-cursor[data-label='']:after{display:none}.jorata-cursor-trail{width:3px;height:3px;margin:-1.5px;background:#5fe1c3;opacity:0}.jorata-cursor-trail[data-visible=true]{opacity:.5}
+@media(min-width:761px) and (hover:hover) and (pointer:fine){html[data-cursor-ready=true] [data-site-motion],html[data-cursor-ready=true] [data-site-motion] :is(a,button,[draggable],.jn-drag-handle){cursor:none}}
+.dock{isolation:isolate}
+@media(min-width:761px){.dock{position:relative}}.nav-tracker{position:absolute;left:0;bottom:12px;width:1px;height:2px;background:var(--sage);transform:translateX(var(--nav-x,0px)) scaleX(var(--nav-width,0));transform-origin:left center;pointer-events:none;transition:transform 240ms var(--motion-ease)}
+.dock a[aria-current]:after{display:none}
+.motion-live :is(.invitation-copy .ui-button,.quick-launch)>*{translate:var(--magnet-x,0px) var(--magnet-y,0px);transition:translate 220ms var(--motion-spring);pointer-events:none}
+.motion-live .game-cover{transform:perspective(900px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform 360ms var(--motion-spring);transform-origin:center;backface-visibility:hidden}
+.motion-live .game-cover[data-preview=active]{outline:1px solid #b4e6da66;outline-offset:3px}
+.motion-live .game-cover[data-preview=active]>img{transform:scale(1.035)}
+.game-cover .floating-island,.game-cover .cloud-a,.game-cover .explorer{animation-play-state:paused}
+.motion-live .game-cover[data-preview=active] :is(.floating-island,.cloud-a,.explorer){animation-play-state:running}
+.product .world-invitation .invitation-art img{animation:none}
+.motion-live .invitation-art{translate:var(--hero-x,0px) var(--hero-y,0px);scale:1.025;transition:translate 650ms var(--motion-ease)}
+@media(hover:hover) and (pointer:fine){.motion-live .world-invitation[data-in-view=true] .invitation-art img{animation:city-breathe 18s ease-in-out infinite alternate}}
+@keyframes city-breathe{from{transform:scale(1.015) translateY(0)}to{transform:scale(1.045) translateY(-5px)}}
+.game-preview{pointer-events:none;position:absolute;left:14px;bottom:14px;width:128px;padding:6px;background:#101820eb;border:1px solid #b4d8d329;border-radius:6px;opacity:0;translate:0 6px;transition:opacity 180ms,translate 240ms var(--motion-ease);display:none;z-index:2}
+.game-preview.has-preview{display:block}.game-preview[data-active=true]{opacity:1;translate:0 0}
+.preview-window{position:relative;display:block;height:96px;overflow:hidden;border-radius:3px;background:#192a33}
+.preview-surgery .preview-window{background:#fff}.preview-window video{width:100%;height:100%;object-fit:contain;display:block}
+.preview-caption{display:block;text-align:center;font-size:11px;color:#d4e6e8;padding-top:5px;line-height:1.6}
+.preview-window .runner-strip{position:absolute!important;left:12px;top:0;width:768px!important;max-width:none;height:96px!important;object-fit:fill!important;padding:0!important;transform:none;animation:runner-preview 666ms steps(8) infinite;animation-play-state:paused;image-rendering:pixelated}
+@keyframes runner-preview{to{transform:translateX(-768px)}}
+.boxing-frames{position:relative;display:block;width:96px;height:96px;margin:auto}.preview-window .boxing-frames img{position:absolute;inset:0;width:96px!important;height:96px!important;image-rendering:pixelated;opacity:0;animation:boxing-preview 720ms steps(1) infinite;animation-play-state:paused;transform:none!important}
+@keyframes boxing-preview{0%,33%{opacity:1}34%,100%{opacity:0}}
+.game-preview[data-active=true] :is(.runner-strip,.boxing-frames img){animation-play-state:running}
+.motion-live .jn-note-row{transition:opacity 180ms,scale 220ms var(--motion-spring),rotate 220ms var(--motion-spring),background 180ms}
+.motion-live .jn-note-row.motion-dragging{opacity:.45;scale:.98;rotate:-1deg}
+.motion-live .motion-drop-target{outline:2px solid #526a4b;outline-offset:-3px;background:#dce6d7!important}
+.motion-live .jn-quick{animation:note-unfold 320ms var(--motion-spring);transition:rotate 280ms var(--motion-spring),scale 280ms var(--motion-spring),box-shadow 220ms}
+@keyframes note-unfold{from{opacity:0;scale:.97}to{opacity:1;scale:1}}
+/* taste-skill-ignore: elevation on a floating dialog while it is actively dragged. */ .motion-live .jn-quick.motion-panel-dragging{rotate:var(--drag-rotation,0deg);scale:1.006;box-shadow:0 28px 80px #0007}
+.motion-live .ui-button:active,.motion-live .game-launch:active{scale:.98}
+.loading-mark{border:0;border-radius:0;background:currentColor;clip-path:polygon(0 0,60% 0,60% 40%,100% 40%,100% 100%,40% 100%,40% 60%,0 60%);animation:pixel-load 1.3s steps(4) infinite}
+@keyframes pixel-load{to{rotate:360deg}}
+@media(max-width:760px){.nav-tracker{bottom:auto;top:0}.game-preview{display:none!important}.motion-live .game-cover{transform:none!important}.jorata-cursor,.jorata-cursor-trail{display:none}}
+@media(prefers-reduced-motion:reduce){.jorata-cursor,.jorata-cursor-trail{display:none}.nav-tracker{transition:none}.game-preview{display:none!important}.world-invitation .invitation-art img{animation:none!important}}
+html[data-motion=off] .game-preview{display:none!important}
+
+[data-site-motion]:not(.motion-live) .game-cover>img{transform:none!important}

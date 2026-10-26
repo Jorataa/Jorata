@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Contextual pixel cursor, nonblocking overlays, original Boxing preview; cards remain ordinary links.",
+    "Video is lazy, muted, inline and looping; hover/focus activate previews; leaving or scrolling out pauses them.",
+    "Reduced motion, cursor opt-out, global motion opt-out and preference persistence work.",
+    "Existing Quick Note drag, bounds, modal exit and persistent Notes reorder remain functional.",
+    "Game canvas keeps its own native cursor and receives no website motion controllers.",
+    "Touch navigation, phone layout and data-saving fallback work."
+  ],
+  "pageErrors": [],
+  "mediaRequests": [
+    "/surgery/surgery_patient_01_healthy.mp4"
+  ]
+}

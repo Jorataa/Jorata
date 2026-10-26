@@ -1,0 +1,26 @@
+{
+  "assets": [
+    {
+      "asset": "public/surgery/surgery_patient_01_healthy.mp4",
+      "use": "53 KB muted, inline, looping hover/focus preview; preload none; static healthy.png poster"
+    },
+    {
+      "asset": "public/rooftop/assets/characters/runner/spritesheets/runner_run_spritesheet.png",
+      "use": "Existing 8-frame runner strip, composited CSS steps on hover/focus"
+    },
+    {
+      "asset": "public/boxing/characters/player_red/idle_01.png .. idle_03.png",
+      "use": "Existing 3-frame original fighter preview"
+    },
+    {
+      "asset": "src/ui/Landscape.tsx",
+      "use": "Existing SVG world animation activated only during preview"
+    },
+    {
+      "asset": "public/brand/hero_bg_main.webp + hero_bg_mobile.webp",
+      "use": "Existing artwork; desktop atmospheric drift and small pointer parallax; phone static art"
+    }
+  ],
+  "new_media_files": 0,
+  "new_dependencies": 0
+}

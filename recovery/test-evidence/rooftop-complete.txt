@@ -1,0 +1,38 @@
+
+> jorata-game@0.1.0 test:rooftop:browser
+> node --import tsx tests/rooftop.browser.ts
+
+Browser keyboard playthrough 1 {
+  phase: 'complete',
+  reason: '',
+  x: 18761.000000000073,
+  y: 440,
+  time: 68.6500000000007,
+  cp: 2,
+  health: 3,
+  gap: 351.37499999884676,
+  guards: [ 0, 0, 0, 0 ]
+}
+Browser keyboard playthrough 2 {
+  phase: 'complete',
+  reason: '',
+  x: 18500.375000000942,
+  y: 420,
+  time: 67.42499999999973,
+  cp: 2,
+  health: 3,
+  gap: 268.51875000180735,
+  guards: [ 0, 0, 0, 0 ]
+}
+Browser keyboard playthrough 3 {
+  phase: 'complete',
+  reason: '',
+  x: 18371.999999999207,
+  y: 390,
+  time: 65.9166666666652,
+  cp: 2,
+  health: 3,
+  gap: 132.1874999987158,
+  guards: [ 0, 0, 0, 0, 0 ]
+}
+PASS: all three routes via keyboard events; pause/focus, touch, persistence, 20 retries, navigation, desktop/phone layouts. No browser errors or failed assets.

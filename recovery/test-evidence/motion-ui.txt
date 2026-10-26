@@ -1,0 +1,4 @@
+{
+  "pass": "All six routes at three widths, labels, empty states, filter persistence, new-tab navigation, mobile surgery apply, keyboard modal and reduced motion.",
+  "contrastFindings": []
+}

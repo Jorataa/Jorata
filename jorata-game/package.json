@@ -14,7 +14,8 @@
     "test:rooftop:browser": "node --import tsx tests/rooftop.browser.ts",
     "test:boxing": "tsx tests/boxing.browser.ts",
     "test:drive": "node --import tsx tests/drive.browser.ts",
-    "test:drive:live": "node --import tsx tests/drive.browser.ts --live"
+    "test:drive:live": "node --import tsx tests/drive.browser.ts --live",
+    "test:motion": "tsx tests/motion.browser.ts"
   },
   "dependencies": {
     "phaser": "^4.2.1",

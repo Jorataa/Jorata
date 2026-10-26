@@ -1,0 +1,1408 @@
+{
+ "url": "http://localhost:3117/games",
+ "at": "2026-10-26T01:06:01.539Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.96,
+    0.94,
+    0.91
+   ],
+   "motion": {
+    "elements": 13,
+    "css": 4,
+    "transitions": 9,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2059,
+     "screens": 2.3,
+     "words": 183,
+     "img": 5,
+     "video": 0,
+     "canvas": 0,
+     "svg": 19,
+     "sections": 1,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "game_surgery_card.webp",
+      "game_boxing_card.webp",
+      "game_rooftop_card.webp",
+      "cover.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Find your game.",
+     "words": 3,
+     "chars": 15,
+     "lines": 1,
+     "size": 44,
+     "vw": 3.1,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.03,
+     "leading": 1.25,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Find your game.",
+     "words": 3,
+     "lines": 1,
+     "size": 44,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Find your game.",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.034,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      11,
+      13,
+      14,
+      16,
+      17,
+      21,
+      44
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 16,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.4
+     },
+     "measureChars": 67,
+     "max": {
+      "size": 44,
+      "vw": 3.1,
+      "font": "Manrope",
+      "text": "Find your game."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#141614",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 0.05,
+      "l": 0.08
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#101820",
+       "top": 0,
+       "hsl": {
+        "h": 210,
+        "s": 0.33,
+        "l": 0.09
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b0bec8",
+       "share": 0.81
+      },
+      {
+       "color": "#f1f2ee",
+       "share": 0.16
+      },
+      {
+       "color": "#1b201b",
+       "share": 0.01
+      },
+      {
+       "color": "#f3f7ff",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#f3f7ff",
+      "hsl": {
+       "h": 220,
+       "s": 1,
+       "l": 0.98
+      },
+      "fg": "#1b201b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": 5,
+     "height": 43,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Quick note ⌘ J",
+      "All games 5"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 5,
+     "boxRadius": 10,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 10,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.2
+     },
+     {
+      "type": "img",
+      "ratio": 0.2
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 88,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2059,
+    "margins": {
+     "left": 80,
+     "right": 80
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Find your game.",
+      "size": 44,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 80,
+      "n": 5
+     },
+     {
+      "x": 734,
+      "n": 3
+     },
+     {
+      "x": 805,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 10,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.08,
+    "voidBox": {
+     "x": 600,
+     "y": 120,
+     "w": 540,
+     "h": 180
+    }
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": true,
+    "ground": "#141614",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 80,
+     "right": 80
+    },
+    "hero": {
+     "text": "Find your game.",
+     "words": 3,
+     "chars": 15,
+     "lines": 1,
+     "size": 44,
+     "vw": 3.1,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.03,
+     "leading": 1.25,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 1,
+    "layout": {
+     "panels": 0,
+     "firstScreen": 0,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 0,
+     "radii": [],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 5,
+     "hues": 1,
+     "samples": [
+      {
+       "hue": 210,
+       "size": 36,
+       "radius": "5px"
+      },
+      {
+       "hue": 210,
+       "size": 36,
+       "radius": "5px"
+      },
+      {
+       "hue": 210,
+       "size": 36,
+       "radius": "5px"
+      },
+      {
+       "hue": 210,
+       "size": 36,
+       "radius": "5px"
+      }
+     ]
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 2,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      13,
+      14,
+      16,
+      17,
+      21,
+      44
+     ]
+    },
+    "title": {
+     "text": "Find your game.",
+     "size": 44,
+     "top": 128
+    },
+    "colourShare": 0.012
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.87,
+    0.85
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 4,
+    "transitions": 8,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1616,
+     "screens": 1.6,
+     "words": 176,
+     "img": 5,
+     "video": 0,
+     "canvas": 0,
+     "svg": 19,
+     "sections": 1,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "game_surgery_card.webp",
+      "game_boxing_card.webp",
+      "game_rooftop_card.webp",
+      "cover.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Find your game.",
+     "words": 3,
+     "chars": 15,
+     "lines": 1,
+     "size": 44,
+     "vw": 5.7,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.03,
+     "leading": 1.25,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Find your game.",
+     "words": 3,
+     "lines": 1,
+     "size": 44,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Find your game.",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 44,
+      "vw": 5.7,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.034,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.45,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      17,
+      21,
+      44
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 16,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.4
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 44,
+      "vw": 5.7,
+      "font": "Manrope",
+      "text": "Find your game."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#141614",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 0.05,
+      "l": 0.08
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#101820",
+       "top": 0,
+       "hsl": {
+        "h": 210,
+        "s": 0.33,
+        "l": 0.09
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b0bec8",
+       "share": 0.81
+      },
+      {
+       "color": "#f1f2ee",
+       "share": 0.16
+      },
+      {
+       "color": "#1b201b",
+       "share": 0.02
+      },
+      {
+       "color": "#f3f7ff",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#f3f7ff",
+      "hsl": {
+       "h": 220,
+       "s": 1,
+       "l": 0.98
+      },
+      "fg": "#1b201b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": 5,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Quick note",
+      "All games"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 5,
+     "boxRadius": 10,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 10,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.1
+     },
+     {
+      "type": "img",
+      "ratio": 0.1
+     },
+     {
+      "type": "img",
+      "ratio": 0.1
+     },
+     {
+      "type": "img",
+      "ratio": 0.1
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 88,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1616,
+    "margins": {
+     "left": 28,
+     "right": 28
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Find your game.",
+      "size": 44,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 28,
+      "n": 5
+     },
+     {
+      "x": 398,
+      "n": 3
+     },
+     {
+      "x": 438,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 10,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": true,
+    "ground": "#141614",
+    "sidebar": null,
+    "topbar": {
+     "h": 88
+    },
+    "canvas": {
+     "left": 28,
+     "right": 28
+    },
+    "hero": {
+     "text": "Find your game.",
+     "words": 3,
+     "chars": 15,
+     "lines": 1,
+     "size": 44,
+     "vw": 5.7,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.03,
+     "leading": 1.25,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 1,
+    "layout": {
+     "panels": 0,
+     "firstScreen": 0,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 0,
+     "radii": [],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 5,
+     "hues": 1,
+     "samples": [
+      {
+       "hue": 210,
+       "size": 36,
+       "radius": "5px"
+      },
+      {
+       "hue": 210,
+       "size": 36,
+       "radius": "5px"
+      },
+      {
+       "hue": 210,
+       "size": 36,
+       "radius": "5px"
+      },
+      {
+       "hue": 210,
+       "size": 36,
+       "radius": "5px"
+      }
+     ]
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 2,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      13,
+      14,
+      16,
+      17,
+      21,
+      44
+     ]
+    },
+    "title": {
+     "text": "Find your game.",
+     "size": 44,
+     "top": 128
+    },
+    "colourShare": 0.059
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.97,
+    0.9,
+    0.87,
+    0.82
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 4,
+    "transitions": 3,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 2844,
+     "screens": 3.4,
+     "words": 177,
+     "img": 5,
+     "video": 0,
+     "canvas": 0,
+     "svg": 19,
+     "sections": 1,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "game_surgery_card.webp",
+      "game_boxing_card.webp",
+      "game_rooftop_card.webp",
+      "cover.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Find your game.",
+     "words": 3,
+     "chars": 15,
+     "lines": 1,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.05,
+     "leading": 1.25,
+     "top": 100,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Find your game.",
+     "words": 3,
+     "lines": 1,
+     "size": 32,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Find your game.",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Manrope",
+      "weight": 600,
+      "tracking": -0.047,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 100,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      16,
+      21,
+      32
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 16,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.4
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Manrope",
+      "text": "Find your game."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.01,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#141614",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 0.05,
+      "l": 0.08
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#101820",
+       "top": 0,
+       "hsl": {
+        "h": 210,
+        "s": 0.33,
+        "l": 0.09
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b0bec8",
+       "share": 0.8
+      },
+      {
+       "color": "#f1f2ee",
+       "share": 0.17
+      },
+      {
+       "color": "#1b201b",
+       "share": 0.02
+      },
+      {
+       "color": "#f3f7ff",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#f3f7ff",
+      "hsl": {
+       "h": 220,
+       "s": 1,
+       "l": 0.98
+      },
+      "fg": "#f3f7ff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 4,
+     "radius": 5,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Games",
+      "Quick note",
+      "All games 5"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 1,
+     "hairlineSamples": [
+      "nav.dock 390px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 5,
+     "boxRadius": 10,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 10,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.25
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 76,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 2844,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.library-toolbar",
+      "tag": "div",
+      "top": 228,
+      "height": 154,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 33,
+      "textLeft": 32,
+      "textRight": 84,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "article.game-card",
+      "tag": "article",
+      "top": 406,
+      "height": 418,
+      "words": 23,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Mosslight",
+       "size": 21,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.game-card",
+      "tag": "article",
+      "top": 856,
+      "height": 418,
+      "words": 22,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Surgery Simulator",
+       "size": 21,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.game-card",
+      "tag": "article",
+      "top": 1306,
+      "height": 445,
+      "words": 32,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Ringcraft Boxing",
+       "size": 21,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.game-card",
+      "tag": "article",
+      "top": 1783,
+      "height": 418,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Rooftop Escape",
+       "size": 21,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article.game-card",
+      "tag": "article",
+      "top": 2233,
+      "height": 418,
+      "words": 32,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Endless Drive",
+       "size": 21,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Find your game.",
+      "size": 32,
+      "top": 100,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 10
+     }
+    ],
+    "leftBlocks": 10,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "dark": true,
+    "ground": "#141614",
+    "sidebar": null,
+    "topbar": {
+     "h": 76
+    },
+    "canvas": {
+     "left": 20,
+     "right": 20
+    },
+    "hero": {
+     "text": "Find your game.",
+     "words": 3,
+     "chars": 15,
+     "lines": 1,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Manrope",
+     "weight": 600,
+     "tracking": -0.05,
+     "leading": 1.25,
+     "top": 100,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 1,
+    "layout": {
+     "panels": 0,
+     "firstScreen": 0,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 0,
+     "radii": [],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 2,
+    "placeholders": [],
+    "type": {
+     "under13": 0.02,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      12,
+      13,
+      14,
+      16,
+      21,
+      32
+     ]
+    },
+    "title": {
+     "text": "Find your game.",
+     "size": 32,
+     "top": 100
+    },
+    "colourShare": 0.002
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "icon-chips",
+   "width": 1440,
+   "message": "5 icons sit in tinted squares or circles.",
+   "fix": "This is the commonest tell of a generated dashboard. Drop the tinted square: a KPI is a label and a number; an icon, if it helps, is plain and in the text colour.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "app-title-size",
+   "width": 1440,
+   "message": "The h1 is 44px (\"Find your game.\").",
+   "fix": "An app screen is not a landing page: the title is 18-32px (20-24px on a phone).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/tmp/jorata-motion-qa/games/desktop-fold.jpg",
+   "pages": [
+    "/tmp/jorata-motion-qa/games/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/tmp/jorata-motion-qa/games/tablet-fold.jpg",
+   "pages": [
+    "/tmp/jorata-motion-qa/games/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/tmp/jorata-motion-qa/games/mobile-fold.jpg",
+   "pages": [
+    "/tmp/jorata-motion-qa/games/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

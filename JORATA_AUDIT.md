@@ -85,6 +85,8 @@ Verified remote backups: workspace `f1c31a0`, stashed originals + salvage `5181f
 
 Selectively recovered 884 compatible gaming files; inventoried 818 runtime public files and 13 source archives (including the separately salvaged archive). All 49 game/Notes source files match the newer snapshot. Presentation uses supplied premium art; no new artwork was generated. Legacy social/server/Supabase code was excluded from the gaming build.
 
-Production gaming build and 23 core + 9 Rooftop unit tests pass. Product/Mosslight/Notes, Surgery, Boxing and UI browser checks pass. All nine production routes and game bundle loads pass with no page errors/failed requests. Rooftop desktop route completion and focused mobile controls pass; final full-suite harness verification is tracked in recovery/RECOVERY_REPORT.md. Headless WebGL screenshot/re-entry reliability limits are documented there.
+Production gaming build and 23 core + 9 Rooftop unit tests pass. Product/Mosslight/Notes, Surgery, Boxing and UI browser checks pass. All nine production routes and game bundle loads pass with no page errors/failed requests. Rooftop desktop route completion and focused mobile controls pass; the complete Rooftop browser suite now passes too. Headless WebGL screenshot/re-entry reliability limits are documented there.
 
 One original driving ZIP is truncated; 56 CRC-verified entries salvaged separately, source unchanged. Raw repository.bundle remains local, but all its 27 commit refs were confirmed present and reachable from remote branches. Full files, results, exclusions and next actions: recovery/RECOVERY_REPORT.md.
+
+Motion follow-up: scoped website cursor/preview/drag effects, dedicated interaction checks, reduced-motion/touch/data-saving fallbacks and final reports are in `recovery/MOTION_REPORT.md`. No gameplay or Notes source changes.
