@@ -38,6 +38,15 @@ export function useSiteMotion(enabled:boolean,page:Page){
   };
   let carousel:HTMLElement|null=null,cStartX=0,cScrollStart=0,cLastX=0,cLastTime=0,cVel=0,cDragged=false,cMomentum=0,suppressClick=false;
   const stopMomentum=()=>{if(cMomentum){cancelAnimationFrame(cMomentum);cMomentum=0;}};
+  const updateProgress=(host:HTMLElement)=>{
+   const max=host.scrollWidth-host.clientWidth;
+   const progress=max>0?Math.max(0,Math.min(1,host.scrollLeft/max)):0;
+   scope.style.setProperty('--carousel-progress',`${progress}`);
+   const activeIdx=Math.min(4,Math.max(0,Math.round(progress*4)));
+   scope.querySelectorAll<HTMLElement>('.carousel-dot').forEach((dot,i)=>{
+    dot.dataset.active=i===activeIdx?'true':'false';
+   });
+  };
   const cDown=(event:PointerEvent)=>{
    if(event.pointerType==='touch'||event.button!==0)return;
    const target=event.target instanceof Element?event.target:null;
@@ -49,7 +58,16 @@ export function useSiteMotion(enabled:boolean,page:Page){
    if(!carousel)return;
    const now=performance.now(),dx=event.clientX-cStartX,dt=Math.max(1,now-cLastTime);
    if(!cDragged&&Math.abs(dx)>4){cDragged=true;carousel.dataset.dragging='true';reset();}
-   if(cDragged){const step=event.clientX-cLastX;cVel=.75*(step/dt)+.25*cVel;carousel.scrollLeft=cScrollStart-dx;cLastX=event.clientX;cLastTime=now;}
+   if(cDragged){
+    const step=event.clientX-cLastX;
+    cVel=.75*(step/dt)+.25*cVel;
+    carousel.scrollLeft=cScrollStart-dx;
+    cLastX=event.clientX;
+    cLastTime=now;
+    const skew=Math.max(-2.5,Math.min(2.5,-cVel*5));
+    carousel.style.setProperty('--drag-skew',`${skew}deg`);
+    updateProgress(carousel);
+   }
   };
   const cUp=()=>{
    if(!carousel)return;
@@ -57,12 +75,27 @@ export function useSiteMotion(enabled:boolean,page:Page){
    if(wasDragged){
     suppressClick=true;setTimeout(()=>{suppressClick=false;},80);
     let v=cVel*16;
-    const coast=()=>{if(Math.abs(v)<.4||!host.isConnected){cMomentum=0;return;}host.scrollLeft-=v;v*=.92;cMomentum=requestAnimationFrame(coast);};
-    if(Math.abs(v)>1)cMomentum=requestAnimationFrame(coast);
+    const coast=()=>{
+     if(Math.abs(v)<.3||!host.isConnected){
+      cMomentum=0;host.style.removeProperty('--drag-skew');
+      updateProgress(host);
+      return;
+     }
+     host.scrollLeft-=v;v*=.92;
+     const skew=Math.max(-2,Math.min(2,-v*.3));
+     host.style.setProperty('--drag-skew',`${skew}deg`);
+     updateProgress(host);
+     cMomentum=requestAnimationFrame(coast);
+    };
+    if(Math.abs(v)>.8)cMomentum=requestAnimationFrame(coast);
+    else host.style.removeProperty('--drag-skew');
    }
   };
   const cClick=(event:MouseEvent)=>{if(suppressClick){suppressClick=false;event.preventDefault();event.stopPropagation();}};
   const cNativeDrag=(event:DragEvent)=>{const t=event.target instanceof Element?event.target:null;if(t?.closest('[data-carousel]')){event.preventDefault();event.stopImmediatePropagation();}};
+  const cScroll=(event:Event)=>{const t=event.target instanceof HTMLElement?event.target:null;if(t?.hasAttribute('data-carousel'))updateProgress(t);};
+  const gamesCarousel=scope.querySelector<HTMLElement>('[data-carousel="games"]');
+  if(gamesCarousel)updateProgress(gamesCarousel);
   let dragged:HTMLElement|null=null,dropTarget:HTMLElement|null=null;let before=new Map<HTMLElement,DOMRect>();
   const clearTarget=()=>{dropTarget?.classList.remove('motion-drop-target');dropTarget=null;};
   const dropCandidate=(event:DragEvent)=>{
@@ -89,9 +122,9 @@ export function useSiteMotion(enabled:boolean,page:Page){
    }
    panel?.classList.remove('motion-panel-dragging');panel?.style.removeProperty('--drag-rotation');panel=null;
   };
-  scope.addEventListener('pointermove',move,{passive:true});scope.addEventListener('pointerout',leave,{passive:true});scope.addEventListener('pointerdown',panelDown,{passive:true});scope.addEventListener('pointerdown',cDown,{passive:true});window.addEventListener('pointermove',panelMove,{passive:true});window.addEventListener('pointermove',cMove,{passive:true});window.addEventListener('pointerup',panelUp,{passive:true});window.addEventListener('pointerup',cUp,{passive:true});window.addEventListener('pointercancel',panelUp,{passive:true});window.addEventListener('pointercancel',cUp,{passive:true});scope.addEventListener('click',cClick,true);window.addEventListener('dragstart',cNativeDrag,true);window.addEventListener('scroll',onScroll,{passive:true});
+  scope.addEventListener('pointermove',move,{passive:true});scope.addEventListener('pointerout',leave,{passive:true});scope.addEventListener('pointerdown',panelDown,{passive:true});scope.addEventListener('pointerdown',cDown,{passive:true});window.addEventListener('pointermove',panelMove,{passive:true});window.addEventListener('pointermove',cMove,{passive:true});window.addEventListener('pointerup',panelUp,{passive:true});window.addEventListener('pointerup',cUp,{passive:true});window.addEventListener('pointercancel',panelUp,{passive:true});window.addEventListener('pointercancel',cUp,{passive:true});scope.addEventListener('click',cClick,true);window.addEventListener('dragstart',cNativeDrag,true);window.addEventListener('scroll',onScroll,{passive:true});scope.addEventListener('scroll',cScroll,{capture:true,passive:true});
   scope.addEventListener('dragstart',dragStart,true);scope.addEventListener('dragover',dragOver,true);scope.addEventListener('drop',drop,true);scope.addEventListener('dragend',end,true);window.addEventListener('blur',reset);window.addEventListener('blur',panelUp);window.addEventListener('blur',cUp);
-  return()=>{reset();end();panelUp();cUp();stopMomentum();cancelAnimationFrame(frame);cancelAnimationFrame(scrollFrame);mutations.disconnect();reveals.disconnect();atmosphere.disconnect();for(const animation of animations)animation.cancel();scope.classList.remove('motion-live');if(hero){delete hero.dataset.inView;hero.style.removeProperty('--scroll-y');}scope.removeEventListener('pointermove',move);scope.removeEventListener('pointerout',leave);scope.removeEventListener('pointerdown',panelDown);scope.removeEventListener('pointerdown',cDown);window.removeEventListener('pointermove',panelMove);window.removeEventListener('pointermove',cMove);window.removeEventListener('pointerup',panelUp);window.removeEventListener('pointerup',cUp);window.removeEventListener('pointercancel',panelUp);window.removeEventListener('pointercancel',cUp);scope.removeEventListener('click',cClick,true);window.removeEventListener('dragstart',cNativeDrag,true);window.removeEventListener('scroll',onScroll);scope.removeEventListener('dragstart',dragStart,true);scope.removeEventListener('dragover',dragOver,true);scope.removeEventListener('drop',drop,true);scope.removeEventListener('dragend',end,true);window.removeEventListener('blur',reset);window.removeEventListener('blur',panelUp);window.removeEventListener('blur',cUp);};
+  return()=>{reset();end();panelUp();cUp();stopMomentum();cancelAnimationFrame(frame);cancelAnimationFrame(scrollFrame);mutations.disconnect();reveals.disconnect();atmosphere.disconnect();for(const animation of animations)animation.cancel();scope.classList.remove('motion-live');if(hero){delete hero.dataset.inView;hero.style.removeProperty('--scroll-y');}scope.removeEventListener('pointermove',move);scope.removeEventListener('pointerout',leave);scope.removeEventListener('pointerdown',panelDown);scope.removeEventListener('pointerdown',cDown);window.removeEventListener('pointermove',panelMove);window.removeEventListener('pointermove',cMove);window.removeEventListener('pointerup',panelUp);window.removeEventListener('pointerup',cUp);window.removeEventListener('pointercancel',panelUp);window.removeEventListener('pointercancel',cUp);scope.removeEventListener('click',cClick,true);window.removeEventListener('dragstart',cNativeDrag,true);window.removeEventListener('scroll',onScroll);scope.removeEventListener('scroll',cScroll,true);scope.removeEventListener('dragstart',dragStart,true);scope.removeEventListener('dragover',dragOver,true);scope.removeEventListener('drop',drop,true);scope.removeEventListener('dragend',end,true);window.removeEventListener('blur',reset);window.removeEventListener('blur',panelUp);window.removeEventListener('blur',cUp);};
  },[enabled,page]);
  // Active navigation follows actual route changes and resizes, including the mobile dock.
  useEffect(()=>{
