@@ -1,23 +1,14 @@
-import {Suspense,lazy,useRef} from 'react';
+import {Suspense,lazy,useContext} from 'react';
 import {AppLink,Icon,LocalNote,type Navigate} from './ui';
 import GameCard,{gameLibrary} from './ui/GameCard';
+import {MotionContext} from './motion/preferences';
+import {useCarousel} from './motion/useCarousel';
 const RecentNotes=lazy(()=>import('./recent'));
 
 export default function Home({navigate,onNote,onNew}:{navigate:Navigate;onNote:(id:string)=>void;onNew:()=>void}){
- const carouselRef=useRef<HTMLDivElement>(null);
- const scrollCarousel=(dir:number)=>{
-  const el=carouselRef.current;if(!el)return;
-  const step=Math.max(280,Math.round(el.clientWidth*.72));
-  el.scrollBy({left:dir*step,behavior:document.documentElement.dataset.motion==='off'?'auto':'smooth'});
- };
- const scrollToCard=(idx:number)=>{
-  const el=carouselRef.current;if(!el)return;
-  const cards=el.querySelectorAll<HTMLElement>('.game-card');
-  if(cards[idx]){
-   const targetLeft=cards[idx].offsetLeft-el.offsetLeft;
-   el.scrollTo({left:targetLeft,behavior:document.documentElement.dataset.motion==='off'?'auto':'smooth'});
-  }
- };
+ const motion=useContext(MotionContext);
+ const carousel=useCarousel(motion);
+ const positionLabel=`Games ${carousel.first}–${carousel.last} of ${gameLibrary.length}`;
  return <div className="home-page">
   <section className="world-invitation" aria-labelledby="world-title">
    <picture className="invitation-art"><source media="(max-width:600px)" srcSet="/brand/hero_bg_mobile.webp"/><img src="/brand/hero_bg_main.webp" width={1536} height={1024} alt="A moonlit pixel city with warm windows and rooftop gardens" fetchPriority="high"/></picture>
@@ -56,25 +47,17 @@ export default function Home({navigate,onNote,onNew}:{navigate:Navigate;onNote:(
     </div>
     <div className="discovery-controls">
      <div className="carousel-nav" role="group" aria-label="Carousel controls">
-      <button type="button" className="carousel-btn" aria-label="Scroll games left" onClick={()=>scrollCarousel(-1)}><Icon name="back" size={16}/></button>
-      <button type="button" className="carousel-btn" aria-label="Scroll games right" onClick={()=>scrollCarousel(1)}><Icon name="arrow" size={16}/></button>
+      <button type="button" className="carousel-btn" aria-label="Scroll games left" disabled={!carousel.canPrevious} aria-controls="featured-games" onClick={()=>carousel.step(-1)}><Icon name="back" size={16}/></button>
+      <button type="button" className="carousel-btn" aria-label="Scroll games right" disabled={!carousel.canNext} aria-controls="featured-games" onClick={()=>carousel.step(1)}><Icon name="arrow" size={16}/></button>
      </div>
      <AppLink to="games" navigate={navigate} className="text-action">All {gameLibrary.length} games<Icon name="arrow" size={16}/></AppLink>
     </div>
    </header>
-   <div ref={carouselRef} className="home-games" data-carousel="games" role="region" aria-label="Featured games">{gameLibrary.map(game=><GameCard key={game.id} game={game} navigate={navigate} compact/>)}</div>
+   <div ref={carousel.ref} id="featured-games" tabIndex={0} className="home-games" data-carousel="games" role="region" aria-label="Featured games">{gameLibrary.map(game=><GameCard key={game.id} game={game} navigate={navigate} compact/>)}</div>
    <div className="carousel-scrub-bar" aria-label="Game library navigation">
-    <div className="carousel-track" role="progressbar" aria-label="Carousel scroll position" onClick={e=>{
-     const rect=e.currentTarget.getBoundingClientRect();
-     const ratio=Math.max(0,Math.min(1,(e.clientX-rect.left)/rect.width));
-     const el=carouselRef.current;
-     if(el)el.scrollTo({left:ratio*(el.scrollWidth-el.clientWidth),behavior:document.documentElement.dataset.motion==='off'?'auto':'smooth'});
-    }}>
-     <div className="carousel-progress-fill"/>
-     <div className="carousel-scrub-thumb"/>
-    </div>
-    <div className="carousel-pills" role="tablist" aria-label="Quick jump to game">
-     {gameLibrary.map((g,i)=><button key={g.id} type="button" className="carousel-dot" aria-label={`Jump to ${g.title}`} data-active={i===0?'true':'false'} onClick={()=>scrollToCard(i)}><span>{i+1}</span><small>{g.title}</small></button>)}
+    <label className="carousel-position"><span>{positionLabel}</span><input className="carousel-track" type="range" min={0} max={100} step={1} value={Math.round(carousel.progress)} aria-label="Browse featured games" aria-valuetext={positionLabel} aria-controls="featured-games" onChange={event=>carousel.scrub(Number(event.target.value))}/></label>
+    <div className="carousel-pills" role="group" aria-label="Quick jump to game">
+     {gameLibrary.map((g,i)=><button key={g.id} type="button" className="carousel-dot" aria-label={`Jump to ${g.title}`} aria-controls="featured-games" onClick={()=>carousel.jump(i)}><span>{i+1}</span><small>{g.title}</small></button>)}
     </div>
    </div>
   </section>

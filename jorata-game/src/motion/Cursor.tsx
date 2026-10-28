@@ -11,7 +11,7 @@ export default function Cursor({enabled}:{enabled:boolean}){
   const hide=()=>{delete el.dataset.pressed;delete dot.dataset.pressed;shown=false;el.dataset.visible='false';dot.dataset.visible='false';delete document.documentElement.dataset.cursorReady;cancelAnimationFrame(frame);frame=0;};
   const tick=(now:number)=>{
    const step=Math.min(2,(now-last)/16.67||1);last=now;
-   x+=(tx-x)*(1-Math.pow(.32,step));y+=(ty-y)*(1-Math.pow(.32,step));
+   x=tx;y=ty;
    dx+=(tx-dx)*(1-Math.pow(.65,step));dy+=(ty-dy)*(1-Math.pow(.65,step));
    el.style.transform=`translate3d(${x}px,${y}px,0)`;dot.style.transform=`translate3d(${dx}px,${dy}px,0)`;
    const speed=Math.hypot(tx-dx,ty-dy);
@@ -20,15 +20,8 @@ export default function Cursor({enabled}:{enabled:boolean}){
   };
   const move=(event:PointerEvent)=>{
    const target=event.target instanceof Element?event.target:null;
-   if(event.pointerType==='touch'||!target||!fine.matches||!scope.contains(target)||target.closest('canvas,input,textarea,select,[contenteditable=true],iframe,[data-native-cursor]')){hide();return;}
-   let nextX=event.clientX,nextY=event.clientY;
-   const magnetTarget=target.closest<HTMLElement>('.carousel-btn,.ui-button,.game-launch,.dock a,.carousel-dot');
-   if(magnetTarget){
-    const b=magnetTarget.getBoundingClientRect(),cx=b.left+b.width/2,cy=b.top+b.height/2;
-    nextX=event.clientX*.82+cx*.18;
-    nextY=event.clientY*.82+cy*.18;
-   }
-   tx=nextX;ty=nextY;
+   if(event.pointerType==='touch'||!target||!fine.matches||!scope.contains(target)||target.closest('canvas,input,textarea,select,[contenteditable=true],iframe,[data-native-cursor],[disabled],[aria-disabled=true]')){hide();return;}
+   tx=event.clientX;ty=event.clientY;
    if(!shown){x=dx=tx;y=dy=ty;shown=true;el.dataset.visible='true';dot.dataset.visible='true';document.documentElement.dataset.cursorReady='true';}
    const dragging=target.closest('[data-dragging="true"]');
    const mode=dragging?'drag':target.closest('[draggable=true],.jn-drag-handle')?'drag':target.closest('.game-cover,.game-launch')?'play':target.closest('a,button,[data-carousel]')?'link':'idle';
@@ -38,9 +31,9 @@ export default function Cursor({enabled}:{enabled:boolean}){
   const press=()=>{el.dataset.pressed='true';dot.dataset.pressed='true';},release=()=>{delete el.dataset.pressed;delete dot.dataset.pressed;};
   const keyboard=(event:KeyboardEvent)=>{if(event.key==='Tab')hide();};
   const visibility=()=>{if(document.hidden)hide();};
-  window.addEventListener('pointermove',move,{passive:true});window.addEventListener('pointerdown',press,{passive:true});window.addEventListener('pointerup',release,{passive:true});
+  window.addEventListener('pointermove',move,{passive:true});window.addEventListener('pointerdown',press,{passive:true});window.addEventListener('pointerup',release,{passive:true});window.addEventListener('pointercancel',hide,{passive:true});
   window.addEventListener('keydown',keyboard);window.addEventListener('scroll',hide,{passive:true});document.addEventListener('dragstart',hide);window.addEventListener('blur',hide);document.addEventListener('pointerleave',hide);document.addEventListener('visibilitychange',visibility);fine.addEventListener('change',hide);
-  return()=>{hide();window.removeEventListener('pointermove',move);window.removeEventListener('pointerdown',press);window.removeEventListener('pointerup',release);window.removeEventListener('keydown',keyboard);window.removeEventListener('scroll',hide);document.removeEventListener('dragstart',hide);window.removeEventListener('blur',hide);document.removeEventListener('pointerleave',hide);document.removeEventListener('visibilitychange',visibility);fine.removeEventListener('change',hide);};
+  return()=>{hide();window.removeEventListener('pointermove',move);window.removeEventListener('pointerdown',press);window.removeEventListener('pointerup',release);window.removeEventListener('pointercancel',hide);window.removeEventListener('keydown',keyboard);window.removeEventListener('scroll',hide);document.removeEventListener('dragstart',hide);window.removeEventListener('blur',hide);document.removeEventListener('pointerleave',hide);document.removeEventListener('visibilitychange',visibility);fine.removeEventListener('change',hide);};
  },[enabled]);
  return <><div ref={ring} className="jorata-cursor" aria-hidden="true"><i/></div><div ref={trail} className="jorata-cursor-trail" aria-hidden="true"/></>;
 }

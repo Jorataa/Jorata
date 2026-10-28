@@ -1,0 +1,36 @@
+{
+  "checks": [
+    "Native slider, Home/End navigation, real visible-card count and disabled end controls.",
+    "Dragging and snapping work with motion off, drag does not launch a game, blur clears pointer capture.",
+    "Cursor stays at the actual pointer coordinate and resets on cancellation.",
+    "Reduced motion preserves carousel functionality without animated travel.",
+    "Quick Note remains draggable, saves content and restores keyboard dismissal.",
+    "Real touch swipe remains native with reduced motion; no phone overflow or custom cursor."
+  ],
+  "errors": [],
+  "date": "2026-10-28",
+  "foundation": "95fe52d",
+  "branch": "feat/jorata-interactions-20261028",
+  "browser": "Playwright Chromium",
+  "viewports": [
+    1440,
+    768,
+    390
+  ],
+  "unchangedGameAndNotesSourceFiles": 49,
+  "unitTestsPassed": 23,
+  "motionRegression": {
+    "checks": [
+      "Contextual pixel cursor, nonblocking overlays, original Boxing preview; cards remain ordinary links.",
+      "Video is lazy, muted, inline and looping; hover/focus activate previews; leaving or scrolling out pauses them.",
+      "Reduced motion, cursor opt-out, global motion opt-out and preference persistence work.",
+      "Existing Quick Note drag, bounds, modal exit and persistent Notes reorder remain functional.",
+      "Game canvas keeps its own native cursor and receives no website motion controllers.",
+      "Touch navigation, phone layout and data-saving fallback work."
+    ],
+    "pageErrors": [],
+    "mediaRequests": [
+      "/surgery/surgery_patient_01_healthy.mp4"
+    ]
+  }
+}

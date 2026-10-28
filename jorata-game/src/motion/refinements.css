@@ -1,0 +1,24 @@
+/* Functional controls share the same timing and focus treatment, with or without effects. */
+:root{--interaction-press:120ms;--interaction-hover:180ms;--interaction-settle:300ms;--interaction-focus:#1f5c3f}
+.carousel-position{display:flex;align-items:center;gap:20px;min-height:44px;color:#46544a;font-size:13px;font-variant-numeric:tabular-nums}
+.carousel-position>span{flex-shrink:0;min-width:112px}
+.carousel-position .carousel-track{appearance:none;display:block;flex:1;min-width:0;width:100%;height:44px;min-height:44px;padding:0;margin:0;border:0;box-shadow:none;background:transparent;cursor:ew-resize;accent-color:var(--interaction-focus)}
+.carousel-position .carousel-track::-webkit-slider-runnable-track{height:5px;border-radius:4px;background:#d4dcd3}
+.carousel-position .carousel-track::-webkit-slider-thumb{appearance:none;width:20px;height:20px;border:3px solid #fdfcfa;border-radius:50%;background:var(--interaction-focus);margin-top:-7.5px;box-shadow:0 0 0 1px var(--interaction-focus);transition:scale var(--interaction-press)}
+.carousel-position .carousel-track::-moz-range-track{height:5px;border-radius:4px;background:#d4dcd3}
+.carousel-position .carousel-track::-moz-range-thumb{width:14px;height:14px;border:3px solid #fdfcfa;border-radius:50%;background:var(--interaction-focus)}
+.carousel-position .carousel-track:active::-webkit-slider-thumb{scale:1.15}
+:is(.carousel-track,.carousel-btn,.carousel-dot,[data-carousel]):focus-visible{outline:2px solid var(--interaction-focus);outline-offset:5px}
+.carousel-btn:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none}
+.carousel-dot{min-height:44px;transition:background-color var(--interaction-hover),color var(--interaction-hover),border-color var(--interaction-hover)}
+.home-page .home-games{position:relative;scroll-behavior:auto;scroll-padding-inline:4px;overflow-anchor:none}
+.home-page .home-games .game-cover{scroll-margin-inline:12px}
+/* Let range increments move freely; native touch/card snapping resumes on blur. */
+.home-discovery:has(.carousel-track:focus) .home-games{scroll-snap-type:none}
+[data-carousel][data-dragging=true] .game-cover{transform:none!important}
+[data-carousel][data-dragging=true] .game-preview{opacity:0!important}
+.jorata-cursor-trail{transition:opacity 140ms ease-out;scale:1}
+.jorata-cursor-trail[data-pressed=true]{scale:1.35}
+@media(max-width:760px){.carousel-position{gap:12px;font-size:13px}.carousel-position>span{min-width:100px}}
+@media(prefers-reduced-motion:reduce){.carousel-position .carousel-track:active::-webkit-slider-thumb{transition:none;scale:1}}
+html[data-motion=off] .carousel-position .carousel-track:active::-webkit-slider-thumb{scale:1}

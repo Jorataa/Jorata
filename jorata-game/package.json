@@ -15,7 +15,8 @@
     "test:boxing": "tsx tests/boxing.browser.ts",
     "test:drive": "node --import tsx tests/drive.browser.ts",
     "test:drive:live": "node --import tsx tests/drive.browser.ts --live",
-    "test:motion": "tsx tests/motion.browser.ts"
+    "test:motion": "tsx tests/motion.browser.ts",
+    "test:interactions": "tsx tests/interactions.browser.ts"
   },
   "dependencies": {
     "phaser": "^4.2.1",
